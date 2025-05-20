@@ -147,6 +147,7 @@ def exec_run(
     # like run(context: ProtocolContext). If so, that function is now in the
     # current scope.
     filename = _get_filename(proto)
+
     if run_time_parameters_with_overrides:
         context._params = run_time_parameters_with_overrides
 
@@ -157,6 +158,9 @@ def exec_run(
 
     new_globs["__context"] = context
     try:
+        def log_command(msg):
+            print(f"Command: {msg}")
+        ##context.broker.subscribe('command', log_command)
         exec("run(__context)", new_globs)
     except (
         SmoothieAlarm,

@@ -192,6 +192,7 @@ class InstrumentContext(publisher.CommandPublisher):
         location: Optional[Union[types.Location, labware.Well]] = None,
         rate: float = 1.0,
         flow_rate: Optional[float] = None,
+
     ) -> InstrumentContext:
         """
         Draw liquid into a pipette tip.
@@ -243,6 +244,7 @@ class InstrumentContext(publisher.CommandPublisher):
         .. versionchanged:: 2.24
             Added the ``flow_rate`` parameter.
         """
+        print(location)
         if flow_rate is not None:
             if self.api_version < APIVersion(2, 24):
                 raise APIVersionError(
@@ -265,6 +267,7 @@ class InstrumentContext(publisher.CommandPublisher):
         move_to_location: types.Location
         well: Optional[labware.Well]
         last_location = self._get_last_location_by_api_version()
+
         try:
             target = validation.validate_location(
                 location=location, last_location=last_location
@@ -591,6 +594,7 @@ class InstrumentContext(publisher.CommandPublisher):
                 volume, repetitions, location if location else "current position", rate
             )
         )
+   
         if not self._core.has_tip():
             raise UnexpectedTipRemovalError("mix", self.name, self.mount)
 

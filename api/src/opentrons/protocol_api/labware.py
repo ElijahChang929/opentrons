@@ -253,6 +253,12 @@ class Well:
             absolute position of the bottom-center of the well, plus the ``z`` offset
             (if specified).
         """
+        import inspect
+        stack = inspect.stack()
+        #print(f"    Well: {self.well_name} in labware: {self.parent.parent}")
+        frame = stack[1]
+        #print(f"  File '{frame.filename}', line {frame.lineno}, in {frame.function}",z)
+    # 
         return Location(self._core.get_bottom(z_offset=z), self)
 
     @requires_version(2, 0)

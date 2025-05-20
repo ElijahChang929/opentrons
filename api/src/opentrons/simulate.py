@@ -178,6 +178,7 @@ class _CommandScraper:
         def handle_command(message: command_types.CommandMessage) -> None:
             """The callback that we will subscribe to the broker."""
             nonlocal depth
+            #print(message)
             payload = message["payload"]
             if message["$"] == "before":
                 self._commands.append({"level": depth, "payload": payload, "logs": []})
@@ -516,6 +517,8 @@ def simulate(
         and this is an unbundled Protocol API
         v2 python protocol. In other cases it is None.
     """
+
+
     stack_logger = logging.getLogger("opentrons")
     stack_logger.propagate = propagate_logs
     # _CommandScraper will set the level of this logger.
@@ -534,6 +537,7 @@ def simulate(
         extra_data = {}
 
     contents = protocol_file.read()
+
     try:
         protocol = parse.parse(
             contents,
@@ -543,6 +547,8 @@ def simulate(
             },
             extra_data=extra_data,
         )
+
+        #print(protocol)
     except parse.JSONSchemaVersionTooNewError as e:
         # opentrons.protocols.parse() doesn't support new JSON protocols.
         # The code to do that should be moved from opentrons.protocol_reader.
@@ -563,6 +569,7 @@ def simulate(
         robot_type=protocol.robot_type,
     ) as hardware_simulator:
         if protocol.api_level < ENGINE_CORE_API_VERSION:
+
             return _run_file_non_pe(
                 protocol=protocol,
                 hardware_api=hardware_simulator,
@@ -570,6 +577,9 @@ def simulate(
                 level=log_level,
                 duration_estimator=duration_estimator,
             )
+        
+
+        
         else:
             # TODO(mm, 2023-07-06): Once these NotImplementedErrors are resolved, consider removing
             # the enclosing if-else block and running everything through _run_file_pe() for simplicity.
@@ -579,6 +589,9 @@ def simulate(
                     f" with apiLevel {ENGINE_CORE_API_VERSION} or newer."
                 )
             protocol_file.seek(0)
+
+            print('here')
+
             return _run_file_pe(
                 protocol=protocol,
                 robot_type=protocol.robot_type,
@@ -882,12 +895,16 @@ def _run_file_non_pe(
     )
 
     scraper = _CommandScraper(logger=logger, level=level, broker=context.broker)
+
+    
+
     if duration_estimator:
         context.broker.subscribe(command_types.COMMAND, duration_estimator.on_message)
 
     context.home()
     with scraper.scrape():
         try:
+           
             execute.run_protocol(
                 protocol, context, run_time_parameters_with_overrides=None
             )
@@ -905,7 +922,7 @@ def _run_file_non_pe(
 
         finally:
             context.cleanup()
-
+    #print(scraper.commands)
     return scraper.commands, bundle_contents
 
 

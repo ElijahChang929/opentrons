@@ -36,6 +36,7 @@ def run_protocol(
     if isinstance(protocol, PythonProtocol):
         try:
             if protocol.api_level >= APIVersion(2, 0):
+
                 exec_run(
                     proto=protocol,
                     context=context,
