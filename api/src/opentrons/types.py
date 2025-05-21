@@ -198,6 +198,17 @@ class Location:
             >>> assert loc.point == Point(1, 1, 1)  # True
 
         """
+        import inspect
+        stack = inspect.stack()
+
+        frame = stack[1]
+        import builtins
+        builtins.event_logs.append({
+                 "event": "move",
+                 "line": frame.lineno,
+                 "offset": point,
+                "labware": self.labware,
+            })
 
         return Location(
             point=self.point + point,

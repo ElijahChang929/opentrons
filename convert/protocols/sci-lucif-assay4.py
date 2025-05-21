@@ -1,3 +1,7 @@
+import builtins
+builtins.event_logs = []
+
+
 def get_values(*names):
     import json
     _all_values = json.loads("""{"p300_mount":"right"}""")
@@ -139,5 +143,10 @@ def run(ctx):
                 "well": well_position,
                 "slot": slot_number
             }
-    #print(json.dumps(liquid_locations, indent=2))
-  
+    filename = f"protocols/json/{metadata['protocolName']}.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

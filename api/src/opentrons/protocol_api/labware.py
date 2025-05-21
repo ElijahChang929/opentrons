@@ -241,6 +241,21 @@ class Well:
             absolute position of the top-center of the well, plus the ``z`` offset
             (if specified).
         """
+
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        if frame.filename == '<protocol>' and frame.function == 'run':
+
+            import builtins
+            builtins.event_logs.append({
+                 "event": "top",
+                 "line": frame.lineno,
+                "z": z
+            })
+            #print(f" Function: top, Well: {self.well_name} in labware: {self.parent.parent}")
+            #print(f" File '{frame.filename}', line {frame.lineno}, in {frame.function}",z)
+            
         return Location(self._core.get_top(z_offset=z), self)
 
     @requires_version(2, 0)
@@ -253,12 +268,17 @@ class Well:
             absolute position of the bottom-center of the well, plus the ``z`` offset
             (if specified).
         """
+        #print(f" Function: bottom, Well: {self.well_name} in labware: {self.parent.parent}")
         import inspect
         stack = inspect.stack()
-        #print(f"    Well: {self.well_name} in labware: {self.parent.parent}")
-        frame = stack[1]
+        frame = stack[2]
+        import builtins
+        builtins.event_logs.append({
+                 "event": "bottom",
+                 "line": frame.lineno,
+                "z": z
+            })
         #print(f"  File '{frame.filename}', line {frame.lineno}, in {frame.function}",z)
-    # 
         return Location(self._core.get_bottom(z_offset=z), self)
 
     @requires_version(2, 0)

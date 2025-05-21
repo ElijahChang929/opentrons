@@ -244,7 +244,21 @@ class InstrumentContext(publisher.CommandPublisher):
         .. versionchanged:: 2.24
             Added the ``flow_rate`` parameter.
         """
-        print(location)
+
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        if frame.function == "run":
+            import builtins
+            builtins.event_logs.append({
+                 "event": "aspirate",
+                 "line": frame.lineno,
+            })
+
+            #print(f"function: aspirate, File '{frame.filename}', line {frame.lineno}, in {frame.function},{volume}")
+        
+
+
         if flow_rate is not None:
             if self.api_version < APIVersion(2, 24):
                 raise APIVersionError(
@@ -267,7 +281,6 @@ class InstrumentContext(publisher.CommandPublisher):
         move_to_location: types.Location
         well: Optional[labware.Well]
         last_location = self._get_last_location_by_api_version()
-
         try:
             target = validation.validate_location(
                 location=location, last_location=last_location
@@ -433,6 +446,16 @@ class InstrumentContext(publisher.CommandPublisher):
             ``location`` is no longer required if the pipette just moved to, dispensed, or blew out
             into a trash bin or waste chute.
         """
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        if frame.function == "run":
+            import builtins
+            builtins.event_logs.append({
+                 "event": "dispense",
+                 "line": frame.lineno,
+            })
+
         if self.api_version < APIVersion(2, 15) and push_out:
             raise APIVersionError(
                 api_element="Parameter push_out",
@@ -963,6 +986,17 @@ class InstrumentContext(publisher.CommandPublisher):
             both are unspecified then ``rate`` is by default set to 1.0.
             Can air gap over a trash bin or waste chute.
         """
+
+        import inspect
+        stack = inspect.stack()
+        frame = stack[3]
+        import builtins
+        builtins.event_logs.append({
+                 "event": "air_gap",
+                 "line": frame.lineno,
+                "volume": volume,
+            })
+
         if not self._core.has_tip():
             raise UnexpectedTipRemovalError("air_gap", self.name, self.mount)
 
@@ -2180,6 +2214,16 @@ class InstrumentContext(publisher.CommandPublisher):
         :param publish: Whether to list this function call in the run preview.
                         Default is ``True``.
         """
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        if frame.filename == '<protocol>' and frame.function == 'run':
+            import builtins
+            builtins.event_logs.append({
+                 "event": "move_to",
+                 "line": frame.lineno,
+                "labware": location.labware,
+            })
         with ExitStack() as contexts:
             if isinstance(location, (TrashBin, WasteChute)):
                 if publish:
