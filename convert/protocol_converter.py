@@ -366,7 +366,7 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     if current_phase:
         grouped_phases.append(current_phase)
 
-    print(grouped_phases)
+    #print(grouped_phases)
      # -------- Build dicts for each phase (liquid vs HS) --------
     outputs = []
     for phase_lines in grouped_phases:
@@ -379,9 +379,10 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     final_outputs = merge_same_slot_phases(outputs)
 
     # ------------- Output the final DataFrame -------------
-    print(final_outputs)
+    #print(final_outputs)
     json.dump(final_outputs, open(f"{filename}.json", "w"), indent=4)
-    # ddf = pd.DataFrame({"Phase {}".format(i + 1): phase for i, phase in enumerate(final_outputs)})
+    #ddf = pd.DataFrame({"Phase {}".format(i + 1): phase for i, phase in enumerate(final_outputs)})
+
     return final_outputs
 
 
@@ -456,18 +457,100 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
 
     return G
 
+def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
+    import json
+    from collections import defaultdict
+
+    detail_action = json.load(open(detail_info, "r"))['event_logs']
+    set_liquid = json.load(open(detail_info, "r"))['liquid_locations']
+
+    # Step 1: 对 detail_action 建立按顺序的指针（滑动窗口）
+    action_ptr = 0
+    total_actions = len(detail_action)
+    enriched_phases = []
+
+    for phase_idx, phase in enumerate(protocol_steps):
+
+
+        asp_info = []
+        disp_info = []
+        # 假设 asp_vols 和 disp_vols 为序列
+        asp_count = len(phase.get("asp_vols", [])) 
+        disp_count = len(phase.get("disp_vols", [])) 
+
+        
+
+    #     # 辅助函数：在 action_ptr 后依次找到下一个目标 event
+    #     def next_event(event_type, start_ptr):
+    #         for i in range(start_ptr, total_actions):
+    #             if detail_action[i]["event"] == event_type:
+    #                 return i, detail_action[i]
+    #         return None, None
+
+    #     # 辅助函数：对于每个asp/disp，查找其附近相关的bottom/top/move_to
+    #     def find_related_events(start, stop):
+    #         related = {"bottom": [], "top": [], "move_to": []}
+    #         for i in range(start, stop):
+    #             evt = detail_action[i]
+    #             if evt["event"] in related:
+    #                 related[evt["event"]].append(evt)
+    #         return related
+
+        # 逐个找aspirate及其附属动作
+        asp_results = []
+        for a in range(asp_count):
+            idx, asp_evt = next_event("aspirate", action_ptr)
+            if asp_evt is None:
+                asp_results.append({"aspirate": None, "bottom": [], "top": [], "move_to": []})
+                continue
+            # 寻找在这次aspirate前面最近的bottom/top/move_to
+            related = find_related_events(action_ptr, idx)
+            asp_results.append({
+                "aspirate": asp_evt,
+                "bottom": related["bottom"] if related["bottom"] else [],
+                "top": related["top"] if related["top"] else [],
+                "move_to": related["move_to"] if related["move_to"] else []
+            })
+            action_ptr = idx + 1  # 推进指针
+
+    #     # 逐个找dispense及其附属动作
+    #     disp_results = []
+    #     for d in range(disp_count):
+    #         idx, disp_evt = next_event("dispense", action_ptr)
+    #         if disp_evt is None:
+    #             disp_results.append({"dispense": None, "bottom": [], "top": [], "move_to": []})
+    #             continue
+    #         related = find_related_events(action_ptr, idx)
+    #         disp_results.append({
+    #             "dispense": disp_evt,
+    #             "bottom": related["bottom"] if related["bottom"] else [],
+    #             "top": related["top"] if related["top"] else [],
+    #             "move_to": related["move_to"] if related["move_to"] else []
+    #         })
+    #         action_ptr = idx + 1
+
+    #     # 添加到 phase 结构
+    #     phase_with_details = dict(phase)  # 拷贝一份
+    #     phase_with_details["aspirate_details"] = asp_results
+    #     phase_with_details["dispense_details"] = disp_results
+    #     enriched_phases.append(phase_with_details)
+    # print( "enriched_phases", enriched_phases)
+    return enriched_phases
+
 
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.py.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
+    detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
     protocol_steps = process_liquid_handler_log(logfile)
-    with open(infofile, "r") as f:
-        labware_data = json.load(f)
-    labware_info = extract_labware_info_from_json(labware_data)
-    protocol_graph = build_protocol_graph(labware_info, protocol_steps)
-    data = nx.node_link_data(protocol_graph)
-    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
-        json.dump(data, f, indent=4)
+    enriched_steps = add_detail_info(protocol_steps, detail_steps)
+    # with open(infofile, "r") as f:
+    #     labware_data = json.load(f)
+    # labware_info = extract_labware_info_from_json(labware_data)
+    # protocol_graph = build_protocol_graph(labware_info, protocol_steps)
+    # data = nx.node_link_data(protocol_graph)
+    # with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
+    #     json.dump(data, f, indent=4)
 
 
 if __name__ == "__main__":

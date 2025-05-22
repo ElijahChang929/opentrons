@@ -1,6 +1,5 @@
 Move function is in types.py (under opentrons/)
 
-
 Air_gap, move_to is in instrument_context.py
 
 bottom and top is in labware.py
