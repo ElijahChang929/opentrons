@@ -1,6 +1,9 @@
 import json
 import pandas as pd
-
+import json
+from collections import defaultdict
+import networkx as nx
+import matplotlib.pyplot as plt
 import re
 from typing import List, Dict, Optional, Union, Sequence, Literal
 # ---------- Heater‑Shaker phase parser ----------
@@ -458,84 +461,160 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
     return G
 
 def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
-    import json
-    from collections import defaultdict
 
     detail_action = json.load(open(detail_info, "r"))['event_logs']
     set_liquid = json.load(open(detail_info, "r"))['liquid_locations']
+    # 先处理详细的动作信息
+    counter = 1
+    for item in detail_action:
+        if item.get("event") in {"aspirate", "dispense"}:
+            item["order"] = counter
+            counter += 1
+    def build_ordered_action_dict(detail_action):
+        ordered_action_dict = {}
+        move_to_list = []
+        prev_main_idx = -1
+        last_order = 0
+        for i, evt in enumerate(detail_action):
+            evt_type = evt.get("event")
+            if evt_type in {"aspirate", "dispense"}:
+                order = evt.get("order")
+                sub_bottom, sub_top, sub_move, before_move_to = [], [], [], []
+                for j in range(prev_main_idx + 1, i):
+                    sub_evt = detail_action[j]
+                    sub_type = sub_evt["event"]
+                    if sub_type == "bottom":
+                        sub_bottom.append(sub_evt)
+                    elif sub_type == "move_to":
+                        move_to_evt = dict(sub_evt)
+                        move_to_evt["top"] = []
+                        before_move_to.append(move_to_evt)
+                    elif sub_type == "top":
+                        sub_top.append(sub_evt)
+                    elif sub_type == "move":
+                        sub_move.append(sub_evt)
+                ordered_action_dict[order] = {
+                    "type": evt_type,
+                    "order": order,
+                    "main_event": evt,
+                    "bottom": sub_bottom,
+                    "top": sub_top,
+                    "move": sub_move,
+                    "before_move_to": before_move_to,
+                    "mix_after": []
+                }
+                prev_main_idx = i
+                last_order = order
 
-    # Step 1: 对 detail_action 建立按顺序的指针（滑动窗口）
-    action_ptr = 0
-    total_actions = len(detail_action)
+            elif evt_type == "mix":
+                sub_bottom, sub_top, sub_move = [], [], []
+                for j in range(prev_main_idx + 1, i):
+                    sub_evt = detail_action[j]
+                    sub_type = sub_evt["event"]
+                    if sub_type == "bottom":
+                        sub_bottom.append(sub_evt)
+                    elif sub_type == "top":
+                        sub_top.append(sub_evt)
+                    elif sub_type == "move":
+                        sub_move.append(sub_evt)
+                if last_order in ordered_action_dict:
+                    ordered_action_dict[last_order]["mix_after"].append({
+                        "mix": evt,
+                        "bottom": sub_bottom,
+                        "top": sub_top,
+                        "move": sub_move
+                    })
+        for od in ordered_action_dict.values():
+            if "before_move_to" in od and "top" in od:
+                tops_to_remove = []
+                for top_evt in od["top"]:
+                    # 检查是否有 move_to 行号与 top 完全一致
+                    for mt in od["before_move_to"]:
+                        if "line" in mt and "line" in top_evt and mt["line"] == top_evt["line"]:
+                            
+                            if "top" not in mt:
+                                mt["top"] = []
+                            mt["top"].append(top_evt)
+                            tops_to_remove.append(top_evt)
+                            break  # 一个top只归一次
+                for top_evt in tops_to_remove:
+                    od["top"].remove(top_evt)
+
+        return ordered_action_dict
+
+    ordered_action_dict = build_ordered_action_dict(detail_action)
+    # with open(f"ordered_action.json", "w") as f:
+    #     json.dump(ordered_action_dict, f, indent=4)
+    
     enriched_phases = []
-
+    current_order = 1  # order编号从1开始
     for phase_idx, phase in enumerate(protocol_steps):
+        # 1. 统计主动作个数
+        asp_count = len(phase.get("asp_vols", [])) if phase.get("asp_vols") else 0
+        disp_count = len(phase.get("disp_vols", [])) if phase.get("disp_vols") else 0
+        num_main = asp_count + disp_count
 
+        # 2. 顺序输出对应 order 的 event 详细结构
+        detailed_event_list = []
 
-        asp_info = []
-        disp_info = []
-        # 假设 asp_vols 和 disp_vols 为序列
-        asp_count = len(phase.get("asp_vols", [])) 
-        disp_count = len(phase.get("disp_vols", [])) 
-
+        for _ in range(num_main):
+            detail = ordered_action_dict.get(current_order)
+            if detail:
+                detailed_event_list.append(detail)
+            current_order += 1
         
+            # 1. 依次提取每个主动作的top/bottom/move参数
+            top_z_list = []
+            bottom_z_list = []
+            move_offset_list = []
+            move_before_action_top_z_list = []
+            mix_after_dis = []
+            for event in detailed_event_list:
+                # 取 top 的 z（如有多个，取第一个或全部；此处取第一个）
+                if event.get("top"):
+                    if len(event["top"]) > 0 and "z" in event["top"][0]:
+                        top_z_list.append(event["top"][0]["z"])
+                    else:
+                        top_z_list.append(None)
+                else:
+                    top_z_list.append(None)
 
-    #     # 辅助函数：在 action_ptr 后依次找到下一个目标 event
-    #     def next_event(event_type, start_ptr):
-    #         for i in range(start_ptr, total_actions):
-    #             if detail_action[i]["event"] == event_type:
-    #                 return i, detail_action[i]
-    #         return None, None
+                # 取 bottom 的 z
+                if event.get("bottom"):
+                    if len(event["bottom"]) > 0 and "z" in event["bottom"][0]:
+                        bottom_z_list.append(event["bottom"][0]["z"])
+                    else:
+                        bottom_z_list.append(None)
+                else:
+                    bottom_z_list.append(None)
 
-    #     # 辅助函数：对于每个asp/disp，查找其附近相关的bottom/top/move_to
-    #     def find_related_events(start, stop):
-    #         related = {"bottom": [], "top": [], "move_to": []}
-    #         for i in range(start, stop):
-    #             evt = detail_action[i]
-    #             if evt["event"] in related:
-    #                 related[evt["event"]].append(evt)
-    #         return related
+                # 取 move 的 offset
+                if event.get("move"):
+                    if len(event["move"]) > 0 and "offset" in event["move"][0]:
+                        move_offset_list.append(event["move"][0]["offset"])
+                    else:
+                        move_offset_list.append(None)
+                else:
+                    move_offset_list.append(None)
 
-        # 逐个找aspirate及其附属动作
-        asp_results = []
-        for a in range(asp_count):
-            idx, asp_evt = next_event("aspirate", action_ptr)
-            if asp_evt is None:
-                asp_results.append({"aspirate": None, "bottom": [], "top": [], "move_to": []})
-                continue
-            # 寻找在这次aspirate前面最近的bottom/top/move_to
-            related = find_related_events(action_ptr, idx)
-            asp_results.append({
-                "aspirate": asp_evt,
-                "bottom": related["bottom"] if related["bottom"] else [],
-                "top": related["top"] if related["top"] else [],
-                "move_to": related["move_to"] if related["move_to"] else []
-            })
-            action_ptr = idx + 1  # 推进指针
+                if event.get("before_move_to"):
+                    for move_to in event["before_move_to"]:
+                        if "top" in move_to and len(move_to["top"]) > 0 and "z" in move_to["top"][0]:
+                            move_before_action_top_z_list.append(move_to["top"][0]["z"])
+                if event.get("mix_after"):
+                    for mix in event["mix_after"]:
+                        mix_after_dis.append(mix["bottom"][0]["z"])
 
-    #     # 逐个找dispense及其附属动作
-    #     disp_results = []
-    #     for d in range(disp_count):
-    #         idx, disp_evt = next_event("dispense", action_ptr)
-    #         if disp_evt is None:
-    #             disp_results.append({"dispense": None, "bottom": [], "top": [], "move_to": []})
-    #             continue
-    #         related = find_related_events(action_ptr, idx)
-    #         disp_results.append({
-    #             "dispense": disp_evt,
-    #             "bottom": related["bottom"] if related["bottom"] else [],
-    #             "top": related["top"] if related["top"] else [],
-    #             "move_to": related["move_to"] if related["move_to"] else []
-    #         })
-    #         action_ptr = idx + 1
 
-    #     # 添加到 phase 结构
-    #     phase_with_details = dict(phase)  # 拷贝一份
-    #     phase_with_details["aspirate_details"] = asp_results
-    #     phase_with_details["dispense_details"] = disp_results
-    #     enriched_phases.append(phase_with_details)
-    # print( "enriched_phases", enriched_phases)
-    return enriched_phases
+        protocol_steps[phase_idx]["top"] = top_z_list
+        protocol_steps[phase_idx]["bottom"] = bottom_z_list
+        protocol_steps[phase_idx]["move"] = move_offset_list
+        protocol_steps[phase_idx]["move_before_action_on_top"] = move_before_action_top_z_list
+        protocol_steps[phase_idx]["mix_after_dis_bottom"] = mix_after_dis
+
+    # with open(f"detailed_action.json", "w") as f:
+    #     json.dump(protocol_steps, f, indent=4)
+    return protocol_steps
 
 
 def parse_protocol(name: str):
@@ -544,14 +623,28 @@ def parse_protocol(name: str):
     detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
     protocol_steps = process_liquid_handler_log(logfile)
     enriched_steps = add_detail_info(protocol_steps, detail_steps)
-    # with open(infofile, "r") as f:
-    #     labware_data = json.load(f)
-    # labware_info = extract_labware_info_from_json(labware_data)
-    # protocol_graph = build_protocol_graph(labware_info, protocol_steps)
-    # data = nx.node_link_data(protocol_graph)
-    # with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
-    #     json.dump(data, f, indent=4)
+    with open(infofile, "r") as f:
+        labware_data = json.load(f)
+    labware_info = extract_labware_info_from_json(labware_data)
+    protocol_graph = build_protocol_graph(labware_info, protocol_steps)
+    data = nx.node_link_data(protocol_graph)
+    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
+        json.dump(data, f, indent=4)
 
+    with open('/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/sci-lucif-assay4.graph.json') as f:
+        g = json.load(f)
+
+    G = nx.DiGraph()
+    for node in g["nodes"]:
+        G.add_node(node["id"], **node)
+
+    for link in g["links"]:
+        G.add_edge(link["source"], link["target"], **link)
+
+    plt.figure(figsize=(12,8))
+    pos = nx.spring_layout(G, k=0.5, seed=42)
+    nx.draw(G, pos, with_labels=True, node_size=1500, node_color='lightblue', arrowsize=20)
+    plt.show()
 
 if __name__ == "__main__":
     # 测试代码

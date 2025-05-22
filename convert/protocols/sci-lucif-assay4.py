@@ -143,10 +143,11 @@ def run(ctx):
                 "well": well_position,
                 "slot": slot_number
             }
-    filename = f"protocols/json/{metadata['protocolName']}.json"
+    filename = f"protocols/detailed_action_json/{metadata['protocolName']}.json"
     output_data = {
         "event_logs": builtins.event_logs,
         "liquid_locations": liquid_locations
     }
+    
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)

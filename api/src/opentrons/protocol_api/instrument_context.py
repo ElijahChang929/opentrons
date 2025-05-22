@@ -617,7 +617,17 @@ class InstrumentContext(publisher.CommandPublisher):
                 volume, repetitions, location if location else "current position", rate
             )
         )
-   
+
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        if frame.function == "run":
+            import builtins
+            builtins.event_logs.append({
+                 "event": "mix",
+                 "line": frame.lineno,
+            })
+
         if not self._core.has_tip():
             raise UnexpectedTipRemovalError("mix", self.name, self.mount)
 
