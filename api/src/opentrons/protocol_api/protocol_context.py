@@ -459,7 +459,7 @@ class ProtocolContext(CommandPublisher):
 
                         .. versionadded:: 2.23
         """
-
+        print('here!')
         if isinstance(location, OffDeckType) and self._api_version < APIVersion(2, 15):
             raise APIVersionError(
                 api_element="Loading a labware off-deck",
