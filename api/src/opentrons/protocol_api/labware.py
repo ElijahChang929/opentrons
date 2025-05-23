@@ -287,6 +287,16 @@ class Well:
         :return: A :py:class:`~opentrons.types.Location` corresponding to the
             absolute position of the center of the well (in all three dimensions).
         """
+
+
+        import inspect
+        stack = inspect.stack()
+        frame = stack[2]
+        import builtins
+        builtins.event_logs.append({
+                 "event": "center",
+                 "line": frame.lineno,
+            })
         return Location(self._core.get_center(), self)
 
     @requires_version(2, 21)

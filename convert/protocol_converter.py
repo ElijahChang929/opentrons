@@ -1,12 +1,13 @@
 import json
 import pandas as pd
-import json
 from collections import defaultdict
 import networkx as nx
 import matplotlib.pyplot as plt
 import re
-from typing import List, Dict, Optional, Union, Sequence, Literal
-# ---------- Heater‑Shaker phase parser ----------
+from typing import List, Dict, Optional, Union, Sequence, Literal, Any
+import networkx as nx
+
+
 def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
     """
     Extracts key parameters for a Heater‑Shaker phase:
@@ -39,9 +40,6 @@ def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
         elif line.startswith("Deactivating Shaker"):
             data["deactivate_shaker"] = True
     return data
-# -----------------------------------------------
-
-
 
 def extract_float_after_keyword(text: str, keyword: str) -> Optional[float]:
     match = re.search(fr'{keyword} ([\d.]+)', text)
@@ -237,7 +235,6 @@ def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
         template = "transfer"
         return {"template": template, **basic_info}
 
-
 def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
     merged = []
     last_key = None
@@ -274,7 +271,6 @@ def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
             last_block = d
 
     return merged
-
 
 def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> List[Dict]:
     """
@@ -388,7 +384,6 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
 
     return final_outputs
 
-
 def extract_labware_info_from_json(json_data: dict) -> list:
     """
     从 Opentrons JSON 配置中提取板位信息，转换为结构化格式。
@@ -409,20 +404,22 @@ def extract_labware_info_from_json(json_data: dict) -> list:
 
     return output
 
-
-# Re-import necessary libraries after kernel reset
-from typing import List, Dict, Any
-import networkx as nx
-import json
-
-def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]) -> nx.DiGraph:
+def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
     """
     构建包含物料创建和步骤节点的 protocol graph。
     每个节点代表一个操作或物料；每条边表示数据/物料流动。
     """
+    # 给labware_info添加液体信息
+    for labware in labware_info:
+        #print(labware)
+        for liquid_key, liquid_val in liquid_info.items():
+            if labware["slot_on_deck"] == int(liquid_val["slot"]):
+                labware["liquid_type"].append(liquid_key)
+                labware["liquid_input_wells"].append(liquid_val["well"])
+
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
-
+    #print(json.dumps(labware_info,indent=4))
     labware_ids = {lw["id"] for lw in labware_info}
     # Step 1: 添加物料创建节点
     for labware in labware_info:
@@ -464,7 +461,7 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
 
     detail_action = json.load(open(detail_info, "r"))['event_logs']
     set_liquid = json.load(open(detail_info, "r"))['liquid_locations']
-    # 先处理详细的动作信息
+    # 1. 把aspirate和dispense设置为主动作，来规划顺序
     counter = 1
     for item in detail_action:
         if item.get("event") in {"aspirate", "dispense"}:
@@ -475,78 +472,77 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
         move_to_list = []
         prev_main_idx = -1
         last_order = 0
+        # helper -------------------------------------------------------
+        def collect_sub(prev_idx: int, cur_idx: int):
+            """Collect sub‑events between two indices, exclusive of cur_idx."""
+            buckets = defaultdict(list)
+            for k in range(prev_idx + 1, cur_idx):
+                sub = detail_action[k]
+                buckets[sub["event"]].append(sub)
+            return buckets
+        # --------------------------------------------------------------
         for i, evt in enumerate(detail_action):
             evt_type = evt.get("event")
+
+            # --------------------------------------------------- MAIN ACTIONS
             if evt_type in {"aspirate", "dispense"}:
-                order = evt.get("order")
-                sub_bottom, sub_top, sub_move, before_move_to = [], [], [], []
-                for j in range(prev_main_idx + 1, i):
-                    sub_evt = detail_action[j]
-                    sub_type = sub_evt["event"]
-                    if sub_type == "bottom":
-                        sub_bottom.append(sub_evt)
-                    elif sub_type == "move_to":
-                        move_to_evt = dict(sub_evt)
-                        move_to_evt["top"] = []
-                        before_move_to.append(move_to_evt)
-                    elif sub_type == "top":
-                        sub_top.append(sub_evt)
-                    elif sub_type == "move":
-                        sub_move.append(sub_evt)
+                order = evt["order"]
+                buckets = collect_sub(prev_main_idx, i)
+
+                # promote move_to to before_move_to list with empty sub‑lists
+                before_move_to = []
+                for mt in buckets.pop("move_to", []):
+                    mt.update({"top": [], "bottom": [], "center": [], "move": []})
+                    before_move_to.append(mt)
+
+                # merge tops/bottoms/move/center into their buckets (defaultdict handles missing)
                 ordered_action_dict[order] = {
                     "type": evt_type,
                     "order": order,
                     "main_event": evt,
-                    "bottom": sub_bottom,
-                    "top": sub_top,
-                    "move": sub_move,
+                    "top": buckets["top"],
+                    "bottom": buckets["bottom"],
+                    "move": buckets["move"],
+                    "center": buckets["center"],
                     "before_move_to": before_move_to,
                     "mix_after": []
                 }
                 prev_main_idx = i
                 last_order = order
 
+            # --------------------------------------------------- MIX ACTION
             elif evt_type == "mix":
-                sub_bottom, sub_top, sub_move = [], [], []
-                for j in range(prev_main_idx + 1, i):
-                    sub_evt = detail_action[j]
-                    sub_type = sub_evt["event"]
-                    if sub_type == "bottom":
-                        sub_bottom.append(sub_evt)
-                    elif sub_type == "top":
-                        sub_top.append(sub_evt)
-                    elif sub_type == "move":
-                        sub_move.append(sub_evt)
                 if last_order in ordered_action_dict:
+                    buckets = collect_sub(prev_main_idx, i)
                     ordered_action_dict[last_order]["mix_after"].append({
                         "mix": evt,
-                        "bottom": sub_bottom,
-                        "top": sub_top,
-                        "move": sub_move
+                        "top": buckets["top"],
+                        "bottom": buckets["bottom"],
+                        "move": buckets["move"],
+                        "center": buckets["center"]
                     })
+
         for od in ordered_action_dict.values():
-            if "before_move_to" in od and "top" in od:
-                tops_to_remove = []
-                for top_evt in od["top"]:
-                    # 检查是否有 move_to 行号与 top 完全一致
-                    for mt in od["before_move_to"]:
-                        if "line" in mt and "line" in top_evt and mt["line"] == top_evt["line"]:
-                            
-                            if "top" not in mt:
-                                mt["top"] = []
-                            mt["top"].append(top_evt)
-                            tops_to_remove.append(top_evt)
-                            break  # 一个top只归一次
-                for top_evt in tops_to_remove:
-                    od["top"].remove(top_evt)
+            for field in ["top", "bottom", "move","center"]:
+                if field in od:
+                    items_to_remove = []
+                    for evt in od[field]:
+                        for mt in od["before_move_to"]:
+                            if "line" in mt and "line" in evt and mt["line"] == evt["line"]:
+                                if field not in mt:
+                                    mt[field] = []
+                                mt[field].append(evt)
+                                items_to_remove.append(evt)
+                                break  # 每个evt最多归一次
+                    for evt in items_to_remove:
+                        od[field].remove(evt)
 
         return ordered_action_dict
 
     ordered_action_dict = build_ordered_action_dict(detail_action)
-    # with open(f"ordered_action.json", "w") as f:
-    #     json.dump(ordered_action_dict, f, indent=4)
-    
-    enriched_phases = []
+    with open(f"ordered_action.json", "w") as f:
+        json.dump(ordered_action_dict, f, indent=4)
+   
     current_order = 1  # order编号从1开始
     for phase_idx, phase in enumerate(protocol_steps):
         # 1. 统计主动作个数
@@ -601,6 +597,7 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
                     for move_to in event["before_move_to"]:
                         if "top" in move_to and len(move_to["top"]) > 0 and "z" in move_to["top"][0]:
                             move_before_action_top_z_list.append(move_to["top"][0]["z"])
+
                 if event.get("mix_after"):
                     for mix in event["mix_after"]:
                         mix_after_dis.append(mix["bottom"][0]["z"])
@@ -612,39 +609,23 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
         protocol_steps[phase_idx]["move_before_action_on_top"] = move_before_action_top_z_list
         protocol_steps[phase_idx]["mix_after_dis_bottom"] = mix_after_dis
 
-    # with open(f"detailed_action.json", "w") as f:
-    #     json.dump(protocol_steps, f, indent=4)
-    return protocol_steps
-
+    with open(f"detailed_action.json", "w") as f:
+        json.dump(protocol_steps, f, indent=4)
+    return protocol_steps, set_liquid
 
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.py.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
     protocol_steps = process_liquid_handler_log(logfile)
-    enriched_steps = add_detail_info(protocol_steps, detail_steps)
-    with open(infofile, "r") as f:
-        labware_data = json.load(f)
-    labware_info = extract_labware_info_from_json(labware_data)
-    protocol_graph = build_protocol_graph(labware_info, protocol_steps)
-    data = nx.node_link_data(protocol_graph)
-    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
-        json.dump(data, f, indent=4)
-
-    with open('/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/sci-lucif-assay4.graph.json') as f:
-        g = json.load(f)
-
-    G = nx.DiGraph()
-    for node in g["nodes"]:
-        G.add_node(node["id"], **node)
-
-    for link in g["links"]:
-        G.add_edge(link["source"], link["target"], **link)
-
-    plt.figure(figsize=(12,8))
-    pos = nx.spring_layout(G, k=0.5, seed=42)
-    nx.draw(G, pos, with_labels=True, node_size=1500, node_color='lightblue', arrowsize=20)
-    plt.show()
+    enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
+    # with open(infofile, "r") as f:
+    #     labware_data = json.load(f)
+    # labware_info = extract_labware_info_from_json(labware_data)
+    # protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
+    # data = nx.node_link_data(protocol_graph)
+    # with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
+    #     json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     # 测试代码

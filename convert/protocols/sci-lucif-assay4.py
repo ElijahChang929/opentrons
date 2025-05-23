@@ -74,7 +74,8 @@ def run(ctx):
         final = cells_all[k]
         p300.move_to(final.top(z=-0.2))
         p300.aspirate(PBS_VOL*1.5, final.bottom(z=0.2).move(Point(x=-2.5)), rate = 10)
-        p300.dispense(PBS_VOL*1.5, waste.top(z=-5), rate = 10)
+        #p300.dispense(PBS_VOL*1.5, waste.top(z=-5), rate = 10)
+        p300.dispense(PBS_VOL*1.5, waste.center(), rate = 10)
         p300.blow_out
         p300.drop_tip()
 
