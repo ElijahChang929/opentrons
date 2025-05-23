@@ -608,9 +608,9 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
         protocol_steps[phase_idx]["move"] = move_offset_list
         protocol_steps[phase_idx]["move_before_action_on_top"] = move_before_action_top_z_list
         protocol_steps[phase_idx]["mix_after_dis_bottom"] = mix_after_dis
-
-    with open(f"detailed_action.json", "w") as f:
-        json.dump(protocol_steps, f, indent=4)
+        
+    # with open(f"detailed_action.json", "w") as f:
+    #     json.dump(protocol_steps, f, indent=4)
     return protocol_steps, set_liquid
 
 def parse_protocol(name: str):
