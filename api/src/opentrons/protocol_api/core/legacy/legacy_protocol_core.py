@@ -153,6 +153,7 @@ class LegacyProtocolCore(
         self,
         definition: LabwareDefinition,
     ) -> LabwareLoadParams:
+        
         """Add a labware definition to the set of loadable definitions."""
         load_params = LabwareLoadParams(
             namespace=definition["namespace"],

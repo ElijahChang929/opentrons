@@ -271,14 +271,16 @@ class Well:
         #print(f" Function: bottom, Well: {self.well_name} in labware: {self.parent.parent}")
         import inspect
         stack = inspect.stack()
+        
         frame = stack[2]
         import builtins
-        builtins.event_logs.append({
+        if frame.function == "run":
+            builtins.event_logs.append({
                  "event": "bottom",
                  "line": frame.lineno,
                 "z": z
             })
-        #print(f"  File '{frame.filename}', line {frame.lineno}, in {frame.function}",z)
+            #print(f"  File '{frame.filename}', line {frame.lineno}, in {frame.function}",z)
         return Location(self._core.get_bottom(z_offset=z), self)
 
     @requires_version(2, 0)

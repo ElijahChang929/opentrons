@@ -527,6 +527,7 @@ def simulate(
     # to match documented behavior.
     # See notes in https://github.com/Opentrons/opentrons/pull/13107
     if custom_labware_paths:
+        print("custom_labware_paths = ", custom_labware_paths)
         extra_labware = entrypoint_util.labware_from_paths(custom_labware_paths)
     else:
         extra_labware = entrypoint_util.find_jupyter_labware() or {}

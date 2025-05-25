@@ -313,10 +313,8 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
              not line.startswith("        ") and not line.startswith("~~") and
              not "--" in line and not line.endswith(":") and
              not sum([line.startswith(patt) for patt in excluded_patterns])]
-
     # Define prepositions to split on
     PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
-
     # Structure for collecting parsed results
     parsed_steps = []
 
@@ -374,13 +372,14 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
         else:
             outputs.append(build_transfer_liquid_dict_complete(phase_lines))
     # -----------------------------------------------------------
+    #print("outputs", json.dumps(outputs, indent=4))
 
     final_outputs = merge_same_slot_phases(outputs)
 
     # ------------- Output the final DataFrame -------------
-    #print(final_outputs)
-    json.dump(final_outputs, open(f"{filename}.json", "w"), indent=4)
-    #ddf = pd.DataFrame({"Phase {}".format(i + 1): phase for i, phase in enumerate(final_outputs)})
+    # with open("parsed_protol.json", "w") as f:
+    #     json.dump(final_outputs, f, indent=4)
+    #print("parsed_protol", json.dumps(final_outputs, indent=4))
 
     return final_outputs
 
@@ -427,7 +426,7 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
         G.add_node(node_id, template="create_resource", **labware)
         slot = labware["slot_on_deck"]
         slot_last_writer[slot] = node_id
-
+    #print(json.dumps(protocol_steps,indent=4))
     # Step 2: 添加 protocol 步骤节点及边
     for i, step in enumerate(protocol_steps):
         node_id = f"step_{i+1}"
@@ -528,7 +527,6 @@ def build_ordered_action_dict(detail_action):
 
     return ordered_action_dict
 
-
 def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
 
     detail_action = json.load(open(detail_info, "r"))['event_logs']
@@ -597,13 +595,13 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
         phase["move_to"] = move_to_detail
         phase["mix_detail"] = mix_detail
         
-    with open(f"detailed_action.json", "w") as f:
-        json.dump(protocol_steps, f, indent=4)
+    # with open(f"detailed_action.json", "w") as f:
+    #     json.dump(protocol_steps, f, indent=4)
 
     return protocol_steps, set_liquid
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.py.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
     protocol_steps = process_liquid_handler_log(logfile)
@@ -611,6 +609,7 @@ def parse_protocol(name: str):
     with open(infofile, "r") as f:
         labware_data = json.load(f)
     labware_info = extract_labware_info_from_json(labware_data)
+    #print(json.dumps(enriched_steps,indent=4))
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)
     with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
@@ -620,4 +619,4 @@ if __name__ == "__main__":
     # 测试代码
     # process_liquid_handler_log("/Users/chang/Design_projects/LabOS/opentrons/Protocols/success/sci-lucif-assay4.ot2.apiv2.log")
     # process_liquid_handler_log(text=text__)
-    parse_protocol("sci-lucif-assay4")
+    parse_protocol("00a6e5")
