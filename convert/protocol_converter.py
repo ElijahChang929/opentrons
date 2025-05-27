@@ -280,21 +280,18 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     if not text:
         text = open(filename, "r", encoding="utf-8").read()
 
-    # Define regex patterns for module start commands
-
     MODULE_START_PATTERNS = [
         r"Setting Target Temperature of Heater-Shaker",
         r"Engaging Magnetic Module"
     ]
-
     # Compile once for quick matching of Heater‑Shaker commands
     module_start_regex = re.compile("|".join(MODULE_START_PATTERNS))
 
     # Input: Multiline protocol text
     # with open("/mnt/data/opentrons_protocol.txt", "r", encoding="utf-8") as file:
     #     lines = file.readlines()
-    text_ = text.replace("\n        ", ";")
-    text_ = text_.replace("\n\t", ";")
+
+    text_ = re.sub(r'\n[ \t]+', '\n', text)
     lines = text_.strip().split('\n')
 
     excluded_patterns = [
@@ -330,7 +327,8 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
             "raw": line,
             "tokens": [t.strip() for t in tokens if t.strip()]
         })
-
+    # with open("parsed_steps.json", "w") as f:
+    #     json.dump(parsed_steps, f, indent=4)
     # -------- Build phases: split on Heater‑Shaker OR liquid‑logic breaks --------
     grouped_phases = []
     current_phase = []
@@ -363,7 +361,6 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     if current_phase:
         grouped_phases.append(current_phase)
 
-    #print(grouped_phases)
      # -------- Build dicts for each phase (liquid vs HS) --------
     outputs = []
     for phase_lines in grouped_phases:
@@ -377,8 +374,8 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     final_outputs = merge_same_slot_phases(outputs)
 
     # ------------- Output the final DataFrame -------------
-    # with open("parsed_protol.json", "w") as f:
-    #     json.dump(final_outputs, f, indent=4)
+    with open("parsed_protol.json", "w") as f:
+        json.dump(final_outputs, f, indent=4)
     #print("parsed_protol", json.dumps(final_outputs, indent=4))
 
     return final_outputs
@@ -396,9 +393,9 @@ def extract_labware_info_from_json(json_data: dict) -> list:
             "parent": "deck",
             "slot_on_deck": int(lw.get("slot")),
             "class_name": lw.get("type"),
-            "liquid_type": [],      # 默认填写
-            "liquid_volume": [],                # 默认每个液体体积
-            "liquid_input_wells": []                # 默认输入孔位索引
+            "liquid_type": [],      
+            "liquid_volume": [],            
+            "liquid_input_wells": []            
         })
 
     return output
@@ -540,15 +537,17 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
     # 2. 生成有序的动作细节字典
     ordered_action_dict = build_ordered_action_dict(detail_action)
 
-    # with open(f"ordered_action.json", "w") as f:
-    #     json.dump(ordered_action_dict, f, indent=4)
+    # with open(f"protocol_steps.json", "w") as f:
+    #     json.dump(protocol_steps, f, indent=4)
    
    # 3. 在每个 phase 中添加详细的动作信息
     current_order = 1  # order编号从1开始
     for phase_idx, phase in enumerate(protocol_steps):
         # 1. 统计主动作个数
-        asp_count = len(phase.get("asp_vols", [])) if phase.get("asp_vols") else 0
-        disp_count = len(phase.get("disp_vols", [])) if phase.get("disp_vols") else 0
+        asp_vals = phase.get("asp_vols")
+        disp_vals = phase.get("disp_vols")
+        asp_count = len(asp_vals) if isinstance(asp_vals, list) else (1 if asp_vals is not None else 0)
+        disp_count = len(disp_vals) if isinstance(disp_vals, list) else (1 if disp_vals is not None else 0)
         num_main = asp_count + disp_count
         # 2. 把本 phase 需要的主动作依次弹出（保证顺序）
         detailed_event_list = []
@@ -609,7 +608,9 @@ def parse_protocol(name: str):
     with open(infofile, "r") as f:
         labware_data = json.load(f)
     labware_info = extract_labware_info_from_json(labware_data)
-    #print(json.dumps(enriched_steps,indent=4))
+    with open('enriched_steps.json', 'w') as f:
+        json.dump(enriched_steps, f, indent=4)
+
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)
     with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
@@ -619,4 +620,4 @@ if __name__ == "__main__":
     # 测试代码
     # process_liquid_handler_log("/Users/chang/Design_projects/LabOS/opentrons/Protocols/success/sci-lucif-assay4.ot2.apiv2.log")
     # process_liquid_handler_log(text=text__)
-    parse_protocol("00a6e5")
+    parse_protocol("sci-lucif-assay4")

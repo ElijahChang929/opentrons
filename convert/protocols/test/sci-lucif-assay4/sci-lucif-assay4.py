@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/test/sci-lucif-assay4/sci-lucif-assay4.py"
 
 def get_values(*names):
     import json
@@ -107,16 +107,16 @@ def run(ctx):
         p300.touch_tip()
         p300.drop_tip()
 
-    # 导入需要的模块
+
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
     all_vars = locals()
-    
+
     # Wells that have been processed 
     processed_wells = set()
     liquid_locations = {}
-    
+
     for var_name, var_value in all_vars.items():
         if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
             for i, well in enumerate(var_value):
@@ -135,7 +135,7 @@ def run(ctx):
         if isinstance(var_value, Well):
             if var_value in processed_wells:
                 continue
-                
+            
             display_name = var_value.display_name
             well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
             slot_match = re.search(r" on (\d+)$", display_name)
@@ -144,11 +144,11 @@ def run(ctx):
                 "well": well_position,
                 "slot": slot_number
             }
-    filename = f"protocols/detailed_action_json/{metadata['protocolName']}.json"
+    filename = f"protocols/detailed_action_json/sci-lucif-assay4.json"
     output_data = {
         "event_logs": builtins.event_logs,
         "liquid_locations": liquid_locations
     }
-    
+
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
