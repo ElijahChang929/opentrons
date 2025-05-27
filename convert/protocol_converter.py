@@ -6,6 +6,7 @@ import re
 from typing import List, Dict, Optional, Union, Sequence, Literal, Any
 import networkx as nx
 import os
+from pathlib import Path
 
 def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
     """
@@ -744,11 +745,15 @@ def parse_protocol(name: str):
 
 if __name__ == "__main__":
     # 测试代码
-    file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/test"
+    file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original"
 
-    # file_dir下面的全部文件夹名字
-    #parse_protocol('0a23c6')    
+    error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
     for name in protocol_names:
         print(f"Processing protocol: {name}")
-        parse_protocol(name)
+        try:
+            parse_protocol(name)
+        except Exception as e:
+            with open(error_log, "a") as f:
+                f.write(f"Error processing {name}: {str(e)}\n")
+            print(f"Error processing {name}: {str(e)}")

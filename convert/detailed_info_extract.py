@@ -36,19 +36,25 @@ def get_values(*names):
 
 builtins.get_values = get_values
 
-log_dir = Path("protocols/test/log")
-os.makedirs(log_dir, exist_ok=True)
 
-for file in Path("protocols/test").rglob("*.py"):
+
+error_log = Path("protocols/log/error.txt")
+for file in Path("protocols/original").rglob("*.py"):
     print(f"Simulating: {file}")
     labware_dir = (file.parent / "labware").resolve()
-    runlog, bundled = simulate(
-        protocol_file=open(file, "r"),
-        custom_labware_paths=[str(labware_dir)] if labware_dir.exists() and labware_dir.is_dir() else []
-    )
-    # delete the file name, only keep the folder name
-    FOLDERNAME = file.parent.name 
-    log_name = FOLDERNAME + ".log"
-    log_path = Path("protocols/log") / log_name
-    with open(log_path, "w") as f:
-        f.write(format_runlog(runlog))
+    try:
+        runlog, bundled = simulate(
+            protocol_file=open(file, "r"),
+            custom_labware_paths=[str(labware_dir)] if labware_dir.exists() and labware_dir.is_dir() else []
+        )
+        # delete the file name, only keep the folder name
+        FOLDERNAME = file.parent.name 
+        log_name = FOLDERNAME + ".log"
+        log_path = Path("protocols/log") / log_name
+        with open(log_path, "w") as f:
+            f.write(format_runlog(runlog))
+    except Exception as e:
+        # 追加写入错误日志
+        with open(error_log, "a") as errf:
+            errf.write(f"{file} : {repr(e)}\n")
+        print(f"Error simulating {file}: {e}")

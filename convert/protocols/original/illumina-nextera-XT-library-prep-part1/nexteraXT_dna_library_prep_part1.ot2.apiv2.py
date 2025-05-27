@@ -1,3 +1,7 @@
+import builtins
+builtins.event_logs = []
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/illumina-nextera-XT-library-prep-part1/nexteraXT_dna_library_prep_part1.ot2.apiv2.py"
+
 import math
 
 metadata = {
@@ -63,6 +67,51 @@ def run(protocol_context):
     p20.transfer(5, atm, output_single, mix_after=(5, 10), new_tip='always')
 
     protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "未知"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "未知"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/illumina-nextera-XT-library-prep-part1.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 on the preprogrammed thermal cycler and run the tagmentation program. When \
 the sample reaches 10°C, immediately proceed to the next step because the \
 transposome is still active. Place the plate back to slot 2.")

@@ -126,7 +126,7 @@ def insert_code_in_run(py_path, foldername):
     print(f"Injected into {py_path}")
 
 def main():
-    base = 'protocols/test/'
+    base = 'protocols/original/'
     for root, dirs, files in os.walk(base):
         foldername = os.path.basename(root)
         for file in files:
