@@ -2,11 +2,10 @@ import json
 import pandas as pd
 from collections import defaultdict
 import networkx as nx
-import matplotlib.pyplot as plt
 import re
 from typing import List, Dict, Optional, Union, Sequence, Literal, Any
 import networkx as nx
-
+import os
 
 def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
     """
@@ -47,10 +46,10 @@ def extract_float_after_keyword(text: str, keyword: str) -> Optional[float]:
 
 def extract_container_from_line(line: str, keyword: str) -> Optional[Dict[str, Union[str, int, float]]]:
     # 匹配 from 模式
-    match = re.search(fr'{keyword} [\d.]+ uL .*?from ([A-H]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
+    match = re.search(fr'{keyword} [\d.]+ uL .*?from ([A-Z]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
     if not match:
         # 匹配 into 模式
-        match = re.search(fr'{keyword} [\d.]+ uL .*?into ([A-H]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
+        match = re.search(fr'{keyword} [\d.]+ uL .*?into ([A-Z]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
     if match:
         return {
             "well": match.group(1),
@@ -93,9 +92,10 @@ def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
     aspirate_index = None
     dispense_index = None
     mixing_indices = []
-
+    
     # First pass: gather line indices for logic
     for i, line in enumerate(step_lines):
+        #print(i,line)
         if line.startswith(" "):  # ignore indented substeps
             continue
         stripped = line.strip()
@@ -113,7 +113,7 @@ def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
                     "type": tip_match.group(2).strip(),
                     "slot": int(tip_match.group(3))
                 }
-
+    
     # Determine mix_stage
     mix_stage = "none"
     for idx in mixing_indices:
@@ -141,20 +141,21 @@ def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
                 targets.append(target)
             dis_flow_rate = extract_float_after_keyword(stripped, "at")
         
-        elif stripped.startswith("Transferring"):
-            asp_vols = extract_float_after_keyword(stripped, "Aspirating")
-            dis_vols = extract_float_after_keyword(stripped, "Dispensing")
-            source = extract_container_from_line(stripped, "Aspirating")
-            if source:
-                sources.append(source)
-            target = extract_container_from_line(stripped, "Dispensing")
-            if target:
-                targets.append(target)    
-                # 新增：分别提取Aspirating和Dispensing的流速
-            asp_match = re.search(r"Aspirating.*?at ([\d.]+)", stripped)
-            dis_match = re.search(r"Dispensing.*?at ([\d.]+)", stripped)
-            asp_flow_rate = float(asp_match.group(1)) if asp_match else None
-            dis_flow_rate = float(dis_match.group(1)) if dis_match else None
+        # elif stripped.startswith("Transferring"):
+        #     asp_vols = extract_float_after_keyword(stripped, "Aspirating")
+        #     print(asp_vols,stripped)
+        #     dis_vols = extract_float_after_keyword(stripped, "Dispensing")
+        #     source = extract_container_from_line(stripped, "Aspirating")
+        #     if source:
+        #         sources.append(source)
+        #     target = extract_container_from_line(stripped, "Dispensing")
+        #     if target:
+        #         targets.append(target)    
+        #         # 新增：分别提取Aspirating和Dispensing的流速
+        #     asp_match = re.search(r"Aspirating.*?at ([\d.]+)", stripped)
+        #     dis_match = re.search(r"Dispensing.*?at ([\d.]+)", stripped)
+        #     asp_flow_rate = float(asp_match.group(1)) if asp_match else None
+        #     dis_flow_rate = float(dis_match.group(1)) if dis_match else None
 
         # Temperature Module commands
         elif stripped.startswith("Setting Temperature Module temperature"):
@@ -233,6 +234,7 @@ def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
         }
     else:
         template = "transfer"
+        #print(json.dumps(basic_info, indent=4))
         return {"template": template, **basic_info}
 
 def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
@@ -334,7 +336,6 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     current_phase = []
     aspirating_seen = False
     last = ""
-
     for step in parsed_steps:
         line_raw = step["raw"]
 
@@ -345,10 +346,12 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
                 current_phase = []
                 aspirating_seen = False    # reset for next liquid series
 
-        # ② 维持原有移液逻辑的切割
-        if (line_raw.startswith("Aspirating") and not ("Picking up tip" in last) and not ("Moving to" in last) and not ("Transferring" in last)) \
-            or ("Picking up tip" in line_raw) \
-            or ("Moving to" in line_raw and not ("Picking up tip" in last)):
+        # if (line_raw.startswith("Aspirating") and not ("Picking up tip" in last) and not ("Moving to" in last) and not ("Transferring" in last)
+        #     and not ("Air gap")) \
+        #     or ("Picking up tip" in line_raw):
+        if (line_raw.startswith("Aspirating") and not "Air gap" in last and not "Moving to" in last and not "Transferring" in last
+            and not "Picking up tip" in last and not "Aspirating" in last) or "Picking up tip" in line_raw:
+            
             if aspirating_seen:
                 grouped_phases.append(current_phase)
                 current_phase = []
@@ -357,9 +360,109 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
         last = line_raw
         current_phase.append(line_raw)
 
-    # 别忘了收集最后一个 phase
+
     if current_phase:
         grouped_phases.append(current_phase)
+    # 合并mix对应的dis和asp    
+    belong_to_mixing = []
+    for i, phase in enumerate(grouped_phases):
+        if "Mixing" in phase[-1]:
+            tmp = phase[-1].split(" ")
+            mix_count = tmp[1]
+            for j in range(1, int(mix_count)+1):
+                grouped_phases[i].extend(grouped_phases[i+j])
+                belong_to_mixing.append(i+j)
+    grouped_phases = [phase for i, phase in enumerate(grouped_phases) if i not in belong_to_mixing]
+    # with open("grouped_phases_new.json", "w") as f:
+    #     json.dump(grouped_phases, f, indent=4) 
+
+
+    def extract_asp_params(line):
+    # 例子：Aspirating 30.0 uL from A2 of reagent stock on 3 at 940.0 uL/sec
+        m = re.match(r"Aspirating ([\d.]+) uL from ([A-H]\d+) of (.+) on (\d+) at ([\d.]+) uL/sec", line)
+        if m:
+            # 只返回体积和其它参数
+            return {
+                "vol": float(m.group(1)),
+                "well": m.group(2),
+                "labware": m.group(3).strip(),
+                "slot": int(m.group(4)),
+                "flow": float(m.group(5)),
+            }
+        return None
+    
+    for i, phase in enumerate(grouped_phases):
+        to_remove = set()
+        for idx, line in enumerate(phase):
+            # print(idx, line)
+            if line.startswith("Air gap"):
+                asp_up = None
+                for i in range(idx-1, -1, -1):
+
+                    #print(lines[i])
+                    if phase[i].startswith("Aspirating"):
+                        
+                        asp_up_idx = i
+                        asp_up = extract_asp_params(phase[i])
+                        
+                        break
+                # 向下找最近Aspirating
+                asp_down = None
+                for i in range(idx+1, len(phase)):
+                    if phase[i].startswith("Aspirating"):
+                        asp_down_idx = i
+                        asp_down = extract_asp_params(phase[i])
+                        break
+                # 两个asp都找到，且体积外其它参数一样
+                if asp_up and asp_down:
+                    # 比较（除了vol之外其它都一样）
+                    #print(asp_up, asp_down)
+                    params = ['well','labware','slot']
+                    if all(asp_up[k]==asp_down[k] for k in params):
+                        # 合并体积
+                        new_vol = asp_up['vol'] + asp_down['vol']
+                        new_line = re.sub(r"Aspirating ([\d.]+) uL", f"Aspirating {new_vol} uL", phase[asp_up_idx])
+                        phase[asp_up_idx] = new_line
+                        # 标记要删除下面那行
+                        to_remove.add(asp_down_idx)
+
+        for i in sorted(to_remove, reverse=True):
+            del phase[i]
+
+    # 处理情况：连续出现asp和dis的情况，合并连续的
+    for i, phase in enumerate(grouped_phases):
+        
+        to_remove = set()
+        idx = 0
+        while idx < len(phase) - 1:
+            line = phase[idx]
+            next_line = phase[idx + 1]
+            if line.startswith("Aspirating") and next_line.startswith("Aspirating"):
+                def get_vol(l): return float(re.search(r"Aspirating ([\d.]+)", l).group(1))
+                vol_sum = get_vol(line) + get_vol(next_line)
+                new_line = re.sub(r"Aspirating [\d.]+", f"Aspirating {vol_sum}", line)
+                phase[idx] = new_line
+                to_remove.add(idx + 1)
+                idx += 1
+                # 不递增idx，因为新下一个还需要检查
+            elif line.startswith("Dispensing") and next_line.startswith("Dispensing"):
+                # 合并体积
+                def get_vol(l): return float(re.search(r"Dispensing ([\d.]+)", l).group(1))
+                vol_sum = get_vol(line) + get_vol(next_line)
+                new_line = re.sub(r"Dispensing [\d.]+", f"Dispensing {vol_sum}", line)
+                phase[idx] = new_line
+                to_remove.add(idx + 1)
+                idx += 1
+            else:
+                idx += 1
+
+        for i in sorted(to_remove, reverse=True):
+            del phase[i]
+        
+    
+
+    # with open("grouped_phases_new.json", "w") as f:
+    #     json.dump(grouped_phases, f, indent=4) 
 
      # -------- Build dicts for each phase (liquid vs HS) --------
     outputs = []
@@ -369,14 +472,15 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
         else:
             outputs.append(build_transfer_liquid_dict_complete(phase_lines))
     # -----------------------------------------------------------
-    #print("outputs", json.dumps(outputs, indent=4))
 
+    with open("outputs.json", "w") as f:
+        json.dump(outputs, f, indent=4)
     final_outputs = merge_same_slot_phases(outputs)
 
     # ------------- Output the final DataFrame -------------
-    with open("parsed_protol.json", "w") as f:
-        json.dump(final_outputs, f, indent=4)
-    #print("parsed_protol", json.dumps(final_outputs, indent=4))
+    # with open("final_outputs.json", "w") as f:
+    #     json.dump(final_outputs, f, indent=4)
+
 
     return final_outputs
 
@@ -432,6 +536,7 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
         if step["template"].startswith("transfer"):
             for port_type, port_name in [("sources", "sources"), ("targets", "targets"), ("tip_racks", "tip_racks")]:
                 items = step.get(port_type, [])
+                # print(port_type, items)
                 item = items[0]
                 slot = item.get("slot")
                 if slot is not None:
@@ -599,18 +704,39 @@ def add_detail_info(protocol_steps: List[Dict], detail_info: str) -> List[Dict]:
 
     return protocol_steps, set_liquid
 
+def fix_special_cases(protocol_steps: List[Dict]) -> List[Dict]:
+    """
+    处理一些protocol的特殊情况，比如：
+    1. 有些protocol的aspirate和dispense没有对应的tip_rack
+    """
+    for step in protocol_steps:
+        if step["template"] == "transfer":
+            if not step.get("tip_racks"):
+                # 让这个步骤的tip_racks为上一个步骤的tip_racks
+                if protocol_steps.index(step) > 0:
+                    prev_step = protocol_steps[protocol_steps.index(step) - 1]
+                    step["tip_racks"] = prev_step.get("tip_racks", [])
+    return protocol_steps
+
+
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
+
+
     protocol_steps = process_liquid_handler_log(logfile)
+    # with open('enriched_steps.json', 'w') as f:
+    #     json.dump(protocol_steps, f, indent=4)
     enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
+    # with open('enriched_steps.json', 'w') as f:
+    #     json.dump(enriched_steps, f, indent=4)
     with open(infofile, "r") as f:
         labware_data = json.load(f)
     labware_info = extract_labware_info_from_json(labware_data)
-    with open('enriched_steps.json', 'w') as f:
+    enriched_steps = fix_special_cases(enriched_steps)
+    with open(f'/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
         json.dump(enriched_steps, f, indent=4)
-
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)
     with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
@@ -618,6 +744,11 @@ def parse_protocol(name: str):
 
 if __name__ == "__main__":
     # 测试代码
-    # process_liquid_handler_log("/Users/chang/Design_projects/LabOS/opentrons/Protocols/success/sci-lucif-assay4.ot2.apiv2.log")
-    # process_liquid_handler_log(text=text__)
-    parse_protocol("sci-lucif-assay4")
+    file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/test"
+
+    # file_dir下面的全部文件夹名字
+    #parse_protocol('0a23c6')    
+    protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
+    for name in protocol_names:
+        print(f"Processing protocol: {name}")
+        parse_protocol(name)
