@@ -1,6 +1,4 @@
 
-# open 0530 
-
 import os
 import sys
 import json

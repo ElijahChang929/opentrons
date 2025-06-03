@@ -8,6 +8,38 @@ import networkx as nx
 import os
 from pathlib import Path
 
+
+import os
+import sys
+import json
+import re
+import pandas as pd
+
+def convert_workflow_to_json(workflow_path):
+    """
+    Convert a workflow file to JSON format.
+    
+    Args:
+        workflow_path (str): Path to the workflow file.
+    
+    Returns:
+        dict: Parsed workflow data.
+    """
+    if not os.path.exists(workflow_path):
+        raise FileNotFoundError(f"Workflow file not found: {workflow_path}")
+
+    with open(workflow_path, 'r') as file:
+        content = file.read()
+
+    # Extract the JSON part from the content
+    json_match = re.search(r'(\{.*\})', content, re.DOTALL)
+    if not json_match:
+        raise ValueError("No valid JSON found in the workflow file.")
+
+    json_data = json.loads(json_match.group(1))
+    
+    return json_data
+
 def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
     """
     Extracts key parameters for a Heater‑Shaker phase:
@@ -39,6 +71,7 @@ def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
             data["deactivate_heater"] = True
         elif line.startswith("Deactivating Shaker"):
             data["deactivate_shaker"] = True
+        
     return data
 
 def extract_float_after_keyword(text: str, keyword: str) -> Optional[float]:
@@ -505,57 +538,101 @@ def extract_labware_info_from_json(json_data: dict) -> list:
 
     return output
 
-def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
+def get_tip_rack_location(tip_rack_type,labware_with_liquid):    
+    tip_rack_dic = {}
+    for labware in labware_with_liquid:
+        #print(labware["class_name"])
+        if labware["class_name"] == tip_rack_type:
+            slot = labware["slot_on_deck"]
+            tip_rack_dic[slot] = True
+
+    return tip_rack_dic
+
+def next_tip_rack_location(tip_rack_dic):
+    for slot, available in tip_rack_dic.items():
+        if available:
+            tip_rack_dic[slot] = False
+            return slot, tip_rack_dic
+    raise RuntimeError("No available tip rack!")
+
+def build_protocol_graph(labware_with_liquid: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]) -> nx.DiGraph:
     """
     构建包含物料创建和步骤节点的 protocol graph。
     每个节点代表一个操作或物料；每条边表示数据/物料流动。
     """
-    
     # 给labware_info添加液体信息
-    for labware in labware_info:
-        #print(labware)
-        for liquid_key, liquid_val in liquid_info.items():
-            if labware["slot_on_deck"] == int(liquid_val["slot"]):
-                labware["liquid_type"].append(liquid_key)
-                labware["liquid_input_wells"].append(liquid_val["well"])
+    # for labware in labware_info:
+    #     #print(labware)
+    #     for liquid_key, liquid_val in liquid_info.items():
+    #         if labware["slot_on_deck"] == int(liquid_val["slot"]):
+    #             labware["liquid_type"].append(liquid_key)
+    #             labware["liquid_input_wells"].append(liquid_val["well"])
+
+    # print(json.dumps(labware_with_liquid, indent=4))
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
+    #print(json.dumps(labware_info,indent=4))
+    labware_ids = {lw["id"] for lw in labware_with_liquid}
 
-    labware_ids = {lw["id"] for lw in labware_info}
+    # 记录tip_rack的类型和位置,这时候得有全部的tip信息在这里输入
+    # TODO，更自动化的方式获取tip_rack类型和位置
+    tip_rack_dic = get_tip_rack_location("BC230", labware_with_liquid)
+
     # Step 1: 添加物料创建节点
-    for labware in labware_info:
+    for labware in labware_with_liquid:
         node_id = labware["id"]
         G.add_node(node_id, template="create_resource", **labware)
         slot = labware["slot_on_deck"]
         slot_last_writer[slot] = node_id
+    # print("labware_ids", labware_ids)
     #print(json.dumps(protocol_steps,indent=4))
     # Step 2: 添加 protocol 步骤节点及边
+    #print(json.dumps(protocol_steps, indent=4))
     for i, step in enumerate(protocol_steps):
         node_id = f"step_{i+1}"
         G.add_node(node_id, **step)
-
         if step["template"].startswith("transfer"):
-            for port_type, port_name in [("sources", "sources"), ("targets", "targets"), ("tip_racks", "tip_racks")]:
-                items = step.get(port_type, [])
-                item = items[0]
-                slot = item.get("slot")
+            for port_type, port_name in [("sources", "sources"), ("targets", "targets")]:
+                slot = step.get(port_type, [])
                 if slot is not None:
                     prev_node = slot_last_writer.get(slot)
                     if prev_node:
                         source_port = "labware" if prev_node in labware_ids else f"{port_name}_out"
+                        
+                        #print(prev_node)
                         G.add_edge(prev_node, node_id, source_port=source_port, target_port=port_name)
-                    if port_type != "tip_racks":
                         slot_last_writer[slot] = node_id
-                G.nodes[node_id][port_type] = step[port_type] = [item["well"] for item in items]
+            #tip_rack_type = step.get("tip_racks", [{}]) 这里写的不好
 
-        elif step["template"] == "heater_shaker":
-            slot = step.get("targets", [{}])[0].get("slot", None)
-            if slot is not None:
-                prev_node = slot_last_writer.get(slot)
-                if prev_node:
-                    G.add_edge(prev_node, node_id, source_port="plate", target_port="plate")
-                slot_last_writer[slot] = node_id
+            tip_rack_location, tip_rack_dic = next_tip_rack_location(tip_rack_dic)
+            rack_id = None
+            port_name = "tip_rack"
+            for labware in labware_with_liquid:
+                if labware["slot_on_deck"] == tip_rack_location:
+                    rack_id = labware["id"]
+                    break
+            if prev_node:
+                source_port = "labware" if prev_node in labware_ids else f"{port_name}_out"
+                G.add_edge(rack_id, node_id, source_port=source_port, target_port=port_name)
+            #print("tip_rack_location", tip_rack_location)
 
+        elif step["template"] == "move_labware":
+            for port_type, port_name in [("sources", "sources"), ("targets", "targets")]:
+                slot = step.get(port_type, [])
+                if slot is not None:
+                    prev_node = slot_last_writer.get(slot)
+                    if prev_node:
+                        #print("prev_node", prev_node)
+                        source_port = "labware" if prev_node in labware_ids else f"{port_name}_out"
+                        G.add_edge(prev_node, node_id, source_port=source_port, target_port=port_name)
+                    slot_last_writer[slot] = node_id
+
+        elif step["template"] == "oscillation" or step["template"] == "incubation":
+            # pre_node_id = f"step_{i}"
+            # slot = G.nodes[pre_node_id]['targets']
+            G.add_edge(node_id, node_id, source_port="plate", target_port="plate")
+            # print(pre_node_id,node_id)
+            # slot_last_writer[slot] = node_id
     return G
 
 def build_ordered_action_dict(detail_action):
@@ -716,44 +793,97 @@ def fix_special_cases(protocol_steps: List[Dict]) -> List[Dict]:
                 if protocol_steps.index(step) > 0:
                     prev_step = protocol_steps[protocol_steps.index(step) - 1]
                     step["tip_racks"] = prev_step.get("tip_racks", [])
+
     return protocol_steps
 
+def refactor_data(data):
+    """
+    Refactor the workflow data to change the structure of transfer operations.
 
-def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.log"
-    infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
-    detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
+    Args:
+        data (list): Original workflow data (list of steps).
 
+    Returns:
+        list: Refactored workflow data.
+    """
+    refactored_data = []
 
-    protocol_steps = process_liquid_handler_log(logfile)
+    #print(data)
+    for step in data.get('steps', []):
+        if step.get('operation') == 'transfer':
+            refactored_data.append({
+                'template': 'transfer',
+                'sources': step.get('parameters', []).get('source', []),
+                'targets': step.get('parameters', []).get('target', []),
+                'volume': step.get('parameters', {}).get('volume', None),
+                'tip_racks': step.get('parameters', {}).get('tip_rack', []),
+                'technique': 'MC P300 High',
+            })
+        elif step.get('operation') == 'incubation':
+            refactored_data.append({
+                'template': 'incubation',
+                'time': step.get('parameters', {}).get('time', None),
+            })
+        elif step.get('operation') == 'move_labware':
+            refactored_data.append({
+                'template': 'move_labware',
+                'sources': step.get('parameters', {}).get('source', None),
+                'targets': step.get('parameters', {}).get('target', None),
+            })
+        elif step.get('operation') == 'oscillation':
+            refactored_data.append({
+                'template': 'oscillation',
+                'rpm': step.get('parameters', {}).get('rpm', None),
+                'time': step.get('parameters', {}).get('time', None),
+            })
+        else:
+            refactored_data.append(step)
+
+    return refactored_data
+
+def parse_protocol_biomek(steps):
+    # logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.log"
+    # infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
+    # detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
+    labware_with_liquid = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/Xianwei_Work_Flow/{steps}.json"
+    steps_info = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/Xianwei_Work_Flow/{steps}.txt"
+    # protocol_steps = process_liquid_handler_log(logfile)
     # with open('enriched_steps.json', 'w') as f:
     #     json.dump(protocol_steps, f, indent=4)
-    enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
+    # enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
     # with open('enriched_steps.json', 'w') as f:
     #     json.dump(enriched_steps, f, indent=4)
-    with open(infofile, "r") as f:
-        labware_data = json.load(f)
-    labware_info = extract_labware_info_from_json(labware_data)
-    enriched_steps = fix_special_cases(enriched_steps)
-    with open(f'/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
-        json.dump(enriched_steps, f, indent=4)
-    protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
+    # with open(infofile, "r") as f:
+    #     labware_data = json.load(f)
+    # labware_info = extract_labware_info_from_json(labware_data)
+    # enriched_steps = fix_special_cases(enriched_steps)
+    # with open(f'/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
+    #     json.dump(enriched_steps, f, indent=4)
+    labware_with_liquid = json.load(open(labware_with_liquid, "r"))
+    steps_info = convert_workflow_to_json(steps_info)
+    steps_info = refactor_data(steps_info)
+    protocol_graph = build_protocol_graph(labware_with_liquid,steps_info)
     data = nx.node_link_data(protocol_graph)
-    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
+    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/Xianwei_Work_Flow/{steps}.graph.json", "w") as f:
         json.dump(data, f, indent=4)
+    # print("\n===== 所有节点（含属性）=====")
+    # for node, attrs in protocol_graph.nodes(data=True):
+    #     print(node, attrs)
 
+    # print("\n===== 所有有向边（含属性）=====")
+    # for u, v, attrs in protocol_graph.edges(data=True):
+    #     print(f"{u} -> {v}: {attrs}")
 if __name__ == "__main__":
     # 测试代码
-    # file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original"
+    parse_protocol_biomek('pcr')
+    #print(json.dumps(refactored_data, indent=4))
 
-    # error_log = Path("protocols/log/error_converting.txt")
-    # protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    # for name in protocol_names:
-    #     print(f"Processing protocol: {name}")
-    #     try:
-    #         parse_protocol(name)
-    #     except Exception as e:
-    #         with open(error_log, "a") as f:
-    #             f.write(f"Error processing {name}: {str(e)}\n")
-    #         print(f"Error processing {name}: {str(e)}")
-    parse_protocol('sci-lucif-assay4')
+
+
+
+
+
+
+
+
+
