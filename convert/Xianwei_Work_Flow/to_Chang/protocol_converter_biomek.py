@@ -54,24 +54,6 @@ def refactor_data(data):
 
     return refactored_data
 
-
-def get_tip_rack_location(tip_rack_type,labware_with_liquid):    
-    tip_rack_dic = {}
-    for labware in labware_with_liquid:
-        #print(labware["class_name"])
-        if labware["class_name"] == tip_rack_type:
-            slot = labware["slot_on_deck"]
-            tip_rack_dic[slot] = True
-
-    return tip_rack_dic
-
-def next_tip_rack_location(tip_rack_dic):
-    for slot, available in tip_rack_dic.items():
-        if available:
-            tip_rack_dic[slot] = False
-            return slot, tip_rack_dic
-    raise RuntimeError("No available tip rack!")
-
 def build_protocol_graph(labware_with_liquid: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]) -> nx.DiGraph:
     """
     构建包含物料创建和步骤节点的 protocol graph。
