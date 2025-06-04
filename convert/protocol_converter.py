@@ -744,16 +744,14 @@ def parse_protocol(name: str):
 
 if __name__ == "__main__":
     # 测试代码
-    # file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original"
-
-    # error_log = Path("protocols/log/error_converting.txt")
-    # protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    # for name in protocol_names:
-    #     print(f"Processing protocol: {name}")
-    #     try:
-    #         parse_protocol(name)
-    #     except Exception as e:
-    #         with open(error_log, "a") as f:
-    #             f.write(f"Error processing {name}: {str(e)}\n")
-    #         print(f"Error processing {name}: {str(e)}")
-    parse_protocol('sci-lucif-assay4')
+    file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original"
+    error_log = Path("protocols/log/error_converting.txt")
+    protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
+    for name in protocol_names:
+        print(f"Processing protocol: {name}")
+        try:
+            parse_protocol(name)
+        except Exception as e:
+            with open(error_log, "a") as f:
+                f.write(f"Error processing {name}: {str(e)}\n")
+            print(f"Error processing {name}: {str(e)}")
