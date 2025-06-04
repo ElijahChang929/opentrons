@@ -74,7 +74,7 @@ def run(ctx):
             try:
                 pip.pick_up_tip()
             except protocol_api.labware.OutOfTipsError:
-                msg = f'\n\n\n\nReplace the \
+                msg = f'\n\n\n\nReplace the  {pip.tip_racks[0].wells()[0].max_volume}ul tips in slot \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -90,9 +90,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -105,9 +105,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -120,7 +120,6 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-{pip.tip_racks[0].wells()[0].max_volume}ul tips in slot \
 {", ".join([rack.parent for rack in pip.tip_racks])}'
                 ctx.pause(msg)
                 pip.reset_tipracks()
@@ -170,8 +169,7 @@ def run(ctx):
             else:
                 pip.drop_tip()
         if prompt:
-            ctx.pause('\n\n\n\nRemove thermocycler plate for thermal \
-cycling. Replace when finished.\n\n\n\n')
+            ctx.pause('\n\n\n\nRemove thermocycler plate for thermal  cycling. Replace when finished.\n\n\n\n')
 
     def remove_supernatant(vol, pip=None, dests=liquid_trash, z_asp=0.2,
                            z_disp=1.0, do_wick=False, park=False):
@@ -265,8 +263,7 @@ cycling. Replace when finished.\n\n\n\n')
     tc.set_block_temperature(4)
     tc.open_lid()
     tc.deactivate_lid()
-    ctx.pause('Fragmentated DNA denaturation, 95C for 3min and put in ice \
-water immediately')
+    ctx.pause('Fragmentated DNA denaturation, 95C for 3min and put in ice  water immediately')
 
     tc.close_lid()
     tc.set_lid_temperature(50)

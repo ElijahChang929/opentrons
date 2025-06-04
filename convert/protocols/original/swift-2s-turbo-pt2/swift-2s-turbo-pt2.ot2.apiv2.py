@@ -6,8 +6,7 @@ import os
 import csv
 
 metadata = {
-    'protocolName': 'Swift 2S Turbo DNA Library Kit Protocol: Part 2/3 - \
-    Ligation Clean-Up & PCR Prep',
+    'protocolName': 'Swift 2S Turbo DNA Library Kit Protocol: Part 2/3 -  Ligation Clean-Up & PCR Prep',
     'author': 'Opentrons <protocols@opentrons.com>',
     'source': 'Protocol Library',
     'apiLevel': '2.10'
@@ -76,8 +75,7 @@ def run(protocol):
 
         if spip_count == 96:
             small_pip.home()
-            protocol.pause('Out of tips. Please replace tips in slot 5 and \
-            click RESUME.')
+            protocol.pause('Out of tips. Please replace tips in slot 5 and  click RESUME.')
             small_tips.reset()
             spip_count = 0
 
@@ -90,8 +88,7 @@ def run(protocol):
 
         if bpip_count == 24:
             p300.home()
-            protocol.pause('Out of tips. Please replace tips in slot 5 and \
-            click RESUME.')
+            protocol.pause('Out of tips. Please replace tips in slot 5 and  click RESUME.')
             big_tips1.reset()
             big_tips2.reset()
             bpip_count = 0
@@ -276,8 +273,7 @@ def run(protocol):
     p16 = ['C'+str(i) for i in range(3, 7)] + ['D'+str(i) for i in range(1, 5)]
 
     if a_i == 'no':
-        protocol.pause('Please manually add indexes to samples now. When done \
-        replace plate and click RESUME.')
+        protocol.pause('Please manually add indexes to samples now. When done  replace plate and click RESUME.')
     else:
         if samps != 24:
             primers = [cool_reagents[well] for well in p8]
@@ -296,8 +292,7 @@ def run(protocol):
                 small_pip.aspirate(5, primer.top(-24))
                 small_pip.dispense(5, well)
                 small_pip.drop_tip()
-            protocol.pause('Please remove initial indexes and replace with \
-            remaining 8 in row B, C1, and C2. Click RESUME when ready.')
+            protocol.pause('Please remove initial indexes and replace with  remaining 8 in row B, C1, and C2. Click RESUME when ready.')
             for primer, well in zip(primers8, pcr_prep_samples[16:]):
                 small_pick_up()
                 small_pip.aspirate(5, primer.top(-24))
@@ -341,8 +336,7 @@ def run(protocol):
         small_pip.drop_tip()
 
     tempdeck.deactivate()
-    protocol.comment("Place samples in thermocycler for PCR. \
-    Temp deck is turned off. Put reagents on temp deck back in the -20")
+    protocol.comment("Place samples in thermocycler for PCR.  Temp deck is turned off. Put reagents on temp deck back in the -20")
 
     # write updated tipcount to CSV
     new_tip_count = str(spip_count)+", "+str(bpip_count)+"\n"
@@ -364,9 +358,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -379,9 +373,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

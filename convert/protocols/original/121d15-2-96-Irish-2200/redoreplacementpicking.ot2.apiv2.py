@@ -8,8 +8,7 @@ import math
 
 # metadata
 metadata = {
-    'protocolName': 'Redo Replacement Picking (Irish Life Sciences 96 Well \
-Plate 2200 µL)',
+    'protocolName': 'Redo Replacement Picking (Irish Life Sciences 96 Well  Plate 2200 µL)',
     'author': 'Nick <protocols@opentrons.com>',
     'source': 'Custom Protocol Request',
     'apiLevel': '2.11'
@@ -75,53 +74,7 @@ def run(ctx):
 
     def _pick_up(pip, loc=None):
         if tip_log[pip]['count'] == tip_log[pip]['max'] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/121d15-2-96-Irish-2200.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log[pip]['count'] = 0
         if loc:
@@ -134,8 +87,7 @@ resuming.')
     tuberack_bar, plate_bar = input_file.splitlines()[3].split(',')[:2]
     if not tuberack_scan[:len(tuberack_scan)-4] == tuberack_bar.strip():
         print(tuberack_scan[:len(tuberack_scan)-4])
-        raise Exception(f'Tuberack scans do not match ({tuberack_bar}, \
-{tuberack_scan})')
+        raise Exception(f'Tuberack scans do not match ({tuberack_bar},  {tuberack_scan})')
     if not plate_scan[:len(plate_scan)-4] == plate_bar.strip():
         raise Exception(f'Plate scans do not match ({plate_bar}, {plate_bar})')
 
@@ -143,8 +95,7 @@ resuming.')
         tuberack_bar2, plate_bar2 = input_file2.splitlines()[3].split(',')[:2]
         if not tuberack_scan2[:len(tuberack_scan2)-4] == tuberack_bar2.strip():
             print(tuberack_scan2[:len(tuberack_scan2)-4])
-            raise Exception(f'Tuberack2 scans do not match ({tuberack_bar2}, \
-    {tuberack_scan2})')
+            raise Exception(f'Tuberack2 scans do not match ({tuberack_bar2},  {tuberack_scan2})')
         if not plate_scan2[:len(plate_scan2)-4] == plate_bar2.strip():
             raise Exception(
              f'Plate2 scans do not match ({plate_bar2}, {plate_bar2})')
@@ -235,3 +186,48 @@ resuming.')
         data = {pip.name: tip_log[pip]['count'] for pip in tip_log}
         with open(tip_file_path, 'w') as outfile:
             json.dump(data, outfile)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/121d15-2-96-Irish-2200.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

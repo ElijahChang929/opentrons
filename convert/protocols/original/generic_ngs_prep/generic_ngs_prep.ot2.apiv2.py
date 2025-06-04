@@ -41,8 +41,7 @@ def run(ctx):
      bead_vol,
      sample_vol,
      elution_buffer_vol,
-     DNA_supernat_vol] = \
-        get_values(  # noqa: F821
+     DNA_supernat_vol] =  get_values(  # noqa: F821
         "m20_mount",
         "m300_mount",
         "n_samples",
@@ -82,8 +81,7 @@ def run(ctx):
     # Load Modules
     temp_mod_list = []
 
-    for temp_mod, slot in \
-            zip([temp_mod_s1_lname, temp_mod_s4_lname, temp_mod_s7_lname],
+    for temp_mod, slot in  zip([temp_mod_s1_lname, temp_mod_s4_lname, temp_mod_s7_lname],
                 ['1', '4', '7']):
         if temp_mod:
             temp_mod_list.append((ctx.load_module(temp_mod, slot)))
@@ -92,8 +90,7 @@ def run(ctx):
 
     [temperature_mod_slot1,
      temperature_mod_slot4,
-     temperature_module_slot7] = \
-        [temp_mod_list[0],
+     temperature_module_slot7] =  [temp_mod_list[0],
          temp_mod_list[1],
          temp_mod_list[2]]
 
@@ -102,8 +99,7 @@ def run(ctx):
 
     # Load Labware
     labware_list = []
-    for temp_mod, load_name, slot in \
-            (zip([temperature_mod_slot1, temperature_mod_slot4,
+    for temp_mod, load_name, slot in  (zip([temperature_mod_slot1, temperature_mod_slot4,
                   temperature_module_slot7, None],
                  [samples_loadname, reagent1_loadname,
                   reagent2_loadname, reservoir_loadname],
@@ -117,8 +113,7 @@ def run(ctx):
     reagent2_plate = labware_list[2]
     reservoir = labware_list[3]
 
-    [temp_plate_a_samples, temp_plate_b_reagent1, reagent2_plate] = \
-        [labware_list[0], labware_list[1], labware_list[2]]
+    [temp_plate_a_samples, temp_plate_b_reagent1, reagent2_plate] =  [labware_list[0], labware_list[1], labware_list[2]]
 
     tipracks200 = [ctx.load_labware('opentrons_96_filtertiprack_200ul', slot)
                    for slot in [m300_tip_slots[0], m300_tip_slots[1]]]
@@ -419,9 +414,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -434,9 +429,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -90,53 +90,7 @@ def run(ctx):
         raise Exception(
             f'Invalid number of salmonella samples: {num_samples_salmonella}.')
     if num_cols_listeria + num_cols_salmonella > 12:
-        raise Exception('Combination of listeria and salmonella samples \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/gsdx.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-exceeds plate capacity')
+        raise Exception('Combination of listeria and salmonella samples  exceeds plate capacity')
 
     # define locations of lysis buffer reagents
     lysis_buffer_listeria = lysis_rack.rows_by_name()['B'][
@@ -331,8 +285,7 @@ exceeds plate capacity')
         num_trans = math.ceil(vol_enzyme/tip_ref.max_volume)
         vol_per_trans = round(vol_enzyme/num_trans, 1)
 
-        if num_samples_listeria_remaining % 48 == 0 or \
-                num_samples_listeria_remaining % 48 == 47:
+        if num_samples_listeria_remaining % 48 == 0 or  num_samples_listeria_remaining % 48 == 47:
             num_partial_listeria_buffers = 0
             num_bvs_effective = 0
         else:
@@ -462,8 +415,7 @@ exceeds plate capacity')
             drop(m300)
 
         # salmonella
-        if num_samples_salmonella_remaining % 48 == 0 or \
-                num_samples_salmonella_remaining == 47:
+        if num_samples_salmonella_remaining % 48 == 0 or  num_samples_salmonella_remaining == 47:
             num_partial_salmonella_buffers = 0
             num_bvs_effective = 0
         else:
@@ -580,8 +532,7 @@ exceeds plate capacity')
                     z=OFFSET_Z_LYSIS_BUFFER_LISTERIA)))
             num_asp_listeria_remaining = math.ceil(
                 (num_samples_listeria_remaining % 48) / 2)
-            bump = 24 - num_asp_listeria_remaining \
-                if 24 - num_asp_listeria_remaining != 24 else 0
+            bump = 24 - num_asp_listeria_remaining  if 24 - num_asp_listeria_remaining != 24 else 0
             for i, d_set in enumerate(lysis_buffer_listeria_dest_sets):
                 set_ind = i + bump
                 lysis_buff = lysis_buffer_listeria[set_ind//24]
@@ -625,8 +576,7 @@ exceeds plate capacity')
             num_asp_salmonella_remaining = math.ceil(
                 (num_samples_salmonella_remaining % 48) / 2)
             bump_check = int(48/num_dests_per_asp)
-            bump = bump_check - num_asp_salmonella_remaining \
-                if bump_check - num_asp_salmonella_remaining != bump_check \
+            bump = bump_check - num_asp_salmonella_remaining  if bump_check - num_asp_salmonella_remaining != bump_check \
                 else 0
             for i, d_set in enumerate(lysis_buffer_salmonella_dest_sets):
                 set_ind = i + bump
@@ -667,8 +617,7 @@ exceeds plate capacity')
             drop(m300)
 
         """ transfer salmonella """
-        [pip, vol_salmonella] = [m20, 10.0] \
-            if not salmonella_meat else [m300, 50.0]
+        [pip, vol_salmonella] = [m20, 10.0]  if not salmonella_meat else [m300, 50.0]
         num_cols_samples_salmonella = math.ceil((num_samples_salmonella-2)/8)
         for s, d in zip(
                 sample_plate.rows()[0][
@@ -776,3 +725,48 @@ exceeds plate capacity')
 
     if do_flash:
         flash_lights()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/gsdx.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

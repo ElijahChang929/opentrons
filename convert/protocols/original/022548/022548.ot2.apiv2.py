@@ -144,8 +144,7 @@ def run(ctx: protocol_api.ProtocolContext):
     bead_start_index, bead_end_index = parse_range_string(
         bead_mix_source_well_indices)
 
-    starting_mm_well_index = \
-        (bb_end_index + 1 if mastermix_tuberack_lname is False
+    starting_mm_well_index =  (bb_end_index + 1 if mastermix_tuberack_lname is False
          else bead_end_index + 1)
 
     is_bead_mix_source_tube = True if mastermix_tuberack_lname else False
@@ -537,8 +536,7 @@ def run(ctx: protocol_api.ProtocolContext):
                                  "this VolTracker is in strict mode, check why"
                                  "manual reset was not performed")
 
-                        fill_status = \
-                            ("over-depleted" if self.mode == "reagent" else
+                        fill_status =  ("over-depleted" if self.mode == "reagent" else
                              "over-filled")
                         e_msg = e_msg.format(str(self),
                                              self.reagent,
@@ -709,8 +707,7 @@ def run(ctx: protocol_api.ProtocolContext):
             # Increasing the clearance for dispensing while moving around
             # in the width direction in the reservoir, if it's just a
             # normal dispense in the center we use the normal offset.
-            target_liq_height = \
-                (15 if fractional_dispense_y_offsets is not None
+            target_liq_height =  (15 if fractional_dispense_y_offsets is not None
                  else dispense_clearance)
             # and dispense a fractional volume
             # Fractionate the volume transfer into discrete pipette
@@ -824,8 +821,7 @@ def run(ctx: protocol_api.ProtocolContext):
         is_strict_mode=True)
 
     # Source wells of bead mix
-    bead_mix_source_labware = \
-        (tuberack_mm_target if is_bead_mix_source_tube else res12)
+    bead_mix_source_labware =  (tuberack_mm_target if is_bead_mix_source_tube else res12)
     bead_mix_source = VolTracker(
         labware=bead_mix_source_labware,
         well_vol=vol_source_bead_mix_per_well*ml_multiplier,
@@ -1004,8 +1000,7 @@ def run(ctx: protocol_api.ProtocolContext):
     # mastermix creation
     # step 7-8a/b: transfer binding buffer from source to targets
     pick_up_tip_decorator(m300.pick_up_tip, m300)
-    bb_full_wells_transfer_vol = \
-        max_bb_vol_per_well*n_full_wells
+    bb_full_wells_transfer_vol =  max_bb_vol_per_well*n_full_wells
     if bb_source_tracker is not None:
         transfer_reagent(
                 source=bb_source_tracker,
@@ -1143,10 +1138,8 @@ def run(ctx: protocol_api.ProtocolContext):
 
         # Calculate diffs between how much volume was transferred to the last
         # well targets and how much was supposed to be transferred there
-        bb_last_well_expected_vol = \
-            mm_vol_last_well*bb_partial_vol_factor
-        bm_last_well_expected_vol =\
-            mm_vol_last_well*bead_mix_partial_vol_factor
+        bb_last_well_expected_vol =  mm_vol_last_well*bb_partial_vol_factor
+        bm_last_well_expected_vol = mm_vol_last_well*bead_mix_partial_vol_factor
         bb_last_well_diff = abs(
             mm_vol_last_well*bb_partial_vol_factor
             - bb_last_well_target_tracker.total_vol_changed)
@@ -1202,11 +1195,9 @@ def run(ctx: protocol_api.ProtocolContext):
             ctx.comment(name)
             ctx.comment(str(vt))
 
-        bb_target_vol_sum = \
-            (bb_first_wells_target_tracker.total_vol_changed
+        bb_target_vol_sum =  (bb_first_wells_target_tracker.total_vol_changed
              + bb_last_well_target_tracker.total_vol_changed)
-        bm_target_vol_sum = \
-            (bead_mix_first_wells_target_tracker.total_vol_changed
+        bm_target_vol_sum =  (bead_mix_first_wells_target_tracker.total_vol_changed
              + bead_mix_last_well_target_tracker.total_vol_changed)
         for name, exp_vol, transf_vol in zip(
                 ["binding buffer", "bead mix"],
@@ -1241,9 +1232,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -1256,9 +1247,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

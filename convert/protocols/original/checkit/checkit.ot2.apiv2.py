@@ -83,56 +83,9 @@ def run(ctx):
 
     # check volume
     if checkit_params['VOLUME'] < pip.min_volume:
-        ctx.pause(f'WARNING: Cartridge volume ({checkit_params["VOLUME"]}) is \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/checkit.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-below tested pipette volume ({pip.min_volume}). Proceed?')
+        ctx.pause(f'WARNING: Cartridge volume ({checkit_params["VOLUME"]}) is  below tested pipette volume ({pip.min_volume}). Proceed?')
     if checkit_params['VOLUME'] > pip.max_volume:
-        ctx.pause(f'WARNING: Cartridge volume ({checkit_params["VOLUME"]}) is \
-below tested pipette volume ({pip.max_volume}). Proceed?')
+        ctx.pause(f'WARNING: Cartridge volume ({checkit_params["VOLUME"]}) is  below tested pipette volume ({pip.max_volume}). Proceed?')
 
     # set rates
     pip.flow_rate.aspirate = checkit_params['FLOW_RATE_ASPIRATE']
@@ -161,7 +114,51 @@ below tested pipette volume ({pip.max_volume}). Proceed?')
             pip.return_tip()
 
         if i < len(wells) - 1:
-            ctx.pause('Please flip cartridge tab. Resume once measurement \
-is read.')
+            ctx.pause('Please flip cartridge tab. Resume once measurement  is read.')
         else:
             ctx.comment('Please flip cartridge tab.')
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/checkit.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

@@ -97,7 +97,19 @@ def run(ctx):
         slow_withdraw(m20, d)
         m20.drop_tip()
 
-    ctx.pause('Cover plate, shake 2 minutes @ 900 r.p.m., incubate 1 hour \
+    ctx.pause('Cover plate, shake 2 minutes @ 900 r.p.m., incubate 1 hour  @ 37C, and 20 minutes @ room temperature.')
+
+    # transfer triglyceride
+    vol_triglyceride = 300.0
+    for d in triglyceride_dests:
+        m300.pick_up_tip()
+        m300.move_to(triglyceride.top(5))
+        m300.aspirate(
+            vol_triglyceride, triglyceride.bottom(5-offset_triglyceride))
+        slow_withdraw(m300, triglyceride)
+        m300.dispense(vol_triglyceride, d.bottom(5))
+        slow_withdraw(m300, d)
+        m300.drop_tip()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -113,9 +125,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -128,9 +140,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -143,16 +155,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-@ 37C, and 20 minutes @ room temperature.')
-
-    # transfer triglyceride
-    vol_triglyceride = 300.0
-    for d in triglyceride_dests:
-        m300.pick_up_tip()
-        m300.move_to(triglyceride.top(5))
-        m300.aspirate(
-            vol_triglyceride, triglyceride.bottom(5-offset_triglyceride))
-        slow_withdraw(m300, triglyceride)
-        m300.dispense(vol_triglyceride, d.bottom(5))
-        slow_withdraw(m300, d)
-        m300.drop_tip()

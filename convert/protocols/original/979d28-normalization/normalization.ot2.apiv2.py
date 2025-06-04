@@ -61,7 +61,7 @@ def run(ctx):
         vol_cdna = float(line[3])
         vol_water = float(line[4])
         if vol_cdna > normalization_vol:
-            ctx.comment(f'Sample in well \
+            ctx.comment(f'Sample in well  {source_plate.wells()[i].display_name.split(" ")[0]} cannot be normalized \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -77,9 +77,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -92,9 +92,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -107,7 +107,6 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-{source_plate.wells()[i].display_name.split(" ")[0]} cannot be normalized \
 (starting concentration {conc}ng/ul requires {vol_cdna}ul transfer). Skipping')
             bad_wells.append(dest_plate.wells()[i])
             transfer_vols.append(None)

@@ -38,8 +38,7 @@ def run(protocol):
     sampNums = [p1num, p2num, p3num, p4num]
     for idx, num in enumerate(sampNums):
         if not 0 <= num <= 96:
-            raise Exception(f'Number of Samples for Plate {idx+1} is: {num}. \
-            Please select a valid value between 1 and 96.')
+            raise Exception(f'Number of Samples for Plate {idx+1} is: {num}.  Please select a valid value between 1 and 96.')
 
     sampCols = [math.ceil(n/8) for n in sampNums]
 
@@ -85,9 +84,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -100,9 +99,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

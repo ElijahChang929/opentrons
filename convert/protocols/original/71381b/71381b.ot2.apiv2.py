@@ -99,8 +99,7 @@ def run(protocol):
             )
 
         # Step 5
-        protocol.comment('\nStep 5: Setting temperature to 65C and incubating \
-        for 60 minutes...')
+        protocol.comment('\nStep 5: Setting temperature to 65C and incubating  for 60 minutes...')
         tempdeck.set_temperature(65)
         protocol.delay(minutes=60)
         tempdeck.deactivate()
@@ -113,8 +112,7 @@ def run(protocol):
             )
 
         # Step 7
-        protocol.comment('\nStep 7: Setting temperature to 50C and incubating \
-        for 60 minutes...')
+        protocol.comment('\nStep 7: Setting temperature to 50C and incubating  for 60 minutes...')
         tempdeck.set_temperature(50)
         protocol.delay(minutes=60)
 
@@ -184,13 +182,11 @@ def run(protocol):
             magdeck.disengage()
 
         # Step 2
-        protocol.comment('\nStep 2: Adding 50uL MagBinding Buffer, \
-        Transferring to MagDeck, & Removing Supernatant...')
+        protocol.comment('\nStep 2: Adding 50uL MagBinding Buffer,  Transferring to MagDeck, & Removing Supernatant...')
         pTransRemoval(magbuff, 50, samps, waste1, dest2=msamps1, rvol=120)
 
         # Step 3
-        protocol.comment('\nStep 3: Adding 50uL MagBinding Buffer \
-        & Removing Supernatant...')
+        protocol.comment('\nStep 3: Adding 50uL MagBinding Buffer  & Removing Supernatant...')
         pTransRemoval(magbuff, 50, msamps1, waste1, rvol=75)
 
         # Step 4
@@ -200,8 +196,7 @@ def run(protocol):
             t20['tr2'].rows()[0][:4])
 
         # Step 5
-        protocol.comment('\nStep 5: Adding 100uL Wash Buffer 1 \
-        & Removing Supernatant...')
+        protocol.comment('\nStep 5: Adding 100uL Wash Buffer 1  & Removing Supernatant...')
         pTransRemoval(wb1, 100, msamps1, waste1)
 
         # Step 6
@@ -211,18 +206,15 @@ def run(protocol):
             t20['tr2'].rows()[0][4:8])
 
         # Step 7
-        protocol.comment('\nStep 7: Adding 100uL Wash Buffer 2 \
-        & Removing Supernatant...')
+        protocol.comment('\nStep 7: Adding 100uL Wash Buffer 2  & Removing Supernatant...')
         pTransRemoval(wb2, 100, msamps1, waste1, rtips=t300[0].rows()[0][:4])
 
         # Step 8
-        protocol.comment('\nStep 8: Adding 100uL Wash Buffer 2 \
-        & Removing Supernatant...')
+        protocol.comment('\nStep 8: Adding 100uL Wash Buffer 2  & Removing Supernatant...')
         pTransRemoval(wb2, 100, msamps1, waste1, rtips=t300[0].rows()[0][4:8])
 
         # Step 9
-        protocol.comment('\nStep 9: Adding 100uL Wash Buffer 2, \
-        Transferring Samples, & Removing Supernatant...')
+        protocol.comment('\nStep 9: Adding 100uL Wash Buffer 2,  Transferring Samples, & Removing Supernatant...')
         pTransRemoval(
             wb2, 100, msamps1, waste1, dest2=msamps2,
             rtips=t300[0].rows()[0][8:])
@@ -240,8 +232,7 @@ def run(protocol):
         protocol.delay(minutes=25)  # assuming tempdeck takes 5 minutes...
 
         # Step 12
-        protocol.comment('\nStep 12: Adding 50uL Elution Buffer, \
-        Transferring Samples, & Removing Supernatant...')
+        protocol.comment('\nStep 12: Adding 50uL Elution Buffer,  Transferring Samples, & Removing Supernatant...')
         pTransRemoval(
             ebuff, 50, msamps2, waste1, dest2=tsamps2,
             rtips=t300[1].rows()[0][:4], tvol=30, remove=False)
@@ -279,8 +270,7 @@ def run(protocol):
             m300.drop_tip(t2)
 
         # Step 17
-        protocol.comment('\nStep 17: Setting Temperature Module to 22C \
-        and waiting 1 minute...')
+        protocol.comment('\nStep 17: Setting Temperature Module to 22C  and waiting 1 minute...')
         tempdeck.set_temperature(22)
 
         # Step 18
@@ -309,9 +299,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -324,9 +314,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

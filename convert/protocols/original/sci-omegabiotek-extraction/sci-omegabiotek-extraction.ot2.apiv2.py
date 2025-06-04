@@ -95,9 +95,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -110,9 +110,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -155,8 +155,7 @@ def run(ctx):
     def _pick_up(pip, loc=None):
         nonlocal tip_log
         if tip_log['count'][pip] == tip_log['max'][pip] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log['count'][pip] = 0
         if loc:
@@ -205,8 +204,7 @@ resuming.')
             nonlocal waste_vol
             if waste_vol + vol >= waste_threshold:
                 m300.home()
-                ctx.pause('Please empty liquid waste (slot 11) before \
-resuming.')
+                ctx.pause('Please empty liquid waste (slot 11) before  resuming.')
                 ctx.home()  # home before continuing with protocol
                 waste_vol = 0
             waste_vol += vol

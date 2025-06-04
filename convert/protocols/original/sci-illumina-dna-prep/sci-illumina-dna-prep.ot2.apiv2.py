@@ -358,9 +358,9 @@ def run(protocol: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -373,9 +373,9 @@ def run(protocol: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -746,8 +746,7 @@ def run(protocol: protocol_api.ProtocolContext):
                 TWBMixVol = 70
             if samplecolumns >= 1:  # ----------------------------------------
                 X = 'A1'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_washtip_1)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_washtip_1)
                 p300.aspirate(100, TWB_1.bottom(z=p300_offset_Res))
                 if X == 'A1':
                     p300.move_to(A1_p300_bead_top)
@@ -785,8 +784,7 @@ def run(protocol: protocol_api.ProtocolContext):
                     p300.return_tip()
             if samplecolumns >= 2:  # ----------------------------------------
                 X = 'A3'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_washtip_2)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_washtip_2)
                 p300.aspirate(100, TWB_2.bottom(z=p300_offset_Res))
                 if X == 'A1':
                     p300.move_to(A1_p300_bead_top)
@@ -824,8 +822,7 @@ def run(protocol: protocol_api.ProtocolContext):
                     p300.return_tip()
             if samplecolumns >= 3:  # ----------------------------------------
                 X = 'A5'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_washtip_3)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_washtip_3)
                 p300.aspirate(100, TWB_3.bottom(z=p300_offset_Res))
                 if X == 'A1':
                     p300.move_to(A1_p300_bead_top)
@@ -875,8 +872,7 @@ def run(protocol: protocol_api.ProtocolContext):
             RemoveSup = 110
             if samplecolumns >= 1:  # ----------------------------------------
                 X = 'A1'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_removetip_1)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_removetip_1)
                 p300.move_to(sample_plate_mag[X].bottom(z=p300_offset_Mag + 4))
                 p300.aspirate(RemoveSup - 30, rate=0.25)
                 p300.default_speed = 5
@@ -901,8 +897,7 @@ def run(protocol: protocol_api.ProtocolContext):
                     p300.return_tip()
             if samplecolumns >= 2:  # ----------------------------------------
                 X = 'A3'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_removetip_2)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_removetip_2)
                 p300.move_to(sample_plate_mag[X].bottom(z=p300_offset_Mag + 4))
                 p300.aspirate(RemoveSup - 30, rate=0.25)
                 p300.default_speed = 5
@@ -927,8 +922,7 @@ def run(protocol: protocol_api.ProtocolContext):
                     p300.return_tip()
             if samplecolumns >= 3:  # ----------------------------------------
                 X = 'A5'
-                p300.pick_up_tip()if TIPREUSE == 'NO' else \
-                    p300.pick_up_tip(TWB_removetip_3)
+                p300.pick_up_tip()if TIPREUSE == 'NO' else  p300.pick_up_tip(TWB_removetip_3)
                 p300.move_to(sample_plate_mag[X].bottom(z=p300_offset_Mag + 4))
                 p300.aspirate(RemoveSup - 30, rate=0.25)
                 p300.default_speed = 5

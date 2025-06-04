@@ -156,53 +156,7 @@ def run(ctx):
         m20.drop_tip()
 
     if not TEST_MODE_BIND_INCUBATE:
-        ctx.delay(minutes=time_incubation_minutes, msg=f'Incubating off magnet \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/5689f5.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-for {time_incubation_minutes} minutes.')
+        ctx.delay(minutes=time_incubation_minutes, msg=f'Incubating off magnet  for {time_incubation_minutes} minutes.')
 
     # transfer ampure beads
     parking_set = parking_sets20.pop(0)
@@ -220,13 +174,11 @@ for {time_incubation_minutes} minutes.')
         m20.drop_tip(p)
 
     if not TEST_MODE_BIND_INCUBATE:
-        ctx.delay(minutes=time_incubation_minutes, msg=f'Incubating off magnet \
-for {time_incubation_minutes} minutes.')
+        ctx.delay(minutes=time_incubation_minutes, msg=f'Incubating off magnet  for {time_incubation_minutes} minutes.')
 
     magdeck.engage()
     if not TEST_MODE_BEADS:
-        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on magnet \
-for {time_settling_minutes} minutes.')
+        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on magnet  for {time_settling_minutes} minutes.')
 
     remove_supernatant(m20, vol_starting+vol_binding_buffer+vol_ampure_beads-2,
                        z_offset=z_offset_supernatant_initial,
@@ -258,8 +210,7 @@ for {time_settling_minutes} minutes.')
                            parking_spots=parking_set)
     m300.flow_rate.dispense *= 2
 
-    ctx.pause('Centrifuge the plate on the magnetic module, and replace before \
-resuming.')
+    ctx.pause('Centrifuge the plate on the magnetic module, and replace before  resuming.')
 
     # remove residual ethanol
     if not TEST_MODE_BEADS:
@@ -301,13 +252,11 @@ resuming.')
         m20.drop_tip()
 
     if not TEST_MODE_BIND_INCUBATE:
-        ctx.delay(minutes=time_incubation_elution_minutes, msg=f'Incubating \
-off magnet for {time_incubation_elution_minutes} minutes.')
+        ctx.delay(minutes=time_incubation_elution_minutes, msg=f'Incubating  off magnet for {time_incubation_elution_minutes} minutes.')
 
     magdeck.engage()
     if not TEST_MODE_BEADS:
-        ctx.delay(minutes=time_settling_minutes_elution, msg=f'Incubating on \
-magnet for {time_settling_minutes_elution} minutes.')
+        ctx.delay(minutes=time_settling_minutes_elution, msg=f'Incubating on  magnet for {time_settling_minutes_elution} minutes.')
 
     parking_set = parking_sets20.pop()
     m20.flow_rate.aspirate /= 5
@@ -324,3 +273,48 @@ magnet for {time_settling_minutes_elution} minutes.')
     m20.flow_rate.aspirate /= 5
 
     magdeck.disengage()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/5689f5.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

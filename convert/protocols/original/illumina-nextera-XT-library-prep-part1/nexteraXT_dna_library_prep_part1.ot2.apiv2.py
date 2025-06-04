@@ -5,8 +5,7 @@ __protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/co
 import math
 
 metadata = {
-    'protocolName': 'Illumina Nextera XT NGS Prep 1: Tagment Genomic DNA & \
-Amplify Libraries',
+    'protocolName': 'Illumina Nextera XT NGS Prep 1: Tagment Genomic DNA &  Amplify Libraries',
     'author': 'Opentrons <protocols@opentrons.com>',
     'source': 'Protocol Library',
     'apiLevel': '2.2'
@@ -66,7 +65,7 @@ def run(protocol_context):
     # Add ATM to each well
     p20.transfer(5, atm, output_single, mix_after=(5, 10), new_tip='always')
 
-    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place \
+    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place  on the preprogrammed thermal cycler and run the tagmentation program. When \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -82,9 +81,9 @@ def run(protocol_context):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -97,9 +96,9 @@ def run(protocol_context):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -112,15 +111,12 @@ def run(protocol_context):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-on the preprogrammed thermal cycler and run the tagmentation program. When \
-the sample reaches 10°C, immediately proceed to the next step because the \
-transposome is still active. Place the plate back to slot 2.")
+the sample reaches 10°C, immediately proceed to the next step because the  transposome is still active. Place the plate back to slot 2.")
 
     # Add Neutralize Tagment Buffer to each well
     p20.transfer(5, nt, output_single, mix_after=(5, 10), new_tip='always')
 
-    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place \
-the plate back on slot 2.")
+    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place  the plate back on slot 2.")
 
     # Incubate at RT for 5 minutes
     protocol_context.delay(minutes=5)

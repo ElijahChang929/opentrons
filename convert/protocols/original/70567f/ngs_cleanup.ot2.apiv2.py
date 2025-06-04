@@ -119,53 +119,7 @@ def run(ctx):
 
     def pick_up(pip, loc=None):
         if tip_log[pip]['count'] == tip_log[pip]['max'] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/70567f.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log[pip]['count'] = 0
         if loc:
@@ -220,11 +174,9 @@ resuming.')
     ctx.max_speeds['Z'] = 125
 
     # incubation
-    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off \
-magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
+    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off  magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
     magdeck.engage(height=MAG_HEIGHT)
-    ctx.delay(minutes=etoh_inc, msg='Incubating \
-on magnet for ' + str(etoh_inc) + ' minutes.')
+    ctx.delay(minutes=etoh_inc, msg='Incubating  on magnet for ' + str(etoh_inc) + ' minutes.')
 
     # remove supernatant
     for m, p, w in zip(mag_samples, parking_spots, waste):
@@ -264,8 +216,7 @@ on magnet for ' + str(etoh_inc) + ' minutes.')
 
         if mix_etoh:
             magdeck.engage(height=MAG_HEIGHT)
-            ctx.delay(minutes=etoh_inc, msg='Incubating on magnet for \
-' + str(etoh_inc) + ' minutes.')
+            ctx.delay(minutes=etoh_inc, msg='Incubating on magnet for  ' + str(etoh_inc) + ' minutes.')
 
         # remove supernatant
         if wash == 0:
@@ -294,8 +245,7 @@ on magnet for ' + str(etoh_inc) + ' minutes.')
                 m300.air_gap(20)
                 drop(m300, p)
 
-            ctx.pause('Briefly centrifuge plate to pellet any residual \
-material on the side of the wells. Then, replace plate on magnetic module.')
+            ctx.pause('Briefly centrifuge plate to pellet any residual  material on the side of the wells. Then, replace plate on magnetic module.')
 
             eb_tip = None
             for set_ind, (sample_set, parking_set, waste_set) in enumerate(
@@ -312,8 +262,7 @@ material on the side of the wells. Then, replace plate on magnetic module.')
                 m300.flow_rate.aspirate = 100
 
                 ctx.delay(
-                    minutes=drying_time_in_minutes, msg='Drying for \
-' + str(drying_time_in_minutes) + ' minutes.')
+                    minutes=drying_time_in_minutes, msg='Drying for  ' + str(drying_time_in_minutes) + ' minutes.')
 
                 # transfer EB buffer
                 if set_ind == 0:
@@ -351,11 +300,9 @@ material on the side of the wells. Then, replace plate on magnetic module.')
         m300.blow_out(m.top())
         drop(m300)
 
-    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off \
-magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
+    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off  magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
     magdeck.engage(height=MAG_HEIGHT)
-    ctx.delay(minutes=elution_inc, msg='Incubating on magnet for \
-' + str(elution_inc) + ' minutes.')
+    ctx.delay(minutes=elution_inc, msg='Incubating on magnet for  ' + str(elution_inc) + ' minutes.')
 
     # transfer supernatant to new PCR plate
     m300.flow_rate.aspirate = 20
@@ -378,3 +325,48 @@ magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
         data = {pip.name: tip_log[pip]['count'] for pip in tip_log}
         with open(tip_file_path, 'w') as outfile:
             json.dump(data, outfile)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/70567f.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

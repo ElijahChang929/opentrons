@@ -57,53 +57,7 @@ def run(ctx):
         try:
             self.pick_up_tip()
         except OutOfTipsError:
-            pause_attention('Please Refill the {} Tip Boxes \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/38efd4.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-and Empty the Tip Waste.'.format(self))
+            pause_attention('Please Refill the {} Tip Boxes  and Empty the Tip Waste.'.format(self))
             self.reset_tipracks()
             self.pick_up_tip()
 
@@ -173,8 +127,7 @@ and Empty the Tip Waste.'.format(self))
             if self.height < min_height:
                 self.height = min_height
             elif self.height > well.parent.highest_z:
-                raise Exception('Specified liquid volume \
-can not exceed the height of the labware.')
+                raise Exception('Specified liquid volume  can not exceed the height of the labware.')
 
         def height_dec(self, vol):
             if self.diameter is not None:
@@ -279,21 +232,17 @@ can not exceed the height of the labware.')
         ctx.comment(' liquid class {}'.format(liquid_class))
         if liquid_class == 'viscous':
             if not source_viscosity[rgnt]:
-                raise Exception('Viscosity in mPa*s must be provided \
-for each viscous reagent.')
+                raise Exception('Viscosity in mPa*s must be provided  for each viscous reagent.')
             else:
                 viscosity = int(round(float(source_viscosity[rgnt])))
                 ctx.comment(' viscosity {}'.format(viscosity))
                 delay_time = round(1.67*(viscosity**0.2831))
-                ctx.comment('calculated post-aspirate and post-dispense \
-delay of {} seconds'.format(delay_time))
+                ctx.comment('calculated post-aspirate and post-dispense  delay of {} seconds'.format(delay_time))
                 adjusted_rate = round(
                  (81.379*(math.e)**(-0.002*viscosity)) / 92, 1)
-                ctx.comment('calculated aspirate and dispense flow rate \
-adjusted to {} times default rate.'.format(adjusted_rate))
+                ctx.comment('calculated aspirate and dispense flow rate  adjusted to {} times default rate.'.format(adjusted_rate))
                 withdraw_speed = int(round(6.4613*(viscosity**-0.318)))
-                ctx.comment('calculated tip withdraw speed adjusted \
-to {} mm/sec.'.format(withdraw_speed))
+                ctx.comment('calculated tip withdraw speed adjusted  to {} mm/sec.'.format(withdraw_speed))
         else:
             delay_time = 0
             adjusted_rate = 1
@@ -416,3 +365,48 @@ to {} mm/sec.'.format(withdraw_speed))
                     p1000s.mix(
                      10, mix_volume, well.bottom(well.height / 2), rate=0.25)
                     p1000s.drop_tip()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/38efd4.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

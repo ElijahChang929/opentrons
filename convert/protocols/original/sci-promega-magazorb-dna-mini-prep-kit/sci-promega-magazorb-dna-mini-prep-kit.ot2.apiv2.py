@@ -86,9 +86,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -101,9 +101,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -190,8 +190,7 @@ def run(ctx):
     def _pick_up(pip, loc=None):
         nonlocal tip_log
         if tip_log['count'][pip] == tip_log['max'][pip] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log['count'][pip] = 0
         if loc:
@@ -253,8 +252,7 @@ resuming.')
                         cancellationToken.set_true()
                     thread = create_thread(ctx, cancellationToken)
                 m300.home()
-                ctx.pause('Please empty liquid waste (slot 11) before \
-resuming.')
+                ctx.pause('Please empty liquid waste (slot 11) before  resuming.')
 
                 ctx.home()  # home before continuing with protocol
                 if flash:
@@ -337,8 +335,7 @@ resuming.')
 
         ctx.pause('mix off deck on a shaker for 10 minutes')
         magdeck.engage(height=MAG_HEIGHT)
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         # remove initial supernatant
         remove_supernatant(vol+starting_vol, park=park)
@@ -427,8 +424,7 @@ resuming.')
         if magdeck.status == 'disengaged':
             magdeck.engage(height=MAG_HEIGHT)
 
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         remove_supernatant(vol, park=park)
 
@@ -501,8 +497,7 @@ resuming.')
 
         ctx.delay(minutes=5, msg='Incubating for elution for 5 minutes')
         magdeck.engage(height=MAG_HEIGHT)
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         for i, (m, e, spot) in enumerate(
                 zip(mag_samples_m, elution_samples_m, parking_spots)):

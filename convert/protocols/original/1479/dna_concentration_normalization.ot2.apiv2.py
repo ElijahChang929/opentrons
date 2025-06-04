@@ -21,8 +21,7 @@ def run(ctx):
         nonlocal p10_tip_count
         p10_tip_count += num
         if p10_tip_count > 96:
-            ctx.pause('The P10 tips have run out. Replenish tip rack before \
-    resuming protocol.')
+            ctx.pause('The P10 tips have run out. Replenish tip rack before  resuming protocol.')
             p10.reset_tip_tracking()
             p10_tip_count = 0
 
@@ -30,8 +29,7 @@ def run(ctx):
         nonlocal p50_tip_count
         p50_tip_count += num
         if p50_tip_count > 96:
-            ctx.pause('The P50 tips have run out. Replenish tip rack before \
-    resuming protocol.')
+            ctx.pause('The P50 tips have run out. Replenish tip rack before  resuming protocol.')
             p50.reset_tip_tracking()
             p50_tip_count = 0
 
@@ -128,9 +126,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -143,9 +141,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -11,8 +11,7 @@ metadata = {
     'author': 'REM Analytics <emily.jamieson@remanalytics.ch>',
     'source': 'Custom Protocol Request',
     'apiLevel': '2.8',
-    'description': 'Dispense master mix from troughs to \
-    plates using multichannel pipette'
+    'description': 'Dispense master mix from troughs to  plates using multichannel pipette'
 }
 
 
@@ -105,18 +104,14 @@ def run(protocol: protocol_api.ProtocolContext):
     for mm in range(start, no_plates+1):
         if source == "trough":
             protocol.pause(
-                "When you press resume, the master mix will be dispensed \
-                into the next plate. Ensure this plate is in position \
-                (in slot 5) and that at least {}uL of master mix for this \
-                plate has been added to trough {}.".format(
+                "When you press resume, the master mix will be dispensed  into the next plate. Ensure this plate is in position \
+                (in slot 5) and that at least {}uL of master mix for this  plate has been added to trough {}.".format(
                     (96*vol_dispense)+297, mm)
             )
         else:
             protocol.pause(
-                "When you press resume, the master mix will be dispensed into \
-                the next plate. Ensure this plate is in position (in slot 5) \
-                and that at least {}uL of master mix for this plate has been \
-                added to each well of column {}.".format(
+                "When you press resume, the master mix will be dispensed into  the next plate. Ensure this plate is in position (in slot 5) \
+                and that at least {}uL of master mix for this plate has been  added to each well of column {}.".format(
                     (8*vol_dispense)+10, mm))
         dispense_mm(vol_dispense, mm, source)
 
@@ -134,9 +129,9 @@ def run(protocol: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -149,9 +144,9 @@ def run(protocol: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

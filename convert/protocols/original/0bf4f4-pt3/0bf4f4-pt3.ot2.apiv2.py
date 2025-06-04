@@ -24,8 +24,7 @@ def run(ctx):
       "plate_C_start_col", "tip_park_start_col", "asp_height",
       "length_from_side", "m20_mount", "m300_mount")
 
-    if not 0 <= plate_A_start_col and plate_B_start_col \
-            and plate_C_start_col and tip_park_start_col <= 12:
+    if not 0 <= plate_A_start_col and plate_B_start_col  and plate_C_start_col and tip_park_start_col <= 12:
         raise Exception("Enter a start column between 1-12")
 
     num_samp = int(num_samp)
@@ -268,9 +267,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -283,9 +282,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

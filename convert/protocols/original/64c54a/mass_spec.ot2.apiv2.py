@@ -59,7 +59,23 @@ def run(ctx):
         for s, d in zip(source_set, dest_set):
             p1000.transfer(vol_supernatant, s.bottom(3), d)
         if i < num_replacements - 1:
-            msg = f'Place next set of samples {sample_start}-{sample_end} in \
+            msg = f'Place next set of samples {sample_start}-{sample_end} in  slot 1 and fresh 1.5ml tubes in slot 2.'
+        else:
+            msg = 'Dry the samples to with a N2 dryer or SpeedVac with no  temp. Place samples 1-24 on slot 1 when complete.'
+        ctx.pause(msg)
+
+    # reconstitute in mobile phase A
+    p1000.flow_rate.aspirate *= 5
+    for i, source_set in enumerate(source_sets):
+        samples_per_set = len(source_set)
+        sample_start = (i+1)*num_tubes_per_replacement+1
+        sample_end = (i+1)*num_tubes_per_replacement+samples_per_set
+        for s in source_set:
+            p1000.transfer(vol_reconstitution, mobile_phase_a, s.bottom(3),
+                           mix_after=(5, 100))
+        if i < num_replacements - 1:
+            msg = f'Place next set of samples {sample_start}-{sample_end} in  slot 1 and fresh 1.5ml tubes in slot 2.'
+            ctx.pause(msg)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -75,9 +91,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -90,9 +106,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -105,22 +121,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-slot 1 and fresh 1.5ml tubes in slot 2.'
-        else:
-            msg = 'Dry the samples to with a N2 dryer or SpeedVac with no \
-temp. Place samples 1-24 on slot 1 when complete.'
-        ctx.pause(msg)
-
-    # reconstitute in mobile phase A
-    p1000.flow_rate.aspirate *= 5
-    for i, source_set in enumerate(source_sets):
-        samples_per_set = len(source_set)
-        sample_start = (i+1)*num_tubes_per_replacement+1
-        sample_end = (i+1)*num_tubes_per_replacement+samples_per_set
-        for s in source_set:
-            p1000.transfer(vol_reconstitution, mobile_phase_a, s.bottom(3),
-                           mix_after=(5, 100))
-        if i < num_replacements - 1:
-            msg = f'Place next set of samples {sample_start}-{sample_end} in \
-slot 1 and fresh 1.5ml tubes in slot 2.'
-            ctx.pause(msg)

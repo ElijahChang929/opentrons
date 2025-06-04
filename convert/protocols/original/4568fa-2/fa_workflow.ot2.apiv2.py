@@ -74,53 +74,7 @@ def run(ctx):
         sample_name = line[1]
         conc = float(line[2])
         if conc < 0.25:
-            raise Exception(f'Sample {sample_name} below allowable \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/4568fa-2.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-concentration of 0.25mg/ml.')
+            raise Exception(f'Sample {sample_name} below allowable  concentration of 0.25mg/ml.')
         sample_vol = 10/conc
         dil_1_vol = 100 - sample_vol
         p300.transfer(dil_1_vol, water, dil, new_tip='never')
@@ -193,8 +147,7 @@ concentration of 0.25mg/ml.')
                 well for set in [*triplicate_sets, *[[final_dest]]]
                 for well in set]]
     else:
-        raise Exception(f'Invalid number of samples given ({num_samples}). \
-Must be 1-31 samples.')
+        raise Exception(f'Invalid number of samples given ({num_samples}).  Must be 1-31 samples.')
 
     if num_samples > 15 or fill_plate_blank:
         blank_wells = [
@@ -241,20 +194,62 @@ Must be 1-31 samples.')
     p300.drop_tip()
 
     # heat samples
-    ctx.pause('Seal the plate in slot 3 and place on the temperature module on \
-slot 10. Resume when finished.')
+    ctx.pause('Seal the plate in slot 3 and place on the temperature module on  slot 10. Resume when finished.')
     ctx.home()
     if not TEST_MODE:
         ctx.delay(minutes=2)
     ctx.home()
-    ctx.pause('Move the plate from temperature module on slot 10 to temperature \
-module on slot 1.')
+    ctx.pause('Move the plate from temperature module on slot 10 to temperature  module on slot 1.')
     if not TEST_MODE:
         ctx.delay(minutes=5)
     ctx.home()
     [td.deactivate() for td in [tempdeck1, tempdeck2]]
-    ctx.pause('Centrifuge the plate on temperature module on slot 1. Replace \
-on temperature module on slot 3 when complete.')
+    ctx.pause('Centrifuge the plate on temperature module on slot 1. Replace  on temperature module on slot 3 when complete.')
 
     # transfer water to blank wells
     p300.transfer(50, blank_solution, blank_wells)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/4568fa-2.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

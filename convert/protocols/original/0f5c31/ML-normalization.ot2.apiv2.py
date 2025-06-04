@@ -85,7 +85,7 @@ def run(ctx):
         try:
             pip.pick_up_tip()
         except protocol_api.labware.OutOfTipsError:
-            ctx.pause(f'\n\n\n\nReplace \
+            ctx.pause(f'\n\n\n\nReplace  {pip.tip_racks[0].wells()[0].max_volume}ul tipracks \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -101,9 +101,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -116,9 +116,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -131,7 +131,6 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-{pip.tip_racks[0].wells()[0].max_volume}ul tipracks \
 (slot \',\'.join{[rack.parent for rack in pip.tip_racks]}) before resuming.')
             pip.reset_tipracks()
             pip.pick_up_tip()
@@ -213,8 +212,7 @@ def run(ctx):
             custom_distribute(m300, vol_h_lysate, [h_lysate_column],
                               filter_plate.rows()[0])
 
-#             ctx.pause('\n\n\n\nRemove filter plate (slot 5) and spin the \
-# H lysis into wells filter plate.\n\n\n\n')
+#             ctx.pause('\n\n\n\nRemove filter plate (slot 5) and spin the  # H lysis into wells filter plate.\n\n\n\n')
 
             pick_up(m300)
             m300.aspirate(vol_l_lysate, l_lysate_column)
@@ -246,12 +244,10 @@ def run(ctx):
             tc.set_block_temperature(temp_block_start)
             tc.set_lid_temperature(temp_lid_start)
 
-            msg = f'\n\n\n\nCentrifuge filter plate. Insert a new filter \
-plate on slot {filter_plate.parent}.'
+            msg = f'\n\n\n\nCentrifuge filter plate. Insert a new filter  plate on slot {filter_plate.parent}.'
             if i == len(drug_plate.rows()[0]) - 1:
                 if drug_plate_ind < num_drug_plates - 1:
-                    msg += f' Insert new drug pool plate on slot \
-{drug_plate.parent} and lysate reservoir on temperature module.\n\n\n\n'
+                    msg += f' Insert new drug pool plate on slot  {drug_plate.parent} and lysate reservoir on temperature module.\n\n\n\n'
                 else:
                     msg += ' Protocol complete.\n\n\n\n'
             else:

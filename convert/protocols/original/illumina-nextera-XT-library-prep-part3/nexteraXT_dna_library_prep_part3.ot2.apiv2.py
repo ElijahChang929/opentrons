@@ -74,8 +74,7 @@ def run(protocol):
     # Transfer 45 uL combined LNA1 and LNB1 to each library
     pip.transfer(45, trough['A6'], [well.top() for well in mag])
 
-    protocol.pause("Shake at 1800 rpm for 30 minutes. Place the plate \
-    back on the MagDeck in slot 4.")
+    protocol.pause("Shake at 1800 rpm for 30 minutes. Place the plate  back on the MagDeck in slot 4.")
 
     # Turn on MagDeck for 2 minutes
     mag_deck.engage()
@@ -88,8 +87,7 @@ def run(protocol):
     # Wash beads twice with LNW1
     for cycle in range(2):
         pip.transfer(45, lnw1, [well.top() for well in mag])
-        protocol.pause("Shake at 1800 rpm for 5 minutes. \
-        Place the plate back on the MagDeck in slot 4.")
+        protocol.pause("Shake at 1800 rpm for 5 minutes.  Place the plate back on the MagDeck in slot 4.")
         protocol.delay(minutes=2)
         for well in mag:
             pip.transfer(50, well, liquid_trash)
@@ -98,8 +96,7 @@ def run(protocol):
     mag_deck.disengage()
     pip.distribute(30, naoh, [well.top() for well in mag])
 
-    protocol.pause("Shake at 1800 rpm for 5 minutes. Place the plate back on \
-        the MagDeck in slot 4.")
+    protocol.pause("Shake at 1800 rpm for 5 minutes. Place the plate back on  the MagDeck in slot 4.")
 
     # Turn on MagDeck for 2 minutes
     mag_deck.engage()
@@ -129,9 +126,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -144,9 +141,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

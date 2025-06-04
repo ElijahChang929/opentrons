@@ -19,8 +19,7 @@ def run(protocol):
 
     # load labware and pipettes
     if samps > 16:
-        raise Exception('This protocol is in review; the maximum number of \
-        supported samples is: 16')
+        raise Exception('This protocol is in review; the maximum number of  supported samples is: 16')
     tips1k = protocol.load_labware('opentrons_96_filtertiprack_1000ul', '6')
     # tips20 definition needs to be updated - for current version of p.library
     tips20 = protocol.load_labware('opentrons_96_tiprack_20ul', '3')
@@ -254,8 +253,7 @@ def run(protocol):
         with open(file_path, 'w') as outfile:
             outfile.write(new_tip_count)
 
-    protocol.comment('Congratulations, the protocol is complete. You can store \
-    the samples or proceed to the next protocol with the samples.')
+    protocol.comment('Congratulations, the protocol is complete. You can store  the samples or proceed to the next protocol with the samples.')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -271,9 +269,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -286,9 +284,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

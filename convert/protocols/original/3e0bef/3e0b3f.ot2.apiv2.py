@@ -40,9 +40,9 @@ def run_quiet_process(command):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -55,9 +55,9 @@ def run_quiet_process(command):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -173,13 +173,11 @@ def run(ctx: protocol_api.ProtocolContext):
                 if cse:
                     self.height = (current_volume/cse)
                 else:
-                    raise Exception('Labware definition must \
-    supply well radius or well length and width.')
+                    raise Exception('Labware definition must  supply well radius or well length and width.')
                 if self.height < min_height:
                     self.height = min_height
                 elif self.height > well.parent.highest_z:
-                    raise Exception('Specified liquid volume \
-    can not exceed the height of the labware.')
+                    raise Exception('Specified liquid volume  can not exceed the height of the labware.')
 
             def height_dec(self, vol, ppt, bottom=False):
                 # decrement height (mm)
@@ -392,10 +390,8 @@ def run(ctx: protocol_api.ProtocolContext):
         # m300.drop_tip()
         #
         # flash_lights()
-        # ctx.pause('Please remove samples and incubate at 56C for 30 minutes, \
-        # then centrifuge at 4000g for 10 minutes. Once complete, please replace \
-        # samples on the deck and place ensure 12-well reservoirs are filled with \
-        # necessary reagents in deck slots 2 and 3. When ready, click RESUME.')
+        # ctx.pause('Please remove samples and incubate at 56C for 30 minutes,  # then centrifuge at 4000g for 10 minutes. Once complete, please replace \
+        # samples on the deck and place ensure 12-well reservoirs are filled with  # necessary reagents in deck slots 2 and 3. When ready, click RESUME.')
         # ctx.set_rail_lights(True)
         # Creating reagent variables for second part of protocol
         rbb = [WellH(well, current_volume=0) for well in rsvr_12[0].wells()[:4]]
@@ -466,8 +462,7 @@ def run(ctx: protocol_api.ProtocolContext):
             ctx.pause('Please make sure samples are loaded on MagDeck')
 
         # Transfer 5uL RNAse + 500uL RBB buffer + 20uL Mag-Bind Beads
-        ctx.comment('Transferring 5uL RNAse + 500uL RBB buffer + \
-    20uL Mag-Bind Beads')
+        ctx.comment('Transferring 5uL RNAse + 500uL RBB buffer +  20uL Mag-Bind Beads')
 
         m300.custom_pick_up()
         flow_rate(blow=10)
@@ -496,8 +491,7 @@ def run(ctx: protocol_api.ProtocolContext):
             flash_lights()
             ctx.pause('Please incubate samples for 10 minutes post resuspension.')
         else:
-            incubate_msg = f'Incubating at room temperature for {inc_time} \
-    minutes plus mixing'
+            incubate_msg = f'Incubating at room temperature for {inc_time}  minutes plus mixing'
             ctx.comment(incubate_msg)
 
             if num_cols > 1:
@@ -568,8 +562,7 @@ def run(ctx: protocol_api.ProtocolContext):
                 m300.drop_tip()
 
         ctx.home()
-        air_dry_msg = f'Air drying the beads for {air_dry} minutes. \
-    Please add elution buffer at 65C to 12-well reservoir.'
+        air_dry_msg = f'Air drying the beads for {air_dry} minutes.  Please add elution buffer at 65C to 12-well reservoir.'
         ctx.delay(minutes=air_dry, msg=air_dry_msg)
         flash_lights()
         if not ctx.is_simulating():
@@ -604,8 +597,7 @@ def run(ctx: protocol_api.ProtocolContext):
                 test_speaker('/var/lib/jupyter/notebooks/all-i-want-ot2.mp3')
             else:
                 test_speaker()
-        ctx.pause('Please remove samples and incubate at 65C for 5 minutes.\
-    When complete, replace samples and click RESUME')
+        ctx.pause('Please remove samples and incubate at 65C for 5 minutes. When complete, replace samples and click RESUME')
         ctx.set_rail_lights(True)
 
         # Transfer elution to PCR plate
@@ -646,5 +638,4 @@ def run(ctx: protocol_api.ProtocolContext):
             m300.drop_tip(tip)
 
         mag_deck.disengage()
-        ctx.comment('Protocol complete! Please store samples at -20C or \
-    continue processing')
+        ctx.comment('Protocol complete! Please store samples at -20C or  continue processing')

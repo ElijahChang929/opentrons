@@ -18,53 +18,7 @@ def run(ctx):
 
     # checks
     if number_of_slides_to_process > 4 or number_of_slides_to_process < 1:
-        raise Exception('Invalid number of slides to process. Please input a \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/56a6a1.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-number between 1 and 4.')
+        raise Exception('Invalid number of slides to process. Please input a  number between 1 and 4.')
 
     # load modules and labware
     res_12 = ctx.load_labware(
@@ -124,8 +78,7 @@ number between 1 and 4.')
         100, super_g_blocking_buffer, dispense_locs, disposal_vol=0)
     m300.move_to(res_12.wells()[-1].top(10))
 
-    ctx.pause("Shake for 30 minutes at room temperature on TeleShake before \
-resuming.")
+    ctx.pause("Shake for 30 minutes at room temperature on TeleShake before  resuming.")
 
     # completely transfer out buffer (replacement for vacuum system)
     vacuum()
@@ -141,16 +94,14 @@ resuming.")
         vacuum()
 
     if sample_addition == 'manually add samples':
-        pause_str = 'Manually add samples to slides. Incubate the samples by \
-gentle agitation for 1 hour using TeleShake before resuming.'
+        pause_str = 'Manually add samples to slides. Incubate the samples by  gentle agitation for 1 hour using TeleShake before resuming.'
     else:
         sample_plate = ctx.load_labware(
             'biorad_96_wellplate_200ul_pcr', '10', 'sample plate')
         samples = sample_plate.rows('A')[:number_of_slides_to_process*2]
         m300.drop_tip(tip_trash.top(10))
         m300.transfer(100, samples, dispense_locs, new_tip='always')
-        pause_str = 'Incubate the samples by gentle agitation for 1 hour \
-using TeleShake before resuming.'
+        pause_str = 'Incubate the samples by gentle agitation for 1 hour  using TeleShake before resuming.'
     m300.move_to(res_12.wells()[-1].top(10))
     ctx.pause(pause_str)
 
@@ -217,8 +168,52 @@ using TeleShake before resuming.'
         num_final_pbst=1
     )
 
-    ctx.pause('Prepare 1:1000 secondary antibody solution (2 ml total volume \
-per slide) in PBST and place in channel 2 of the 12-channel reagent reservoir \
+    ctx.pause('Prepare 1:1000 secondary antibody solution (2 ml total volume  per slide) in PBST and place in channel 2 of the 12-channel reagent reservoir \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/56a6a1.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 (slot 3).')
 
     m300.pick_up_tip()
@@ -231,8 +226,7 @@ per slide) in PBST and place in channel 2 of the 12-channel reagent reservoir \
     )
     m300.move_to(res_12.wells()[-1].top(10))
 
-    ctx.pause('Incubate the samples by gentle agitation for 1 hour using \
-TeleShake before resuming.')
+    ctx.pause('Incubate the samples by gentle agitation for 1 hour using  TeleShake before resuming.')
 
     vacuum()
 
@@ -256,8 +250,6 @@ TeleShake before resuming.')
     ctx.delay(minutes=5)
     m300.drop_tip(tip_trash)
 
-    ctx.comment('Take off slides from FastFrame and place into 50 ml \
-conical tube filled with 45 ml PBS, and wash by agitating on TeleShake for 5 \
-minutes. Briefly rinse the slides 2 times using a 50 ml conical tube with \
-ddH2O. Spin at 300 rpm using Beckman-Coulter Avant J-E Centrifuge at RT for 4 \
+    ctx.comment('Take off slides from FastFrame and place into 50 ml  conical tube filled with 45 ml PBS, and wash by agitating on TeleShake for 5 \
+minutes. Briefly rinse the slides 2 times using a 50 ml conical tube with  ddH2O. Spin at 300 rpm using Beckman-Coulter Avant J-E Centrifuge at RT for 4 \
 minutes. Scan the slides with GenePix 4400 A.')

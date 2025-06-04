@@ -91,8 +91,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
     # protocol
     # Transfer Bead Solution Transfer
-    ctx.comment(f'\nTransferring 45uL Bead Solution \
-    to samples in columns {samp_cols}\n')
+    ctx.comment(f'\nTransferring 45uL Bead Solution  to samples in columns {samp_cols}\n')
     for col in samp_cols:
         m300.pick_up_tip()
         beads.liq_vol -= 45
@@ -136,8 +135,7 @@ def run(ctx: protocol_api.ProtocolContext):
     incubate(2)
 
     # Transfer elution buffer and elutes
-    ctx.comment(f'\nTransferring 50uL Low TE \
-    to samples in columns {samp_cols}\n')
+    ctx.comment(f'\nTransferring 50uL Low TE  to samples in columns {samp_cols}\n')
     for col in samp_cols:
         m300.pick_up_tip()
         te.liq_vol -= 50
@@ -176,9 +174,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -191,9 +189,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

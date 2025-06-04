@@ -23,8 +23,7 @@ def run(protocol):
     if num_samps > 32:
         raise Exception('Number of Samples must be 32 or less.')
 
-    tip_type = 'opentrons_96_filtertiprack_200ul' if filter_tip \
-        else 'opentrons_96_tiprack_300ul'
+    tip_type = 'opentrons_96_filtertiprack_200ul' if filter_tip  else 'opentrons_96_tiprack_300ul'
     tips = [protocol.load_labware(
         tip_type, str(s)) for s in range(7, 12)]
     tip_locs = [wells for rack in tips for wells in rack.rows()[0]]
@@ -152,8 +151,7 @@ def run(protocol):
         protocol.set_rail_lights(not protocol.rail_lights_on)
         protocol.delay(seconds=0.2)
 
-    protocol.pause('Please ensure elution plate is on deck. \n\
-                    When ready, click RESUME')
+    protocol.pause('Please ensure elution plate is on deck. \n When ready, click RESUME')
     protocol.set_rail_lights(True)
 
     protocol.comment('\nTransferring 100µL Elution Buffer\n')
@@ -182,9 +180,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -197,9 +195,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

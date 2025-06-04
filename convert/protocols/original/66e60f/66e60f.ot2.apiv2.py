@@ -415,8 +415,7 @@ def run(ctx: protocol_api.ProtocolContext):
     ctx.comment("\nTransferring DNA sample to target plate\n")
     for plate, well, sampleID, conc, vol in sorted_data:
         vol = float(vol)
-        dna_source = dna_sample_plate_A[well] \
-            if plate == 'A' else dna_sample_plate_B[well]
+        dna_source = dna_sample_plate_A[well]  if plate == 'A' else dna_sample_plate_B[well]
         dna_dest = final_plate_A[well] if plate == 'A' else final_plate_B[well]
 
         ctx.comment(("Normalizing sample \"{}\" on plate {} with "
@@ -432,8 +431,7 @@ def run(ctx: protocol_api.ProtocolContext):
         # Remove water from the final plates and dispense into waste tubes
         remaining_water_vol = vol
         while remaining_water_vol > 0:
-            aspiration_vol = remaining_water_vol \
-                if remaining_water_vol < pip.max_volume else pip.max_volume
+            aspiration_vol = remaining_water_vol  if remaining_water_vol < pip.max_volume else pip.max_volume
             pip.aspirate(aspiration_vol, dna_dest)
             pip.dispense(aspiration_vol, water_waste_tube_tracker.track(vol))
             remaining_water_vol -= aspiration_vol
@@ -443,8 +441,7 @@ def run(ctx: protocol_api.ProtocolContext):
         remaining_dna_vol = vol
         max_asp_vol = pip.max_volume - air_gap_vol
         while remaining_dna_vol > 0:
-            aspiration_vol = remaining_dna_vol \
-                if remaining_dna_vol < max_asp_vol else max_asp_vol
+            aspiration_vol = remaining_dna_vol  if remaining_dna_vol < max_asp_vol else max_asp_vol
             pip.aspirate(aspiration_vol, dna_source)
             pip.air_gap(air_gap_vol)
             # Dispense into final well
@@ -466,8 +463,7 @@ def run(ctx: protocol_api.ProtocolContext):
         + "remove seal, replace the plates back to the deck\n")
     ctx.comment("Transferring 5 uL diluted DNA samples to DNA pool tube\n\n")
     for plate, well, _, _, _ in sorted_data:
-        well = final_plate_A.wells_by_name()[well] if plate == 'A' \
-            else final_plate_B.wells_by_name()[well]
+        well = final_plate_A.wells_by_name()[well] if plate == 'A'  else final_plate_B.wells_by_name()[well]
         if plate == 'A':
             pip.pick_up_tip(tiprack_20_A[0].next_tip())
         elif plate == 'B':
@@ -496,9 +492,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -511,9 +507,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

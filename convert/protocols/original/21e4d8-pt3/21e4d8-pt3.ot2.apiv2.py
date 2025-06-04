@@ -124,8 +124,7 @@ def run(protocol):
     # Add 25uL of KAPA HiFi HotStart ReadyMix to each sample
     transfer('KAPA HiFi HotStart ReadyMix', 25, kapa_hifi, p300mag, p300)
 
-    msg1 = 'Please seal plate, spin down, & transfer to thermocycler. When \
-    complete, return plate to MagDeck. Make sure magbeads are mixed and in A1 \
+    msg1 = 'Please seal plate, spin down, & transfer to thermocycler. When  complete, return plate to MagDeck. Make sure magbeads are mixed and in A1 \
     of the reservoir. When ready, click RESUME.'
     protocol.pause(msg1)
 
@@ -222,9 +221,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -237,9 +236,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -213,53 +213,7 @@ def run(ctx):
 
         magdeck.engage(engage_height)
         if not TEST_MODE_BEADS:
-            ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/629f38.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-MagDeck for {time_settling_minutes} minutes.')
+            ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
 
         # remove initial supernatant
         remove_supernatant(vol+starting_vol, parking_spots)
@@ -337,16 +291,14 @@ MagDeck for {time_settling_minutes} minutes.')
             m300.drop_tip(spot)
 
         if incubation_time and not TEST_MODE_BIND_INCUBATE:
-            ctx.delay(minutes=incubation_time, msg=f'Incubating off MagDeck \
-for {incubation_time} minutes.')
+            ctx.delay(minutes=incubation_time, msg=f'Incubating off MagDeck  for {incubation_time} minutes.')
 
         if remove:
             if magdeck.status == 'disengaged':
                 magdeck.engage(engage_height)
 
             if not TEST_MODE_BEADS:
-                ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on \
-MagDeck for {time_settling_minutes} minutes.')
+                ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
 
             removal_vol = supernatant_volume if supernatant_volume else vol
             remove_supernatant(removal_vol, parking_spots)
@@ -384,8 +336,7 @@ MagDeck for {time_settling_minutes} minutes.')
         magdeck.engage(engage_height)
 
         if not TEST_MODE_BEADS:
-            ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on \
-MagDeck for {time_settling_minutes} minutes.')
+            ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
 
         m300.flow_rate.aspirate /= 5
         for i, (m, e, spot) in enumerate(
@@ -410,11 +361,55 @@ MagDeck for {time_settling_minutes} minutes.')
              parking_spots=parking_sets[set_ind],
              aspiration_location=Point(x=-4.5, z=0.5))
     if not TEST_MODE_AIRDRY:
-        ctx.delay(minutes=time_airdry_minutes, msg=f'Air drying for \
-{time_airdry_minutes} minutes before final elution.')
+        ctx.delay(minutes=time_airdry_minutes, msg=f'Air drying for  {time_airdry_minutes} minutes before final elution.')
     if not TEST_MODE_TEMP:
         tempdeck.set_temperature(4)
     elute(vol_elution, parking_spots=parking_sets[5])
 
     magdeck.disengage()
     ctx.comment('Protocol complete.')
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/629f38.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

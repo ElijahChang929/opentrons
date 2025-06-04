@@ -323,10 +323,8 @@ def run(ctx):
     sample_list = sample_plate.rows()[0][:sample_cols]
     mag_sample_list = mag_plate.rows()[0][:sample_cols]
     # Protocl starts here
-    pause_attention(msg='''Set up for CleanPlex NGS library preparation:\
-    1. Double check all labwares/modules/reagents are loaded correctly\
-    2. Please set up a timer\
-    3. Remember to be back to transfer the 96-well plate for mPCR reaction''')
+    pause_attention(msg='''Set up for CleanPlex NGS library preparation: 1. Double check all labwares/modules/reagents are loaded correctly\
+    2. Please set up a timer 3. Remember to be back to transfer the 96-well plate for mPCR reaction''')
     ctx. comment('\n------------Multiplex PCR (mPCR) Reaction--------------')
     ctx. comment('\n-------------1A.1: adding 6 ul of water-----------')
     pick_up(p20m)
@@ -352,10 +350,8 @@ def run(ctx):
         tip_disposal(p20m)
         ctx.comment('\n')
 
-    pause_attention(msg='''1. mPCR reaction pre is compelte\
-    2. Transfer the sample plate from deck slot 2 to thermocycler\
-    3. Set up a timer\
-    4. Please refill the 20ul filter tipracks and dump the trash bin\
+    pause_attention(msg='''1. mPCR reaction pre is compelte 2. Transfer the sample plate from deck slot 2 to thermocycler\
+    3. Set up a timer 4. Please refill the 20ul filter tipracks and dump the trash bin\
     5. Transfer sample plate to the magnetic module after
     reaction&centrifugation''')
     p20m.reset_tipracks()
@@ -440,10 +436,8 @@ def run(ctx):
         tip_disposal(p20m)
         ctx.comment('\n')
 
-    pause_attention(msg='''1. Ready for 37C digestion for 10 min\
-    2. Transfer the sample plate from the magnetic module to thermocycler\
-    3. Set up a timer\
-    4. Please refill both filter tipracks and dump the trash bin\
+    pause_attention(msg='''1. Ready for 37C digestion for 10 min 2. Transfer the sample plate from the magnetic module to thermocycler\
+    3. Set up a timer 4. Please refill both filter tipracks and dump the trash bin\
     5. Move the sample plate to the magnetic module after
     digestion&centrifugation''')
     p20m.reset_tipracks()
@@ -527,10 +521,8 @@ def run(ctx):
         tip_disposal(p20m)
         ctx.comment('\n')
 
-    pause_attention(msg='1. Ready for second PCR reaction\
-    2. Transfer the sample plate from the magnetic module to thermocycler\
-    3. Set up a min timer\
-    4. Refill both 20ul and 200ul filter tipracks and dump the trash bin\
+    pause_attention(msg='1. Ready for second PCR reaction 2. Transfer the sample plate from the magnetic module to thermocycler\
+    3. Set up a min timer 4. Refill both 20ul and 200ul filter tipracks and dump the trash bin\
     5. Move the sample plate from TC to the magnetic module after PCR')
     p20m.reset_tipracks()
     p300m.reset_tipracks()
@@ -610,9 +602,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -625,9 +617,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -34,8 +34,7 @@ def run(protocol: protocol_api.ProtocolContext):
             m300 = protocol.load_instrument(
                 'p300_multi_gen2', mnt300, tip_racks=tipracks300)
         else:
-            raise Exception('The prefill volume cannot be selected \
-            with 24-well plate option.')
+            raise Exception('The prefill volume cannot be selected  with 24-well plate option.')
 
     # load pipette
     p1000 = protocol.load_instrument(
@@ -127,9 +126,9 @@ def run(protocol: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -142,9 +141,9 @@ def run(protocol: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

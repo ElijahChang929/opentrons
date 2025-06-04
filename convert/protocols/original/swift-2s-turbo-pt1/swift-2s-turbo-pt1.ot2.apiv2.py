@@ -6,8 +6,7 @@ import os
 import csv
 
 metadata = {
-    'protocolName': 'Swift 2S Turbo DNA Library Kit Protocol: Part 1/3 - \
-    Enzymatic Prep & Ligation',
+    'protocolName': 'Swift 2S Turbo DNA Library Kit Protocol: Part 1/3 -  Enzymatic Prep & Ligation',
     'author': 'Opentrons <protocols@opentrons.com>',
     'source': 'Protocol Library',
     'apiLevel': '2.10'
@@ -81,8 +80,7 @@ def run(protocol):
 
         if spip_count == 96:
             small_pip.home()
-            protocol.pause('Out of tips. Please replace tips in slot 5 and \
-            click RESUME.')
+            protocol.pause('Out of tips. Please replace tips in slot 5 and  click RESUME.')
             small_tips.reset()
 
         small_pip.pick_up_tip(small_tips.wells()[spip_count])
@@ -134,8 +132,7 @@ def run(protocol):
         small_pip.drop_tip()
 
     # Run Enzymatic Prep Profile
-    protocol.pause('Enzymatic prep complete. Please place sample plate in \
-    thermocycler and run program according to Swift 2S Turbo manual. When \
+    protocol.pause('Enzymatic prep complete. Please place sample plate in  thermocycler and run program according to Swift 2S Turbo manual. When \
     complete, return samples to OT-2 deck for ligation prep and click RESUME.')
 
     # Transfer Ligation Master Mix to the samples
@@ -151,8 +148,7 @@ def run(protocol):
         small_pip.blow_out(well.top(-7))
         small_pip.drop_tip()
 
-    protocol.comment("Add samples to the thermocycler for ligation. \
-    Temp deck will remain on at 4C")
+    protocol.comment("Add samples to the thermocycler for ligation.  Temp deck will remain on at 4C")
 
     # write updated tipcount to CSV
     new_tip_count = str(spip_count)+", "+str(bpip_count)+"\n"
@@ -174,9 +170,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -189,9 +185,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

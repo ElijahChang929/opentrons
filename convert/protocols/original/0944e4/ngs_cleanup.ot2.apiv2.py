@@ -97,56 +97,9 @@ def run(ctx):
     ctx.max_speeds['Z'] = 125
 
     # incubation
-    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/0944e4.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
+    ctx.delay(minutes=bead_incubation_time_in_minutes, msg='Incubating off  magnet for ' + str(bead_incubation_time_in_minutes) + ' minutes.')
     magdeck.engage(height=18)
-    ctx.delay(minutes=bead_settling_time_on_magnet_in_minutes, msg='Incubating \
-on magnet for ' + str(bead_settling_time_on_magnet_in_minutes) + ' minutes.')
+    ctx.delay(minutes=bead_settling_time_on_magnet_in_minutes, msg='Incubating  on magnet for ' + str(bead_settling_time_on_magnet_in_minutes) + ' minutes.')
 
     # remove supernatant
     for m in mag_samples:
@@ -184,8 +137,7 @@ on magnet for ' + str(bead_settling_time_on_magnet_in_minutes) + ' minutes.')
         drop(m20)
 
     ctx.delay(
-        minutes=drying_time_in_minutes, msg='Drying for \
-' + str(drying_time_in_minutes) + ' minutes.')
+        minutes=drying_time_in_minutes, msg='Drying for  ' + str(drying_time_in_minutes) + ' minutes.')
     magdeck.disengage()
 
     # transfer EB buffer
@@ -197,8 +149,52 @@ on magnet for ' + str(bead_settling_time_on_magnet_in_minutes) + ' minutes.')
         m300.blow_out()
         drop(m300)
 
-    ctx.pause('Remove PCR plate, seal and shake at 1800 RPM for 2 minutes. \
-Return PCR plate to magnetic module and incubate for 3 minutes before \
+    ctx.pause('Remove PCR plate, seal and shake at 1800 RPM for 2 minutes.  Return PCR plate to magnetic module and incubate for 3 minutes before \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/0944e4.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 resuming.')
 
     magdeck.engage(height=18)

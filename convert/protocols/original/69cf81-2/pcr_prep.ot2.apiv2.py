@@ -40,7 +40,7 @@ def run(ctx):
     else:
         num_cols = 12
     if num_cols*num_primers > 12:
-        raise Exception(f'Can only accommodate up to {math.floor(12/num_cols)} \
+        raise Exception(f'Can only accommodate up to {math.floor(12/num_cols)}  primers with {num_samples} samples or {math.floor(12/num_primers)} samples \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -56,9 +56,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -71,9 +71,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -86,11 +86,9 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-primers with {num_samples} samples or {math.floor(12/num_primers)} samples \
 with {num_primers} primers')
     if num_primers + primer_start > 13:
-        raise Exception(f'Can not accommodate primer starting colum \
-({primer_start}) and number of primers ({num_primers})')
+        raise Exception(f'Can not accommodate primer starting colum  ({primer_start}) and number of primers ({num_primers})')
     if not 1 <= num_plates <= 12:
         raise Exception(f'Invalid plate number ({num_plates})')
     if not 1 <= num_samples <= 96:
@@ -122,6 +120,5 @@ with {num_primers} primers')
                 m20.transfer(3, s, d.bottom(height_dispense), new_tip='never')
                 m20.drop_tip()
         if i < num_plates - 1:
-            ctx.pause(f'Prep {i+1} complete. Replace plates and tipracks on \
-the deck with labware set {i+2}')
+            ctx.pause(f'Prep {i+1} complete. Replace plates and tipracks on  the deck with labware set {i+2}')
             m20.reset_tipracks()

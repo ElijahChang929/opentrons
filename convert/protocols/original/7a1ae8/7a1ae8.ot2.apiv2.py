@@ -54,53 +54,7 @@ def run(protocol):
     if number_of_samples > 24:
         raise Exception('Can only process up to 24 samples.')
     if volume_of_beads_in_ul < 30:
-        raise Exception('WARNING: bead volume \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/7a1ae8.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-' + str(volume_of_beads_in_ul) + ' is lower than P300 range.')
+        raise Exception('WARNING: bead volume  ' + str(volume_of_beads_in_ul) + ' is lower than P300 range.')
 
     # pipette
     if p300_multi_mount == p300_single_mount:
@@ -205,13 +159,10 @@ def run(protocol):
     if dry_on_temperature_module == 'yes':
         protocol.comment('Temperature module reaching temp (37C)...')
         tempdeck.set_temperature(37)
-        protocol.pause('Replace tubes A1-C1 in original sample rack (slot 2) \
-        with molecular grade water. Move plate from magnetic module to \
-        temperature module to dry. Replace the plate on the magnetic module \
-        and resume when ready.')
+        protocol.pause('Replace tubes A1-C1 in original sample rack (slot 2)  with molecular grade water. Move plate from magnetic module to \
+        temperature module to dry. Replace the plate on the magnetic module  and resume when ready.')
     else:
-        protocol.pause('Replace tubes A1-C1 in original sample rack (slot 2) \
-    with molecular grade water. Resume once the beads are sufficiently dry.')
+        protocol.pause('Replace tubes A1-C1 in original sample rack (slot 2)  with molecular grade water. Resume once the beads are sufficiently dry.')
 
     # transfer water and mix iteratively
     magdeck.disengage()
@@ -248,3 +199,48 @@ def run(protocol):
         p300.transfer(200, s, d.top(-5))
 
     magdeck.disengage()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/7a1ae8.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

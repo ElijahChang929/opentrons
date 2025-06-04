@@ -63,11 +63,9 @@ def run(ctx):
     reagent_slot_scan_type = reagent_slot_scan.upper().strip()
     elution_scan_type = elution_scan.split('_')[-1].upper().strip()
     elution_slot_scan_type = elution_slot_scan.upper().strip()
-    if reagent_scan_type == 'REPLACE WITH SCAN' \
-            or reagent_slot_scan_type == 'REPLACE WITH SCAN':
+    if reagent_scan_type == 'REPLACE WITH SCAN'  or reagent_slot_scan_type == 'REPLACE WITH SCAN':
         pass
-    elif elution_scan_type == 'REPLACE WITH SCAN' \
-            or elution_slot_scan_type == 'REPLACE WITH SCAN':
+    elif elution_scan_type == 'REPLACE WITH SCAN'  or elution_slot_scan_type == 'REPLACE WITH SCAN':
         pass
     else:
         if not reagent_scan_type:
@@ -75,64 +73,16 @@ def run(ctx):
         if not reagent_slot_scan_type:
             raise Exception('Rescan reagent slot (empty slot scan)')
         if not reagent_scan_type == reagent_slot_scan_type[:3]:
-            raise Exception(f'Reagent mismatch: {reagent_scan_type} in slot \
-    {reagent_slot_scan_type}')
+            raise Exception(f'Reagent mismatch: {reagent_scan_type} in slot  {reagent_slot_scan_type}')
         if reagent_slot_scan_type not in reagent_map.keys():
-            raise Exception(f'Invalid reagent slot scan: \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/121d15-5.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-{reagent_slot_scan_type}')
+            raise Exception(f'Invalid reagent slot scan:  {reagent_slot_scan_type}')
 
         if not elution_scan:
             raise Exception('Rescan elution (empty elution scan)')
         if not elution_slot_scan_type:
             raise Exception('Rescan elution slot (empty elution slot scan)')
         if not elution_scan_type == elution_slot_scan_type[:3]:
-            raise Exception(f'Elution mismatch: {elution_scan_type} in slot \
-{elution_slot_scan_type}')
+            raise Exception(f'Elution mismatch: {elution_scan_type} in slot  {elution_slot_scan_type}')
         if elution_slot_scan_type not in reagent_map.keys():
             raise Exception(f'Invalid slot scan: {elution_slot_scan_type}')
 
@@ -266,8 +216,7 @@ def run(ctx):
                     if reagent_map[reagent_type]['blow-out']:
                         pip.blow_out(dest.top(-1))
 
-                if elution == num_centrifugations - 1 and \
-                        reagent_map[reagent_type]['drop-tip'] and \
+                if elution == num_centrifugations - 1 and  reagent_map[reagent_type]['drop-tip'] and \
                         accessed == num_chunks:
                     pip.drop_tip()
                 else:
@@ -289,17 +238,14 @@ def run(ctx):
                         if reagent_map[elution_type]['blow-out']:
                             pip.blow_out(dest.top(-1))
 
-                    if elution_ind == num_centrifugations - 1 and \
-                            reagent_map[elution_type]['drop-tip'] and \
+                    if elution_ind == num_centrifugations - 1 and  reagent_map[elution_type]['drop-tip'] and \
                             accessed == num_chunks:
                         pip.drop_tip()
                     else:
                         # return tip and reset has_tip attribute
                         return_tip(pip, pick_up_loc, num_tips, elution_type)
-            func = ctx.pause if elution_ind < num_centrifugations - 1 \
-                else ctx.comment
-            func(msg='Centrifuge all plates. Replace and resume when \
-finished.')
+            func = ctx.pause if elution_ind < num_centrifugations - 1  else ctx.comment
+            func(msg='Centrifuge all plates. Replace and resume when  finished.')
 
         # track final used tip
         # void partially full tip column
@@ -328,3 +274,48 @@ finished.')
 
     for c in ctx.commands():
         print(c)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/121d15-5.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

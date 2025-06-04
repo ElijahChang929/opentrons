@@ -187,53 +187,7 @@ def run(ctx):
             my_bioshake.set_shake(1500, shake_time)
             my_bioshake.home_shaker()
 
-        ctx.pause('Place deepwell plate on magnetic module when \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/979d28.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-shaking is complete.')
+        ctx.pause('Place deepwell plate on magnetic module when  shaking is complete.')
 
         magdeck.engage()
         ctx.delay(minutes=time_initial_bead_incubation,
@@ -318,8 +272,7 @@ shaking is complete.')
             if magdeck.status == 'disengaged':
                 magdeck.engage()
 
-            ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for \
-{settling_time} minutes.')
+            ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for  {settling_time} minutes.')
 
             removal_vol = supernatant_volume if supernatant_volume else vol
             remove_supernatant(removal_vol, parking_spots)
@@ -357,8 +310,7 @@ shaking is complete.')
         ctx.pause('Move plate back to magnetic module.')
 
         magdeck.engage()
-        ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for \
-{settling_time} minutes.')
+        ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for  {settling_time} minutes.')
 
         m300.flow_rate.aspirate /= 5
         for i, (m, e, spot) in enumerate(
@@ -392,10 +344,54 @@ shaking is complete.')
          remove=False)
     ctx.pause('Place deepwell plate on magnetic module before resuming.')
     magdeck.engage()
-    ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for \
-{settling_time} minutes.')
+    ctx.delay(minutes=settling_time, msg=f'Incubating on MagDeck for  {settling_time} minutes.')
     remove_supernatant(parking_spots=parking_sets[6], vol=600)
     wash(rna_wash1_vol, rna_wash[2], parking_spots=parking_sets[7])
     if not TEST_MODE:
         tempdeck.set_temperature(4)
     elute(elution2_vol, parking_spots=parking_sets[3])
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/979d28.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

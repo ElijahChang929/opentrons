@@ -167,8 +167,7 @@ def run(protocol):
         for _ in range(6):
             protocol.set_rail_lights(not protocol.rail_lights_on)
             protocol.delay(seconds=1)
-        protocol.pause(f'Please seal plate and place on thermomixer for {tm} \
-        minutes at {rpm}rpm at {temp}. When done mixing, place plate back on \
+        protocol.pause(f'Please seal plate and place on thermomixer for {tm}  minutes at {rpm}rpm at {temp}. When done mixing, place plate back on \
         OT-2 and click RESUME')
         magdeck.engage(height=magheight[deep_plate])
         protocol.comment('Engaging Magdeck for 5 minutes.')
@@ -216,8 +215,7 @@ def run(protocol):
         wash_step('Wash Buffer 1', wb1, 400, 5, t3, t4, t2,
                   1, 1500, '70C', tt_tips, tt_tips)
         if num_cols > 6:
-            protocol.pause('Please replace used tips with clean tips in \
-            slots 8, 9, 6, and 3. When ready, click RESUME')
+            protocol.pause('Please replace used tips with clean tips in  slots 8, 9, 6, and 3. When ready, click RESUME')
         wash_step('Wash Buffer 2', wb2_1, 400, 5, t5, t6, t1,
                   1, 1500, '70C', True, tt_tips)
         wash_step('Wash Buffer 2', wb2_2, 400, 5, t7, t8, t1,
@@ -234,11 +232,9 @@ def run(protocol):
             else:
                 m300.drop_tip()
 
-        protocol.pause('Please place plate on thermomixer for allocated time. \
-        When ready to resume, replace plate on OT-2 and click RESUME')
+        protocol.pause('Please place plate on thermomixer for allocated time.  When ready to resume, replace plate on OT-2 and click RESUME')
         if num_cols > 6:
-            protocol.comment('Please replace empty tips with clean tips in \
-            slot 2 as well.')
+            protocol.comment('Please replace empty tips with clean tips in  slot 2 as well.')
 
         magdeck.engage(height=magheight[deep_plate])
         protocol.comment('Engaging Magdeck for 5 minutes.')
@@ -299,8 +295,7 @@ def run(protocol):
             m300.blow_out()
             m300.drop_tip(tret)
 
-        protocol.pause('Please place plate on thermomixer for allocated time. \
-        When ready to resume, replace plate on OT-2 and click RESUME')
+        protocol.pause('Please place plate on thermomixer for allocated time.  When ready to resume, replace plate on OT-2 and click RESUME')
 
         magdeck.engage(height=magheight[deep_plate])
         protocol.comment('Engaging Magdeck for 5 minutes.')
@@ -332,9 +327,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -347,9 +342,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

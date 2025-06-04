@@ -26,7 +26,7 @@ def run(protocol):
 
     # check sample number + reaction mix number combination
     if num_samples * rm_num > 96:
-        raise Exception(f'Invalid combination of number of samples \
+        raise Exception(f'Invalid combination of number of samples  ({num_samples}) and number of reaction mixes ({rm_num}). Multiple of these \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -42,9 +42,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -57,9 +57,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -72,7 +72,6 @@ def run(protocol):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-({num_samples}) and number of reaction mixes ({rm_num}). Multiple of these \
 inputs cannot exceed 96 (currently {num_samples*rm_num}).')
 
     sp_tips = [protocol.load_labware(sp_tip_name, s) for s in ['6', '3']]

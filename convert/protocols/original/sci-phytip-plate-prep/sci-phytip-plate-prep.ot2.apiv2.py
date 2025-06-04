@@ -3,8 +3,7 @@ builtins.event_logs = []
 __protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/sci-phytip-plate-prep/sci-phytip-plate-prep.ot2.apiv2.py"
 
 metadata = {
-    'protocolName': 'Phytip Protein A, ProPlus, ProPlus LX Columns:\
-     Plate Prep',
+    'protocolName': 'Phytip Protein A, ProPlus, ProPlus LX Columns: Plate Prep',
     'author': 'Boren Lin',
     'source': '',
     'apiLevel': '2.11'
@@ -55,8 +54,7 @@ def run(ctx):
 
     reagents = ctx.load_labware('nest_12_reservoir_15ml', '8', 'reagents')
 
-    eql1_stock, eql2_stock, wash11_stock, wash12_stock, wash21_stock,\
-        wash22_stock, eln1_stock, eln2_stock = [
+    eql1_stock, eql2_stock, wash11_stock, wash12_stock, wash21_stock, wash22_stock, eln1_stock, eln2_stock = [
             reagents.wells()[0],
             reagents.wells()[1],
             reagents.wells()[2],
@@ -110,9 +108,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -125,9 +123,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

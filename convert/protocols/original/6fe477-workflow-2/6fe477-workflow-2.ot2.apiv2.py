@@ -56,8 +56,7 @@ def run(protocol):
         p300.transfer(40, s, d, new_tip='always')
 
     # Transfer 560 uL of Lysis Buffer into samples in tube rack
-    protocol.comment('Adding 560 uL of Lysis buffer into 1.5mL tubes on the \
-                     tube rack')
+    protocol.comment('Adding 560 uL of Lysis buffer into 1.5mL tubes on the  tube rack')
     p1000.transfer(560, buffer_reservoir, dest_wells, new_tip='always')
 
     from opentrons.protocol_api.labware import Well, Labware
@@ -74,9 +73,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -89,9 +88,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

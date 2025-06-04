@@ -248,8 +248,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
         :param volume: The volume of supernatant to remove to the trash
         '''
-        nonlocal is_lwaste, trash, m300, sides, sample_columns, \
-            liq_trash_tracker
+        nonlocal is_lwaste, trash, m300, sides, sample_columns,  liq_trash_tracker
 
         # Determine where the liquid trash goes: general trash or
         # liq. trash reservoir
@@ -274,8 +273,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
     def wash(wash_vol, wash_vol_tracker, mag_engage_time,
              n_mixes, buffer_name='wash buffer', reuse_tips=True):
-        nonlocal is_lwaste, m300, sides, sample_columns, mag_mod, \
-                 ctx, mag_height
+        nonlocal is_lwaste, m300, sides, sample_columns, mag_mod,  ctx, mag_height
         '''
         This function repeats a washing procedure two times.
         Washing procedure:
@@ -303,8 +301,7 @@ def run(ctx: protocol_api.ProtocolContext):
                 remainining_volume = wash_vol
                 pick_up(m300)
                 while remainining_volume > 0:
-                    vol = 200 if remainining_volume >= 200 else \
-                        remainining_volume
+                    vol = 200 if remainining_volume >= 200 else  remainining_volume
                     m300.aspirate(vol, wash_vol_tracker.track(vol))
                     m300.dispense(vol, col[0])
                     remainining_volume -= vol
@@ -320,8 +317,7 @@ def run(ctx: protocol_api.ProtocolContext):
             remove_supernatant(wash_vol)
 
     def get_well_index_by_name(well_name):
-        letter_to_row_num_dict = \
-            {"A": 0, "B": 1, "C": 2, "D": 3,
+        letter_to_row_num_dict =  {"A": 0, "B": 1, "C": 2, "D": 3,
              "E": 4, "F": 5, "G": 6, "H": 7}
         well_row_letter = well_name[0:1]
         row_num = letter_to_row_num_dict[well_row_letter]
@@ -480,14 +476,12 @@ def run(ctx: protocol_api.ProtocolContext):
 
     lysis_lbb_tracker = VolTracker(twelve_well_resv, twelve_well_max_vol,
                                    pip_type='multi', start=2, end=3,
-                                   msg='Replenish Lysis LBB buffer in \
-                                   12 well reservoir on deck slot 4, \
+                                   msg='Replenish Lysis LBB buffer in  12 well reservoir on deck slot 4, \
                                    well 2 and 3')
 
     bind_bbb_tracker = VolTracker(twelve_well_resv, twelve_well_max_vol,
                                   pip_type='multi', start=4, end=5,
-                                  msg='Replenish Bind BBB buffer in \
-                                  12 well reservoir on deck slot 4 \
+                                  msg='Replenish Bind BBB buffer in  12 well reservoir on deck slot 4 \
                                   in well 4 and 5')
     if is_eb_tube:
         elution_buf_tracker = VolTracker(twelve_well_resv, twelve_well_max_vol,
@@ -498,19 +492,16 @@ def run(ctx: protocol_api.ProtocolContext):
     else:
         elution_buf_tracker = VolTracker(twelve_well_resv, twelve_well_max_vol,
                                          pip_type='multi', start=6, end=7,
-                                         msg='Replenish elution buffer in \
-                                         12 well reservoir on deck slot 4 \
+                                         msg='Replenish elution buffer in  12 well reservoir on deck slot 4 \
                                          in well 6 and 7')
 
     wash_wbb_tracker = VolTracker(wash_wbb_resv, one_well_max_vol,
                                   pip_type='multi', start=1, end=1,
-                                  msg='Replenish Wash WBB buffer in \
-                                  reservoir on deck slot 2')
+                                  msg='Replenish Wash WBB buffer in  reservoir on deck slot 2')
 
     wash_wbc_tracker = VolTracker(wash_wbc_resv, one_well_max_vol,
                                   pip_type='multi', start=1, end=1,
-                                  msg='Replenish Wash WBB buffer in \
-                                  reservoir on deck slot 2')
+                                  msg='Replenish Wash WBB buffer in  reservoir on deck slot 2')
 
     liq_trash_tracker = VolTracker(trash_resv_1, trash_max_vol,
                                    pip_type='multi', mode='waste',
@@ -710,9 +701,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -725,9 +716,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

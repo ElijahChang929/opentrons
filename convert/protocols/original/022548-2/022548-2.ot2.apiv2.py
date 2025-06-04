@@ -88,13 +88,10 @@ def run(ctx: protocol_api.ProtocolContext):
     # Todo: If tuberack: Error check that all tubes are 15 mL types
 
     # Define labware and slots
-    sample_tuberack_loader = \
-        ("nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml", ['10', '7', '4'])
-    target_plate_loader = \
-        ("thermofisherkingfisherdeepwell_96_wellplate_2000ul", '2')
+    sample_tuberack_loader =  ("nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml", ['10', '7', '4'])
+    target_plate_loader =  ("thermofisherkingfisherdeepwell_96_wellplate_2000ul", '2')
     mastermix_labware_loader = ('nest_12_reservoir_15ml', '1')
-    sample_200ul_filtertiprack_loader = \
-        ('opentrons_96_filtertiprack_200ul', '9')
+    sample_200ul_filtertiprack_loader =  ('opentrons_96_filtertiprack_200ul', '9')
 
     mm_well_vol_ul = mastermix_max_vol * 1000
     # TODO: Remove dead volumes from the protocols - the dead-volume is
@@ -544,8 +541,7 @@ def run(ctx: protocol_api.ProtocolContext):
                                  "this VolTracker is in strict mode, check why"
                                  "manual reset was not performed")
 
-                        fill_status = \
-                            ("over-depleted" if self.mode == "reagent" else
+                        fill_status =  ("over-depleted" if self.mode == "reagent" else
                              "over-filled")
                         e_msg = e_msg.format(str(self),
                                              self.reagent,
@@ -789,9 +785,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -804,9 +800,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -110,8 +110,7 @@ def run(ctx):
                                in the 'parking rack' or to pick up new tips.
         """
 
-        dest_list = [destinations]*num_cols \
-            if type(destinations) != list else destinations
+        dest_list = [destinations]*num_cols  if type(destinations) != list else destinations
 
         if not z_disp:
             z_disp = dest_list[0].depth
@@ -207,7 +206,46 @@ def run(ctx):
 
         if not TEST_MODE_BIND_INCUBATE:
             ctx.delay(minutes=time_incubation,
-                      msg=f'Incubating off MagDeck for \
+                      msg=f'Incubating off MagDeck for  {time_incubation_deep_blue_minutes} minutes.')
+        if do_discard_supernatant:
+            magdeck.engage(engage_height)
+            if not TEST_MODE_BEADS:
+                ctx.delay(minutes=time_settling, msg=f'Incubating on  MagDeck for {time_settling} minutes.')
+
+            remove_supernatant(vol_supernatant,
+                               destinations=supernatant_locations)
+            magdeck.disengage()
+
+    lyse_bind_wash(vol=100, reagent=deep_blue_lysis_buffer,
+                   time_incubation=time_incubation_deep_blue_minutes,
+                   do_discard_supernatant=False)
+    lyse_bind_wash(vol=450, reagent=neutralization_buffer,
+                   do_discard_supernatant=False, resuspension_delay_seconds=5)
+    lyse_bind_wash(vol=50, reagent=magclearing_beads, premix=True,
+                   do_discard_supernatant=False, resuspension_delay_seconds=5)
+
+    ctx.pause('Centrifuge the extraction plate. Replace on magnetic module  when finished.')
+    magdeck.engage(engage_height)
+    ctx.delay(minutes=10, msg='Incubating on MagDeck for 10 minutes.')
+    remove_supernatant(vol_cleared_lysate, collection_samples,
+                       z_disp=2.0)
+
+    ctx.pause('Discard plate on magnetic module. Move collection plate  (slot 2) to the magnetic module (slot 1)')
+
+    lyse_bind_wash(30, magbinding_beads, do_resuspend=True, premix=True,
+                   do_discard_supernatant=True, vol_supernatant=780,
+                   supernatant_locations=waste)
+    lyse_bind_wash(200, endo_wash_buffer, do_resuspend=True,
+                   time_settling=time_settling_wash_minutes,
+                   do_discard_supernatant=True, vol_supernatant=200,
+                   supernatant_locations=waste)
+    for _ in range(2):
+        lyse_bind_wash(400, zyppy_wash_buffer, do_resuspend=True,
+                       time_settling=time_settling_wash_minutes,
+                       do_discard_supernatant=True, vol_supernatant=400,
+                       supernatant_locations=waste)
+
+    ctx.pause('Move the collection plate (slot 1) to a heating block for  30mins 65C to remove the residual ethanol. Replace the plate onto the \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -223,9 +261,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -238,9 +276,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -253,50 +291,6 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-{time_incubation_deep_blue_minutes} minutes.')
-        if do_discard_supernatant:
-            magdeck.engage(engage_height)
-            if not TEST_MODE_BEADS:
-                ctx.delay(minutes=time_settling, msg=f'Incubating on \
-MagDeck for {time_settling} minutes.')
-
-            remove_supernatant(vol_supernatant,
-                               destinations=supernatant_locations)
-            magdeck.disengage()
-
-    lyse_bind_wash(vol=100, reagent=deep_blue_lysis_buffer,
-                   time_incubation=time_incubation_deep_blue_minutes,
-                   do_discard_supernatant=False)
-    lyse_bind_wash(vol=450, reagent=neutralization_buffer,
-                   do_discard_supernatant=False, resuspension_delay_seconds=5)
-    lyse_bind_wash(vol=50, reagent=magclearing_beads, premix=True,
-                   do_discard_supernatant=False, resuspension_delay_seconds=5)
-
-    ctx.pause('Centrifuge the extraction plate. Replace on magnetic module \
-when finished.')
-    magdeck.engage(engage_height)
-    ctx.delay(minutes=10, msg='Incubating on MagDeck for 10 minutes.')
-    remove_supernatant(vol_cleared_lysate, collection_samples,
-                       z_disp=2.0)
-
-    ctx.pause('Discard plate on magnetic module. Move collection plate \
-(slot 2) to the magnetic module (slot 1)')
-
-    lyse_bind_wash(30, magbinding_beads, do_resuspend=True, premix=True,
-                   do_discard_supernatant=True, vol_supernatant=780,
-                   supernatant_locations=waste)
-    lyse_bind_wash(200, endo_wash_buffer, do_resuspend=True,
-                   time_settling=time_settling_wash_minutes,
-                   do_discard_supernatant=True, vol_supernatant=200,
-                   supernatant_locations=waste)
-    for _ in range(2):
-        lyse_bind_wash(400, zyppy_wash_buffer, do_resuspend=True,
-                       time_settling=time_settling_wash_minutes,
-                       do_discard_supernatant=True, vol_supernatant=400,
-                       supernatant_locations=waste)
-
-    ctx.pause('Move the collection plate (slot 1) to a heating block for \
-30mins 65C to remove the residual ethanol. Replace the plate onto the \
 magnetic module when complete.')
 
     lyse_bind_wash(vol_elution, elution_buffer,

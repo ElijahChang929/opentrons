@@ -103,12 +103,10 @@ def run(ctx: protocol_api.ProtocolContext):
             well.liq_vol = 1500
             total_dil -= 1500
         if well.liq_vol > 1500:
-            raise Exception("There aren't enough wells to accomodate this \
-            volume of dilutent.")
+            raise Exception("There aren't enough wells to accomodate this  volume of dilutent.")
         if well.liq_vol > 0:
             ctx.comment(
-                f"Please ensure there is {well.liq_vol}uL of dilutent in \
-                {well}\n")
+                f"Please ensure there is {well.liq_vol}uL of dilutent in  {well}\n")
 
     # reaction mix
     samp_chunks = [0]
@@ -120,13 +118,11 @@ def run(ctx: protocol_api.ProtocolContext):
     for chunk, tube in zip(samp_chunks, reaction_mixes):
         if reaction_mix:
             num_ddpcr_tubes = math.ceil((3*11*num_samps*1.15)/1200)
-            ctx.comment(f"Please ensure that there is {num_ddpcr_tubes} tubes \
-            of 2x ddPCR Supermix column 4, all with at least \
+            ctx.comment(f"Please ensure that there is {num_ddpcr_tubes} tubes  of 2x ddPCR Supermix column 4, all with at least \
             1200ul of 2x ddPCR\n")  # FIX COMMENT
         else:
             total_vol = 18 * round(((chunk+1) * 3.15), 0)
-            ctx.comment(f"Please ensure that there is {total_vol}uL of \
-            Reaction Mix in {tube}\n")  # FIX COMMENT
+            ctx.comment(f"Please ensure that there is {total_vol}uL of  Reaction Mix in {tube}\n")  # FIX COMMENT
             tube.liq_vol = total_vol
 
     if reaction_mix:
@@ -202,8 +198,7 @@ def run(ctx: protocol_api.ProtocolContext):
             transfer_vol *= 1.15
             pip = p20 if transfer_vol <= 20 else p300
             for label, src in components.items():
-                ctx.comment(f"\nTransferring {transfer_vol}uL of {label} \
-                from {src} to {tube}.")
+                ctx.comment(f"\nTransferring {transfer_vol}uL of {label}  from {src} to {tube}.")
                 pip.pick_up_tip()
                 # custom pip.mix()
                 pip.aspirate(transfer_vol, src)
@@ -213,8 +208,7 @@ def run(ctx: protocol_api.ProtocolContext):
             water_vol = vol_water * round((tube_v) * 3)
             water_vol *= 1.15
             pip = p20 if water_vol <= 20 else p300
-            ctx.comment(f"\nTransferring {water_vol}uL of water from \
-            {water_src} to {tube}.")
+            ctx.comment(f"\nTransferring {water_vol}uL of water from  {water_src} to {tube}.")
             pip.pick_up_tip()
             # custom pip.mix()
             pip.aspirate(water_vol, src)
@@ -224,8 +218,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
             pick_up(p300)
             ddpcr_vol = 3*11*num_samps*1.15
-            ctx.comment(f"\nTransferring {ddpcr_vol}uL of ddpcr from \
-            column 4 to A1.")
+            ctx.comment(f"\nTransferring {ddpcr_vol}uL of ddpcr from  column 4 to A1.")
 
             num_transfers = math.ceil(ddpcr_vol/300)
             starting_tube_vol = 1200
@@ -299,9 +292,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -314,9 +307,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

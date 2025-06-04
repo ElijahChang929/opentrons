@@ -86,61 +86,14 @@ def run(ctx):
         nonlocal tipcount300
         if pip == p20:
             if tipcount20 == tipmax20:
-                ctx.pause('Refill 20µl tipracks in slots 6 and 9 before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/6030b7.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+                ctx.pause('Refill 20µl tipracks in slots 6 and 9 before  resuming.')
                 p20.reset_tipracks()
                 tipcount20 = 0
             p20.pick_up_tip()
             tipcount20 += 1
         else:
             if tipcount300 == tipmax300:
-                ctx.pause('Refill 200µl tipracks in slots 8, 10, and 11 \
-before resuming.')
+                ctx.pause('Refill 200µl tipracks in slots 8, 10, and 11  before resuming.')
                 m300.reset_tipracks()
                 tipcount300 = 0
             m300.pick_up_tip()
@@ -155,28 +108,23 @@ before resuming.')
 
     # transfer FS1
     init_transfers(5, fs1)
-    ctx.pause('Place sample plate in cycler at 85C for 3 minutes, then cool \
-down to 42C. Return sample plate to OT-2 when finished.')
+    ctx.pause('Place sample plate in cycler at 85C for 3 minutes, then cool  down to 42C. Return sample plate to OT-2 when finished.')
 
     # transfer FS2/E1
     init_transfers(10, fs2e1)
-    ctx.pause('Place sample plate in cycler at 42C for 15 minutes. Return \
-sample plate to OT-2 when finished.')
+    ctx.pause('Place sample plate in cycler at 42C for 15 minutes. Return  sample plate to OT-2 when finished.')
 
     # transfer RS
     init_transfers(5, rs)
-    ctx.pause('Place sample plate in cycler at 95C for 10 minutes. Return \
-sample plate to OT-2 when finished.')
+    ctx.pause('Place sample plate in cycler at 95C for 10 minutes. Return  sample plate to OT-2 when finished.')
 
     # transfer SS1
     init_transfers(10, ss1)
-    ctx.pause('Place sample plate in cycler at 98C for 1 minute. Return \
-sample plate to OT-2 when finished.')
+    ctx.pause('Place sample plate in cycler at 98C for 1 minute. Return  sample plate to OT-2 when finished.')
 
     # transfer SS2
     init_transfers(5, ss2)
-    ctx.pause('Place sample plate in cycler at 25C for 15 minutes. Return \
-sample plate to OT-2 when finished.')
+    ctx.pause('Place sample plate in cycler at 25C for 15 minutes. Return  sample plate to OT-2 when finished.')
 
     # transfer PB
     init_transfers(16, pb)
@@ -253,8 +201,7 @@ sample plate to OT-2 when finished.')
         p20.blow_out(s.top())
         p20.drop_tip()
 
-    ctx.pause('Perform PCR cycling reaction, then place SP2 on the magnetic \
-deck.')
+    ctx.pause('Perform PCR cycling reaction, then place SP2 on the magnetic  deck.')
 
     # transfer PB
     for s in magsamples_s:
@@ -348,3 +295,48 @@ deck.')
         pickup(p20)
         p20.transfer(15, s, o, new_tip='never')
         p20.drop_tip()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/6030b7.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

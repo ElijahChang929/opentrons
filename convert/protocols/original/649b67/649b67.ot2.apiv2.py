@@ -475,8 +475,7 @@ def run(ctx: protocol_api.ProtocolContext):
         canonical_tempmod = canonical_lw_entry[3]
 
         # Check that the canonical entry is well defined
-        if canonical_lw_name == '' or canonical_magmod is None \
-                or canonical_tempmod is None:
+        if canonical_lw_name == '' or canonical_magmod is None  or canonical_tempmod is None:
             err_msg = ("The initial labware definition for slot {} on the "
                        "row with step_id {} is not well defined. It must "
                        "include the labware API name and definite yes/no "
@@ -516,8 +515,7 @@ def run(ctx: protocol_api.ProtocolContext):
                     canonical_lw_name, slot, canonical_step_id, entry_step_id)
 
             # Check for Temperature module setting mismatches
-            if canonical_tempmod != entry_tempmod \
-                    and entry_tempmod is not None:
+            if canonical_tempmod != entry_tempmod  and entry_tempmod is not None:
                 err_msg = ("There is a mismatch between the Temperature "
                            "module setting for {} on slot {} on the row with "
                            "step_id {}, and the Temperature module setting on "
@@ -579,8 +577,7 @@ def run(ctx: protocol_api.ProtocolContext):
     # are only singular references so no double dispenses are tried.
     step_id_occurences = Counter(dispense_parked_tip_step_id_list)
     # Check the length of the list first, there might not be any entries
-    if len(dispense_parked_tip_step_id_list) > 0 \
-            and max(step_id_occurences.values()) > 1:
+    if len(dispense_parked_tip_step_id_list) > 0  and max(step_id_occurences.values()) > 1:
         err_msg = ("There are multiples references to the same step_id for "
                    "dispensing a parked tip. Can't dispense an already "
                    "dispensed tip. Please inspect your input CSV file.")
@@ -734,8 +731,7 @@ def run(ctx: protocol_api.ProtocolContext):
             self.current_vol = current_vol
 
         def is_overflow(self) -> bool:
-            return True if \
-                self.current_vol > 0.8 * self.well_max_vol else False
+            return True if  self.current_vol > 0.8 * self.well_max_vol else False
 
         def add_vol(self, vol):
             self.current_vol += vol
@@ -768,8 +764,7 @@ def run(ctx: protocol_api.ProtocolContext):
                 current_vol = transfer_vol
                 if init_dest_well_vol != '':
                     current_vol += init_dest_well_vol
-                well_dict[(dest_slot, dest_well)] = \
-                    OverflowTracker(well.max_volume, current_vol)
+                well_dict[(dest_slot, dest_well)] =  OverflowTracker(well.max_volume, current_vol)
 
             # Check if there is overflow, if so add the step at which overflow
             # occurs and add it to a list
@@ -878,11 +873,9 @@ def run(ctx: protocol_api.ProtocolContext):
                         ("There is no 300 uL pipette loaded for aspirating "
                          f"and parking a volume of {volume} uL"))
             elif volume < 300.01:
-                if pip_left and "300" in left_mount_pipette_type \
-                        and left_tip_type == "standard":
+                if pip_left and "300" in left_mount_pipette_type  and left_tip_type == "standard":
                     return pip_left, 300
-                elif pip_right and "300" in right_mount_pipette_type \
-                        and right_tip_type == "standard":
+                elif pip_right and "300" in right_mount_pipette_type  and right_tip_type == "standard":
                     return pip_right, 300
                 else:
                     raise Exception(
@@ -969,16 +962,14 @@ def run(ctx: protocol_api.ProtocolContext):
                     is_source_tube = True
                 else:
                     is_dest_tube = True
-                volume_change = -transfer_vol if is_source else \
-                    transfer_vol
+                volume_change = -transfer_vol if is_source else  transfer_vol
                 if tube_volume_track_dict.get(well):
                     tube_volume_track_dict[well] += volume_change
                 else:
                     # The dictionary entry doesn't exist because this is
                     # the first time we encountered this tube during
                     # execution.
-                    tube_volume_track_dict[well] \
-                        = init_vol + volume_change
+                    tube_volume_track_dict[well]  = init_vol + volume_change
         return is_source_tube, is_dest_tube
 
     # --- PROTOCOL EXECUTION STARTS HERE ---
@@ -1221,9 +1212,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -1236,9 +1227,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

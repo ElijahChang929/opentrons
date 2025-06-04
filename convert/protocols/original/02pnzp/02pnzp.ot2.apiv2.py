@@ -6,8 +6,7 @@ __protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/co
 
 metadata = {
     'author': 'Michael Fichtner <michael.fichtner@mdc-berlin.de>',
-    'description': 'The protocol is intended to prepare and run a PCR \
-                    using the opentrons cycler module',
+    'description': 'The protocol is intended to prepare and run a PCR  using the opentrons cycler module',
     'apiLevel': '2.11'
             }
 
@@ -86,8 +85,7 @@ def transfer_to_tube(total_vol, source, source_vol, target, target_vol,
         target_vol = dispense_to_falcon(split_vol, target, target_vol, pip)
         total_vol = 0
     else:
-        raise ValueError("Wrong total volume. That should not happen! Please \
-                         contact the protocol developer.")
+        raise ValueError("Wrong total volume. That should not happen! Please  contact the protocol developer.")
     pip.blow_out()
     pip.drop_tip()
     
@@ -171,8 +169,7 @@ def run(prot):
     ######## unless you know what you are doing ###########
     #-----------------------------------------------------#
 
-    water_needed = reaction_vol - vol_Buffer - (vol_Primers * 2) - vol_dNTPs - \
-                   vol_Polymerase - sample_vol - vol_MgCl2
+    water_needed = reaction_vol - vol_Buffer - (vol_Primers * 2) - vol_dNTPs -  vol_Polymerase - sample_vol - vol_MgCl2
     wells_needed = (sample_no * replicates) + 1  # per mastermix, the +1 is for water control
     assert wells_needed * MM_no <= 96, "Not enough free wells for MM"
     assert water_needed >= 0, "Reaction volume is too large"
@@ -431,9 +428,9 @@ def run(prot):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -446,9 +443,9 @@ def run(prot):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

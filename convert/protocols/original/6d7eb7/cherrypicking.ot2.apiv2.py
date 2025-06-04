@@ -166,7 +166,28 @@ def run(ctx):
 
     def pick_up(pip):
         if tip_log[pip]['count'] == tip_log[pip]['max']:
-            ctx.pause(f'Please refill {pip.max_volume}µl tipracks before \
+            ctx.pause(f'Please refill {pip.max_volume}µl tipracks before  resuming.')
+            pip.reset_tipracks()
+            tip_log[pip]['count'] = 0
+        pip.pick_up_tip(tip_log[pip]['tips'][tip_log[pip]['count']])
+        tip_log[pip]['count'] += 1
+
+    def parse_well(well):
+        letter = well[0]
+        number = well[1:]
+        return letter.upper() + str(int(number))
+
+    for line in transfer_info:
+        [pip, s_lw_key, s_slot, s_well, h, d_well, vol] = line[:7]
+        source_lw = ctx.loaded_labwares[int(s_slot)]
+        dest = dest_lw.wells_by_name()[parse_well(d_well)]
+        s_top_offset = labware_map[s_lw_key]['top'] - source_lw.highest_z -  labware_map[s_lw_key]['depth'] + float(h)
+        source = source_lw.wells_by_name()[parse_well(s_well)].top(
+            s_top_offset)
+        pipette = pipettes[pip]
+        pick_up(pipette)
+        pipette.transfer(float(vol), source, dest, new_tip='never')
+        pipette.drop_tip()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -182,9 +203,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -197,9 +218,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -212,26 +233,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-resuming.')
-            pip.reset_tipracks()
-            tip_log[pip]['count'] = 0
-        pip.pick_up_tip(tip_log[pip]['tips'][tip_log[pip]['count']])
-        tip_log[pip]['count'] += 1
-
-    def parse_well(well):
-        letter = well[0]
-        number = well[1:]
-        return letter.upper() + str(int(number))
-
-    for line in transfer_info:
-        [pip, s_lw_key, s_slot, s_well, h, d_well, vol] = line[:7]
-        source_lw = ctx.loaded_labwares[int(s_slot)]
-        dest = dest_lw.wells_by_name()[parse_well(d_well)]
-        s_top_offset = labware_map[s_lw_key]['top'] - source_lw.highest_z - \
-            labware_map[s_lw_key]['depth'] + float(h)
-        source = source_lw.wells_by_name()[parse_well(s_well)].top(
-            s_top_offset)
-        pipette = pipettes[pip]
-        pick_up(pipette)
-        pipette.transfer(float(vol), source, dest, new_tip='never')
-        pipette.drop_tip()

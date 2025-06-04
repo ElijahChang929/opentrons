@@ -190,7 +190,7 @@ def run(ctx):
 
     hs.open_labware_latch()
 
-    ctx.pause('Remove Slot 10) Heater Shaker & Tecan 96 Well Plate 1200 ul \
+    ctx.pause('Remove Slot 10) Heater Shaker & Tecan 96 Well Plate 1200 ul  and centrifuge, and remove Slot 11) Eppendorf 96 DWP 1200ul and seal. Place \
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -206,9 +206,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -221,9 +221,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
@@ -236,9 +236,7 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-and centrifuge, and remove Slot 11) Eppendorf 96 DWP 1200ul and seal. Place \
-a new Slot 11) Eppendorf 96 DWP 1200ul and place Tecan 96 Well Plate 1200 \
-ul back on the Slot 10) Heater Shaker')
+a new Slot 11) Eppendorf 96 DWP 1200ul and place Tecan 96 Well Plate 1200  ul back on the Slot 10) Heater Shaker')
 
     hs.close_labware_latch()
 

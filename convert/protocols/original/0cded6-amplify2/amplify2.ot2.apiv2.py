@@ -100,53 +100,7 @@ def run(ctx):
             try:
                 pip.pick_up_tip()
             except protocol_api.labware.OutOfTipsError:
-                ctx.pause("\n\n\n\nReplace 200ul filtertipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/0cded6-amplify2.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.\n\n\n\n")
+                ctx.pause("\n\n\n\nReplace 200ul filtertipracks before  resuming.\n\n\n\n")
                 pip.reset_tipracks()
                 pip.pick_up_tip()
 
@@ -242,13 +196,11 @@ resuming.\n\n\n\n")
 
         if not TEST_MODE_BIND_INCUBATE:
             ctx.delay(minutes=time_incubation,
-                      msg=f'Incubating off MagDeck for \
-{time_incubation} minutes.')
+                      msg=f'Incubating off MagDeck for  {time_incubation} minutes.')
         if do_discard_supernatant:
             magdeck.engage(engage_height)
             if not TEST_MODE_BEADS:
-                ctx.delay(minutes=time_settling, msg=f'Incubating on \
-MagDeck for {time_settling} minutes.')
+                ctx.delay(minutes=time_settling, msg=f'Incubating on  MagDeck for {time_settling} minutes.')
 
             remove_supernatant(vol_supernatant)
             magdeck.disengage()
@@ -256,8 +208,7 @@ MagDeck for {time_settling} minutes.')
     # remove previous supernatant
     magdeck.engage(engage_height)
     if not TEST_MODE_BEADS:
-        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on \
-MagDeck for {time_settling_minutes} minutes.')
+        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
     remove_supernatant(vol_wash, pip=m300, park=False)
     remove_supernatant(10, pip=m20, z_asp=0.1, park=False)
 
@@ -284,8 +235,51 @@ MagDeck for {time_settling_minutes} minutes.')
         else:
             m20.drop_tip()
 
-    ctx.comment('\n\n\n\nSeal and shake at 1600 rpm for 1 minute. If liquid \
-is visible on the seal, centrifuge at 500 x g for 1 minute. Inspect to make \
-sure beads are resuspended. To resuspend, set your pipette to 35 µl with the \
-plunger down, and then slowly pipette to mix. Place on the preprogrammed \
+    ctx.comment('\n\n\n\nSeal and shake at 1600 rpm for 1 minute. If liquid  is visible on the seal, centrifuge at 500 x g for 1 minute. Inspect to make \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/0cded6-amplify2.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
+sure beads are resuspended. To resuspend, set your pipette to 35 µl with the  plunger down, and then slowly pipette to mix. Place on the preprogrammed \
 thermal cycler and run the COVIDSeq TAG PCR program')

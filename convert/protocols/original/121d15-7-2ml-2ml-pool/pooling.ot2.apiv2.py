@@ -91,53 +91,7 @@ def run(ctx):
 
     def _pick_up(pip, loc=None):
         if tip_log[pip]['count'] == tip_log[pip]['max'] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/121d15-7-2ml-2ml-pool.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log[pip]['count'] = 0
         if loc:
@@ -147,28 +101,18 @@ resuming.')
             tip_log[pip]['count'] += 1
 
     # check barcode scans (tube, plate)
-    tuberack2_1_bar, tuberack15_1_bar = \
-        input_file.splitlines()[3].split(',')[:2]
-    if not tuberack15_1_scan[:len(tuberack15_1_scan)-4] == \
-            tuberack15_1_bar.strip():
-        raise Exception(f'15ml tuberack 1 scans do not match \
-({tuberack15_1_bar}, {tuberack15_1_scan})')
-    if not tuberack2_1_scan[:len(tuberack2_1_scan)-4] == \
-            tuberack2_1_bar.strip():
-        raise Exception(f'2ml tuberack 2 scans do not match \
-({tuberack2_1_bar}, {tuberack2_1_bar})')
+    tuberack2_1_bar, tuberack15_1_bar =  input_file.splitlines()[3].split(',')[:2]
+    if not tuberack15_1_scan[:len(tuberack15_1_scan)-4] ==  tuberack15_1_bar.strip():
+        raise Exception(f'15ml tuberack 1 scans do not match  ({tuberack15_1_bar}, {tuberack15_1_scan})')
+    if not tuberack2_1_scan[:len(tuberack2_1_scan)-4] ==  tuberack2_1_bar.strip():
+        raise Exception(f'2ml tuberack 2 scans do not match  ({tuberack2_1_bar}, {tuberack2_1_bar})')
 
     if input_file2:
-        tuberack2_2_bar, tuberack15_2_bar = \
-            input_file2.splitlines()[3].split(',')[:2]
-        if not tuberack15_1_scan[:len(tuberack15_1_scan)-4] == \
-                tuberack15_1_bar.strip():
-            raise Exception(f'15ml tuberack 2 scans do not match \
-({tuberack15_2_bar}, {tuberack15_2_scan})')
-        if not tuberack2_2_scan[:len(tuberack2_2_scan)-4] == \
-                tuberack2_2_bar.strip():
-            raise Exception(f'2ml tuberack 2 scans do not match \
-({tuberack2_2_bar}, {tuberack2_2_bar})')
+        tuberack2_2_bar, tuberack15_2_bar =  input_file2.splitlines()[3].split(',')[:2]
+        if not tuberack15_1_scan[:len(tuberack15_1_scan)-4] ==  tuberack15_1_bar.strip():
+            raise Exception(f'15ml tuberack 2 scans do not match  ({tuberack15_2_bar}, {tuberack15_2_scan})')
+        if not tuberack2_2_scan[:len(tuberack2_2_scan)-4] ==  tuberack2_2_bar.strip():
+            raise Exception(f'2ml tuberack 2 scans do not match  ({tuberack2_2_bar}, {tuberack2_2_bar})')
 
     if input_file2:
         data_sets = [data, data2]
@@ -218,3 +162,48 @@ resuming.')
         data = {pip.name: tip_log[pip]['count'] for pip in tip_log}
         with open(tip_file_path, 'w') as outfile:
             json.dump(data, outfile)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/121d15-7-2ml-2ml-pool.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

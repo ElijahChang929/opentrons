@@ -147,8 +147,7 @@ def run(ctx):
 
     # transfer samples initially
     for i, sample in enumerate(sample_plate.wells()[8:num_samples]):
-        dest_set = all_wells_first_half[i*2:(i+1)*2] + \
-            all_wells_second_half[i*2:(i+1)*2]
+        dest_set = all_wells_first_half[i*2:(i+1)*2] +  all_wells_second_half[i*2:(i+1)*2]
         pick_up(p300)
         for d in dest_set:
             p300.aspirate(vol_sample, sample)
@@ -196,9 +195,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -211,9 +210,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

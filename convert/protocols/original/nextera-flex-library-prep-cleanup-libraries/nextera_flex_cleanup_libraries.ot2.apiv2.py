@@ -46,56 +46,9 @@ def run(ctx):
 
     # check:
     if p50_mount == p300_mount:
-        raise Exception('Input different mounts for P50 and P300 multi-channel \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/nextera-flex-library-prep-cleanup-libraries.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-pipettes')
+        raise Exception('Input different mounts for P50 and P300 multi-channel  pipettes')
     if number_of_samples_to_process > 96 or number_of_samples_to_process < 1:
-        raise Exception('Invalid number of samples to process (must be between \
-1 and 96).')
+        raise Exception('Invalid number of samples to process (must be between  1 and 96).')
 
     # pipettes
     num_cols = math.ceil(number_of_samples_to_process/8)
@@ -142,16 +95,14 @@ pipettes')
 
         if pip == 'pip50':
             if tip50_count == tip50_max:
-                ctx.pause('Replace 300ul tipracks in slots \
-' + slot_str50 + ' before resuming.')
+                ctx.pause('Replace 300ul tipracks in slots  ' + slot_str50 + ' before resuming.')
                 pip50.reset_tipracks()
                 tip50_count = 0
             pip50.pick_up_tip()
             tip50_count += 1
         else:
             if tip300_count == tip300_max:
-                ctx.pause('Replace 300ul tipracks in slots \
-' + slot_str300 + ' before resuming.')
+                ctx.pause('Replace 300ul tipracks in slots  ' + slot_str300 + ' before resuming.')
                 pip300.reset_tipracks()
                 tip300_count = 0
             pip300.pick_up_tip()
@@ -179,8 +130,7 @@ pipettes')
         pip50.blow_out()
         pip50.drop_tip()
 
-    ctx.pause('Vortex beads and add to channel 1 of the 12-channel reservoir \
-in slot 3.')
+    ctx.pause('Vortex beads and add to channel 1 of the 12-channel reservoir  in slot 3.')
 
     for s in new_samples300:
         pick_up('pip300')
@@ -192,10 +142,53 @@ in slot 3.')
         pip300.blow_out(s.top())
         pip300.drop_tip()
 
-    ctx.pause('Seal PCR plate in slot 2 and incubate at room \
-temperature for 5 minutes. Then discard the original plate on the magnetic \
-stand and place the plate from slot 2 on the engaged magnetic deck. Place a \
-new PCR plate in slot 2, and resume.')
+    ctx.pause('Seal PCR plate in slot 2 and incubate at room  temperature for 5 minutes. Then discard the original plate on the magnetic \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/nextera-flex-library-prep-cleanup-libraries.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
+stand and place the plate from slot 2 on the engaged magnetic deck. Place a  new PCR plate in slot 2, and resume.')
 
     if p300_type == 'multi':
         pick_up('pip300')
@@ -219,10 +212,8 @@ new PCR plate in slot 2, and resume.')
         pip300.drop_tip()
     magdeck.disengage()
 
-    ctx.pause('Incubate for 5 minutes at room temperature before placing \
-the PCR plate from slot 2 on the magnetic module in slot 1. Discard the \
-original plate occupying the magnetic module. Place another fresh PCR plate \
-on slot 2 for the final elution.')
+    ctx.pause('Incubate for 5 minutes at room temperature before placing  the PCR plate from slot 2 on the magnetic module in slot 1. Discard the \
+original plate occupying the magnetic module. Place another fresh PCR plate  on slot 2 for the final elution.')
 
     magdeck.engage(height=18)
     ctx.delay(minutes=5, msg='Incubating beads on magnet for 5 minutes.')
@@ -284,6 +275,5 @@ on slot 2 for the final elution.')
 
     magdeck.disengage()
 
-    ctx.comment('If you are stopping, seal the plate with Microseal B \
-adhesive or Microseal F foil seal, and store at -25°C to -15°C for up to 30 \
+    ctx.comment('If you are stopping, seal the plate with Microseal B  adhesive or Microseal F foil seal, and store at -25°C to -15°C for up to 30 \
 days.')

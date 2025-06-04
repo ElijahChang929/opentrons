@@ -941,24 +941,21 @@ def run(protocol: protocol_api.ProtocolContext):
                 X = 'A1'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag+1))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
             if samplecolumns >= 2:  # --------------------------------------
                 X = 'A3'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag+1))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
             if samplecolumns >= 3:  # ---------------------------------------
                 X = 'A5'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag+1))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
         if TIPREUSE == 'YES':
@@ -1810,24 +1807,21 @@ def run(protocol: protocol_api.ProtocolContext):
                 X = 'A7'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
             if samplecolumns >= 2:  # ----------
                 X = 'A9'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
             if samplecolumns >= 3:  # ----------
                 X = 'A11'
                 p20.pick_up_tip()
                 p20.move_to(sample_plate_mag[X].bottom(z=p20_offset_Mag))
-                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else \
-                    p20.aspirate(10, rate=0.25)
+                p20.aspirate(20, rate=0.25)if NOMODULES == 'NO' else  p20.aspirate(10, rate=0.25)
                 p20.move_to(bypass)
                 p20.drop_tip() if DRYRUN == 'NO' else p20.return_tip()
         if TIPREUSE == 'YES':
@@ -2307,9 +2301,9 @@ def run(protocol: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -2322,9 +2316,9 @@ def run(protocol: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -8,8 +8,7 @@ import os
 from opentrons.types import Point
 
 metadata = {
-    'protocolName': 'Zymo-Seq RiboFree™ Total RNA Library Prep Select-a-Size \
-MagBead Clean-up (robot 2)',
+    'protocolName': 'Zymo-Seq RiboFree™ Total RNA Library Prep Select-a-Size  MagBead Clean-up (robot 2)',
     'author': 'Nick <protocols@opentrons.com>',
     'source': 'Custom Protocol Request',
     'apiLevel': '2.0'
@@ -106,77 +105,28 @@ def run(ctx):
         #     'opentrons_96_aluminumblock_nest_wellplate_100ul')
         inc_temp = 95
         inc_time = 5
-        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/zymo-ribofree-cleanup.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
+        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely  stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
     elif cleanup_stage == 'post-P7 adapter ligation':
         start_vol = 40
         bead_vol = 60
         elution_vol = 10
         inc_temp = None
         inc_time = None
-        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely \
-stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
+        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely  stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
     elif cleanup_stage == 'post-P5 adapter ligation':
         start_vol = 100
         bead_vol = 100
         elution_vol = 20
         inc_temp = None
         inc_time = None
-        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely \
-stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
+        end_msg = 'This is a safe stopping point. Cleaned-up DNA can be safely  stored at ≤ 4°C overnight or ≤ −20°C for up to one week.'
     elif cleanup_stage == 'post-library index PCR':
         start_vol = 100
         bead_vol = 85
         elution_vol = 20
         inc_temp = None
         inc_time = None
-        end_msg = 'The eluate is your final RNA-Seq library 3. Libraries may be \
-stored at ≤ 4°C overnight or ≤ -20°C for long-term storage.'
+        end_msg = 'The eluate is your final RNA-Seq library 3. Libraries may be  stored at ≤ 4°C overnight or ≤ -20°C for long-term storage.'
 
     """ Appendix A: Select-a-Size MagBead Clean-up Protocol """
     # mix and transfer beads
@@ -262,12 +212,55 @@ stored at ≤ 4°C overnight or ≤ -20°C for long-term storage.'
         tempdeck.set_temperature(inc_temp)
         # m20.move_to(tempplate.wells()[0].top(10))
         m20.home()
-        ctx.pause('Transfer plate from magnetic module to aluminum block on \
-temperature module. Once you resume, the plate will incubate for \
+        ctx.pause('Transfer plate from magnetic module to aluminum block on  temperature module. Once you resume, the plate will incubate for \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/zymo-ribofree-cleanup.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 ' + str(inc_temp) + ' minutes.')
         ctx.delay(minutes=inc_time)
-        ctx.pause('Transfer plate back to magnetic module from aluminum block \
-on temperature module.')
+        ctx.pause('Transfer plate back to magnetic module from aluminum block  on temperature module.')
 
     magdeck.engage()
     ctx.delay(minutes=3, msg='Incubating on magnet for 3 minutes.')

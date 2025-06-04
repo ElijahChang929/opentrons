@@ -48,8 +48,7 @@ def run(ctx):
     # check for barcode scan
     reagent_scan_type = reagent_scan.split('_')[-1].upper().strip()
     slot_scan_type = slot_scan.upper().strip()
-    if reagent_scan_type == 'REPLACE WITH SCAN' \
-            or slot_scan_type == 'REPLACE WITH SCAN':
+    if reagent_scan_type == 'REPLACE WITH SCAN'  or slot_scan_type == 'REPLACE WITH SCAN':
         pass
     else:
         if not reagent_scan_type:
@@ -57,8 +56,7 @@ def run(ctx):
         if not slot_scan_type:
             raise Exception('Rescan slot (empty slot scan)')
         if not reagent_scan_type == slot_scan_type[:3]:
-            raise Exception(f'Reagent mismatch: {reagent_scan_type} in slot \
-    {slot_scan_type}')
+            raise Exception(f'Reagent mismatch: {reagent_scan_type} in slot  {slot_scan_type}')
         if slot_scan_type not in reagent_map.keys():
             raise Exception(f'Invalid slot scan: {slot_scan_type}')
 
@@ -199,15 +197,13 @@ def run(ctx):
                         if reagent_map[reagent_type]['blow-out']:
                             pip.blow_out(dest.top(-1))
 
-                    if elution == num_centrifugations - 1 and \
-                            reagent_map[reagent_type]['drop-tip'] and \
+                    if elution == num_centrifugations - 1 and  reagent_map[reagent_type]['drop-tip'] and \
                             accessed == num_chunks:
                         pip.drop_tip()
                     else:
                         # return tip and reset has_tip attribute
                         return_tip(pip, pick_up_loc, num_tips, reagent_type)
-            func = ctx.pause if elution < num_centrifugations - 1 \
-                else ctx.comment
+            func = ctx.pause if elution < num_centrifugations - 1  else ctx.comment
             func('Centrifuge all plates. Replace and resume when finished.')
 
         # track final used tip
@@ -249,9 +245,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -264,9 +260,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

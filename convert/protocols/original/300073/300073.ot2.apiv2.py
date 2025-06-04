@@ -62,8 +62,7 @@ def run(ctx: protocol_api.ProtocolContext):
                      else filtered_200_lname)
 
     tuberack_lname = 'opentrons_6_tuberack_stellarsci_25ml_conical'
-    well_plate_on_alum_lname = \
-        "stellarscientific_96_aluminumblock_100ul"
+    well_plate_on_alum_lname =  "stellarscientific_96_aluminumblock_100ul"
     well_plate_lname = "stellarscientific_96_wellplate_100ul"
     # load modules
 
@@ -350,8 +349,7 @@ def run(ctx: protocol_api.ProtocolContext):
         ctx.comment("\n\nTransferring samples from Sample set 1:Tuberack "
                     "quad 1 to Destination quad 1\n")
         n_wells = len(target_quadrant_1) - 3
-        n_quad_transfers = n_wells if n_wells < n_samples_set1 \
-            else n_samples_set1
+        n_quad_transfers = n_wells if n_wells < n_samples_set1  else n_samples_set1
         transfer_tube_samples(sample_aspiration_vol_ul,
                               tuberack_quad_1_map[3:n_quad_transfers+3],
                               target_quadrant_1[3:n_quad_transfers+3])
@@ -376,8 +374,7 @@ def run(ctx: protocol_api.ProtocolContext):
     # Transfer the second set of tube samples
     if has_second_tube_set:
         n_wells = len(target_quadrant_3)
-        n_quad_transfers = n_wells if n_wells < n_samples_set2\
-            else n_samples_set2
+        n_quad_transfers = n_wells if n_wells < n_samples_set2 else n_samples_set2
         transfer_tube_samples(sample_aspiration_vol_ul,
                               tuberack_quad_1_map[:n_quad_transfers],
                               target_quadrant_3[:n_quad_transfers])
@@ -404,9 +401,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -419,9 +416,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

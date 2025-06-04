@@ -55,8 +55,7 @@ def run(ctx: protocol_api.ProtocolContext):
               for slot in range(n_plates)]
     tuberack_15_50 = ctx.load_labware(
         tuberack_mixed_lname, '8')
-    tuberacks_15 = \
-        [ctx.load_labware(tuberacks_15_lname, slot)
+    tuberacks_15 =  [ctx.load_labware(tuberacks_15_lname, slot)
          for slot in ['9', '7']]
     tips_20 = [ctx.load_labware(tiprack_lname_20_ul, '10')]
     tips_300 = [ctx.load_labware(tiprack_lname_300ul, '11')]
@@ -387,8 +386,7 @@ def run(ctx: protocol_api.ProtocolContext):
                     # print(str(well_h_track[i]))
                     well_height_track(i, v)
                     dispense_pos_wo_offset = well.bottom(well_h_track[i])
-                    dispense_pos_w_offset = \
-                        dispense_pos_wo_offset.move(
+                    dispense_pos_w_offset =  dispense_pos_wo_offset.move(
                             Point(0, 0, dispense_offset))
                     p20.dispense(disp_vol, dispense_pos_w_offset)
                     pip_v_track -= disp_vol
@@ -430,9 +428,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -445,9 +443,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

@@ -16,9 +16,9 @@ for var_name, var_value in all_vars.items():
         for i, well in enumerate(var_value):
             processed_wells.add(well)   
             display_name = well.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             name_with_index = f"{var_name}[{i}]"
             liquid_locations[name_with_index] = {
                 "well": well_position,
@@ -31,9 +31,9 @@ for var_name, var_value in all_vars.items():
             continue
             
         display_name = var_value.display_name
-        well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+        well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
         slot_match = re.search(r" on (\\d+)$", display_name)
-        slot_number = slot_match.group(1) if slot_match else "未知"
+        slot_number = slot_match.group(1) if slot_match else "unknown"
         liquid_locations[var_name] = {
             "well": well_position,
             "slot": slot_number
@@ -53,6 +53,24 @@ def insert_code_in_run(py_path, foldername):
         code = f.read()
 
     lines = code.splitlines()
+
+    # -------- Preprocess: remove backslash line continuations --------
+    processed_lines = []
+    idx = 0
+    while idx < len(lines):
+        current = lines[idx]
+        if current.rstrip().endswith('\\'):
+            # 始终在行之间插入一个空格，防止关键字或运算符黏连
+            stripped = current.rstrip()[:-1]
+            if idx + 1 < len(lines):
+                next_line = lines[idx + 1]
+                merged = stripped + ' ' + next_line.lstrip()
+                processed_lines.append(merged)
+                idx += 2
+                continue
+        processed_lines.append(current)
+        idx += 1
+    lines = processed_lines
 
     # 检查整文件是否已含 event_logs 初始化
     need_eventlog = not any("builtins.event_logs" in ln for ln in lines)

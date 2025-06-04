@@ -264,8 +264,7 @@ def run(ctx):
         p1000.flow_rate.aspirate = 150
         p1000.flow_rate.dispense = 800
         # custom distribution
-        asp_vol = vol_mobile_phase*2 + 100 \
-            if vol_mobile_phase*2 + 100 < 1000 else 1000
+        asp_vol = vol_mobile_phase*2 + 100  if vol_mobile_phase*2 + 100 < 1000 else 1000
         p1000.aspirate(asp_vol, tubes_dict[mobile_phase].height_dec(asp_vol))
         for well in mobile_phase_dests[i*2:i*2+2]:
             p1000.dispense(vol_mobile_phase, well.bottom(10))
@@ -361,9 +360,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -376,9 +375,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

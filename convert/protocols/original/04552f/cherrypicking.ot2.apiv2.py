@@ -60,53 +60,7 @@ def run(ctx):
             pip.pick_up_tip()
         except protocol_api.labware.OutOfTipsError:
             rack_prompt = ', '.join([rack.parent for rack in pip.tip_racks])
-            ctx.pause(f'Replace {pip} tipracks, slots {rack_prompt} \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/04552f.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-before resuming.')
+            ctx.pause(f'Replace {pip} tipracks, slots {rack_prompt}  before resuming.')
             pip.reset_tipracks()
             pip.pick_up_tip()
 
@@ -137,15 +91,13 @@ before resuming.')
         pip = p300
 
         # check for media
-        if i > 0 and last_source_lw != source_labware \
-                and last_source_lw == source_plates[-1]:
+        if i > 0 and last_source_lw != source_labware  and last_source_lw == source_plates[-1]:
             sources = [media_source[0] for media_source in media_sources]
             vols = [media_source[1] for media_source in media_sources]
             pick_up(p300)
             p300.distribute(vols, media, [s.top() for s in sources],
                             new_tip='never')
-            ctx.pause(f'Plate {source_plates.index(source_labware)+1} \
-finished. Load new plate if necessary.')
+            ctx.pause(f'Plate {source_plates.index(source_labware)+1}  finished. Load new plate if necessary.')
             media_sources = []
 
         if i > 0 and last_dest_lw != dest_labware:
@@ -156,8 +108,7 @@ finished. Load new plate if necessary.')
                 pick_up(p300)
             p300.distribute(vols, media, [d.top(-1) for d in dests],
                             new_tip='never')
-            ctx.comment(f'Plate {dest_plates.index(dest_labware)+1} \
-finished. Load new plate if necessary.')
+            ctx.comment(f'Plate {dest_plates.index(dest_labware)+1}  finished. Load new plate if necessary.')
             media_dests = []
 
         if p300.has_tip:
@@ -186,3 +137,48 @@ finished. Load new plate if necessary.')
         pick_up(p300)
         p300.distribute(vols, media, wells, new_tip='never')
         p300.return_tip()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/04552f.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

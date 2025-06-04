@@ -62,12 +62,9 @@ def run(protocol):
     # begin protocol
     protocol.set_rail_lights(True)
 
-    preampMsg = "Please ensure the Source Plate and Preamp Plate are placed \
-    on the deck (slots 1 and 2, respectively). \
-    The Preamp mastermix should be loaded in A1 of the Tube Rack (slot 4). \
-    At least {}uL should be in the tube, \
-    but approximately 10% extra is recommended ({}uL). \
-    When ready, click RESUME".format(preampVol, preExtra)
+    preampMsg = "Please ensure the Source Plate and Preamp Plate are placed  on the deck (slots 1 and 2, respectively). \
+    The Preamp mastermix should be loaded in A1 of the Tube Rack (slot 4).  At least {}uL should be in the tube, \
+    but approximately 10% extra is recommended ({}uL).  When ready, click RESUME".format(preampVol, preExtra)
     msgLights(preampMsg)
 
     # transfer preamp mix, then transfer samples
@@ -89,17 +86,13 @@ def run(protocol):
             )
 
     # message user to let them know that the robot is ready for amplification
-    ampMsg = "Preamp plate is ready. Please remove from robot for \
-    amplification off deck. After amplification, click RESUME."
+    ampMsg = "Preamp plate is ready. Please remove from robot for  amplification off deck. After amplification, click RESUME."
     msgLights(ampMsg)
 
     # message to user to prepare for final step
-    oaMsg = "Please ensure the Preamp Plate and Loading Plate are placed \
-    on the deck (slots 2 and 3, respectively). \
-    The OpenArray mastermix should be loaded in D6 of the Tube Rack (slot 4). \
-    At least {}uL should be in the tube, \
-    but approximately 10% extra is recommended ({}uL). \
-    When ready, click RESUME".format(oaVol, oaExtra)
+    oaMsg = "Please ensure the Preamp Plate and Loading Plate are placed  on the deck (slots 2 and 3, respectively). \
+    The OpenArray mastermix should be loaded in D6 of the Tube Rack (slot 4).  At least {}uL should be in the tube, \
+    but approximately 10% extra is recommended ({}uL).  When ready, click RESUME".format(oaVol, oaExtra)
     msgLights(oaMsg)
 
     # transfer OpenArray Master Mix and samples
@@ -144,9 +137,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -159,9 +152,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

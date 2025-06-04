@@ -132,8 +132,7 @@ def run(protocol):
 
         if tipc == 96:
             pipp.home()
-            protocol.pause('Out of tips for respective pipette. Please replace \
-            and click RESUME.')
+            protocol.pause('Out of tips for respective pipette. Please replace  and click RESUME.')
             tipr.reset()
             tipc = 0
 
@@ -149,8 +148,7 @@ def run(protocol):
         nonlocal ab_vol
 
         if vol >= ab_vol:
-            protocol.pause('More antibody dilutent needed, please replace. \
-            When replaced in A3, click RESUME.')
+            protocol.pause('More antibody dilutent needed, please replace.  When replaced in A3, click RESUME.')
             ab_vol = 50000
             ab_ht = 93
         pick_up(p1k)
@@ -181,8 +179,7 @@ def run(protocol):
         nonlocal amp_vol
 
         if vol >= amp_vol:
-            protocol.pause('More opal dilutent needed, please replace. \
-            When replaced in A4, click RESUME.')
+            protocol.pause('More opal dilutent needed, please replace.  When replaced in A4, click RESUME.')
             amp_vol = 50000
             amp_ht = 93
 
@@ -219,8 +216,7 @@ def run(protocol):
         ab_src_vol = ab_src[0]
         ab_src_well = tube_rack[ab_src[1]]
 
-        pause_msg = 'Please add more '+src+' antibody to well '+ab_src[1]+' \
-        in slot 6. When ready, click RESUME.'
+        pause_msg = 'Please add more '+src+' antibody to well '+ab_src[1]+'  in slot 6. When ready, click RESUME.'
 
         if vol >= ab_vol:
             if ab_src_vol <= 50:
@@ -236,8 +232,7 @@ def run(protocol):
         ab[0] -= vol
 
     def ki67_helper(vol, src, dest):
-        """This is a helper function that will check the value of the volume \
-        bening transferred and will do the appropriate transfer. Finally, \
+        """This is a helper function that will check the value of the volume  bening transferred and will do the appropriate transfer. Finally, \
         it will update the volume as a return value.
         """
         src_vol = src[0]
@@ -260,8 +255,7 @@ def run(protocol):
         return vol
 
     def ki67_transfer(vol, dest):
-        """This function that will use 'ki67_helper' (above) to make the the \
-        source list based on the dictionary. This way, the dictionary will be \
+        """This function that will use 'ki67_helper' (above) to make the the  source list based on the dictionary. This way, the dictionary will be \
         updated appropriately.
         """
         srcs = [volumes_dict['KI67_src'+str(i)] for i in range(1, 6)]
@@ -272,8 +266,7 @@ def run(protocol):
             x = ki67_helper(x, src, dest)
         # Refills tube if there is still volume left after transfers
         while x > 0:
-            protocol.pause('Please refill all KI67 source tubes. Tubes D3, E3, \
-            F3, G3, and H3 should each have 2mL in them. After refilling, \
+            protocol.pause('Please refill all KI67 source tubes. Tubes D3, E3,  F3, G3, and H3 should each have 2mL in them. After refilling, \
             please click RESUME.')
             for src in srcs:
                 src[0] = 2000
@@ -358,9 +351,9 @@ def run(protocol):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -373,9 +366,9 @@ def run(protocol):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

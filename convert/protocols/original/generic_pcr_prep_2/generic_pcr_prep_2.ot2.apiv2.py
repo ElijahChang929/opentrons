@@ -65,11 +65,9 @@ def run(ctx: protocol_api.ProtocolContext):
                         "aluminum block in order to be used with a "
                         "temperature module")
 
-    assert aspiration_rate_multiplier > 0, \
-        "The aspiration flow-rate multiplier must be greater than zero"
+    assert aspiration_rate_multiplier > 0,  "The aspiration flow-rate multiplier must be greater than zero"
 
-    assert dispensation_rate_multiplier > 0, \
-        "The dispensation flow-rate multiplier must be greater than zero"
+    assert dispensation_rate_multiplier > 0,  "The dispensation flow-rate multiplier must be greater than zero"
 
     assert n_samples > 0, "There must be at least one sample"
     # Error checking on n_samples <= number of wells on destination plate
@@ -84,8 +82,7 @@ def run(ctx: protocol_api.ProtocolContext):
                         format(n_wells_dest, n_samples))
     """
 
-    assert left_pipette_lname or right_pipette_lname, \
-        "Load at least one pipette"
+    assert left_pipette_lname or right_pipette_lname,  "Load at least one pipette"
 
     # End error checking ---------------------------------------------------
 
@@ -134,8 +131,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
     # labware setup
     plate_list = []
-    for labware_lname, tmod, slot, name in \
-        zip([DNA_well_plate_lname, destination_well_plate_lname],
+    for labware_lname, tmod, slot, name in  zip([DNA_well_plate_lname, destination_well_plate_lname],
             [tmod_dna_plate, tmod_dest_plate],
             [DNA_plate_slots[0], dest_plate_slot],
             ["DNA plate 1", "destination plate"]):
@@ -221,8 +217,7 @@ def run(ctx: protocol_api.ProtocolContext):
                              slot, tiprack_list)
             tipracks_r = tiprack_list
     else:
-        for pip_lname, is_filtered, slots \
-            in zip([left_pipette_lname, right_pipette_lname],
+        for pip_lname, is_filtered, slots  in zip([left_pipette_lname, right_pipette_lname],
                    [use_filter_tips_left, use_filter_tips_right],
                    [tiprack_l_slots, tiprack_r_slots]):
             for i in range(len(slots)):
@@ -324,15 +319,12 @@ def run(ctx: protocol_api.ProtocolContext):
         This function will try to return a multi-channel pipette that
         can handle the given volume, and failing that a single channel pip.
         """
-        assert small_pipette.max_volume \
-            <= large_pipette.max_volume, ("Pipette argument error, small pip's"
+        assert small_pipette.max_volume  <= large_pipette.max_volume, ("Pipette argument error, small pip's"
                                           " max volume should be less than or "
                                           "equal to the large pip's")
-        if small_pipette.min_volume <= volume <= small_pipette.max_volume \
-                and is_multi_channel(small_pipette):
+        if small_pipette.min_volume <= volume <= small_pipette.max_volume  and is_multi_channel(small_pipette):
             return small_pipette
-        elif large_pipette.min_volume <= volume \
-                and is_multi_channel(large_pipette):
+        elif large_pipette.min_volume <= volume  and is_multi_channel(large_pipette):
             return large_pipette
         elif small_pipette.min_volume <= volume <= small_pipette.max_volume:
             return small_pipette
@@ -728,9 +720,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -743,9 +735,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

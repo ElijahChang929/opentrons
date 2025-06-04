@@ -16,8 +16,7 @@ def run(ctx):
     [input_file, p20_mount, p300_mount] = get_values(  # noqa: F821
         'input_file', 'p20_mount', 'p300_mount')
     # [input_file, p20_mount, p300_mount] = [
-    #     'Lable,Pos,nM,FC,Rxn,Vol,h2O,Tube\nP_F3,A1,28.9,0.8,100,10,30,\
-    #     T1\nP_B3,A2,28.32,0.8,100,10,,T1\nP_FIP,A3,53.8,1.6,100,20,,\
+    #     'Lable,Pos,nM,FC,Rxn,Vol,h2O,Tube\nP_F3,A1,28.9,0.8,100,10,30, #     T1\nP_B3,A2,28.32,0.8,100,10,,T1\nP_FIP,A3,53.8,1.6,100,20,,\
     #     T1\nP_BIP,A4,82,1.6,100,20,,T1\nP_LF,A5,32.5,0.4,100,5,,T1',
     #     'right', 'left']
 
@@ -124,9 +123,9 @@ def run(ctx):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -139,9 +138,9 @@ def run(ctx):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number

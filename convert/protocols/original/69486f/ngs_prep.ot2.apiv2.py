@@ -34,53 +34,7 @@ def run(ctx):
     subsample_list = [sample_map[key] for key in sorted(sample_map.keys())]
 
     if num_samples * max_subsamples * 2 > 96:
-        raise Exception(f'Invalid number of samples ({num_samples}) and \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/69486f.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-max subsamples ({max_subsamples}). Exceeds plate capacity.')
+        raise Exception(f'Invalid number of samples ({num_samples}) and  max subsamples ({max_subsamples}). Exceeds plate capacity.')
 
     # labware
     sample_plate = ctx.load_labware('agilent_96_wellplate_200ul', '1',
@@ -159,8 +113,7 @@ max subsamples ({max_subsamples}). Exceeds plate capacity.')
     rows_per_sample = 2 if max_subsamples > 6 else 1
     if p20.type == 'multi' and rows_per_sample == 1:  # only if samples in col
         sources, num_pickups = [
-            sample_plate.rows()[0][0] for _ in range(max_subsamples)], \
-            num_samples
+            sample_plate.rows()[0][0] for _ in range(max_subsamples)],  num_samples
         source_sets = [
             [sample_plate.rows()[0][i]] for i in range(max_subsamples)]
         dilution_sets = [
@@ -335,8 +288,7 @@ max subsamples ({max_subsamples}). Exceeds plate capacity.')
     vol_sample_per_pool = 15
 
     if perform_normalization:
-        ctx.pause(F'RUN PCR PROFILE 1 ON PLATE IN SLOT {pcr1_plate.parent}. \
-CHANGE THE TUBERACK 1 (SLOT 7) ACCORDING TO REAGENT MAP 2.')
+        ctx.pause(F'RUN PCR PROFILE 1 ON PLATE IN SLOT {pcr1_plate.parent}.  CHANGE THE TUBERACK 1 (SLOT 7) ACCORDING TO REAGENT MAP 2.')
 
         if len(all_normalization_wells) > 28:
             reservoir = ctx.load_labware('agilent_3_reservoir_95ml', '11',
@@ -410,8 +362,52 @@ CHANGE THE TUBERACK 1 (SLOT 7) ACCORDING TO REAGENT MAP 2.')
         ctx.delay(minutes=5, msg='Incubating 5 minutes.')
 
     else:
-        ctx.pause(f'RUN PCR PROFILE 1 ON PLATE IN SLOT {pcr1_plate.parent}. \
-NORMALIZE ALL SAMPLES PLACE NORMALIZED PLATE IN SLOT 6 FOR POOLING TO BEGIN. \
+        ctx.pause(f'RUN PCR PROFILE 1 ON PLATE IN SLOT {pcr1_plate.parent}.  NORMALIZE ALL SAMPLES PLACE NORMALIZED PLATE IN SLOT 6 FOR POOLING TO BEGIN. \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/69486f.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 CHANGE THE TUBERACK 1 (SLOT 7) ACCORDING TO REAGENT MAP 2')
 
     for source_set, pool in zip(pool_source_sets, pool_dests):

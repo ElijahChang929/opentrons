@@ -36,8 +36,6 @@ def get_values(*names):
 
 builtins.get_values = get_values
 
-
-
 error_log = Path("protocols/log/error.txt")
 for file in Path("protocols/original").rglob("*.py"):
     print(f"Simulating: {file}")

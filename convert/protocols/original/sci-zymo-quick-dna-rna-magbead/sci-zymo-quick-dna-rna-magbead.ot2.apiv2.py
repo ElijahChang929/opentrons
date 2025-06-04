@@ -155,53 +155,7 @@ def run(ctx):
 
     def _pick_up(pip, loc=None):
         if tip_log[pip]['count'] == tip_log[pip]['max'] and not loc:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/sci-zymo-quick-dna-rna-magbead.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'µl tipracks before  resuming.')
             pip.reset_tipracks()
             tip_log[pip]['count'] = 0
         if loc:
@@ -264,8 +218,7 @@ resuming.')
                         cancellationToken.set_true()
                     thread = create_thread(ctx, cancellationToken)
                 m300.home()
-                ctx.pause('Please empty liquid waste (slot 11) before \
-resuming.')
+                ctx.pause('Please empty liquid waste (slot 11) before  resuming.')
 
                 ctx.home()  # home before continuing with protocol
                 if flash:
@@ -318,8 +271,7 @@ resuming.')
         'rightLeft' will determine which value to use in the list of 'top' and
         'bottom' (below), based on the column of the 'well' used.
         In the case that an Even column is used, the first value of 'top' and
-        'bottom' will be used, otherwise, the second value of each will be \
-        used.
+        'bottom' will be used, otherwise, the second value of each will be  used.
         """
         center = well.bottom().move(types.Point(x=0, y=0, z=0.1))
         top = [
@@ -390,8 +342,7 @@ resuming.')
                 _drop(m300)
         ctx.pause('mix for 10 minutes off-deck in a heatershaker')
         magdeck.engage(height=MAG_HEIGHT)
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         # remove initial supernatant
         remove_supernatant(vol+starting_vol, park=park)
@@ -446,8 +397,7 @@ resuming.')
         if magdeck.status == 'disengaged':
             magdeck.engage(height=MAG_HEIGHT)
 
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         remove_supernatant(vol, park=park)
 
@@ -481,8 +431,7 @@ resuming.')
             else:
                 _drop(m300)
 
-        ctx.pause('Incubating for 10 minutes for DNase 1 treatment with \
-        occasional mixing.')
+        ctx.pause('Incubating for 10 minutes for DNase 1 treatment with  occasional mixing.')
 
     def stop_reaction(vol, source, mix_reps=6, park=True, resuspend=True):
 
@@ -514,14 +463,12 @@ resuming.')
             else:
                 _drop(m300)
 
-        ctx.pause('Incubating for 10 minutes with occasional mixing for stop \
-        reaction')
+        ctx.pause('Incubating for 10 minutes with occasional mixing for stop  reaction')
 
         if magdeck.status == 'disengaged':
             magdeck.engage(height=MAG_HEIGHT)
 
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         remove_supernatant(vol, park=park)
 
@@ -558,8 +505,7 @@ resuming.')
                 _drop(m300)
 
         magdeck.engage(height=MAG_HEIGHT)
-        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for \
-' + str(settling_time) + ' minutes.')
+        ctx.delay(minutes=settling_time, msg='Incubating on MagDeck for  ' + str(settling_time) + ' minutes.')
 
         for i, (m, e, spot) in enumerate(
                 zip(mag_samples_m, elution_samples_m, parking_spots)):
@@ -612,3 +558,48 @@ resuming.')
         data = {pip.name: tip_log[pip]['count'] for pip in tip_log}
         with open(tip_file_path, 'w') as outfile:
             json.dump(data, outfile)
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/sci-zymo-quick-dna-rna-magbead.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

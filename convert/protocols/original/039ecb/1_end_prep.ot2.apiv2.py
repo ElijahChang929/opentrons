@@ -9,8 +9,7 @@ from opentrons.types import Point
 import math
 
 metadata = {
-    'protocolName': 'NEBNext® Ultra™ II FS DNA Library Prep Kit for \
-Illumina',
+    'protocolName': 'NEBNext® Ultra™ II FS DNA Library Prep Kit for  Illumina',
     'author': 'Opentrons <protocols@opentrons.com>',
     'apiLevel': '2.13'
 }
@@ -89,53 +88,7 @@ def run(ctx):
             try:
                 pip.pick_up_tip()
             except protocol_api.labware.OutOfTipsError:
-                ctx.pause("\n\n\n\nReplace 200ul filtertipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/039ecb.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.\n\n\n\n")
+                ctx.pause("\n\n\n\nReplace 200ul filtertipracks before  resuming.\n\n\n\n")
                 pip.reset_tipracks()
                 pip.pick_up_tip()
 
@@ -224,12 +177,10 @@ resuming.\n\n\n\n")
 
         if time_incubation > 0:
             ctx.delay(minutes=time_incubation,
-                      msg=f'Incubating off MagDeck for \
-{time_incubation} minutes.')
+                      msg=f'Incubating off MagDeck for  {time_incubation} minutes.')
         if do_discard_supernatant:
             magdeck.engage()
-            ctx.delay(minutes=time_settling, msg=f'Incubating on \
-MagDeck for {time_settling} minutes.')
+            ctx.delay(minutes=time_settling, msg=f'Incubating on  MagDeck for {time_settling} minutes.')
 
             remove_supernatant(vol_supernatant)
             magdeck.disengage()
@@ -263,8 +214,7 @@ MagDeck for {time_settling} minutes.')
             slow_withdraw(m300, m)
             m300.drop_tip()
 
-        ctx.pause('\n\n\n\nCentrifugre PCR plate if necessary. Resume once \
-    plate is returned to slot 2.\n\n\n\n')
+        ctx.pause('\n\n\n\nCentrifugre PCR plate if necessary. Resume once  plate is returned to slot 2.\n\n\n\n')
 
         tc.open_lid()
         tc.set_lid_temperature(75)
@@ -289,8 +239,7 @@ MagDeck for {time_settling} minutes.')
         tc.set_block_temperature(4)
         tc.open_lid()
 
-        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once \
-    plate is returned to Thermocycler.\n\n\n\n')
+        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once  plate is returned to Thermocycler.\n\n\n\n')
 
 
 
@@ -326,15 +275,13 @@ MagDeck for {time_settling} minutes.')
             slow_withdraw(m300, m)
             m300.drop_tip()
 
-        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once \
-    plate is returned to Thermocycler.\n\n\n\n')
+        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once  plate is returned to Thermocycler.\n\n\n\n')
 
         tc.close_lid()
         tc.set_block_temperature(20, hold_time_minutes=15)
         tc.open_lid()
 
-        ctx.pause('\n\n\n\nPlace USER enzyme in position C1 of tuberack on \
-    temprature module. Resume once finished.\n\n\n\n')
+        ctx.pause('\n\n\n\nPlace USER enzyme in position C1 of tuberack on  temprature module. Resume once finished.\n\n\n\n')
 
         for s in samples_s_tc:
             pick_up(p20)
@@ -354,8 +301,7 @@ MagDeck for {time_settling} minutes.')
             slow_withdraw(m300, m)
             m300.drop_tip()
 
-        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once \
-    plate is returned to Thermocycler.\n\n\n\n')
+        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once  plate is returned to Thermocycler.\n\n\n\n')
 
         tc.set_lid_temperature(47)
         tc.close_lid()
@@ -404,8 +350,7 @@ MagDeck for {time_settling} minutes.')
             slow_withdraw(m300, s)
             m300.drop_tip()
 
-        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once \
-    plate is returned to Thermocycler.\n\n\n\n')
+        ctx.pause('\n\n\n\nCentrifuge PCR plate if necessary. Resume once  plate is returned to Thermocycler.\n\n\n\n')
 
         ctx.delay(minutes=5, msg='\n\n\n\nIncubating\n\n\n\n')
         magdeck.engage()
@@ -475,8 +420,7 @@ MagDeck for {time_settling} minutes.')
             slow_withdraw(p20, s)
             p20.drop_tip()
 
-        ctx.pause('Add 5ul of Primer indexes, vortex and centrifuge manually. \
-    Place back into the thermocycler block when finished.')
+        ctx.pause('Add 5ul of Primer indexes, vortex and centrifuge manually.  Place back into the thermocycler block when finished.')
 
         profile = [
             {'temperature': 98, 'hold_time_seconds': 10},
@@ -489,8 +433,7 @@ MagDeck for {time_settling} minutes.')
         tc.set_block_temperature(4)
         tc.open_lid()
 
-        ctx.pause('\n\n\n\nRefill all tips and reagents, and move \
-    Thermocycler plate to magnetic module.\n\n\n\n')
+        ctx.pause('\n\n\n\nRefill all tips and reagents, and move  Thermocycler plate to magnetic module.\n\n\n\n')
         p20.reset_tipracks()
         m300.reset_tipracks()
 
@@ -574,3 +517,48 @@ MagDeck for {time_settling} minutes.')
             m300.drop_tip()
 
         magdeck.disengage()
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/039ecb.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

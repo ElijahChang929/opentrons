@@ -92,53 +92,7 @@ def run(ctx):
     def pick_up(pip):
         nonlocal tip_track
         if tip_track[pip]['count'] == tip_track[pip]['max']:
-            ctx.pause('Replace ' + str(pip.max_volume) + 'ul tipracks before \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/51df08.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
-resuming.')
+            ctx.pause('Replace ' + str(pip.max_volume) + 'ul tipracks before  resuming.')
             tip_track[pip]['count'] = 0
             pip.reset_tipracks()
         tip_track[pip]['count'] += 1
@@ -180,10 +134,53 @@ resuming.')
             p20.drop_tip()
 
         ctx.home()
-        ctx.pause('Remove well module from OT-2 and incubate in humidity \
-chamber overnight at 4C to allow antibodies to adhere to slides. After \
-overnight incubation, remove the slides from the humidity chamber and place \
-in desiccator to dry. Once dry, place slides with attached well module back \
+        ctx.pause('Remove well module from OT-2 and incubate in humidity  chamber overnight at 4C to allow antibodies to adhere to slides. After \
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/51df08.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
+overnight incubation, remove the slides from the humidity chamber and place  in desiccator to dry. Once dry, place slides with attached well module back \
 into OT-2')
 
         wash(250, detergent_wash_buffer)
@@ -191,8 +188,7 @@ into OT-2')
         add_reagent(250, bsa_blocking_buffer)
 
         ctx.home()
-        ctx.pause('Remove slide from OT-2 and place on benchtop shaker to \
-    incubate in humidity chamber for 1 hour at room temperature')
+        ctx.pause('Remove slide from OT-2 and place on benchtop shaker to  incubate in humidity chamber for 1 hour at room temperature')
 
         for _ in range(2):
             wash(250, pbs[0])
@@ -200,8 +196,7 @@ into OT-2')
         wash(250, water[0])
 
     ctx.home()
-    ctx.pause('Remove slide from OT-2 and desiccate dry. Prepare serum \
-samples in Eppendorf tubes')
+    ctx.pause('Remove slide from OT-2 and desiccate dry. Prepare serum  samples in Eppendorf tubes')
 
     if 'sample' in process:
         # add samples
@@ -216,8 +211,7 @@ samples in Eppendorf tubes')
                 p300.drop_tip()
 
         ctx.home()
-        ctx.pause('Remove slide from OT-2 and incubate on benchtop shaker in \
-    humidity box for 2 hours at room temperature')
+        ctx.pause('Remove slide from OT-2 and incubate on benchtop shaker in  humidity box for 2 hours at room temperature')
 
         discard_liquid(100, new_tip=True)
 

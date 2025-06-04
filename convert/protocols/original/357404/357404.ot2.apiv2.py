@@ -156,8 +156,7 @@ def run(ctx: protocol_api.ProtocolContext):
 
     '''
     # Load 1000 uL tips on 6 and 9
-    tiprack_1000s = \
-        [ctx.load_labware(tiprack_1000_loader['lname'], slot)
+    tiprack_1000s =  [ctx.load_labware(tiprack_1000_loader['lname'], slot)
          for slot in tiprack_1000_loader['slots']]
 
     # load instrument
@@ -447,8 +446,7 @@ def run(ctx: protocol_api.ProtocolContext):
             remaining_wells = n_wells - i
             aspiration_vol = 0
             if track_vol < 100:
-                aspiration_vol = 905 if remaining_wells > 9 else \
-                    remaining_wells * 100 + 5
+                aspiration_vol = 905 if remaining_wells > 9 else  remaining_wells * 100 + 5
                 if p1000.has_tip:
                     if do_reuse_tip:
                         p1000.blow_out(ctx.fixed_trash['A1'])
@@ -614,8 +612,7 @@ def run(ctx: protocol_api.ProtocolContext):
     if temp_mod:
         temp_mod.set_temperature(4)
     dt = t_per_block * n_slots
-    reag_transfer_fn = multi_dispense_reagent_p1000 if is_multi_disp_reags \
-        else single_dispense_reagent_p1000
+    reag_transfer_fn = multi_dispense_reagent_p1000 if is_multi_disp_reags  else single_dispense_reagent_p1000
 
     # Transfer 100 µL of block from the tuberack to each destination well
     # (slide) (could be done as a multi-dispense with the P1000)
@@ -693,9 +690,9 @@ def run(ctx: protocol_api.ProtocolContext):
             for i, well in enumerate(var_value):
                 processed_wells.add(well)   
                 display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
                 slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "未知"
+                slot_number = slot_match.group(1) if slot_match else "unknown"
                 name_with_index = f"{var_name}[{i}]"
                 liquid_locations[name_with_index] = {
                     "well": well_position,
@@ -708,9 +705,9 @@ def run(ctx: protocol_api.ProtocolContext):
                 continue
             
             display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "未知"
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
             slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "未知"
+            slot_number = slot_match.group(1) if slot_match else "unknown"
             liquid_locations[var_name] = {
                 "well": well_position,
                 "slot": slot_number
