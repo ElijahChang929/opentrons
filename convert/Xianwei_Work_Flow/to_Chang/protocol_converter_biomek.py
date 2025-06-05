@@ -85,7 +85,7 @@ def build_protocol_graph(labware_with_liquid: List[Dict[str, Any]], protocol_ste
                         G.add_edge(prev_node, node_id, source_port=source_port, target_port=port_name)
                         slot_last_writer[slot] = node_id
 
-            tip_rack_location = 'TL1'
+            tip_rack_location = 'TL2'
             port_name = "tip_rack"
             rack_id = "Tip Rack BC230 TL2"
 
