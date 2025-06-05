@@ -1,12 +1,16 @@
 import importlib.util
 import os
 import sys
+sys.path.insert(0, '/Users/guangxinzhang/Documents/Deep_Potential/opentrons/api/src')
+sys.path.insert(0, '/Users/guangxinzhang/Documents/Deep_Potential/opentrons/shared-data/python')
 from pathlib import Path
 from opentrons.simulate import simulate, format_runlog
 import builtins
 import inspect
 import json
 import os
+
+
 
 def get_values(*names):
     caller_globals = inspect.stack()[1].frame.f_globals

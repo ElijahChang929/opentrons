@@ -116,35 +116,35 @@ def insert_code_in_run(py_path, foldername):
     folder_code = INJECT_CODE.replace('{FOLDERNAME}', foldername)
     inject_lines = [(indent + l if l.strip() else l) for l in folder_code.splitlines()]
     
-    # Insert before function end (keep any dedented code after run)
-    # We'll just put it at the end of the file for safety (alternatively, more complex AST rewrite)
-    # -- Optionally, you can improve it to insert before all dedented lines after the function body
-    # For now, just append after the function
+    # # Insert before function end (keep any dedented code after run)
+    # # We'll just put it at the end of the file for safety (alternatively, more complex AST rewrite)
+    # # -- Optionally, you can improve it to insert before all dedented lines after the function body
+    # # For now, just append after the function
 
-    # Find where the run() ends (simple logic: after all lines more indented than run)
-    func_lines = []
-    in_run = False
-    for i, line in enumerate(lines):
-        if line.strip().startswith('def run'):
-            in_run = True
-            func_lines.append(i)
-            continue
-        if in_run:
-            if (line.strip() == "") or (len(line) - len(line.lstrip()) > run_indent):
-                func_lines.append(i)
-            else:
-                # out of function block
-                break
+    # # Find where the run() ends (simple logic: after all lines more indented than run)
+    # func_lines = []
+    # in_run = False
+    # for i, line in enumerate(lines):
+    #     if line.strip().startswith('def run'):
+    #         in_run = True
+    #         func_lines.append(i)
+    #         continue
+    #     if in_run:
+    #         if (line.strip() == "") or (len(line) - len(line.lstrip()) > run_indent):
+    #             func_lines.append(i)
+    #         else:
+    #             # out of function block
+    #             break
 
     # Insert after the last function body line
-    inject_at = func_lines[-1] + 1
+    inject_at = start #func_lines[-1] + 1
     new_lines = lines[:inject_at] + inject_lines + lines[inject_at:]
     with open(py_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines))
     print(f"Injected into {py_path}")
 
 def main():
-    base = 'protocols/original/'
+    base = 'protocols/test/'
     for root, dirs, files in os.walk(base):
         foldername = os.path.basename(root)
         for file in files:

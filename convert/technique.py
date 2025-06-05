@@ -39,56 +39,77 @@ enriched_steps_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/co
 liquid_to_check = ['beads','water']
 
 def gather_location(liquid_type, key_location, path_enriched_steps):
+
     with open(path_enriched_steps, "r", encoding="utf-8") as f:
         enriched_steps = json.load(f)
-    #print(liquid_type, key_location, path_enriched_steps)
+
+    asp_infor = {
+        'top':[],
+        'bottom':[],
+        'move':[],
+        'center':[],
+        'move_to':[],
+        'mix_detail':[],
+    }
+    dis_infor = {
+        'top':[],
+        'bottom':[],
+        'move':[],
+        'center':[],
+        'move_to':[],
+        'mix_detail':[],
+    }
+
     for step in enriched_steps:
-            
-            asp_infor = {
+
+        for step_number, i in enumerate(step['sources']):
+
+            if i['well'] == key_location[liquid_type]['well'] and i['slot'] == key_location[liquid_type]['slot']:
+                #print("DEBUG", i['slot'], type(i['slot']),
+      #key_location[liquid_type]['slot'], type(key_location[liquid_type]['slot']))
+                # 对于吸和放，其实都要考察。序号上： 放 = 吸 + 1
+                asp_infor['top'].append(step['top'][step_number])
+                asp_infor['bottom'].append(step['bottom'][step_number])
+                asp_infor['move'].append(step['move'][step_number])
+                asp_infor['center'].append(step['center'][step_number])
+                asp_infor['move_to'].append(step['move_to'][step_number])
+                asp_infor['mix_detail'].append(step['mix_detail'][step_number])
+
+                dis_infor['top'].append(step['top'][step_number+1])
+                dis_infor['bottom'].append(step['bottom'][step_number+1])
+                dis_infor['move'].append(step['move'][step_number+1])
+                dis_infor['center'].append(step['center'][step_number+1])
+                dis_infor['move_to'].append(step['move_to'][step_number+1])
+                dis_infor['mix_detail'].append(step['mix_detail'][step_number+1])
+
+    #print(asp_infor)
+    return asp_infor, dis_infor
+
+def visit_protocols(liquid_to_check, path_detail_infor, path_enriched_steps):
+
+    liquid_transfer_properties = {
+
+        key: {'aspirate':{
                 'top':[],
                 'bottom':[],
                 'move':[],
                 'center':[],
                 'move_to':[],
                 'mix_detail':[],
-            }
-            dis_infor = {
+        },
+              'dispense':{
                 'top':[],
                 'bottom':[],
                 'move':[],
                 'center':[],
                 'move_to':[],
                 'mix_detail':[],
-            }
+              }
+         } for key in liquid_to_check
+    }
 
-            for step_number, i in enumerate(step['sources']):
-                if i['well'] == key_location[liquid_type]['well'] and i['slot'] == key_location[liquid_type]['slot']:
-                    # 对于吸和放，其实都要考察。序号上： 放 = 吸 + 1
-                    asp_infor['top'].append(step['top'][step_number])
-                    asp_infor['bottom'].append(step['bottom'][step_number])
-                    asp_infor['move'].append(step['move'][step_number])
-                    asp_infor['center'].append(step['center'][step_number])
-                    asp_infor['move_to'].append(step['move_to'][step_number])
-                    asp_infor['mix_detail'].append(step['mix_detail'][step_number])
-
-                    dis_infor['top'].append(step['top'][step_number+1])
-                    dis_infor['bottom'].append(step['bottom'][step_number+1])
-                    dis_infor['move'].append(step['move'][step_number+1])
-                    dis_infor['center'].append(step['center'][step_number+1])
-                    dis_infor['move_to'].append(step['move_to'][step_number+1])
-                    dis_infor['mix_detail'].append(step['mix_detail'][step_number+1])
-
-            print(liquid_type, dis_infor)
-                    
-
-          
-
-
-    # for step in enriched_steps:
-    #     if key_location in
-
-def visit_protocols(liquid, path_detail_infor, path_enriched_steps):
     protocol = [path_detail_infor+d for d in os.listdir(path_detail_infor)]
+
     for p in protocol:
         try:
             with open(p, "r", encoding="utf-8") as f:
@@ -96,15 +117,25 @@ def visit_protocols(liquid, path_detail_infor, path_enriched_steps):
             liquid_infor = labware_data['liquid_locations']
             for key in list(liquid_infor.keys()):
                 key_location = {}
-                for liquid_type in liquid:
+                for liquid_type in liquid_to_check:
                     if liquid_type in key:
                         key_location[liquid_type] = liquid_infor[key]
                         if key_location[liquid_type]['slot'] in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']:
                             key_location[liquid_type]['slot'] = int(key_location[liquid_type]['slot'])
-                            enriched_steps = path_enriched_steps + os.path.basename(p)
-                            gather_location(liquid_type,key_location, enriched_steps)
+                            enriched_steps = os.path.join(path_enriched_steps, os.path.basename(p))
+                            asp_infor, dis_infor = gather_location(liquid_type, key_location, enriched_steps)
+                            for key in liquid_transfer_properties[liquid_type]['aspirate'].keys():
+                                liquid_transfer_properties[liquid_type]['aspirate'][key].extend(asp_infor[key])
+                            for key in liquid_transfer_properties[liquid_type]['dispense'].keys():
+                                liquid_transfer_properties[liquid_type]['dispense'][key].extend(dis_infor[key])
         except Exception as e:
             print(e)
-    return
 
-visit_protocols(liquid_to_check, file_dir, enriched_steps_dir)
+    return liquid_transfer_properties
+
+liquid_transfer_properties = visit_protocols(liquid_to_check, file_dir, enriched_steps_dir)
+
+# with open('liquid_transfer_properties.json', 'w', encoding='utf-8') as f:
+#     json.dump(liquid_transfer_properties, f, indent=4, ensure_ascii=False)
+
+
