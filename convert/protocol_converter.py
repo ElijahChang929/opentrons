@@ -720,9 +720,9 @@ def fix_special_cases(protocol_steps: List[Dict]) -> List[Dict]:
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/log/{name}.log"
-    infofile = f"/Users/guangxinzhang/Documents/Deep Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
-    detail_steps = f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
+    infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
+    detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
 
     protocol_steps = process_liquid_handler_log(logfile)
@@ -735,16 +735,16 @@ def parse_protocol(name: str):
         labware_data = json.load(f)
     labware_info = extract_labware_info_from_json(labware_data)
     enriched_steps = fix_special_cases(enriched_steps)
-    with open(f'/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
+    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
         json.dump(enriched_steps, f, indent=4)
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)
-    with open(f"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
+    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/graph/{name}.graph.json", "w") as f:
         json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     # 测试代码
-    file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original"
+    file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
     for name in protocol_names:

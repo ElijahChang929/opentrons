@@ -1,35 +1,110 @@
 import json
 import os
 
-file_dir = "/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/detailed_action_json/"
-protocol_names = [file_dir + d for d in os.listdir(file_dir)]
+file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/"
+enriched_steps_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/enriched_steps/"
 
-liquid_information = []
+# protocol_names = [file_dir + d for d in os.listdir(file_dir)]
 
-for detail_infor in protocol_names:
-    try:
-        with open(detail_infor, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        liquid_infor = data['liquid_locations']
-        liquid_information.append(liquid_infor)
-    except Exception as e:
-        print(e)
+# liquid_information = []
 
-liquid_types = []
-for i, liquid_infor in enumerate(liquid_information):
-    liquid_type = list(liquid_infor.keys())
-    # remove the [number] structure at the end of the string
-    liquid_type = set([liquid.split('[')[0] for liquid in liquid_type])
-    liquid_types.extend(liquid_type)
+# for detail_infor in protocol_names:
+#     try:
+#         with open(detail_infor, "r", encoding="utf-8") as f:
+#             data = json.load(f)
+#         liquid_infor = data['liquid_locations']
+#         liquid_information.append(liquid_infor)
+#     except Exception as e:
+#         print(e)
 
-# count the number of each liquid type
-liquid_types_count = {}
-for liquid in liquid_types:
-    if liquid not in liquid_types_count:
-        liquid_types_count[liquid] = 1
-    else:
-        liquid_types_count[liquid] += 1
-# sort the liquid types by count
-liquid_types_count = dict(sorted(liquid_types_count.items(), key=lambda item: item[1], reverse=True))
+# liquid_types = []
+# for i, liquid_infor in enumerate(liquid_information):
+#     liquid_type = list(liquid_infor.keys())
+#     # remove the [number] structure at the end of the string
+#     liquid_type = set([liquid.split('[')[0] for liquid in liquid_type])
+#     liquid_types.extend(liquid_type)
 
-print(liquid_types_count)
+
+# # count the number of each liquid type
+# liquid_types_count = {}
+# for liquid in liquid_types:
+#     if liquid not in liquid_types_count:
+#         liquid_types_count[liquid] = 1
+#     else:
+#         liquid_types_count[liquid] += 1
+
+# # sort the liquid types by count
+# liquid_types_count = dict(sorted(liquid_types_count.items(), key=lambda item: item[1], reverse=True))
+
+liquid_to_check = ['beads','water']
+
+def gather_location(liquid_type, key_location, path_enriched_steps):
+    with open(path_enriched_steps, "r", encoding="utf-8") as f:
+        enriched_steps = json.load(f)
+    #print(liquid_type, key_location, path_enriched_steps)
+    for step in enriched_steps:
+            
+            asp_infor = {
+                'top':[],
+                'bottom':[],
+                'move':[],
+                'center':[],
+                'move_to':[],
+                'mix_detail':[],
+            }
+            dis_infor = {
+                'top':[],
+                'bottom':[],
+                'move':[],
+                'center':[],
+                'move_to':[],
+                'mix_detail':[],
+            }
+
+            for step_number, i in enumerate(step['sources']):
+                if i['well'] == key_location[liquid_type]['well'] and i['slot'] == key_location[liquid_type]['slot']:
+                    # 对于吸和放，其实都要考察。序号上： 放 = 吸 + 1
+                    asp_infor['top'].append(step['top'][step_number])
+                    asp_infor['bottom'].append(step['bottom'][step_number])
+                    asp_infor['move'].append(step['move'][step_number])
+                    asp_infor['center'].append(step['center'][step_number])
+                    asp_infor['move_to'].append(step['move_to'][step_number])
+                    asp_infor['mix_detail'].append(step['mix_detail'][step_number])
+
+                    dis_infor['top'].append(step['top'][step_number+1])
+                    dis_infor['bottom'].append(step['bottom'][step_number+1])
+                    dis_infor['move'].append(step['move'][step_number+1])
+                    dis_infor['center'].append(step['center'][step_number+1])
+                    dis_infor['move_to'].append(step['move_to'][step_number+1])
+                    dis_infor['mix_detail'].append(step['mix_detail'][step_number+1])
+
+            print(liquid_type, dis_infor)
+                    
+
+          
+
+
+    # for step in enriched_steps:
+    #     if key_location in
+
+def visit_protocols(liquid, path_detail_infor, path_enriched_steps):
+    protocol = [path_detail_infor+d for d in os.listdir(path_detail_infor)]
+    for p in protocol:
+        try:
+            with open(p, "r", encoding="utf-8") as f:
+                labware_data = json.load(f)
+            liquid_infor = labware_data['liquid_locations']
+            for key in list(liquid_infor.keys()):
+                key_location = {}
+                for liquid_type in liquid:
+                    if liquid_type in key:
+                        key_location[liquid_type] = liquid_infor[key]
+                        if key_location[liquid_type]['slot'] in ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']:
+                            key_location[liquid_type]['slot'] = int(key_location[liquid_type]['slot'])
+                            enriched_steps = path_enriched_steps + os.path.basename(p)
+                            gather_location(liquid_type,key_location, enriched_steps)
+        except Exception as e:
+            print(e)
+    return
+
+visit_protocols(liquid_to_check, file_dir, enriched_steps_dir)
