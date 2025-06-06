@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/sci-zymo-quick-dna-rna-magbead/sci-zymo-quick-dna-rna-magbead.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/sci-zymo-quick-dna-rna-magbead/sci-zymo-quick-dna-rna-magbead.ot2.apiv2.py"
 
 from opentrons.types import Point
 import json

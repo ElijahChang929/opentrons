@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/batch-test-plating/batch-test-plating.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/batch-test-plating/batch-test-plating.ot2.apiv2.py"
 
 from opentrons import protocol_api
 

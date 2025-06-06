@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/05fb0f/gsh_assay.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/05fb0f/gsh_assay.ot2.apiv2.py"
 
 import time
 import math
@@ -191,6 +191,23 @@ def run(ctx):
     hs.open_labware_latch()
 
     ctx.pause('Remove Slot 10) Heater Shaker & Tecan 96 Well Plate 1200 ul  and centrifuge, and remove Slot 11) Eppendorf 96 DWP 1200ul and seal. Place \
+a new Slot 11) Eppendorf 96 DWP 1200ul and place Tecan 96 Well Plate 1200  ul back on the Slot 10) Heater Shaker')
+
+    hs.close_labware_latch()
+
+    vol_final = 400.0
+    num_transfers = math.ceil(
+        vol_final/m300.tip_racks[0].wells()[0].max_volume)
+    vol_per_transfer = round(vol_final/num_transfers, 2)
+    for s, d in zip(hs_plate.rows()[0][:num_cols],
+                    deep_plate.rows()[0][:num_cols]):
+        pick_up(m300)
+        for _ in range(num_transfers):
+            m300.aspirate(vol_per_transfer, s.bottom(1))
+            slow_withdraw(m300, s)
+            m300.dispense(vol_per_transfer, d.bottom(1))
+            slow_withdraw(m300, d)
+        m300.drop_tip()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -236,20 +253,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-a new Slot 11) Eppendorf 96 DWP 1200ul and place Tecan 96 Well Plate 1200  ul back on the Slot 10) Heater Shaker')
-
-    hs.close_labware_latch()
-
-    vol_final = 400.0
-    num_transfers = math.ceil(
-        vol_final/m300.tip_racks[0].wells()[0].max_volume)
-    vol_per_transfer = round(vol_final/num_transfers, 2)
-    for s, d in zip(hs_plate.rows()[0][:num_cols],
-                    deep_plate.rows()[0][:num_cols]):
-        pick_up(m300)
-        for _ in range(num_transfers):
-            m300.aspirate(vol_per_transfer, s.bottom(1))
-            slow_withdraw(m300, s)
-            m300.dispense(vol_per_transfer, d.bottom(1))
-            slow_withdraw(m300, d)
-        m300.drop_tip()

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/56a6a1/protein_array.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/56a6a1/protein_array.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Protein Array',
@@ -169,6 +169,45 @@ def run(ctx):
     )
 
     ctx.pause('Prepare 1:1000 secondary antibody solution (2 ml total volume  per slide) in PBST and place in channel 2 of the 12-channel reagent reservoir \
+(slot 3).')
+
+    m300.pick_up_tip()
+    m300.distribute(
+        100,
+        antibody_2,
+        dispense_locs,
+        disposal_vol=0,
+        new_tip='never'
+    )
+    m300.move_to(res_12.wells()[-1].top(10))
+
+    ctx.pause('Incubate the samples by gentle agitation for 1 hour using  TeleShake before resuming.')
+
+    vacuum()
+
+    for i in range(3):
+        m300.pick_up_tip()
+        m300.distribute(
+            100,
+            pbst[i//2+2],
+            dispense_locs,
+            disposal_vol=0,
+            new_tip='never'
+        )
+        m300.move_to(res_12.wells()[-1].top(10))
+        ctx.comment('Incubating 5 minutes.')
+        ctx.delay(minutes=5)
+        if i < 2:
+            vacuum()
+
+    m300.move_to(res_12.wells()[-1].top(10))
+    ctx.comment('Incubating 5 minutes.')
+    ctx.delay(minutes=5)
+    m300.drop_tip(tip_trash)
+
+    ctx.comment('Take off slides from FastFrame and place into 50 ml  conical tube filled with 45 ml PBS, and wash by agitating on TeleShake for 5 \
+minutes. Briefly rinse the slides 2 times using a 50 ml conical tube with  ddH2O. Spin at 300 rpm using Beckman-Coulter Avant J-E Centrifuge at RT for 4 \
+minutes. Scan the slides with GenePix 4400 A.')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -214,42 +253,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-(slot 3).')
-
-    m300.pick_up_tip()
-    m300.distribute(
-        100,
-        antibody_2,
-        dispense_locs,
-        disposal_vol=0,
-        new_tip='never'
-    )
-    m300.move_to(res_12.wells()[-1].top(10))
-
-    ctx.pause('Incubate the samples by gentle agitation for 1 hour using  TeleShake before resuming.')
-
-    vacuum()
-
-    for i in range(3):
-        m300.pick_up_tip()
-        m300.distribute(
-            100,
-            pbst[i//2+2],
-            dispense_locs,
-            disposal_vol=0,
-            new_tip='never'
-        )
-        m300.move_to(res_12.wells()[-1].top(10))
-        ctx.comment('Incubating 5 minutes.')
-        ctx.delay(minutes=5)
-        if i < 2:
-            vacuum()
-
-    m300.move_to(res_12.wells()[-1].top(10))
-    ctx.comment('Incubating 5 minutes.')
-    ctx.delay(minutes=5)
-    m300.drop_tip(tip_trash)
-
-    ctx.comment('Take off slides from FastFrame and place into 50 ml  conical tube filled with 45 ml PBS, and wash by agitating on TeleShake for 5 \
-minutes. Briefly rinse the slides 2 times using a 50 ml conical tube with  ddH2O. Spin at 300 rpm using Beckman-Coulter Avant J-E Centrifuge at RT for 4 \
-minutes. Scan the slides with GenePix 4400 A.')

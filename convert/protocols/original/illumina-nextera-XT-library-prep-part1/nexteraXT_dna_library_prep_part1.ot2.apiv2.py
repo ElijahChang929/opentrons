@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/illumina-nextera-XT-library-prep-part1/nexteraXT_dna_library_prep_part1.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/illumina-nextera-XT-library-prep-part1/nexteraXT_dna_library_prep_part1.ot2.apiv2.py"
 
 import math
 
@@ -66,6 +66,25 @@ def run(protocol_context):
     p20.transfer(5, atm, output_single, mix_after=(5, 10), new_tip='always')
 
     protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place  on the preprogrammed thermal cycler and run the tagmentation program. When \
+the sample reaches 10°C, immediately proceed to the next step because the  transposome is still active. Place the plate back to slot 2.")
+
+    # Add Neutralize Tagment Buffer to each well
+    p20.transfer(5, nt, output_single, mix_after=(5, 10), new_tip='always')
+
+    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place  the plate back on slot 2.")
+
+    # Incubate at RT for 5 minutes
+    protocol_context.delay(minutes=5)
+
+    """
+    Amplify Libraries
+    """
+    # Add each index
+    m20.transfer(
+        10, indexes, output_multi, mix_after=(5, 10), new_tip='always')
+
+    # Add Nextera PCR Master Mix to each well
+    p20.transfer(15, npm, output_single, mix_after=(2, 10))
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -111,22 +130,3 @@ def run(protocol_context):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-the sample reaches 10°C, immediately proceed to the next step because the  transposome is still active. Place the plate back to slot 2.")
-
-    # Add Neutralize Tagment Buffer to each well
-    p20.transfer(5, nt, output_single, mix_after=(5, 10), new_tip='always')
-
-    protocol_context.pause("Centrifuge at 280 × g at 20°C for 1 minute. Place  the plate back on slot 2.")
-
-    # Incubate at RT for 5 minutes
-    protocol_context.delay(minutes=5)
-
-    """
-    Amplify Libraries
-    """
-    # Add each index
-    m20.transfer(
-        10, indexes, output_multi, mix_after=(5, 10), new_tip='always')
-
-    # Add Nextera PCR Master Mix to each well
-    p20.transfer(15, npm, output_single, mix_after=(2, 10))

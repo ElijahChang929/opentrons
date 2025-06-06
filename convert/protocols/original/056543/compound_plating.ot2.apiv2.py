@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/056543/compound_plating.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/056543/compound_plating.ot2.apiv2.py"
 
 from opentrons.types import Point
 
@@ -115,6 +115,8 @@ def run(ctx):
 
         if i < len(transfer_data) - 1:
             ctx.pause('\n\n\n\nReplace 96-well plates and tip racks. Insert  two new tip racks in positions 10 and 11, remove all 96-well plates from \
+positions 1-7, and insert five new 96-well plates in positions 1-5.\n\n\n\n')
+            p20.reset_tipracks()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -160,5 +162,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-positions 1-7, and insert five new 96-well plates in positions 1-5.\n\n\n\n')
-            p20.reset_tipracks()

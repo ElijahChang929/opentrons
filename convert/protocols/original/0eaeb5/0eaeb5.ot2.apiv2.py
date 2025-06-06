@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0eaeb5/0eaeb5.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0eaeb5/0eaeb5.ot2.apiv2.py"
 
 import math
 from opentrons import protocol_api
@@ -575,19 +575,6 @@ def run(ctx):
         tip_disposal(p20m)
         ctx.comment('\n')
 
-    # ctx. comment('\n-----3B.8: 5 minutes incubation for DNA binding------')
-    # incubation_airdry(time=incubation_time)
-
-    # ctx. comment('\n------------------3B.8: Magnet Engage-----------------')
-    # mag_engage(height=magdeck_engage_height, minutes=beads_engaging_time)
-
-    # ctx. comment('\n--------3B.8: Remove Elution---------------------')
-    # removal_liquids(liquid_volume=10,
-    #                 mag_sources=mag_sample_list,
-    #                 dest_list=sample_list,
-    #                 mode='elution')
-    # mag_mod.disengage()
-
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
@@ -632,3 +619,16 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+
+    # ctx. comment('\n-----3B.8: 5 minutes incubation for DNA binding------')
+    # incubation_airdry(time=incubation_time)
+
+    # ctx. comment('\n------------------3B.8: Magnet Engage-----------------')
+    # mag_engage(height=magdeck_engage_height, minutes=beads_engaging_time)
+
+    # ctx. comment('\n--------3B.8: Remove Elution---------------------')
+    # removal_liquids(liquid_volume=10,
+    #                 mag_sources=mag_sample_list,
+    #                 dest_list=sample_list,
+    #                 mode='elution')
+    # mag_mod.disengage()

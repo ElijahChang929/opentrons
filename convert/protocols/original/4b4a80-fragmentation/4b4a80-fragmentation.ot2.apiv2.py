@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/4b4a80-fragmentation/4b4a80-fragmentation.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/4b4a80-fragmentation/4b4a80-fragmentation.ot2.apiv2.py"
 
 metadata = {
     'protocolName': '''NEBNext Ultra II FS DNA Library Prep Kit for Illumina

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0451f3/miniprep.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0451f3/miniprep.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -246,6 +246,13 @@ def run(ctx):
                        supernatant_locations=waste)
 
     ctx.pause('Move the collection plate (slot 1) to a heating block for  30mins 65C to remove the residual ethanol. Replace the plate onto the \
+magnetic module when complete.')
+
+    lyse_bind_wash(vol_elution, elution_buffer,
+                   time_incubation=time_incubation_elution_minutes,
+                   do_resuspend=True, supernatant_locations=elution_samples_m,
+                   time_settling=5.0, vol_supernatant=vol_elution-5.0,
+                   z_disp_supernatant=2.0)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -291,10 +298,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-magnetic module when complete.')
-
-    lyse_bind_wash(vol_elution, elution_buffer,
-                   time_incubation=time_incubation_elution_minutes,
-                   do_resuspend=True, supernatant_locations=elution_samples_m,
-                   time_settling=5.0, vol_supernatant=vol_elution-5.0,
-                   z_disp_supernatant=2.0)

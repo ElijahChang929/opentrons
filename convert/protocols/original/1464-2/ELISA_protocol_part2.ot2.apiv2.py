@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1464-2/ELISA_protocol_part2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1464-2/ELISA_protocol_part2.ot2.apiv2.py"
 
 import math
 
@@ -102,7 +102,6 @@ def run(ctx):
         for well in chunk:
             p300.dispense(50, well)
         p300.drop_tip()
-        # dests.pop(0)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -148,3 +147,4 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+        # dests.pop(0)

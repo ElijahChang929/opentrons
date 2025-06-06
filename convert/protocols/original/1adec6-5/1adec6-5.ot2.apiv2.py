@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1adec6-5/1adec6-5.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1adec6-5/1adec6-5.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Custom Supernatant Removal and PrestoBlue test [5/7]',

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/swift-fully-automated/swift-2s-turbo-fully-automated.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/swift-fully-automated/swift-2s-turbo-fully-automated.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Swift 2S Turbo DNA Library Kit Protocol: Fully Automated',

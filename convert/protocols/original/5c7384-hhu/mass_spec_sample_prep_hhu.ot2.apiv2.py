@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/5c7384-hhu/mass_spec_sample_prep_hhu.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/5c7384-hhu/mass_spec_sample_prep_hhu.ot2.apiv2.py"
 
 import math
 from opentrons import protocol_api
@@ -210,6 +210,7 @@ def run(ctx):
 
     heat_func(37)
     ctx.comment('Protocol complete. Please shake the plate from the magnetic  module to resuspend the beads, and replace on the thermocycler now set at \
+37C.')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -255,4 +256,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-37C.')

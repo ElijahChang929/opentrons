@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0944e4/ngs_cleanup.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0944e4/ngs_cleanup.ot2.apiv2.py"
 
 import math
 
@@ -150,6 +150,22 @@ def run(ctx):
         drop(m300)
 
     ctx.pause('Remove PCR plate, seal and shake at 1800 RPM for 2 minutes.  Return PCR plate to magnetic module and incubate for 3 minutes before \
+resuming.')
+
+    magdeck.engage(height=18)
+    ctx.delay(minutes=3, msg='Incubating on magnet for 3 minutes.')
+
+    # transfer supernatant to new PCR plate
+    for m, e in zip(mag_samples, elution_samples):
+        pick_up()
+        m300.aspirate(30, m.top(5))
+        m300.aspirate(volume_final_elution_in_ul, m)
+        m300.dispense(volume_final_elution_in_ul, e)
+        m300.dispense(30, e.bottom(7))
+        m300.blow_out(e.top(-2))
+        drop(m300)
+
+    magdeck.disengage()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -195,19 +211,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-resuming.')
-
-    magdeck.engage(height=18)
-    ctx.delay(minutes=3, msg='Incubating on magnet for 3 minutes.')
-
-    # transfer supernatant to new PCR plate
-    for m, e in zip(mag_samples, elution_samples):
-        pick_up()
-        m300.aspirate(30, m.top(5))
-        m300.aspirate(volume_final_elution_in_ul, m)
-        m300.dispense(volume_final_elution_in_ul, e)
-        m300.dispense(30, e.bottom(7))
-        m300.blow_out(e.top(-2))
-        drop(m300)
-
-    magdeck.disengage()

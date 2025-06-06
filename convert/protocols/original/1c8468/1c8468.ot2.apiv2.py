@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1c8468/1c8468.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1c8468/1c8468.ot2.apiv2.py"
 
 from opentrons import protocol_api
 import csv
@@ -118,6 +118,14 @@ def run(protocol):
                 p30ctr = 0
 
     protocol.comment('''Source plate depleted.
+Replace source plate and upload its corresponding CSV
+to the protocol website.''')
+
+    # write updated counter to CSV
+    new_counter_num = str(p25ctr)+", "+str(p30ctr)+"\n"
+    if not protocol.is_simulating():
+        with open(file_path, 'w') as outfile:
+            outfile.write(new_counter_num)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -163,11 +171,3 @@ def run(protocol):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-Replace source plate and upload its corresponding CSV
-to the protocol website.''')
-
-    # write updated counter to CSV
-    new_counter_num = str(p25ctr)+", "+str(p30ctr)+"\n"
-    if not protocol.is_simulating():
-        with open(file_path, 'w') as outfile:
-            outfile.write(new_counter_num)

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/7e4c3e-4/7e4c3e-4.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/7e4c3e-4/7e4c3e-4.ot2.apiv2.py"
 
 metadata = {'apiLevel': '2.0'}
 

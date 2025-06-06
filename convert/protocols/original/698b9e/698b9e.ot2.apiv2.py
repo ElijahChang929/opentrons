@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/698b9e/698b9e.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/698b9e/698b9e.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'PCR Prep with 1.5 mL Tubes Part 1 - Plate Filling',

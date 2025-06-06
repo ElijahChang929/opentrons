@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/3d942d/3d942d.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/3d942d/3d942d.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Custom PCR Setup from CSV',

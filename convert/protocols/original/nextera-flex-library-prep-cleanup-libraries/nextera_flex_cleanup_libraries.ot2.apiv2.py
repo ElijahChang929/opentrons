@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/nextera-flex-library-prep-cleanup-libraries/nextera_flex_cleanup_libraries.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/nextera-flex-library-prep-cleanup-libraries/nextera_flex_cleanup_libraries.ot2.apiv2.py"
 
 import math
 from opentrons.types import Point
@@ -143,51 +143,6 @@ def run(ctx):
         pip300.drop_tip()
 
     ctx.pause('Seal PCR plate in slot 2 and incubate at room  temperature for 5 minutes. Then discard the original plate on the magnetic \
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "unknown"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "unknown"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/nextera-flex-library-prep-cleanup-libraries.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
 stand and place the plate from slot 2 on the engaged magnetic deck. Place a  new PCR plate in slot 2, and resume.')
 
     if p300_type == 'multi':
@@ -277,3 +232,48 @@ original plate occupying the magnetic module. Place another fresh PCR plate  on 
 
     ctx.comment('If you are stopping, seal the plate with Microseal B  adhesive or Microseal F foil seal, and store at -25°C to -15°C for up to 30 \
 days.')
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/nextera-flex-library-prep-cleanup-libraries.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)

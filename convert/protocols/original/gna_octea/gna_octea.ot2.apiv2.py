@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/gna_octea/gna_octea.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/gna_octea/gna_octea.ot2.apiv2.py"
 
 from opentrons import types
 
@@ -233,8 +233,6 @@ def run(protocol):
         p300.dispense(20, well.bottom().move(types.Point(x=1, y=-1, z=1)))
         p300.drop_tip()
 
-    # p300.transfer(40, mmlyo, octeaPlate.wells()[numSamps:])
-
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
@@ -279,3 +277,5 @@ def run(protocol):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+
+    # p300.transfer(40, mmlyo, octeaPlate.wells()[numSamps:])

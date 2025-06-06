@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/02pnzp/02pnzp.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/02pnzp/02pnzp.ot2.apiv2.py"
 
 # flake8: noqa
 
@@ -411,8 +411,6 @@ def run(prot):
     prot.comment("######### Last required tips ###########")
     prot.comment("P20: " + str(last_p20_tip))
     prot.comment("P300: " + str(last_p300_tip))
-    
-    
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -458,3 +456,5 @@ def run(prot):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+    
+    

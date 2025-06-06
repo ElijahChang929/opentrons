@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/2bba96/2bba96.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/2bba96/2bba96.ot2.apiv2.py"
 
 from opentrons.protocol_api.labware import Well, OutOfTipsError
 from types import MethodType

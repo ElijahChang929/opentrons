@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0479ad-part-2/0479ad-part-2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0479ad-part-2/0479ad-part-2.ot2.apiv2.py"
 
 import math
 from opentrons.protocol_api.labware import OutOfTipsError

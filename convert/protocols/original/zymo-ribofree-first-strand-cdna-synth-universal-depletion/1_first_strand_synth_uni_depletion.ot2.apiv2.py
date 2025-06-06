@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/zymo-ribofree-first-strand-cdna-synth-universal-depletion/1_first_strand_synth_uni_depletion.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/zymo-ribofree-first-strand-cdna-synth-universal-depletion/1_first_strand_synth_uni_depletion.ot2.apiv2.py"
 
 import math
 import json

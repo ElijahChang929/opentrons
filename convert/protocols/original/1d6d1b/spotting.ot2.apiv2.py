@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1d6d1b/spotting.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1d6d1b/spotting.ot2.apiv2.py"
 
 import math
 from opentrons.types import Point
@@ -117,6 +117,8 @@ def run(ctx):
 
     m300.move_to(tiprack300.wells()[0].top())
     ctx.pause('Protocol complete. Continue descending 20mm before dropping  tip?\nIf yes, click \'Resume\'.\nIf no, cancel run, and remove tips/pins \
+manually.')
+    m300.drop_tip(tiprack300.wells()[0].top().move(Point(z=-20)))
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -162,5 +164,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-manually.')
-    m300.drop_tip(tiprack300.wells()[0].top().move(Point(z=-20)))

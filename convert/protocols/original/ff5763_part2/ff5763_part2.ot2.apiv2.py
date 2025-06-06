@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/ff5763_part2/ff5763_part2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/ff5763_part2/ff5763_part2.ot2.apiv2.py"
 
 """OPENTRONS."""
 import math
@@ -230,8 +230,6 @@ def run(ctx):
                 ''' protocol, leaving the plate engaged on the'''
                 ''' magnetic module''')
 
-    # End part 2
-
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
@@ -276,3 +274,5 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+
+    # End part 2

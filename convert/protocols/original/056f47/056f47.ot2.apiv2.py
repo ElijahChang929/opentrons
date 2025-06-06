@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/056f47/056f47.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/056f47/056f47.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'DMSO and Compound Stock Solution Addition - Part 2',

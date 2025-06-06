@@ -11,7 +11,6 @@ import json
 import os
 
 
-
 def get_values(*names):
     caller_globals = inspect.stack()[1].frame.f_globals
     caller_file = caller_globals.get("__protocol_file__")

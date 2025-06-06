@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/6ec4dd-2/ngs_prep.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/6ec4dd-2/ngs_prep.ot2.apiv2.py"
 
 import json
 import os
@@ -245,6 +245,14 @@ def run(ctx):
         m20.drop_tip()
 
     ctx.pause('Remove plates and perform Index/Barcode PCR. Place PCR plate  back on magnetic module after completed PCR. Place fresh plate 2 for final \
+elution.')
+
+    """ Cleanup 2 """
+    bind(vol_beads_2, vol_initial_2)
+    wash(ethanol[4:6])
+    wash(ethanol[6:8], air_dry=True)
+    elution_samples = [elution_plate.wells()[0]]*num_cols  # pool
+    elute(vol_elution_buffer_2, vol_elution_final_2)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -290,11 +298,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-elution.')
-
-    """ Cleanup 2 """
-    bind(vol_beads_2, vol_initial_2)
-    wash(ethanol[4:6])
-    wash(ethanol[6:8], air_dry=True)
-    elution_samples = [elution_plate.wells()[0]]*num_cols  # pool
-    elute(vol_elution_buffer_2, vol_elution_final_2)

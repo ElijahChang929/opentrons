@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/979d28-normalization/normalization.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/979d28-normalization/normalization.ot2.apiv2.py"
 
 import math
 from opentrons.types import Point
@@ -62,6 +62,41 @@ def run(ctx):
         vol_water = float(line[4])
         if vol_cdna > normalization_vol:
             ctx.comment(f'Sample in well  {source_plate.wells()[i].display_name.split(" ")[0]} cannot be normalized \
+(starting concentration {conc}ng/ul requires {vol_cdna}ul transfer). Skipping')
+            bad_wells.append(dest_plate.wells()[i])
+            transfer_vols.append(None)
+        else:
+            dest = dest_plate.wells()[i]
+            transfer_vols.append(vol_cdna)
+            p20.aspirate(vol_water, water)
+            p20.dispense(vol_water, dest.bottom(1))
+            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
+
+    # transfer RNA sample to normalize
+    for i, vol in enumerate(transfer_vols):
+        if vol:
+            if not p20.has_tip:
+                p20.pick_up_tip()
+            source = source_plate.wells()[i]
+            dest = dest_plate.wells()[i]
+            p20.aspirate(vol, source)
+            p20.aspirate(1, dest)
+            p20.dispense(p20.current_volume)
+            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
+            p20.drop_tip()
+
+    # transfer mastermix and mix
+    for dest in dest_plate.wells()[:len(data)]:
+        if dest not in bad_wells:
+            p20.pick_up_tip()
+            p20.transfer(mm_vol, mm, dest, mix_after=(5, 10), new_tip='never')
+            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
+            p20.drop_tip()
+
+    bad_list = [well.display_name.split(' ')[0] for well in bad_wells]
+    if len(bad_list) > 0:
+        bad_msg = '\n\n'.join(bad_list)
+        ctx.comment(f'The following sample wells failed: \n\n{bad_msg}')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -107,38 +142,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-(starting concentration {conc}ng/ul requires {vol_cdna}ul transfer). Skipping')
-            bad_wells.append(dest_plate.wells()[i])
-            transfer_vols.append(None)
-        else:
-            dest = dest_plate.wells()[i]
-            transfer_vols.append(vol_cdna)
-            p20.aspirate(vol_water, water)
-            p20.dispense(vol_water, dest.bottom(1))
-            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
-
-    # transfer RNA sample to normalize
-    for i, vol in enumerate(transfer_vols):
-        if vol:
-            if not p20.has_tip:
-                p20.pick_up_tip()
-            source = source_plate.wells()[i]
-            dest = dest_plate.wells()[i]
-            p20.aspirate(vol, source)
-            p20.aspirate(1, dest)
-            p20.dispense(p20.current_volume)
-            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
-            p20.drop_tip()
-
-    # transfer mastermix and mix
-    for dest in dest_plate.wells()[:len(data)]:
-        if dest not in bad_wells:
-            p20.pick_up_tip()
-            p20.transfer(mm_vol, mm, dest, mix_after=(5, 10), new_tip='never')
-            p20.move_to(dest.bottom().move(Point(x=-1.5, z=5)))
-            p20.drop_tip()
-
-    bad_list = [well.display_name.split(' ')[0] for well in bad_wells]
-    if len(bad_list) > 0:
-        bad_msg = '\n\n'.join(bad_list)
-        ctx.comment(f'The following sample wells failed: \n\n{bad_msg}')

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/speaker-test/speaker-test.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/speaker-test/speaker-test.ot2.apiv2.py"
 
 import subprocess
 from opentrons import protocol_api
@@ -19,6 +19,28 @@ def run_quiet_process(command):
     subprocess.check_output('{} &> /dev/null'.format(command), shell=True)
 
 
+def test_speaker(protocol):
+    print('Speaker')
+    print('Next\t--> CTRL-C')
+    try:
+        if not protocol.is_simulating():
+            run_quiet_process('mpg123 {}'.format(AUDIO_FILE_PATH))
+        else:
+            print('Not playing mp3, simulating')
+    except KeyboardInterrupt:
+        pass
+        print()
+
+
+def run(protocol: protocol_api.ProtocolContext):
+    [pip, mnt, tips] = get_values(  # noqa: F821
+      'pip', 'mnt', 'tips')
+
+    tr2 = protocol.load_labware(tips, '1')
+    pipette = protocol.load_instrument(pip, mnt, tip_racks=[tr2])
+    pipette.pick_up_tip()
+    pipette.drop_tip()
+    test_speaker(protocol)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -64,25 +86,3 @@ def run_quiet_process(command):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-def test_speaker(protocol):
-    print('Speaker')
-    print('Next\t--> CTRL-C')
-    try:
-        if not protocol.is_simulating():
-            run_quiet_process('mpg123 {}'.format(AUDIO_FILE_PATH))
-        else:
-            print('Not playing mp3, simulating')
-    except KeyboardInterrupt:
-        pass
-        print()
-
-
-def run(protocol: protocol_api.ProtocolContext):
-    [pip, mnt, tips] = get_values(  # noqa: F821
-      'pip', 'mnt', 'tips')
-
-    tr2 = protocol.load_labware(tips, '1')
-    pipette = protocol.load_instrument(pip, mnt, tip_racks=[tr2])
-    pipette.pick_up_tip()
-    pipette.drop_tip()
-    test_speaker(protocol)

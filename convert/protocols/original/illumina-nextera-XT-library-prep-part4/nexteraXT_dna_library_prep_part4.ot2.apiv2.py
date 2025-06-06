@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/illumina-nextera-XT-library-prep-part4/nexteraXT_dna_library_prep_part4.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/illumina-nextera-XT-library-prep-part4/nexteraXT_dna_library_prep_part4.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Illumina Nextera XT NGS Prep 4: Pool Libraries',

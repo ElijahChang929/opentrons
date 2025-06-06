@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/sci-bead-based-elisa-for-sars-cov-2-surrogate-virus-neutralization-test/sci-bead-based-elisa-for-sars-cov-2-surrogate-virus-neutralization-test.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/sci-bead-based-elisa-for-sars-cov-2-surrogate-virus-neutralization-test/sci-bead-based-elisa-for-sars-cov-2-surrogate-virus-neutralization-test.ot2.apiv2.py"
 
 from opentrons.types import Point
 

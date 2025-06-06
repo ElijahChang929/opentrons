@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/2aee74-48-2/olink.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/2aee74-48-2/olink.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Olink Target 48 Part 2/3: Extension',
@@ -38,6 +38,7 @@ def run(ctx):
 
     ctx.comment('Seal the plate with an adhesive plastic film, vortex  thoroughly ensuring that all wells are mixed, and spin down.')
     ctx.comment('Place the Incubation Plate in the thermal cycler, and start  the PEA program (50°C 20 min, 95°C 5 min (95°C 30s, 54°C 1 min, 60°C 1 min) \
+x17, 10°C hold).')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -83,4 +84,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-x17, 10°C hold).')

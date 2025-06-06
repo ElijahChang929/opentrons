@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0cded6-amplify2/amplify2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0cded6-amplify2/amplify2.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -236,6 +236,8 @@ def run(ctx):
             m20.drop_tip()
 
     ctx.comment('\n\n\n\nSeal and shake at 1600 rpm for 1 minute. If liquid  is visible on the seal, centrifuge at 500 x g for 1 minute. Inspect to make \
+sure beads are resuspended. To resuspend, set your pipette to 35 µl with the  plunger down, and then slowly pipette to mix. Place on the preprogrammed \
+thermal cycler and run the COVIDSeq TAG PCR program')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -281,5 +283,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-sure beads are resuspended. To resuspend, set your pipette to 35 µl with the  plunger down, and then slowly pipette to mix. Place on the preprogrammed \
-thermal cycler and run the COVIDSeq TAG PCR program')

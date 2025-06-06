@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/4ee4d6-part2/4ee4d6-part2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/4ee4d6-part2/4ee4d6-part2.ot2.apiv2.py"
 
 metadata = {
     'protocolName': '''Illumina DNA Prep with Enrichment:

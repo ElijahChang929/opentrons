@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/51df08/mass_spec_sample_prep.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/51df08/mass_spec_sample_prep.ot2.apiv2.py"
 
 from opentrons.types import Point
 
@@ -135,6 +135,46 @@ def run(ctx):
 
         ctx.home()
         ctx.pause('Remove well module from OT-2 and incubate in humidity  chamber overnight at 4C to allow antibodies to adhere to slides. After \
+overnight incubation, remove the slides from the humidity chamber and place  in desiccator to dry. Once dry, place slides with attached well module back \
+into OT-2')
+
+        wash(250, detergent_wash_buffer)
+
+        add_reagent(250, bsa_blocking_buffer)
+
+        ctx.home()
+        ctx.pause('Remove slide from OT-2 and place on benchtop shaker to  incubate in humidity chamber for 1 hour at room temperature')
+
+        for _ in range(2):
+            wash(250, pbs[0])
+
+        wash(250, water[0])
+
+    ctx.home()
+    ctx.pause('Remove slide from OT-2 and desiccate dry. Prepare serum  samples in Eppendorf tubes')
+
+    if 'sample' in process:
+        # add samples
+        sample_duplicates = [[slide[i*2+1:i*2+3] for i in range(num_samples)]
+                             for slide in slides_wells_reordered]
+        for slide in sample_duplicates:
+            for sample, set in zip(samples, slide):
+                pick_up(p300)
+                p300.distribute(100, sample, [d.top(-1) for d in set],
+                                air_gap=20, new_tip='never')
+                p300.air_gap(20)
+                p300.drop_tip()
+
+        ctx.home()
+        ctx.pause('Remove slide from OT-2 and incubate on benchtop shaker in  humidity box for 2 hours at room temperature')
+
+        discard_liquid(100, new_tip=True)
+
+        for _ in range(2):
+            wash(250, pbs[1])
+
+        for _ in range(2):
+            wash(250, water[1])
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -180,43 +220,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-overnight incubation, remove the slides from the humidity chamber and place  in desiccator to dry. Once dry, place slides with attached well module back \
-into OT-2')
-
-        wash(250, detergent_wash_buffer)
-
-        add_reagent(250, bsa_blocking_buffer)
-
-        ctx.home()
-        ctx.pause('Remove slide from OT-2 and place on benchtop shaker to  incubate in humidity chamber for 1 hour at room temperature')
-
-        for _ in range(2):
-            wash(250, pbs[0])
-
-        wash(250, water[0])
-
-    ctx.home()
-    ctx.pause('Remove slide from OT-2 and desiccate dry. Prepare serum  samples in Eppendorf tubes')
-
-    if 'sample' in process:
-        # add samples
-        sample_duplicates = [[slide[i*2+1:i*2+3] for i in range(num_samples)]
-                             for slide in slides_wells_reordered]
-        for slide in sample_duplicates:
-            for sample, set in zip(samples, slide):
-                pick_up(p300)
-                p300.distribute(100, sample, [d.top(-1) for d in set],
-                                air_gap=20, new_tip='never')
-                p300.air_gap(20)
-                p300.drop_tip()
-
-        ctx.home()
-        ctx.pause('Remove slide from OT-2 and incubate on benchtop shaker in  humidity box for 2 hours at room temperature')
-
-        discard_liquid(100, new_tip=True)
-
-        for _ in range(2):
-            wash(250, pbs[1])
-
-        for _ in range(2):
-            wash(250, water[1])

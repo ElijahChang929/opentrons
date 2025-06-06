@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/zymo-ribofree-cleanup/cleanup.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/zymo-ribofree-cleanup/cleanup.ot2.apiv2.py"
 
 import math
 import json
@@ -213,6 +213,45 @@ def run(ctx):
         # m20.move_to(tempplate.wells()[0].top(10))
         m20.home()
         ctx.pause('Transfer plate from magnetic module to aluminum block on  temperature module. Once you resume, the plate will incubate for \
+' + str(inc_temp) + ' minutes.')
+        ctx.delay(minutes=inc_time)
+        ctx.pause('Transfer plate back to magnetic module from aluminum block  on temperature module.')
+
+    magdeck.engage()
+    ctx.delay(minutes=3, msg='Incubating on magnet for 3 minutes.')
+
+    # transfer elution to new plate
+    for m, e in zip(mag_samples, elution_samples):
+        pick_up(m20)
+        side = -1 if i % 2 == 0 else 1
+        loc = m.bottom().move(Point(x=side*m.diameter/2*0.9, z=0.5))
+        m20.move_to(m.center())
+        m20.transfer(elution_vol, loc, e, new_tip='never')
+        m20.blow_out(e.top(-2))
+        m20.air_gap(5)
+        m20.drop_tip()
+
+    magdeck.disengage()
+    if cleanup_stage == 'post-first-strand synthesis and universal depletion':
+        tempdeck.deactivate()
+    ctx.comment(end_msg)
+
+    # track final used tip
+    if not ctx.is_simulating():
+        file_path = '/data/csv/tip_track.json'
+        # file_path = '/protocols/tip_track.json'
+        if cleanup_stage == 'post-library index PCR':
+            data = {
+                'tips20': 0,
+                'tips300': 0
+            }
+        else:
+            data = {
+                'tips20': tip20_count,
+                'tips300': tip300_count
+            }
+        with open(file_path, 'w') as outfile:
+            json.dump(data, outfile)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -258,42 +297,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-' + str(inc_temp) + ' minutes.')
-        ctx.delay(minutes=inc_time)
-        ctx.pause('Transfer plate back to magnetic module from aluminum block  on temperature module.')
-
-    magdeck.engage()
-    ctx.delay(minutes=3, msg='Incubating on magnet for 3 minutes.')
-
-    # transfer elution to new plate
-    for m, e in zip(mag_samples, elution_samples):
-        pick_up(m20)
-        side = -1 if i % 2 == 0 else 1
-        loc = m.bottom().move(Point(x=side*m.diameter/2*0.9, z=0.5))
-        m20.move_to(m.center())
-        m20.transfer(elution_vol, loc, e, new_tip='never')
-        m20.blow_out(e.top(-2))
-        m20.air_gap(5)
-        m20.drop_tip()
-
-    magdeck.disengage()
-    if cleanup_stage == 'post-first-strand synthesis and universal depletion':
-        tempdeck.deactivate()
-    ctx.comment(end_msg)
-
-    # track final used tip
-    if not ctx.is_simulating():
-        file_path = '/data/csv/tip_track.json'
-        # file_path = '/protocols/tip_track.json'
-        if cleanup_stage == 'post-library index PCR':
-            data = {
-                'tips20': 0,
-                'tips300': 0
-            }
-        else:
-            data = {
-                'tips20': tip20_count,
-                'tips300': tip300_count
-            }
-        with open(file_path, 'w') as outfile:
-            json.dump(data, outfile)

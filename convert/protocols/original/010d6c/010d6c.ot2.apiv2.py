@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/010d6c/010d6c.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/010d6c/010d6c.ot2.apiv2.py"
 
 # flake8: noqa
 
@@ -313,6 +313,16 @@ def run(ctx):
             m300.touch_tip(v_offset=1)
             ctx.delay(seconds = 1)
 
+#     for _ in range(2):
+#         m300.distribute(50, dye, [well.top() for well in hs_plate.rows()[0]],
+#                         new_tip='never')
+
+    m300.drop_tip()
+
+    ctx.pause('''
+    Plate is ready! Please remove, seal, and transport to the plate reader for
+    analysis. Please remember to tidy the robot deck and dispose of any waste.
+    ''')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -358,13 +368,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-#     for _ in range(2):
-#         m300.distribute(50, dye, [well.top() for well in hs_plate.rows()[0]],
-#                         new_tip='never')
-
-    m300.drop_tip()
-
-    ctx.pause('''
-    Plate is ready! Please remove, seal, and transport to the plate reader for
-    analysis. Please remember to tidy the robot deck and dispose of any waste.
-    ''')

@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0966ae/culture.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0966ae/culture.ot2.apiv2.py"
 
 metadata = {
     'protocolName': '384-Well Plate Prep',
@@ -151,36 +151,6 @@ def run(ctx):
             custom_transfer(vol_water2, water, d, h_asp=5)
         p300.drop_tip()
 
-        # sources8 = sources5
-        # p300.pick_up_tip()
-        # for s in sources8:
-        #     custom_transfer(vol_water2, s, waste, h_asp=0.2,
-        #                     h_disp=30, vol_pre_airgap=20, blow_out=True)
-        # p300.drop_tip()
-
-        # dests9 = dests3
-        # p300.pick_up_tip()
-        # for d in dests9:
-        #     custom_transfer(vol_water1, water, d, h_asp=5)
-        # p300.drop_tip()
-
-        # ctx.delay(minutes=10)
-
-        # dests10 = dests4
-        # p300.pick_up_tip()
-        # for d in dests10:
-        #     custom_transfer(vol_water1, water, d, h_asp=5)
-        # p300.drop_tip()
-
-        # ctx.delay(minutes=10)
-
-        # sources11 = sources8
-        # p300.pick_up_tip()
-        # for s in sources11:
-        #     custom_transfer(vol_water2+20, s, waste, h_asp=0.2,
-        #                     h_disp=30, vol_pre_airgap=20, blow_out=True)
-        # p300.drop_tip()
-
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
@@ -225,3 +195,33 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+
+        # sources8 = sources5
+        # p300.pick_up_tip()
+        # for s in sources8:
+        #     custom_transfer(vol_water2, s, waste, h_asp=0.2,
+        #                     h_disp=30, vol_pre_airgap=20, blow_out=True)
+        # p300.drop_tip()
+
+        # dests9 = dests3
+        # p300.pick_up_tip()
+        # for d in dests9:
+        #     custom_transfer(vol_water1, water, d, h_asp=5)
+        # p300.drop_tip()
+
+        # ctx.delay(minutes=10)
+
+        # dests10 = dests4
+        # p300.pick_up_tip()
+        # for d in dests10:
+        #     custom_transfer(vol_water1, water, d, h_asp=5)
+        # p300.drop_tip()
+
+        # ctx.delay(minutes=10)
+
+        # sources11 = sources8
+        # p300.pick_up_tip()
+        # for s in sources11:
+        #     custom_transfer(vol_water2+20, s, waste, h_asp=0.2,
+        #                     h_disp=30, vol_pre_airgap=20, blow_out=True)
+        # p300.drop_tip()

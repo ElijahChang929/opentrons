@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0b97ae-protocol-3B/0b97ae-protocol-3B.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0b97ae-protocol-3B/0b97ae-protocol-3B.ot2.apiv2.py"
 
 # flake8: noqa
 

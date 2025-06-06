@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0cded6-synthesize/synthesize.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0cded6-synthesize/synthesize.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -89,6 +89,7 @@ def run(ctx):
             m20.drop_tip()
 
     ctx.comment('\n\n\n\nProtocol complete.\nSeal and shake at 1600 rpm for 1  minute. Centrifuge at 1000 × g for 1 minute. Place on the preprogrammed \
+thermal cycler and run the COVIDSeq FSS program.\n\n\n\n')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -134,4 +135,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-thermal cycler and run the COVIDSeq FSS program.\n\n\n\n')

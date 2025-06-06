@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/ff5763_part5/ff5763_part5.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/ff5763_part5/ff5763_part5.ot2.apiv2.py"
 
 """OPENTRONS."""
 from opentrons import types
@@ -85,51 +85,6 @@ def run(ctx):
 
     mag_module.engage()
     ctx.delay(minutes=5)
-
-    from opentrons.protocol_api.labware import Well, Labware
-    import re
-    import json
-    all_vars = locals()
-
-    # Wells that have been processed 
-    processed_wells = set()
-    liquid_locations = {}
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
-            for i, well in enumerate(var_value):
-                processed_wells.add(well)   
-                display_name = well.display_name
-                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
-                slot_match = re.search(r" on (\d+)$", display_name)
-                slot_number = slot_match.group(1) if slot_match else "unknown"
-                name_with_index = f"{var_name}[{i}]"
-                liquid_locations[name_with_index] = {
-                    "well": well_position,
-                    "slot": slot_number
-                }
-
-    for var_name, var_value in all_vars.items():
-        if isinstance(var_value, Well):
-            if var_value in processed_wells:
-                continue
-            
-            display_name = var_value.display_name
-            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
-            slot_match = re.search(r" on (\d+)$", display_name)
-            slot_number = slot_match.group(1) if slot_match else "unknown"
-            liquid_locations[var_name] = {
-                "well": well_position,
-                "slot": slot_number
-            }
-    filename = f"protocols/detailed_action_json/ff5763_part5.json"
-    output_data = {
-        "event_logs": builtins.event_logs,
-        "liquid_locations": liquid_locations
-    }
-
-    with open(filename, 'w') as f:
-        json.dump(output_data, f, indent=2, default=str)
 # transfer 15ul IPB to each empty well in mag module plate
     ctx.comment('\n\n~~~~~~~~~~~~~~~ADDING IPB~~~~~~~~~~~~~~~~\n')
     m20.pick_up_tip()
@@ -309,6 +264,51 @@ def run(ctx):
         m300.drop_tip()
         m300.flow_rate.aspirate *= 5
         num_times += 1
+
+    from opentrons.protocol_api.labware import Well, Labware
+    import re
+    import json
+    all_vars = locals()
+
+    # Wells that have been processed 
+    processed_wells = set()
+    liquid_locations = {}
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, list) and len(var_value) > 0 and isinstance(var_value[0], Well):
+            for i, well in enumerate(var_value):
+                processed_wells.add(well)   
+                display_name = well.display_name
+                well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+                slot_match = re.search(r" on (\d+)$", display_name)
+                slot_number = slot_match.group(1) if slot_match else "unknown"
+                name_with_index = f"{var_name}[{i}]"
+                liquid_locations[name_with_index] = {
+                    "well": well_position,
+                    "slot": slot_number
+                }
+
+    for var_name, var_value in all_vars.items():
+        if isinstance(var_value, Well):
+            if var_value in processed_wells:
+                continue
+            
+            display_name = var_value.display_name
+            well_position = display_name.split(" of ")[0] if " of " in display_name else "unknown"
+            slot_match = re.search(r" on (\d+)$", display_name)
+            slot_number = slot_match.group(1) if slot_match else "unknown"
+            liquid_locations[var_name] = {
+                "well": well_position,
+                "slot": slot_number
+            }
+    filename = f"protocols/detailed_action_json/ff5763_part5.json"
+    output_data = {
+        "event_logs": builtins.event_logs,
+        "liquid_locations": liquid_locations
+    }
+
+    with open(filename, 'w') as f:
+        json.dump(output_data, f, indent=2, default=str)
 
     # for c in ctx.commands():
     #     print(c)

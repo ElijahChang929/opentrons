@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/21u968/21u968.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/21u968/21u968.ot2.apiv2.py"
 
 # flake8: noqa
 
@@ -44,7 +44,6 @@ def run(protocol):
    
     # Distribute MasterMix solution to wells
     p300.distribute(32, MasterMix, master_mix, disposal_vol=0, blow_out=True)
-  
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -90,3 +89,4 @@ def run(protocol):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+  

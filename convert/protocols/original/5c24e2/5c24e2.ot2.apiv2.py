@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/5c24e2/5c24e2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/5c24e2/5c24e2.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Plate Filling Sample in AB 384 Well Plate',

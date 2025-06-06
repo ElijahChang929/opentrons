@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/macherey-nagel-nucleomag-DNA-microbiome/macherey-nagel-nucleo-mag-dna-microbiome.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/macherey-nagel-nucleomag-DNA-microbiome/macherey-nagel-nucleo-mag-dna-microbiome.ot2.apiv2.py"
 
 # flake8: noqa
 from opentrons.types import Point

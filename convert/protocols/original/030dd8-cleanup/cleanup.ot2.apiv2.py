@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/030dd8-cleanup/cleanup.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/030dd8-cleanup/cleanup.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -212,6 +212,16 @@ def run(ctx):
         else:
             m20.drop_tip()
 
+#     ctx.pause('\n\n\n\nSeal and shake at 1600 rpm for 1 minute. Incubate  # at room temperature for 5 minutes. Centrifuge at 500 × g for 1 minute. \
+# Replace on the magnetic stand.')
+
+    # wash
+    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
+         premix=False, do_discard_supernatant=True, do_resuspend=True,
+         vol_supernatant=vol_wash)
+    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
+         premix=False, do_discard_supernatant=False, do_resuspend=True,
+         vol_supernatant=vol_wash, park=False)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -257,13 +267,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-#     ctx.pause('\n\n\n\nSeal and shake at 1600 rpm for 1 minute. Incubate  # at room temperature for 5 minutes. Centrifuge at 500 × g for 1 minute. \
-# Replace on the magnetic stand.')
-
-    # wash
-    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
-         premix=False, do_discard_supernatant=True, do_resuspend=True,
-         vol_supernatant=vol_wash)
-    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
-         premix=False, do_discard_supernatant=False, do_resuspend=True,
-         vol_supernatant=vol_wash, park=False)

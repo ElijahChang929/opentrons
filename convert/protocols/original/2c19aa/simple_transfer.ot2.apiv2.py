@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/2c19aa/simple_transfer.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/2c19aa/simple_transfer.ot2.apiv2.py"
 
 metadata = {
     'ctxName': 'Simple Plate Transfer - 6 Sources',

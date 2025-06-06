@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/50486f-v2-part1/50486f-v2-part1.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/50486f-v2-part1/50486f-v2-part1.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'APIv2 PCR Prep 1/4: HYB',

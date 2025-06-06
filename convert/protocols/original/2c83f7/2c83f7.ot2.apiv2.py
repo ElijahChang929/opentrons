@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/2c83f7/2c83f7.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/2c83f7/2c83f7.ot2.apiv2.py"
 
 from opentrons import types
 import math
@@ -254,6 +254,41 @@ def run(protocol):
     # second set of 3x EtOH washes
     etoh_wash_3x()
     protocol.pause('Let the beads dry, ideally at 55C or let the plate seat for  20min. Replace plate on magnetic module when finished if necessary before \
+resuming.')
+
+    # add DNAse/RNAse-free water and mix during 8 minute incubation
+    magdeck.disengage()
+    pick_up()
+    m300.distribute(50, water, [s.top() for s in mag_samples], new_tip='never')
+    tip_locs = []
+    for mix_rep in range(3):
+        for t, (s, d) in enumerate(zip(mag_samples, disp_locs)):
+            if mix_rep == 0:
+                if not m300.hw_pipette['has_tip']:
+                    m300.pick_up_tip()
+                tip_locs.append(m300._last_tip_picked_up_from)
+            else:
+                pick_up(tip_locs[t])
+            m300.mix(mix_repetitions, 250, d)
+            m300.blow_out(s.bottom(10))
+            m300.return_tip()
+        protocol.comment('Incubating before next mix...')
+        protocol.delay(minutes=2)
+
+    magdeck.engage(height=12)
+    protocol.comment('Incubating on magnet for bead separation')
+    protocol.delay(minutes=bead_separation_time_in_minutes)
+
+    # transfer eluate to a new PCR plate
+    for i, (t, s, e) in enumerate(zip(tip_locs, mag_samples, elution_samples)):
+        angle = 1 if i % 2 == 0 else -1
+        asp_loc = s.bottom().move(types.Point(x=angle, y=0, z=0.6))
+        pick_up(t)
+        m300.transfer(50, asp_loc, e, new_tip='never')
+        m300.blow_out(e.bottom(0.5))
+        m300.drop_tip()
+
+    magdeck.disengage()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -299,38 +334,3 @@ def run(protocol):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-resuming.')
-
-    # add DNAse/RNAse-free water and mix during 8 minute incubation
-    magdeck.disengage()
-    pick_up()
-    m300.distribute(50, water, [s.top() for s in mag_samples], new_tip='never')
-    tip_locs = []
-    for mix_rep in range(3):
-        for t, (s, d) in enumerate(zip(mag_samples, disp_locs)):
-            if mix_rep == 0:
-                if not m300.hw_pipette['has_tip']:
-                    m300.pick_up_tip()
-                tip_locs.append(m300._last_tip_picked_up_from)
-            else:
-                pick_up(tip_locs[t])
-            m300.mix(mix_repetitions, 250, d)
-            m300.blow_out(s.bottom(10))
-            m300.return_tip()
-        protocol.comment('Incubating before next mix...')
-        protocol.delay(minutes=2)
-
-    magdeck.engage(height=12)
-    protocol.comment('Incubating on magnet for bead separation')
-    protocol.delay(minutes=bead_separation_time_in_minutes)
-
-    # transfer eluate to a new PCR plate
-    for i, (t, s, e) in enumerate(zip(tip_locs, mag_samples, elution_samples)):
-        angle = 1 if i % 2 == 0 else -1
-        asp_loc = s.bottom().move(types.Point(x=angle, y=0, z=0.6))
-        pick_up(t)
-        m300.transfer(50, asp_loc, e, new_tip='never')
-        m300.blow_out(e.bottom(0.5))
-        m300.drop_tip()
-
-    magdeck.disengage()

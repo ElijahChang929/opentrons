@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/69cf81/pcr_prep.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/69cf81/pcr_prep.ot2.apiv2.py"
 
 import math
 
@@ -44,6 +44,42 @@ def run(ctx):
     num_cols = math.ceil(num_samples/8)
     if num_cols*num_primers > 12:
         raise Exception(f'Can only accommodate up to {math.floor(12/num_cols)}  primers with {num_samples} samples or {math.floor(12/num_primers)} samples \
+with {num_primers} primers.')
+
+    # reagents
+    mm = res.wells()[0]
+
+    sample_sources = sample_plate.rows()[0][:num_cols]
+    sample_dests_sets_m = [
+        [pcr_plate.rows()[0][p*num_cols+s] for p in range(num_primers)]
+        for s in range(num_cols)]
+    primer_sources = primer_rack.wells()[:num_primers]
+    primer_dest_sets = [
+        [well
+         for col in pcr_plate.columns()[p*num_cols:(p+1)*num_cols]
+         for well in col]
+        for p in range(num_primers)]
+
+    # transfer BigDye + water mix
+    reagent_dests_multi = pcr_plate.rows()[0][:num_cols*num_primers]
+    m20.pick_up_tip()
+    for d in reagent_dests_multi:
+        m20.transfer(16, mm, d.bottom(height_dispense), new_tip='never')
+    m20.drop_tip()
+
+    # transfer samples
+    for s, d_set in zip(sample_sources, sample_dests_sets_m):
+        for d in d_set:
+            m20.pick_up_tip()
+            m20.transfer(3, s, d.bottom(height_dispense), new_tip='never')
+            m20.drop_tip()
+
+    # transfer primers
+    for primer, dest_set in zip(primer_sources, primer_dest_sets):
+        for d in dest_set:
+            p20.pick_up_tip()
+            p20.transfer(1, primer, d.bottom(height_dispense), new_tip='never')
+            p20.drop_tip()
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -89,39 +125,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-with {num_primers} primers.')
-
-    # reagents
-    mm = res.wells()[0]
-
-    sample_sources = sample_plate.rows()[0][:num_cols]
-    sample_dests_sets_m = [
-        [pcr_plate.rows()[0][p*num_cols+s] for p in range(num_primers)]
-        for s in range(num_cols)]
-    primer_sources = primer_rack.wells()[:num_primers]
-    primer_dest_sets = [
-        [well
-         for col in pcr_plate.columns()[p*num_cols:(p+1)*num_cols]
-         for well in col]
-        for p in range(num_primers)]
-
-    # transfer BigDye + water mix
-    reagent_dests_multi = pcr_plate.rows()[0][:num_cols*num_primers]
-    m20.pick_up_tip()
-    for d in reagent_dests_multi:
-        m20.transfer(16, mm, d.bottom(height_dispense), new_tip='never')
-    m20.drop_tip()
-
-    # transfer samples
-    for s, d_set in zip(sample_sources, sample_dests_sets_m):
-        for d in d_set:
-            m20.pick_up_tip()
-            m20.transfer(3, s, d.bottom(height_dispense), new_tip='never')
-            m20.drop_tip()
-
-    # transfer primers
-    for primer, dest_set in zip(primer_sources, primer_dest_sets):
-        for d in dest_set:
-            p20.pick_up_tip()
-            p20.transfer(1, primer, d.bottom(height_dispense), new_tip='never')
-            p20.drop_tip()

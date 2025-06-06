@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/39b4c7/39b4c7.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/39b4c7/39b4c7.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Reformat 96 Well Plates to 384 Well Plate for qPCR',

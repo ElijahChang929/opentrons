@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/sci-pierce-ninta-magnetic-beads-part-2/sci-pierce-ninta-magnetic-beads-part-2.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/sci-pierce-ninta-magnetic-beads-part-2/sci-pierce-ninta-magnetic-beads-part-2.ot2.apiv2.py"
 
 from opentrons.types import Point
 metadata = {

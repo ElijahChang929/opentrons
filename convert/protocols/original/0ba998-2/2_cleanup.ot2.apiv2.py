@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0ba998-2/2_cleanup.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0ba998-2/2_cleanup.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -226,6 +226,24 @@ def run(ctx):
             m20.drop_tip()
 
     ctx.pause('Seal the plate with Microseal B, place on the preprogrammed  thermal cycler, and run the PTC program. Replace on magnetic module when \
+finished.')
+
+    if not TEST_MODE_BEADS:
+        magdeck.engage()
+        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
+
+    remove_supernatant(60, pip=m300, park=False)
+
+    # wash
+    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
+         premix=False, do_discard_supernatant=True, do_resuspend=True,
+         vol_supernatant=vol_wash)
+    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
+         premix=False, do_discard_supernatant=True, do_resuspend=True,
+         vol_supernatant=vol_wash)
+    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
+         premix=False, do_discard_supernatant=False, do_resuspend=True,
+         vol_supernatant=vol_wash, park=False)
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -271,21 +289,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-finished.')
-
-    if not TEST_MODE_BEADS:
-        magdeck.engage()
-        ctx.delay(minutes=time_settling_minutes, msg=f'Incubating on  MagDeck for {time_settling_minutes} minutes.')
-
-    remove_supernatant(60, pip=m300, park=False)
-
-    # wash
-    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
-         premix=False, do_discard_supernatant=True, do_resuspend=True,
-         vol_supernatant=vol_wash)
-    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
-         premix=False, do_discard_supernatant=True, do_resuspend=True,
-         vol_supernatant=vol_wash)
-    wash(vol_wash, twb, time_incubation=0, time_settling=time_settling_minutes,
-         premix=False, do_discard_supernatant=False, do_resuspend=True,
-         vol_supernatant=vol_wash, park=False)

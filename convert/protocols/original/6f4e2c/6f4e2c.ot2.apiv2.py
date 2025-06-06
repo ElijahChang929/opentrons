@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/6f4e2c/6f4e2c.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/6f4e2c/6f4e2c.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'DNA Isolation from Whole Blood',

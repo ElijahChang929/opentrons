@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1adec6-4/1adec6-4.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1adec6-4/1adec6-4.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Transfer Small Molecules - CSV Input [4/7]',

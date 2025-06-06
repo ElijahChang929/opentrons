@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/0ba998-3/3_amplify.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/0ba998-3/3_amplify.ot2.apiv2.py"
 
 from opentrons import protocol_api
 from opentrons.types import Point
@@ -192,6 +192,7 @@ def run(ctx):
             m20.drop_tip()
 
     ctx.comment('Seal the plate with Microseal B, and then centrifuge at  280 × g for 30 seconds. 11 Place on the thermal cycler and run the BLT PCR \
+program.')
 
     from opentrons.protocol_api.labware import Well, Labware
     import re
@@ -237,4 +238,3 @@ def run(ctx):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
-program.')

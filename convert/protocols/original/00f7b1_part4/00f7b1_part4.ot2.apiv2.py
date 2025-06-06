@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/00f7b1_part4/00f7b1_part4.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/00f7b1_part4/00f7b1_part4.ot2.apiv2.py"
 
 """OPENTRONS."""
 from opentrons import protocol_api

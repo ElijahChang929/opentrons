@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/user-upload_ZooMS_Protocol/ZooMS_Protocol.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/user-upload_ZooMS_Protocol/ZooMS_Protocol.ot2.apiv2.py"
 
 from opentrons import protocol_api
 
@@ -153,7 +153,6 @@ def run(protocol: protocol_api.ProtocolContext):
             ext_wells_in_use,
             eluting_wells)
 
-
     from opentrons.protocol_api.labware import Well, Labware
     import re
     import json
@@ -198,6 +197,7 @@ def run(protocol: protocol_api.ProtocolContext):
 
     with open(filename, 'w') as f:
         json.dump(output_data, f, indent=2, default=str)
+
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Protocol End~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Initalisation Functions~~~~~~~~~~~~~~~~~~~~~~~~~

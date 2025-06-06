@@ -1,6 +1,6 @@
 import builtins
 builtins.event_logs = []
-__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep Potential/opentrons/convert/protocols/original/1dec68/1dec68.ot2.apiv2.py"
+__protocol_file__ = r"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original/1dec68/1dec68.ot2.apiv2.py"
 
 metadata = {
     'protocolName': 'Covid Sample Prep with Custom 96 Tube Rack',
