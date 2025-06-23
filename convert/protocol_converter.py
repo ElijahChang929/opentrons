@@ -724,6 +724,21 @@ def parse_protocol(name: str):
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
+    # first check if the files exist
+    if not os.path.exists(infofile):
+        # 获取协议文件夹路径
+        proto_dir = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/"
+        # 列出文件夹下所有json文件，排除metadata.json和README.json
+        candidates = [
+            os.path.join(proto_dir, f)
+            for f in os.listdir(proto_dir)
+            if f.endswith(".json") and f not in ("metadata.json", "README.json")
+        ]
+        # 如果有多个json文件，取第一个
+        if candidates:
+            infofile = candidates[0]
+        else:
+            raise FileNotFoundError(f"No protocol json found in {proto_dir}, except metadata.json/README.json")
 
     protocol_steps = process_liquid_handler_log(logfile)
     # with open('enriched_steps.json', 'w') as f:
