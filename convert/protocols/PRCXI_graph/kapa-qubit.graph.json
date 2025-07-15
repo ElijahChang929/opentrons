@@ -5,16 +5,6 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Agilent 96 Well Plate 270 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "agilent_96_wellplate_270ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
             "id": "Agilent 96 Well Plate 270 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
@@ -35,10 +25,10 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 12 Well Reservoir 15 mL on 2",
+            "id": "Agilent 96 Well Plate 270 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "nest_12_reservoir_15ml",
+            "class_name": "agilent_96_wellplate_270ul",
             "liquid_type": [
                 "sample_cols_dest[0]",
                 "col"
@@ -51,10 +41,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "id": "NEST 12 Well Reservoir 15 mL on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_filtertiprack_200ul",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "buffer"
             ],
@@ -65,9 +55,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 4",
+            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "opentrons_96_filtertiprack_200ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "opentrons_96_filtertiprack_20ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -75,9 +75,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons Fixed Trash on 6",
             "parent": "deck",
-            "slot_on_deck": 5,
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -482,14 +482,26 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "NEST 12 Well Reservoir 15 mL on 2",
+            "source": "Agilent 96 Well Plate 270 \u00b5L on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "source": "NEST 12 Well Reservoir 15 mL on 3",
             "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
+            "target": "step_2"
         },
         {
             "source_port": "targets_out",

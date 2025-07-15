@@ -5,17 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "biorad_96_wellplate_200ul_pcr",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "output plate on 1",
+            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "biorad_96_wellplate_200ul_pcr",
@@ -75,10 +65,10 @@
         },
         {
             "template": "create_resource",
-            "id": "p1000 tiprack on 2",
+            "id": "output plate on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_1000ul",
+            "class_name": "biorad_96_wellplate_200ul_pcr",
             "liquid_type": [
                 "output[0]",
                 "output[1]",
@@ -145,9 +135,19 @@
         },
         {
             "template": "create_resource",
-            "id": "reagent reservoir on 4",
+            "id": "p1000 tiprack on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "opentrons_96_tiprack_1000ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "reagent reservoir on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "usascientific_12_reservoir_22ml",
             "liquid_type": [],
             "liquid_volume": [],
@@ -155,9 +155,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons Fixed Trash on 6",
             "parent": "deck",
-            "slot_on_deck": 5,
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -5399,13 +5399,13 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "output plate on 1",
+            "source": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 1",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "p1000 tiprack on 2",
+            "source": "output plate on 2",
             "target": "step_11"
         },
         {
@@ -5465,26 +5465,32 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "p1000 tiprack on 4",
             "target": "step_10"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "p1000 tiprack on 4",
             "target": "step_11"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "p1000 tiprack on 4",
             "target": "step_12"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "p1000 tiprack on 4",
             "target": "step_13"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "reagent reservoir on 5",
+            "target": "step_1"
         },
         {
             "source_port": "targets_out",

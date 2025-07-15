@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on 0",
+            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "biorad_96_wellplate_200ul_pcr",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 1",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,20 +25,10 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 12 Well Reservoir 15 mL on 2",
-            "parent": "deck",
-            "slot_on_deck": 2,
-            "class_name": "nest_12_reservoir_15ml",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "NEST 12 Well Reservoir 15 mL on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "green_wells[0]",
                 "green_wells[1]",
@@ -154,6 +144,16 @@
                 "F11",
                 "G12"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer",
@@ -296,7 +296,19 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 3",
+            "source": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "NEST 12 Well Reservoir 15 mL on 3",
             "target": "step_1"
         }
     ]

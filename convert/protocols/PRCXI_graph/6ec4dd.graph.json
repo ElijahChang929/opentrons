@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "source plate on 0",
+            "id": "source plate on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "kingfisher_96_wellplate_200ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "PCR plate on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "biorad_96_wellplate_350ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 2",
+            "id": "PCR plate on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_20ul",
+            "class_name": "biorad_96_wellplate_350ul",
             "liquid_type": [
                 "sources[0]",
                 "sources[1]",
@@ -61,10 +51,10 @@
         },
         {
             "template": "create_resource",
-            "id": "reagent plate on 3",
+            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
+            "class_name": "opentrons_96_tiprack_20ul",
             "liquid_type": [
                 "dests[0]",
                 "dests[1]",
@@ -97,9 +87,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "reagent plate on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -324,13 +324,31 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 2",
+            "source": "source plate on 1",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "reagent plate on 3",
+            "source": "PCR plate on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 3",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "reagent plate on 4",
             "target": "step_1"
         },
         {

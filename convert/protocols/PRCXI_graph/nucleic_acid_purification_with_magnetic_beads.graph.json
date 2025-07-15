@@ -5,17 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "biorad_96_wellplate_200ul_pcr",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "output plate on 1",
+            "id": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "biorad_96_wellplate_200ul_pcr",
@@ -75,10 +65,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 2",
+            "id": "output plate on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_1000ul",
+            "class_name": "biorad_96_wellplate_200ul_pcr",
             "liquid_type": [
                 "output[0]",
                 "output[1]",
@@ -135,20 +125,20 @@
         },
         {
             "template": "create_resource",
-            "id": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "usascientific_12_reservoir_22ml",
+            "class_name": "opentrons_96_tiprack_1000ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 4",
+            "id": "USA Scientific 12 Well Reservoir 22 mL on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_96_tiprack_1000ul",
+            "class_name": "usascientific_12_reservoir_22ml",
             "liquid_type": [
                 "liquid_waste",
                 "beads",
@@ -165,9 +155,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_tiprack_1000ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -3521,85 +3521,85 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "output plate on 1",
+            "source": "Bio-Rad 96 Well Plate 200 \u00b5L PCR on Magnetic Module GEN1 on 1",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 2",
+            "source": "output plate on 2",
             "target": "step_10"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "target": "step_4"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "USA Scientific 12 Well Reservoir 22 mL on 3",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
             "target": "step_5"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 4",
+            "source": "USA Scientific 12 Well Reservoir 22 mL on 4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_6"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_7"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_8"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_9"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_10"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 5",
             "target": "step_11"
         },
         {

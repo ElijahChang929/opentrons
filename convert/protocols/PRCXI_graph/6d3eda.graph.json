@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_filtertiprack_200ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Corning 24 Well Plate 3.4 mL Flat on 1",
+            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "corning_24_wellplate_3.4ml_flat",
+            "class_name": "opentrons_96_filtertiprack_200ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
@@ -59,9 +49,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Corning 24 Well Plate 3.4 mL Flat on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "corning_24_wellplate_3.4ml_flat",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -580,13 +580,13 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Corning 24 Well Plate 3.4 mL Flat on 1",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Corning 24 Well Plate 3.4 mL Flat on 1",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 1",
             "target": "step_2"
         },
         {
@@ -604,8 +604,14 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Corning 24 Well Plate 3.4 mL Flat on 4",
             "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "Corning 24 Well Plate 3.4 mL Flat on 5",
+            "target": "step_2"
         }
     ]
 }

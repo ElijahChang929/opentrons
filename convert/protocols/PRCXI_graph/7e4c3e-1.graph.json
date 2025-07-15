@@ -5,16 +5,6 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_filtertiprack_20ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
             "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
@@ -35,20 +25,20 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 \u00b5L on 3",
+            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_aluminumblock_biorad_wellplate_200ul",
+            "class_name": "opentrons_96_filtertiprack_20ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Applied Biosystems\u2122 MicroAmp\u2122 Optical 384-Well Reaction Plate With Barcode 384 Well Plate 30 \u00b5L on 4",
+            "id": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "appliedbiosystemsmicroampoptical384wellreactionplatewithbarcode_384_wellplate_30ul",
+            "class_name": "opentrons_96_aluminumblock_biorad_wellplate_200ul",
             "liquid_type": [
                 "b_cols[0]",
                 "b_cols[1]",
@@ -81,10 +71,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Applied Biosystems\u2122 MicroAmp\u2122 Optical 384-Well Reaction Plate With Barcode 384 Well Plate 30 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "appliedbiosystemsmicroampoptical384wellreactionplatewithbarcode_384_wellplate_30ul",
             "liquid_type": [
                 "target_wells[0]",
                 "target_wells[1]",
@@ -96,6 +86,16 @@
                 "B17",
                 "B18"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer",
@@ -953,13 +953,13 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Applied Biosystems\u2122 MicroAmp\u2122 Optical 384-Well Reaction Plate With Barcode 384 Well Plate 30 \u00b5L on 4",
+            "source": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 \u00b5L on 4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Applied Biosystems\u2122 MicroAmp\u2122 Optical 384-Well Reaction Plate With Barcode 384 Well Plate 30 \u00b5L on 5",
             "target": "step_1"
         }
     ]

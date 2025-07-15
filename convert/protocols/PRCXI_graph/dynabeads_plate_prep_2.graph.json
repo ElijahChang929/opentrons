@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "reagents on 0",
+            "id": "reagents on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "nest_96_wellplate_2ml_deep",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "reagents - stock on 1",
+            "id": "reagents - stock on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "opentrons_15_tuberack_nest_15ml_conical",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,9 +25,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "parent": "deck",
-            "slot_on_deck": 2,
+            "slot_on_deck": 3,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,13 +35,31 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons Fixed Trash on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
-            "liquid_type": [],
+            "liquid_type": [
+                "elution[0]",
+                "elution[1]",
+                "elution[2]",
+                "elution[3]",
+                "elution[4]",
+                "elution[5]",
+                "elution[6]",
+                "elution[7]"
+            ],
             "liquid_volume": [],
-            "liquid_input_wells": []
+            "liquid_input_wells": [
+                "A12",
+                "B12",
+                "C12",
+                "D12",
+                "E12",
+                "F12",
+                "G12",
+                "H12"
+            ]
         },
         {
             "template": "transfer",
@@ -169,5 +187,24 @@
             "id": "step_1"
         }
     ],
-    "links": []
+    "links": [
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "reagents on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "reagents - stock on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_1"
+        }
+    ]
 }

@@ -5,30 +5,20 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Sample Plate on MagDeck on Magnetic Module GEN2 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "12-Well Reservoir with Reagents on 1",
+            "id": "Sample Plate on MagDeck on Magnetic Module GEN2 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "nest_12_reservoir_15ml",
+            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Elution Plate on 2",
+            "id": "12-Well Reservoir with Reagents on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "beads",
                 "etoh",
@@ -43,10 +33,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "id": "Elution Plate on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_filtertiprack_200ul",
+            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
             "liquid_type": [
                 "dest"
             ],
@@ -67,9 +57,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_filtertiprack_200ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -1210,74 +1210,92 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "12-Well Reservoir with Reagents on 1",
+            "source": "Sample Plate on MagDeck on Magnetic Module GEN2 on 1",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Elution Plate on 2",
+            "source": "12-Well Reservoir with Reagents on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "source": "Elution Plate on 3",
             "target": "step_11"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_4"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_5"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_6"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_7"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_8"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
             "target": "step_9"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 5",
+            "target": "step_10"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 5",
+            "target": "step_11"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 5",
+            "target": "step_12"
         },
         {
             "source_port": "targets_out",

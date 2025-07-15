@@ -5,17 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Tip Box 1 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_filtertiprack_20ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Tip Box 2 on 1",
+            "id": "Tip Box 1 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "opentrons_96_filtertiprack_20ul",
@@ -25,10 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "KingFisher 96 Deep Well Plate on 2",
+            "id": "Tip Box 2 on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "kingfisher_96_deepwell_plate_2ml",
+            "class_name": "opentrons_96_filtertiprack_20ul",
             "liquid_type": [
                 "tip"
             ],
@@ -39,20 +29,20 @@
         },
         {
             "template": "create_resource",
-            "id": "ThermoFisher MicroAmp Fast 96-well 0.1 96 Well Plate 100 \u00b5L on 3",
+            "id": "KingFisher 96 Deep Well Plate on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "thermofishermicroampfast96well0.1_96_wellplate_100ul",
+            "class_name": "kingfisher_96_deepwell_plate_2ml",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "MicroAmp 96-Well Base with 0.2 mL Thermo Scientific PCR Tube Strip on 4",
+            "id": "ThermoFisher MicroAmp Fast 96-well 0.1 96 Well Plate 100 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "96well_pcr_base_200ul_strip",
+            "class_name": "thermofishermicroampfast96well0.1_96_wellplate_100ul",
             "liquid_type": [
                 "source"
             ],
@@ -63,10 +53,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "MicroAmp 96-Well Base with 0.2 mL Thermo Scientific PCR Tube Strip on 5",
             "parent": "deck",
             "slot_on_deck": 5,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "96well_pcr_base_200ul_strip",
             "liquid_type": [
                 "pcr_well",
                 "dest"
@@ -76,6 +66,16 @@
                 "A12",
                 "A12"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer",
@@ -291,25 +291,31 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Tip Box 2 on 1",
+            "source": "Tip Box 1 on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "KingFisher 96 Deep Well Plate on 2",
+            "source": "Tip Box 2 on 2",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "MicroAmp 96-Well Base with 0.2 mL Thermo Scientific PCR Tube Strip on 4",
+            "source": "KingFisher 96 Deep Well Plate on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "ThermoFisher MicroAmp Fast 96-well 0.1 96 Well Plate 100 \u00b5L on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "MicroAmp 96-Well Base with 0.2 mL Thermo Scientific PCR Tube Strip on 5",
             "target": "step_1"
         },
         {

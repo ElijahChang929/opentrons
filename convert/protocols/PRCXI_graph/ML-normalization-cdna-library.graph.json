@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "source plate on Temperature Module GEN2 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "regeneron_96_aluminumblock_200ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "destination plate on 1",
+            "id": "source plate on Temperature Module GEN2 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "amplifyt_96_tuberack_200ul",
+            "class_name": "regeneron_96_aluminumblock_200ul",
             "liquid_type": [
                 "s"
             ],
@@ -29,10 +19,10 @@
         },
         {
             "template": "create_resource",
-            "id": "20ul tiprack on 2",
+            "id": "destination plate on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_20ul",
+            "class_name": "amplifyt_96_tuberack_200ul",
             "liquid_type": [
                 "d"
             ],
@@ -43,9 +33,19 @@
         },
         {
             "template": "create_resource",
-            "id": "reservoir for water (position A1) on 3",
+            "id": "20ul tiprack on 3",
             "parent": "deck",
             "slot_on_deck": 3,
+            "class_name": "opentrons_96_tiprack_20ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "reservoir for water (position A1) on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
             "class_name": "opentrons_15_tuberack_5000ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -53,9 +53,9 @@
         },
         {
             "template": "create_resource",
-            "id": "300ul tiprack on 4",
+            "id": "300ul tiprack on 5",
             "parent": "deck",
-            "slot_on_deck": 4,
+            "slot_on_deck": 5,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -63,9 +63,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons Fixed Trash on 6",
             "parent": "deck",
-            "slot_on_deck": 5,
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -166,25 +166,31 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "destination plate on 1",
+            "source": "source plate on Temperature Module GEN2 on 1",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "20ul tiprack on 2",
+            "source": "destination plate on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "reservoir for water (position A1) on 3",
+            "source": "20ul tiprack on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "reservoir for water (position A1) on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "300ul tiprack on 5",
             "target": "step_1"
         },
         {

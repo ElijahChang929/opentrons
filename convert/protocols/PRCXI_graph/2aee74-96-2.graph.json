@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "incubation plate on 0",
+            "id": "incubation plate on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "reservoir for extension mix (channel 1) on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "nest_12_reservoir_15ml",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "reservoir for extension mix (channel 1) on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "col"
             ],
@@ -39,9 +29,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -577,7 +577,19 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "source": "incubation plate on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "reservoir for extension mix (channel 1) on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "target": "step_1"
         }
     ]

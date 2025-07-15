@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Tuberack A on 0",
+            "id": "Tuberack A on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "6x5_half_inch_t1_t3",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Tuberack B on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "opentrons_24_tuberack_t4_t5",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 2",
+            "id": "Tuberack B on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_filtertiprack_200ul",
+            "class_name": "opentrons_24_tuberack_t4_t5",
             "liquid_type": [
                 "well"
             ],
@@ -39,9 +29,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
+            "class_name": "opentrons_96_filtertiprack_200ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -3013,14 +3013,122 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Tuberack B on 1",
+            "source": "Tuberack A on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 2",
+            "source": "Tuberack B on 2",
             "target": "step_11"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_3"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_4"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_5"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_6"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_7"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_8"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_9"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_10"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_11"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_12"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_13"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_14"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_15"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_16"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_17"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "target": "step_18"
         },
         {
             "source_port": "targets_out",

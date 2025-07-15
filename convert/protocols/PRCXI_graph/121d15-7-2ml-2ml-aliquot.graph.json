@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "tuberack on 0",
+            "id": "tuberack on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "eurofins_96x2ml_tuberack",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "opentrons_96_tiprack_300ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 2",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [
                 "tubes1_ordered[0]",
                 "tubes1_ordered[1]",
@@ -418,6 +408,16 @@
                 "O12",
                 "P12"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer",
@@ -860,7 +860,13 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons Fixed Trash on 2",
+            "source": "tuberack on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "target": "step_1"
         },
         {

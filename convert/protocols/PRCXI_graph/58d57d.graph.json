@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Greiner 384 Well Plate 130 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "greiner_384_wellplate_130ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 1",
+            "id": "Greiner 384 Well Plate 130 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_96_tiprack_20ul",
+            "class_name": "greiner_384_wellplate_130ul",
             "liquid_type": [
                 "sample_wells[0]",
                 "sample_wells[1]",
@@ -795,9 +785,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap on 2",
+            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
+            "class_name": "opentrons_96_tiprack_20ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
             "class_name": "opentrons_24_tuberack_eppendorf_1.5ml_safelock_snapcap",
             "liquid_type": [],
             "liquid_volume": [],
@@ -805,13 +805,23 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons Fixed Trash on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
-            "liquid_type": [],
+            "liquid_type": [
+                "liquid_A",
+                "liquid_B",
+                "liquid_C",
+                "liquid_D"
+            ],
             "liquid_volume": [],
-            "liquid_input_wells": []
+            "liquid_input_wells": [
+                "A1",
+                "B1",
+                "C1",
+                "D1"
+            ]
         },
         {
             "template": "transfer",
@@ -13148,13 +13158,19 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 1",
+            "source": "Greiner 384 Well Plate 130 \u00b5L on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap on 2",
+            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap on 3",
             "target": "step_1"
         }
     ]

@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 1",
+            "id": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_96_filtertiprack_20ul",
+            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
             "liquid_type": [
                 "sampwells[0]",
                 "sampwells[1]",
@@ -219,9 +209,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Applied Biosystems 96 Aluminum Block 200 \u00b5L on Temperature Module GEN1 on 2",
+            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
+            "class_name": "opentrons_96_filtertiprack_20ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Applied Biosystems 96 Aluminum Block 200 \u00b5L on Temperature Module GEN1 on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
             "class_name": "ab_96_aluminumblock",
             "liquid_type": [],
             "liquid_volume": [],
@@ -229,20 +229,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on 3",
-            "parent": "deck",
-            "slot_on_deck": 3,
-            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 4",
+            "id": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_96_filtertiprack_20ul",
+            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
             "liquid_type": [
                 "mm_wells[0]",
                 "mm_wells[1]",
@@ -635,10 +625,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "opentrons_96_filtertiprack_20ul",
             "liquid_type": [
                 "mmTubes[0]"
             ],
@@ -646,6 +636,16 @@
             "liquid_input_wells": [
                 "A1"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer_with_temperature",
@@ -11274,20 +11274,194 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 1",
+            "source": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on 1",
             "target": "step_29"
         },
         {
             "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_3"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_4"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_5"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_6"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_7"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_8"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_9"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_10"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_11"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_12"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_13"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_14"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_15"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_16"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_17"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_18"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_19"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_20"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_21"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_22"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_23"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_24"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_25"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_26"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_27"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "target": "step_28"
+        },
+        {
+            "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 4",
+            "source": "Applied Biosystems 96 Aluminum Block 200 \u00b5L on Temperature Module GEN1 on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on 4",
             "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
+            "target": "step_29"
         },
         {
             "source_port": "targets_out",

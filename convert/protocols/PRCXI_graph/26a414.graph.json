@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "10uL Tips on 0",
+            "id": "10uL Tips on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "opentrons_96_tiprack_10ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "12-Channel Trough on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "usascientific_12_reservoir_22ml",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "384-Well Plate on 2",
+            "id": "12-Channel Trough on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "corning_384_wellplate_112ul_flat",
+            "class_name": "usascientific_12_reservoir_22ml",
             "liquid_type": [
                 "guan",
                 "pbs"
@@ -41,9 +31,19 @@
         },
         {
             "template": "create_resource",
-            "id": "50uL Tips on 3",
+            "id": "384-Well Plate on 3",
             "parent": "deck",
             "slot_on_deck": 3,
+            "class_name": "corning_384_wellplate_112ul_flat",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "50uL Tips on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -51,9 +51,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Opentrons Fixed Trash on 5",
             "parent": "deck",
-            "slot_on_deck": 4,
+            "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -158,25 +158,25 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "12-Channel Trough on 1",
+            "source": "10uL Tips on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "384-Well Plate on 2",
+            "source": "12-Channel Trough on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "50uL Tips on 3",
+            "source": "384-Well Plate on 3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "50uL Tips on 4",
             "target": "step_2"
         },
         {

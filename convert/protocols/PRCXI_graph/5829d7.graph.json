@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "NEST 32 Tuberack 15ml (2 Slot) on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Qiagen 96 Well Plate 2250 \u00b5L on 1",
+            "id": "NEST 32 Tuberack 15ml (2 Slot) on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "qiagen_96_wellplate_2250ul",
+            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
             "liquid_type": [
                 "tubes[0]",
                 "tubes[1]",
@@ -91,20 +81,20 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 32 Tuberack 15ml (2 Slot) on 2",
+            "id": "Qiagen 96 Well Plate 2250 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
+            "class_name": "qiagen_96_wellplate_2250ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 3",
+            "id": "NEST 32 Tuberack 15ml (2 Slot) on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_filtertiprack_1000ul",
+            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
             "liquid_type": [
                 "wells[0]",
                 "wells[1]",
@@ -305,10 +295,10 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 32 Tuberack 15ml (2 Slot) on 4",
+            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
+            "class_name": "opentrons_96_filtertiprack_1000ul",
             "liquid_type": [
                 "tubes[32]",
                 "tubes[33]",
@@ -381,9 +371,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "NEST 32 Tuberack 15ml (2 Slot) on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "nest_32_tuberack_8x15ml_8x15ml_8x15ml_8x15ml",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -4462,20 +4462,44 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Qiagen 96 Well Plate 2250 \u00b5L on 1",
+            "source": "NEST 32 Tuberack 15ml (2 Slot) on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 3",
+            "source": "Qiagen 96 Well Plate 2250 \u00b5L on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "NEST 32 Tuberack 15ml (2 Slot) on 4",
+            "source": "NEST 32 Tuberack 15ml (2 Slot) on 3",
             "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
+            "target": "step_3"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "NEST 32 Tuberack 15ml (2 Slot) on 5",
+            "target": "step_3"
         },
         {
             "source_port": "targets_out",

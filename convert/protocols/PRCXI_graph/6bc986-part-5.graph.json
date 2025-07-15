@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Aspir-8 Reservoir on 0",
+            "id": "Aspir-8 Reservoir on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "aspir8_1_reservoir_taped",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 1",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,9 +25,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Thermo 96 Well Plate 200 \u00c2\u00b5L on 2",
+            "id": "Thermo 96 Well Plate 200 \u00c2\u00b5L on 3",
             "parent": "deck",
-            "slot_on_deck": 2,
+            "slot_on_deck": 3,
             "class_name": "thermo_96_wellplate_200ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,9 +35,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons Fixed Trash on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -183,7 +183,19 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Thermo 96 Well Plate 200 \u00c2\u00b5L on 2",
+            "source": "Aspir-8 Reservoir on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "Thermo 96 Well Plate 200 \u00c2\u00b5L on 3",
             "target": "step_1"
         }
     ]

@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Reagents on 0",
+            "id": "Reagents on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "opentrons_96_aluminumblock_generic_pcr_strip_200ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Sample Plate at 4 Degrees on Temperature Module GEN2 on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "eppendorftwin.tec96_96_aluminumblock_200ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "id": "Sample Plate at 4 Degrees on Temperature Module GEN2 on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_filtertiprack_20ul",
+            "class_name": "eppendorftwin.tec96_96_aluminumblock_200ul",
             "liquid_type": [
                 "postindexcleanup_enz_mx[0]",
                 "postindexcleanup_enz_mx[1]",
@@ -81,9 +71,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "opentrons_96_filtertiprack_20ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -5989,13 +5989,19 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 2",
+            "source": "Reagents on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 3",
+            "source": "Sample Plate at 4 Degrees on Temperature Module GEN2 on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_1",
             "target": "step_1"
         },
         {
@@ -6011,8 +6017,8 @@
             "target": "step_3"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_2",
             "target": "step_2"
         },
@@ -6020,6 +6026,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_2",
+            "target": "step_3"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_3",
             "target": "step_3"
         },
         {
@@ -6035,8 +6047,8 @@
             "target": "step_5"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_4",
             "target": "step_4"
         },
@@ -6044,6 +6056,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_4",
+            "target": "step_5"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_5",
             "target": "step_5"
         },
         {
@@ -6059,8 +6077,8 @@
             "target": "step_7"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_6",
             "target": "step_6"
         },
@@ -6068,6 +6086,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_6",
+            "target": "step_7"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_7",
             "target": "step_7"
         },
         {
@@ -6083,8 +6107,8 @@
             "target": "step_9"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_8",
             "target": "step_8"
         },
@@ -6092,6 +6116,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_8",
+            "target": "step_9"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_9",
             "target": "step_9"
         },
         {
@@ -6107,8 +6137,8 @@
             "target": "step_11"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_10",
             "target": "step_10"
         },
@@ -6116,6 +6146,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_10",
+            "target": "step_11"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_11",
             "target": "step_11"
         },
         {
@@ -6131,8 +6167,8 @@
             "target": "step_13"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_12",
             "target": "step_12"
         },
@@ -6140,6 +6176,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_12",
+            "target": "step_13"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_13",
             "target": "step_13"
         },
         {
@@ -6155,8 +6197,8 @@
             "target": "step_15"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_14",
             "target": "step_14"
         },
@@ -6164,6 +6206,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_14",
+            "target": "step_15"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_15",
             "target": "step_15"
         },
         {
@@ -6179,8 +6227,8 @@
             "target": "step_17"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_16",
             "target": "step_16"
         },
@@ -6188,6 +6236,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_16",
+            "target": "step_17"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_17",
             "target": "step_17"
         },
         {
@@ -6203,8 +6257,8 @@
             "target": "step_19"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_18",
             "target": "step_18"
         },
@@ -6212,6 +6266,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_18",
+            "target": "step_19"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_19",
             "target": "step_19"
         },
         {
@@ -6227,8 +6287,8 @@
             "target": "step_21"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_20",
             "target": "step_20"
         },
@@ -6236,6 +6296,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_20",
+            "target": "step_21"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_21",
             "target": "step_21"
         },
         {
@@ -6251,8 +6317,8 @@
             "target": "step_23"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_22",
             "target": "step_22"
         },
@@ -6260,6 +6326,12 @@
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_22",
+            "target": "step_23"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_23",
             "target": "step_23"
         },
         {
@@ -6269,8 +6341,8 @@
             "target": "step_24"
         },
         {
-            "source_port": "targets_out",
-            "target_port": "targets",
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
             "source": "step_24",
             "target": "step_24"
         }

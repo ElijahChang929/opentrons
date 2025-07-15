@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "PCR strips on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_aluminumblock_generic_pcr_strip_200ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 24 Tube Rack with Eppendorf 2 mL Safe-Lock Snapcap on 1",
+            "id": "PCR strips on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_24_tuberack_eppendorf_2ml_safelock_snapcap",
+            "class_name": "opentrons_96_aluminumblock_generic_pcr_strip_200ul",
             "liquid_type": [
                 "dests[0]",
                 "dests[1]",
@@ -71,10 +61,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 3",
+            "id": "Opentrons 24 Tube Rack with Eppendorf 2 mL Safe-Lock Snapcap on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_tiprack_10ul",
+            "class_name": "opentrons_24_tuberack_eppendorf_2ml_safelock_snapcap",
             "liquid_type": [
                 "sources[0]",
                 "sources[1]",
@@ -113,9 +103,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "opentrons_96_tiprack_10ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -123,9 +123,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons Fixed Trash on 6",
             "parent": "deck",
-            "slot_on_deck": 5,
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -861,7 +861,7 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 24 Tube Rack with Eppendorf 2 mL Safe-Lock Snapcap on 1",
+            "source": "PCR strips on 1",
             "target": "step_1"
         },
         {
@@ -873,8 +873,20 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 10 \u00b5L on 3",
+            "source": "Opentrons 24 Tube Rack with Eppendorf 2 mL Safe-Lock Snapcap on 3",
             "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 10 \u00b5L on 4",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
+            "target": "step_1"
         },
         {
             "source_port": "targets_out",

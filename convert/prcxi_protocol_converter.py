@@ -495,21 +495,23 @@ def extract_labware_info_from_json(json_data: dict) -> list:
     import re
 
     output = []
+    replace_map = {}
     # 直接把标号强行转换为1-6
     for i, lw in enumerate(labware_list):
-        prcxi_id = lw.get("name") 
-        prcxi_id = re.sub(r'on \d+', f'on {i}', prcxi_id)
+        prcxi_id = lw.get("name")
+        new_id = re.sub(r'on \d+', f'on {i+1}', prcxi_id)
+        replace_map[lw.get("slot")] = i+1
         output.append({
-            "id": prcxi_id,   
+            "id": new_id,
             "parent": "deck",
-            "slot_on_deck": i,
+            "slot_on_deck": i+1,
             "class_name": lw.get("type"),
             "liquid_type": [],      
             "liquid_volume": [],            
             "liquid_input_wells": []            
         })
     
-    return output
+    return output, replace_map
 
 def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
     """
@@ -725,6 +727,25 @@ def fix_special_cases(protocol_steps: List[Dict]) -> List[Dict]:
     return protocol_steps
 
 
+def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> List[Dict]:
+    """
+    根据 replace_map 修复 protocol_steps 中各 labware 的 slot。
+    若某个 slot 没有映射，只记录警告并继续执行。
+    """
+    for step_idx, step in enumerate(protocol_steps):
+        for field in ("targets", "sources", "tip_racks"):
+            for item_idx, single_slot in enumerate(step.get(field, [])):
+                old_slot = single_slot.get("slot")
+                try:
+                    single_slot["slot"] = replace_map[str(old_slot)]
+                    print(f"[INFO] step {step_idx}, {field}[{item_idx}] slot {old_slot} replaced with {single_slot['slot']}")
+                except KeyError:
+                    # 通用警告，不输出具体 labware 名称等敏感信息
+                    print(f"[WARN] step {step_idx}, {field}[{item_idx}] 无映射，保留原 slot")
+                    # pass
+    
+    return protocol_steps
+    return protocol_steps
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
@@ -754,9 +775,11 @@ def parse_protocol(name: str):
     #     json.dump(enriched_steps, f, indent=4)
     with open(infofile, "r") as f:
         labware_data = json.load(f)
-    labware_info = extract_labware_info_from_json(labware_data)
+    labware_info, replace_map = extract_labware_info_from_json(labware_data)
+    
     enriched_steps = fix_special_cases(enriched_steps)
-    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/enriched_steps/{name}.json', 'w') as f:
+    enriched_steps = fix_positions(enriched_steps, replace_map)
+    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
         json.dump(enriched_steps, f, indent=4)
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)

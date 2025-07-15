@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "NEST 12 Well Reservoir 15 mL on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "nest_12_reservoir_15ml",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Abgene 96-Deep Well Plate 800ul on 1",
+            "id": "NEST 12 Well Reservoir 15 mL on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "abgene_96_wellplate_800ul",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "ma1",
                 "naoh"
@@ -31,20 +21,20 @@
         },
         {
             "template": "create_resource",
-            "id": "Axygen 96 Well Plate on 2",
+            "id": "Abgene 96-Deep Well Plate 800ul on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "axygen_96_wellplate",
+            "class_name": "abgene_96_wellplate_800ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 3",
+            "id": "Axygen 96 Well Plate on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_tiprack_10ul",
+            "class_name": "axygen_96_wellplate",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
@@ -61,9 +51,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_tiprack_10ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -522,19 +522,19 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Abgene 96-Deep Well Plate 800ul on 1",
+            "source": "NEST 12 Well Reservoir 15 mL on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Axygen 96 Well Plate on 2",
+            "source": "Abgene 96-Deep Well Plate 800ul on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 10 \u00b5L on 3",
+            "source": "Axygen 96 Well Plate on 3",
             "target": "step_2"
         },
         {
@@ -552,7 +552,7 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Tip Rack 10 \u00b5L on 5",
             "target": "step_3"
         },
         {

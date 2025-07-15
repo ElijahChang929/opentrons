@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "tagmentation reaction plate on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "biorad_96_wellplate_200ul_pcr",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "reagent tuberack on 1",
+            "id": "tagmentation reaction plate on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
+            "class_name": "biorad_96_wellplate_200ul_pcr",
             "liquid_type": [
                 "samples[0]",
                 "samples[1]",
@@ -219,10 +209,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "reagent tuberack on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
             "liquid_type": [
                 "mm[0]",
                 "mm[1]",
@@ -249,9 +239,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -4645,31 +4645,31 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "reagent tuberack on 1",
+            "source": "tagmentation reaction plate on 1",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "source": "reagent tuberack on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "target": "step_3"
         },
         {

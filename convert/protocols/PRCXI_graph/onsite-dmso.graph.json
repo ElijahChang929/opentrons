@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "NEST 1 Well Reservoir 195 mL on 0",
+            "id": "NEST 1 Well Reservoir 195 mL on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "nest_1_reservoir_195ml",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Altemis Lab 48 Well Plate 2000 \u00b5L on 1",
+            "id": "Altemis Lab 48 Well Plate 2000 \u00b5L on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "altemislab_48_wellplate_2000ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,9 +25,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Bricklabware_type1_rack_long 24 Well Plate 4000 \u00b5L on 2",
+            "id": "Bricklabware_type1_rack_long 24 Well Plate 4000 \u00b5L on 3",
             "parent": "deck",
-            "slot_on_deck": 2,
+            "slot_on_deck": 3,
             "class_name": "bricklabwaretype1racklong_24_wellplate_4000ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,20 +35,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Micronic 96 Well Plate 1000 \u00b5L on 3",
-            "parent": "deck",
-            "slot_on_deck": 3,
-            "class_name": "micronic_96_wellplate_1000ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
+            "id": "Micronic 96 Well Plate 1000 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_96_filtertiprack_1000ul",
+            "class_name": "micronic_96_wellplate_1000ul",
             "liquid_type": [
                 "sample_tubes[0]",
                 "sample_tubes[1]",
@@ -105,9 +95,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_filtertiprack_1000ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -354,26 +354,44 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Altemis Lab 48 Well Plate 2000 \u00b5L on 1",
+            "source": "NEST 1 Well Reservoir 195 mL on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Bricklabware_type1_rack_long 24 Well Plate 4000 \u00b5L on 2",
+            "source": "Altemis Lab 48 Well Plate 2000 \u00b5L on 2",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
+            "source": "Bricklabware_type1_rack_long 24 Well Plate 4000 \u00b5L on 3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Micronic 96 Well Plate 1000 \u00b5L on 4",
+            "target": "step_3"
+        },
+        {
+            "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Micronic 96 Well Plate 1000 \u00b5L on 4",
             "target": "step_4"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 5",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 5",
+            "target": "step_2"
         },
         {
             "source_port": "sources_out",
@@ -397,6 +415,12 @@
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_3",
+            "target": "step_4"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_4",
             "target": "step_4"
         }
     ]

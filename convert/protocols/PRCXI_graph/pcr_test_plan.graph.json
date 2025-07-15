@@ -5,16 +5,6 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_tiprack_10ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
             "id": "Opentrons 96 Tip Rack 10 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
@@ -25,9 +15,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "Opentrons 96 Tip Rack 10 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
+            "class_name": "opentrons_96_tiprack_10ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
             "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,9 +35,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap on 3",
+            "id": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_24_tuberack_nest_1.5ml_snapcap",
             "liquid_type": [],
             "liquid_volume": [],
@@ -45,9 +45,9 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on Thermocycler Module on 4",
+            "id": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on Thermocycler Module on 5",
             "parent": "deck",
-            "slot_on_deck": 4,
+            "slot_on_deck": 5,
             "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
             "liquid_type": [],
             "liquid_volume": [],
@@ -55,13 +55,21 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons Fixed Trash on 6",
             "parent": "deck",
-            "slot_on_deck": 5,
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
-            "liquid_type": [],
+            "liquid_type": [
+                "master_mix",
+                "primer_1",
+                "primer_2"
+            ],
             "liquid_volume": [],
-            "liquid_input_wells": []
+            "liquid_input_wells": [
+                "A1",
+                "A2",
+                "B2"
+            ]
         },
         {
             "template": "transfer",
@@ -11920,7 +11928,19 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap on 3",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "NEST 96 Well Plate 100 \u00b5L PCR Full Skirt on Thermocycler Module on 5",
             "target": "step_1"
         }
     ]

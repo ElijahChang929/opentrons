@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Thermofisher Scientific Deepwell 96 Well Plate 2000 \u00b5L on 0",
+            "id": "Thermofisher Scientific Deepwell 96 Well Plate 2000 \u00b5L on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "thermofisherscientificdeepwell_96_wellplate_2000ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Thermofisher 384 Well Plate 50 \u00b5L on 1",
+            "id": "Thermofisher 384 Well Plate 50 \u00b5L on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "thermofisher_384_wellplate_50ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,9 +25,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 2",
+            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 3",
             "parent": "deck",
-            "slot_on_deck": 2,
+            "slot_on_deck": 3,
             "class_name": "opentrons_96_tiprack_20ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,9 +35,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons Fixed Trash on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -2010,5 +2010,24 @@
             "id": "step_1"
         }
     ],
-    "links": []
+    "links": [
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Thermofisher Scientific Deepwell 96 Well Plate 2000 \u00b5L on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "Thermofisher 384 Well Plate 50 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 3",
+            "target": "step_1"
+        }
+    ]
 }

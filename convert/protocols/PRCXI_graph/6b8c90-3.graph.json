@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "custom5mltesttube_24_wellplate_5000ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 1",
+            "id": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "custom1mltesttube_24_wellplate_5000ul",
+            "class_name": "custom5mltesttube_24_wellplate_5000ul",
             "liquid_type": [
                 "v5mls[0]",
                 "v5mls[1]",
@@ -75,10 +65,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 2",
+            "id": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "custom5mltesttube_24_wellplate_5000ul",
+            "class_name": "custom1mltesttube_24_wellplate_5000ul",
             "liquid_type": [
                 "v1mls[0]",
                 "v1mls[1]",
@@ -135,20 +125,20 @@
         },
         {
             "template": "create_resource",
-            "id": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 3",
+            "id": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "custom1mltesttube_24_wellplate_5000ul",
+            "class_name": "custom5mltesttube_24_wellplate_5000ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "id": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "custom1mltesttube_24_wellplate_5000ul",
             "liquid_type": [
                 "v5mls[24]",
                 "v5mls[25]",
@@ -205,10 +195,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [
                 "v1mls[24]",
                 "v1mls[25]",
@@ -262,6 +252,16 @@
                 "C6",
                 "D6"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer",
@@ -2324,25 +2324,37 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 1",
+            "source": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 2",
+            "source": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "source": "Custom 5 ML Test Tube 24 Well Plate 5000 \u00b5L on 3",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Custom 1 ML Test Tube 24 Well Plate 5000 \u00b5L on 4",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
             "target": "step_2"
         }
     ]

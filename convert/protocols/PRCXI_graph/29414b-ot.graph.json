@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 0",
+            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "opentrons_96_filtertiprack_200ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,9 +15,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Custom 500ul Tube Holder on 1",
+            "id": "Custom 500ul Tube Holder on 2",
             "parent": "deck",
-            "slot_on_deck": 1,
+            "slot_on_deck": 2,
             "class_name": "custom_96_tubeholder_500ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -25,9 +25,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 2",
+            "id": "Opentrons Fixed Trash on 3",
             "parent": "deck",
-            "slot_on_deck": 2,
+            "slot_on_deck": 3,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -151,7 +151,13 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Custom 500ul Tube Holder on 1",
+            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Custom 500ul Tube Holder on 2",
             "target": "step_1"
         },
         {

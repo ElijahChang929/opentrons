@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "384-well plate on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "biorad_384_wellplate_50ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "GenMate 96 Aluminum Block 20 \u00b5L on 1",
+            "id": "384-well plate on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "genmate_96_aluminumblock_20ul",
+            "class_name": "biorad_384_wellplate_50ul",
             "liquid_type": [
                 "d_set[0]",
                 "d_set[1]",
@@ -51,10 +41,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on Temperature Module GEN1 on 2",
+            "id": "GenMate 96 Aluminum Block 20 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
+            "class_name": "genmate_96_aluminumblock_20ul",
             "liquid_type": [
                 "samples[0]",
                 "samples[1]",
@@ -103,10 +93,10 @@
         },
         {
             "template": "create_resource",
-            "id": "20\u00b5l tiprack on 3",
+            "id": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on Temperature Module GEN1 on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_tiprack_20ul",
+            "class_name": "opentrons_24_aluminumblock_nest_1.5ml_snapcap",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
@@ -137,9 +127,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "20\u00b5l tiprack on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_tiprack_20ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -1454,37 +1454,37 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "GenMate 96 Aluminum Block 20 \u00b5L on 1",
+            "source": "384-well plate on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on Temperature Module GEN1 on 2",
+            "source": "GenMate 96 Aluminum Block 20 \u00b5L on 2",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
+            "source": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap on Temperature Module GEN1 on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
             "source": "20\u00b5l tiprack on 4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
-            "target": "step_1"
-        },
-        {
-            "source_port": "labware",
-            "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "20\u00b5l tiprack on 4",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "20\u00b5l tiprack on 4",
             "target": "step_3"
         },
         {

@@ -5,16 +5,6 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Custom Beaker and Stir Plate on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "custom_beaker",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
             "id": "Custom Beaker and Stir Plate on 1",
             "parent": "deck",
             "slot_on_deck": 1,
@@ -25,9 +15,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 6 Tube Rack with Falcon 2 mL Conical on 2",
+            "id": "Custom Beaker and Stir Plate on 2",
             "parent": "deck",
             "slot_on_deck": 2,
+            "class_name": "custom_beaker",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 6 Tube Rack with Falcon 3 mL Conical on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
             "class_name": "opentrons_6_tuberack_falcon_50ml_conical",
             "liquid_type": [],
             "liquid_volume": [],
@@ -35,9 +35,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 3",
+            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 4",
             "parent": "deck",
-            "slot_on_deck": 3,
+            "slot_on_deck": 4,
             "class_name": "opentrons_96_tiprack_1000ul",
             "liquid_type": [],
             "liquid_volume": [],
@@ -45,9 +45,9 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Opentrons Fixed Trash on 5",
             "parent": "deck",
-            "slot_on_deck": 4,
+            "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -1558,7 +1558,25 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Custom Beaker and Stir Plate on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "Custom Beaker and Stir Plate on 2",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Opentrons 6 Tube Rack with Falcon 3 mL Conical on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_1",
             "target": "step_1"
         },
         {
@@ -1574,6 +1592,12 @@
             "target": "step_3"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_2",
+            "target": "step_2"
+        },
+        {
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_2",
@@ -1586,6 +1610,12 @@
             "target": "step_4"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_3",
+            "target": "step_3"
+        },
+        {
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_3",
@@ -1598,6 +1628,12 @@
             "target": "step_5"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_4",
+            "target": "step_4"
+        },
+        {
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_4",
@@ -1610,6 +1646,12 @@
             "target": "step_6"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_5",
+            "target": "step_5"
+        },
+        {
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_5",
@@ -1622,6 +1664,12 @@
             "target": "step_7"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_6",
+            "target": "step_6"
+        },
+        {
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_6",
@@ -1634,6 +1682,12 @@
             "target": "step_8"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_7",
+            "target": "step_7"
+        },
+        {
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_7",
@@ -1646,6 +1700,12 @@
             "target": "step_9"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_8",
+            "target": "step_8"
+        },
+        {
             "source_port": "targets_out",
             "target_port": "targets",
             "source": "step_8",
@@ -1658,6 +1718,12 @@
             "target": "step_10"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_9",
+            "target": "step_9"
+        },
+        {
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_9",
@@ -1668,6 +1734,12 @@
             "target_port": "sources",
             "source": "step_9",
             "target": "step_11"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_10",
+            "target": "step_10"
         },
         {
             "source_port": "targets_out",
@@ -1682,9 +1754,21 @@
             "target": "step_12"
         },
         {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_11",
+            "target": "step_11"
+        },
+        {
             "source_port": "sources_out",
             "target_port": "sources",
             "source": "step_11",
+            "target": "step_12"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_12",
             "target": "step_12"
         }
     ]

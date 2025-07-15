@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 15 Tube Rack with Falcon 0 mL Conical on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_15_tuberack_falcon_15ml_conical",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "tuberack on 1",
+            "id": "Opentrons 15 Tube Rack with Falcon 1 mL Conical on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "eurofins_96x2ml_tuberack",
+            "class_name": "opentrons_15_tuberack_falcon_15ml_conical",
             "liquid_type": [
                 "tubes2_ordered[0]",
                 "tubes2_ordered[1]",
@@ -57,10 +47,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "tuberack on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "eurofins_96x2ml_tuberack",
             "liquid_type": [
                 "tubes1_ordered[0]",
                 "tubes1_ordered[1]",
@@ -261,9 +251,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -616,13 +616,19 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "tuberack on 1",
+            "source": "Opentrons 15 Tube Rack with Falcon 1 mL Conical on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "source": "tuberack on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "target": "step_1"
         }
     ]

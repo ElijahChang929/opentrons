@@ -5,16 +5,6 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "SPL Cell Culture Plate 96 Well Flat Bottom on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "spl_96_wellplate_200ul_round",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
             "id": "SPL Cell Culture Plate 96 Well Flat Bottom on 1",
             "parent": "deck",
             "slot_on_deck": 1,
@@ -39,20 +29,20 @@
         },
         {
             "template": "create_resource",
-            "id": "NEST 12 Well Reservoir 15 mL on 3",
+            "id": "SPL Cell Culture Plate 96 Well Flat Bottom on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "nest_12_reservoir_15ml",
+            "class_name": "spl_96_wellplate_200ul_round",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "id": "NEST 12 Well Reservoir 15 mL on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "nest_12_reservoir_15ml",
             "liquid_type": [
                 "rsvr1[0]",
                 "rsvr1[1]",
@@ -73,9 +63,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -180,7 +180,13 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "source": "NEST 12 Well Reservoir 15 mL on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
             "target": "step_1"
         },
         {

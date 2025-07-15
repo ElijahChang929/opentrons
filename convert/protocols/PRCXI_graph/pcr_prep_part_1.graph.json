@@ -5,17 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "tuberack 1 on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_24_tuberack_nest_0.5ml_screwcap",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "tuberack 2 on 1",
+            "id": "tuberack 1 on 1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "opentrons_24_tuberack_nest_0.5ml_screwcap",
@@ -29,20 +19,20 @@
         },
         {
             "template": "create_resource",
-            "id": "12-channel reservoir on 2",
+            "id": "tuberack 2 on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "usascientific_12_reservoir_22ml",
+            "class_name": "opentrons_24_tuberack_nest_0.5ml_screwcap",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 3",
+            "id": "12-channel reservoir on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_96_filtertiprack_1000ul",
+            "class_name": "usascientific_12_reservoir_22ml",
             "liquid_type": [
                 "mastermix_dest"
             ],
@@ -63,9 +53,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 5",
             "parent": "deck",
             "slot_on_deck": 5,
+            "class_name": "opentrons_96_filtertiprack_1000ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -229,37 +229,37 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "tuberack 2 on 1",
+            "source": "tuberack 1 on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "12-channel reservoir on 2",
+            "source": "tuberack 2 on 2",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 3",
+            "source": "12-channel reservoir on 3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 5",
+            "source": "Opentrons 96 Filter Tip Rack 1000 \u00b5L on 4",
             "target": "step_3"
         },
         {

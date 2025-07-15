@@ -5,9 +5,9 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Corning 96 Well Plate 360 \u00b5L Flat on 0",
+            "id": "Corning 96 Well Plate 360 \u00b5L Flat on 1",
             "parent": "deck",
-            "slot_on_deck": 0,
+            "slot_on_deck": 1,
             "class_name": "corning_96_wellplate_360ul_flat",
             "liquid_type": [],
             "liquid_volume": [],
@@ -15,20 +15,10 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 1",
-            "parent": "deck",
-            "slot_on_deck": 1,
-            "class_name": "opentrons_96_tiprack_300ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Electron Microscopy Sciences 1 Reservoir 100000 \u00b5L on 2",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "electronmicroscopysciences_1_reservoir_100000ul",
+            "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [
                 "plate_loc[0]",
                 "plate_loc[1]",
@@ -71,13 +61,27 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Electron Microscopy Sciences 1 Reservoir 100000 \u00b5L on 4",
             "parent": "deck",
             "slot_on_deck": 4,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "electronmicroscopysciences_1_reservoir_100000ul",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [
+                "wistd"
+            ],
+            "liquid_volume": [],
+            "liquid_input_wells": [
+                "A1"
+            ]
         },
         {
             "template": "transfer",
@@ -226,13 +230,25 @@
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons Fixed Trash on 4",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Electron Microscopy Sciences 1 Reservoir 100000 \u00b5L on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Electron Microscopy Sciences 1 Reservoir 100000 \u00b5L on 4",
             "target": "step_2"
         },
         {

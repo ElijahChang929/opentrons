@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "custom_300_other_100x500ul_100x500ul_100x500ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 1",
+            "id": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_96_tiprack_1000ul",
+            "class_name": "custom_300_other_100x500ul_100x500ul_100x500ul",
             "liquid_type": [
                 "capsules_reordered[0]",
                 "capsules_reordered[1]",
@@ -647,9 +637,19 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 2",
+            "id": "Opentrons 96 Tip Rack 1000 \u00b5L on 2",
             "parent": "deck",
             "slot_on_deck": 2,
+            "class_name": "opentrons_96_tiprack_1000ul",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
             "class_name": "opentrons_1_trash_1100ml_fixed",
             "liquid_type": [],
             "liquid_volume": [],
@@ -4905,7 +4905,19 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 1",
+            "source": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 1000 \u00b5L on 2",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Opentrons Fixed Trash on 3",
             "target": "step_1"
         }
     ]

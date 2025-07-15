@@ -5,20 +5,10 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 0",
-            "parent": "deck",
-            "slot_on_deck": 0,
-            "class_name": "opentrons_96_aluminumblock_nest_wellplate_100ul",
-            "liquid_type": [],
-            "liquid_volume": [],
-            "liquid_input_wells": []
-        },
-        {
-            "template": "create_resource",
-            "id": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1 on 1",
+            "id": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 1",
             "parent": "deck",
             "slot_on_deck": 1,
-            "class_name": "opentrons_24_aluminumblock_generic_2ml_screwcap",
+            "class_name": "opentrons_96_aluminumblock_nest_wellplate_100ul",
             "liquid_type": [
                 "enzymatic_prep_samples[0]",
                 "enzymatic_prep_samples[1]",
@@ -43,20 +33,20 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 2",
+            "id": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1 on 2",
             "parent": "deck",
             "slot_on_deck": 2,
-            "class_name": "opentrons_96_tiprack_300ul",
+            "class_name": "opentrons_24_aluminumblock_generic_2ml_screwcap",
             "liquid_type": [],
             "liquid_volume": [],
             "liquid_input_wells": []
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 3",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
             "parent": "deck",
             "slot_on_deck": 3,
-            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "class_name": "opentrons_96_tiprack_300ul",
             "liquid_type": [
                 "enzymatic_prep_mm",
                 "ligation_mm"
@@ -66,6 +56,16 @@
                 "A1",
                 "A2"
             ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [],
+            "liquid_input_wells": []
         },
         {
             "template": "transfer_with_temperature",
@@ -448,14 +448,38 @@
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1 on 1",
+            "source": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Opentrons Fixed Trash on 3",
+            "source": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1 on 2",
             "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_3"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 3",
+            "target": "step_4"
         },
         {
             "source_port": "targets_out",
