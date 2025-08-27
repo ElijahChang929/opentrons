@@ -497,7 +497,42 @@ def extract_labware_info_from_json(json_data: dict) -> list:
     output = []
     replace_map = {}
     # 直接把标号强行转换为1-6
+    container_char = ['wellplate', 'well', 'pcr']
     for i, lw in enumerate(labware_list):
+
+        class_name = lw.get("type")
+        # replace '.' in class_name as 'point'
+        class_name = re.sub(r'\.', 'point', class_name)
+        #print(class_name)
+        
+    # 判断 class_name 是否包含 container_char 的任一关键词
+        if any(c in class_name.lower() for c in container_char):
+
+            # 用正则匹配体积：例如 12.5ul / 0.5ml
+            match = re.search(r'(\d+)\.(\d+)([mu]l)', class_name, re.IGNORECASE)
+            if match:
+                num1, num2, unit = match.groups()
+                value = float(f"{num1}.{num2}")
+                # 单位换算：统一转成 µL
+                if unit.lower() == "ml":
+                    liquid_vol = value * 1000.0
+                elif unit.lower() == "ul":
+                    liquid_vol = value
+            else:
+                # 没匹配到小数，尝试匹配整数
+                match_int = re.search(r'(\d+)([mu]l)', class_name, re.IGNORECASE)
+                if match_int:
+                    num, unit = match_int.groups()
+                    value = float(num)
+                    if unit.lower() == "ml":
+                        liquid_vol = value * 1000.0
+                    elif unit.lower() == "ul":
+                        liquid_vol = value
+                # 如果没有匹配到体积信息，默认为 0
+                if liquid_vol is None:
+                    liquid_vol = 200
+            print(class_name, liquid_vol)
+
         prcxi_id = lw.get("name")
         new_id = re.sub(r'on \d+', f'on {i+1}', prcxi_id)
         replace_map[lw.get("slot")] = i+1
@@ -505,12 +540,12 @@ def extract_labware_info_from_json(json_data: dict) -> list:
             "id": new_id,
             "parent": "deck",
             "slot_on_deck": i+1,
-            "class_name": lw.get("type"),
-            "liquid_type": [],      
-            "liquid_volume": [],            
-            "liquid_input_wells": []            
+            "class_name": class_name,
+            "liquid_type": [],
+            "liquid_volume": [liquid_vol],
+            "liquid_input_wells": []    
         })
-    
+
     return output, replace_map
 
 def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
@@ -524,7 +559,9 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
         #print(labware)
         for liquid_key, liquid_val in liquid_info.items():
             if labware["slot_on_deck"] == int(liquid_val["slot"]):
-                labware["liquid_type"].append(liquid_key)
+                clean_key = re.sub(r'[^0-9a-zA-Z_]', '_', liquid_key)
+                labware["liquid_type"].append(clean_key)
+                print(labware["liquid_type"])
                 labware["liquid_input_wells"].append(liquid_val["well"])
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
@@ -777,14 +814,17 @@ def parse_protocol(name: str):
         labware_data = json.load(f)
     labware_info, replace_map = extract_labware_info_from_json(labware_data)
     
-    enriched_steps = fix_special_cases(enriched_steps)
-    enriched_steps = fix_positions(enriched_steps, replace_map)
-    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
-        json.dump(enriched_steps, f, indent=4)
-    protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
-    data = nx.node_link_data(protocol_graph)
-    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
-        json.dump(data, f, indent=4)
+    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
+        json.dump(labware_info, f, indent=4)
+
+    # enriched_steps = fix_special_cases(enriched_steps)
+    # enriched_steps = fix_positions(enriched_steps, replace_map)
+    # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
+    #     json.dump(enriched_steps, f, indent=4)
+    # protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
+    # data = nx.node_link_data(protocol_graph)
+    # with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
+    #     json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     # 测试代码
@@ -792,10 +832,10 @@ if __name__ == "__main__":
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
     for name in protocol_names:
-        print(f"Processing protocol: {name}")
+        #print(f"Processing protocol: {name}")
         try:
             parse_protocol(name)
         except Exception as e:
             with open(error_log, "a") as f:
                 f.write(f"Error processing {name}: {str(e)}\n")
-            print(f"Error processing {name}: {str(e)}")
+            #print(f"Error processing {name}: {str(e)}")
