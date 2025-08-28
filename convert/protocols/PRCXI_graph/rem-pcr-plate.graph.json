@@ -5,7 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "master-plate on 1",
+            "id": "master-plate_on_1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "96w_pcr_plate2",
@@ -17,7 +17,7 @@
         },
         {
             "template": "create_resource",
-            "id": "master trough on 2",
+            "id": "master_trough_on_2",
             "parent": "deck",
             "slot_on_deck": 2,
             "class_name": "nest_12_reservoir_15ml",
@@ -29,7 +29,7 @@
         },
         {
             "template": "create_resource",
-            "id": "pcr-plate on 3",
+            "id": "pcr-plate_on_3",
             "parent": "deck",
             "slot_on_deck": 3,
             "class_name": "96w_pcr_plate2",
@@ -41,7 +41,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Tip Rack 20 \u00b5L on 4",
+            "id": "Opentrons_96_Tip_Rack_20_uL_on_4",
             "parent": "deck",
             "slot_on_deck": 4,
             "class_name": "opentrons_96_tiprack_20ul",
@@ -53,7 +53,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons_Fixed_Trash_on_5",
             "parent": "deck",
             "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
@@ -66,35 +66,35 @@
         {
             "template": "transfer",
             "sources": [
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2",
-                "PRCXI9300/deck/master_trough_on_2/master_trough_on_2_A2"
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2",
+                "A2"
             ],
             "targets": [
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A1",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A2",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A3",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A4",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A5",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A6",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A7",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A8",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A9",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A10",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A11",
-                "PRCXI9300/deck/pcr_plate_on_3/pcr_plate_on_3_A12"
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8",
+                "A9",
+                "A10",
+                "A11",
+                "A12"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Tip_Rack_20__L_on_4/Opentrons_96_Tip_Rack_20__L_on_4_A1"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Tip_Rack_20_ul_on_4/Opentrons_OT_2_96_Tip_Rack_20_ul_on_4_A1"
             ],
             "use_channels": null,
             "asp_vols": 9.0,
@@ -133,19 +133,19 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "master trough on 2",
+            "source": "master_trough_on_2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "pcr-plate on 3",
+            "source": "pcr-plate_on_3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Tip Rack 20 \u00b5L on 4",
+            "source": "Opentrons_96_Tip_Rack_20_uL_on_4",
             "target": "step_1"
         }
     ]

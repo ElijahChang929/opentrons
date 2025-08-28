@@ -1,3 +1,4 @@
+from pprint import pprint
 import json
 from platform import node
 import pandas as pd
@@ -8,7 +9,7 @@ from typing import List, Dict, Optional, Union, Sequence, Literal, Any
 import networkx as nx
 import os
 from pathlib import Path
-
+_LABWARE_CACHE: Dict[tuple, Any] = {}
 from pylabrobot.resources.opentrons.tube_racks import *
 from pylabrobot.resources.opentrons.tip_racks import *
 # from pylabrobot.resources.opentrons.plates import *
@@ -20,6 +21,8 @@ import pylabrobot.resources.opentrons.plates as plates
 # from pylabrobot.resources.opentrons.plate_adapters import *
 from pylabrobot.resources.opentrons.module import *
 # from pylabrobot.resources.opentrons.deck import *
+import pylabrobot.resources.opentrons.tip_racks as tip_racks_mod
+import pylabrobot.resources.opentrons.tube_racks as tube_racks_mod
 
 
 
@@ -35,14 +38,14 @@ def _parse_well_count(name: str) -> int | None:
 
 def _parse_capacity_ul(name: str) -> float | None:
     s = name.lower()
-    m = re.search(r'(\d+(?:\.\d+)?)(\s*(?:u?l|ml))', s, re.IGNORECASE)
+    m = re.search(r'(\d+(?:\.\d+)?)(\s*(?:u?l|[µμ]l|ml))', s, re.IGNORECASE)
     if not m:
         return None
     val = float(m.group(1))
     unit = m.group(2).strip().lower()
     if unit == 'ml':
         return val * 1000.0
-    # 兼容 'ul' / 'u l' / 'µl'
+    # 兼容 'ul' / 'u l' / 'µl' / 'μl'
     return val
 
 def match_labware_class(class_name: str):
@@ -55,7 +58,7 @@ def match_labware_class(class_name: str):
     """
     name_l = class_name.lower()
     # Special case: trash – pick the largest reservoir available
-    if 'trash' in name_l:
+    if 'trash' in name_l or 'reservoir' in name_l:
         import inspect
         trash_candidates = []  # (factory_fn, name, cap)
         for nm, obj in inspect.getmembers(reservoirs, inspect.isfunction):
@@ -67,6 +70,57 @@ def match_labware_class(class_name: str):
             cls, nm, cap = trash_candidates[0]
             return cls, f"trash matched by max capacity: picked {nm} ({cap}uL)"
         return None, "no reservoir functions found for trash"
+    
+        # Tip racks: choose by tip volume (closest >= target if available)
+    if 'tip' in name_l:
+        import inspect
+        target_cap = _parse_capacity_ul(class_name)  # may be None
+        cands = []  # (factory_fn, name, cap)
+        for nm, obj in inspect.getmembers(tip_racks_mod, inspect.isfunction):
+            cap = _parse_capacity_ul(nm)
+            cands.append((obj, nm, cap))
+        if not cands:
+            return None, 'no tip_rack factories found'
+        if target_cap is not None:
+            feasible = [(fn, nm, cap) for fn, nm, cap in cands if cap is not None and cap >= target_cap]
+            if feasible:
+                feasible.sort(key=lambda x: x[2] - target_cap)
+                fn, nm, cap = feasible[0]
+                return fn, f"tip rack by min over-cap: target={target_cap}uL, picked {nm} ({cap}uL)"
+            # fallback: pick closest absolute difference if none are >=
+            with_caps = [(fn, nm, cap) for fn, nm, cap in cands if cap is not None]
+            if with_caps:
+                with_caps.sort(key=lambda x: abs(x[2] - target_cap))
+                fn, nm, cap = with_caps[0]
+                return fn, f"tip rack by nearest: target={target_cap}uL, picked {nm} ({cap}uL)"
+        # if no target cap or no caps in names, return first candidate
+        fn, nm, cap = cands[0]
+        return fn, f"tip rack fallback: chose {nm} (cap={cap})"
+
+    # Tube racks (non-tip racks): try to match by capacity if present, else fallback
+    if 'rack' in name_l and 'tip' not in name_l:
+        import inspect
+        target_cap = _parse_capacity_ul(class_name)  # may be None
+        cands = []  # (factory_fn, name, cap)
+        for nm, obj in inspect.getmembers(tube_racks_mod, inspect.isfunction):
+            cap = _parse_capacity_ul(nm)
+            cands.append((obj, nm, cap))
+        if not cands:
+            return None, 'no tube_rack factories found'
+        if target_cap is not None:
+            feasible = [(fn, nm, cap) for fn, nm, cap in cands if cap is not None and cap >= target_cap]
+            if feasible:
+                feasible.sort(key=lambda x: x[2] - target_cap)
+                fn, nm, cap = feasible[0]
+                return fn, f"tube rack by min over-cap: target={target_cap}uL, picked {nm} ({cap}uL)"
+            with_caps = [(fn, nm, cap) for fn, nm, cap in cands if cap is not None]
+            if with_caps:
+                with_caps.sort(key=lambda x: abs(x[2] - target_cap))
+                fn, nm, cap = with_caps[0]
+                return fn, f"tube rack by nearest: target={target_cap}uL, picked {nm} ({cap}uL)"
+        fn, nm, cap = cands[0]
+        return fn, f"tube rack fallback: chose {nm} (cap={cap})"
+
 
     has_plate_keyword = ('well' in name_l) or ('pcr' in name_l)
     if not has_plate_keyword:
@@ -634,6 +688,7 @@ def extract_labware_info_from_json(json_data: dict) -> list:
 
         prcxi_id = lw.get("name")
         new_id = re.sub(r'on \d+', f'on {i+1}', prcxi_id)
+        new_id = re.sub(r' ', '_', new_id)
         replace_map[lw.get("slot")] = i+1
         output.append({
             "id": new_id,
@@ -646,71 +701,125 @@ def extract_labware_info_from_json(json_data: dict) -> list:
         })
 
     return output, replace_map
+import re, inspect
 
-def expend_labware_info(labware_dic):
-    class_name = labware_dic["class_name"] if isinstance(labware_dic, dict) else str(labware_dic)
+def expend_labware_info(class_name: str, name: str = "labware", slot: int = 1):
+    """
+    传入：class_name（字符串），可选 name（将作为资源名；会清洗为[a-zA-Z0-9_]），slot（整数）
+    返回：实例对象 或 None
+    """
+    if not isinstance(class_name, str) or not class_name:
+        #print(f"[WARN] expend_labware_info: invalid class_name={class_name!r}")
+        return None
+
+    safe_name = f"{sanitize_name(name or 'labware')}_on_{slot}"
+
     try:
         cls = globals().get(class_name)
         if cls is None:
             cand, reason = match_labware_class(class_name)
             if cand is None:
+                print(f"[WARN] No match for '{class_name}': {reason}")
                 return None
+            #print(f"[INFO] Matched '{class_name}' -> '{getattr(cand,'__name__',str(cand))}' ({reason})")
             cls = cand
 
-        try:
-            import inspect
-            a = None
-            # 清洗 node id 作为 name
-            raw_id = labware_dic["id"] if isinstance(labware_dic, dict) and "id" in labware_dic else "labware"
-            safe_name = re.sub(r"[^0-9a-zA-Z_]", "_", raw_id)
-
-            if isinstance(cls, type):
-                a = cls(name=safe_name)
-            elif callable(cls):
-                sig = inspect.signature(cls)
-                if "name" in sig.parameters:
-                    a = cls(name=safe_name)
-                else:
-                    a = cls()
-            if a is not None:
-                return a
-            print(f"[INFO] candidate is not instantiable: {getattr(cls, '__name__', str(cls))}")
-            return None
-        except TypeError as e:
+        # 尝试实例化：优先带 name；如果签名里没有 name 就无参
+        if isinstance(cls, type):
             try:
-                a = cls(name=safe_name) if callable(cls) else None
-                if a is not None:
-                    return a
-            except Exception:
-                pass
-            print(f"[INFO] instantiate candidate failed ({getattr(cls, '__name__', str(cls))}): {e}")
+                inst = cls(name=safe_name)
+            except TypeError:
+                inst = cls()
+        elif callable(cls):
+            sig = inspect.signature(cls)
+            if "name" in sig.parameters:
+                inst = cls(name=safe_name)
+            else:
+                inst = cls()
+        else:
+            #print(f"[WARN] Candidate not callable/type: {cls}")
             return None
-        except Exception as e:
-            print(f"[INFO] instantiate candidate failed ({getattr(cls, '__name__', str(cls))}): {e}")
-            return None
+
+        #print(f"[OK] Instantiated {getattr(cls,'__name__',str(cls))} as name='{safe_name}'")
+        #pprint(inst.serialize())
+        return inst
 
     except Exception as e:
-        print(f"[ERROR] expend_labware_info failed for class '{class_name}': {e}")
+        #print(f"[ERROR] expend_labware_info('{class_name}', name='{safe_name}') -> {e}")
         return None
+    
+def sanitize_name(name: str) -> str:
+    name = (name
+            .replace("µL", "ul").replace("μL", "ul")
+            .replace("µl", "ul").replace("μl", "ul")
+            .replace("uL", "ul").replace("UL", "ul"))
+    name = re.sub(r"[^0-9a-zA-Z_]", "_", name)
+    return name
 
 
-
-def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
-    """
-    构建包含物料创建和步骤节点的 protocol graph。
-    每个节点代表一个操作或物料；每条边表示数据/物料流动。
-    """
+def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]):
 
     # 给labware_info添加液体信息
     for labware in labware_info:
-        #print(labware)
         for liquid_key, liquid_val in liquid_info.items():
             if labware["slot_on_deck"] == int(liquid_val["slot"]):
                 clean_key = re.sub(r'[^0-9a-zA-Z_]', '_', liquid_key)
                 labware["liquid_type"].append(clean_key)
                 labware["liquid_input_wells"].append(liquid_val["well"])
-        # 当该labware存在液体信息时，尝试展开并打印其孔位信息
 
+    # 收集 protocol 里将会用到的唯一 (class_name, slot) 组合
+    unique_pairs = set()
+    for step in protocol_steps:
+        for term in ("tip_racks", "sources", "targets"):
+            for it in step.get(term, []) or []:
+                cls_name = it.get("labware") or it.get("type")
+                slot = it.get("slot")
+                if cls_name and slot is not None:
+                    unique_pairs.add((cls_name, slot))
+
+    # 只对每个唯一 (class_name, slot) 实例化一次，并缓存
+    for cls_name, slot in sorted(unique_pairs, key=lambda x: (x[0], x[1])):
+        key = (cls_name, slot)
+        if key in _LABWARE_CACHE:
+            continue
+        inst = expend_labware_info(cls_name, name=cls_name, slot=slot)
+        _LABWARE_CACHE[key] = inst
+        
+
+    # —— 新增：把 step 里的 wells 改成带前缀的完整路径 ——
+    for step in protocol_steps:
+        for term in ("tip_racks", "sources", "targets"):
+            items = step.get(term, []) or []
+            for it in items:
+                cls_name = it.get("labware") or it.get("type")
+                slot = it.get("slot")
+                if cls_name and slot is not None:
+                    inst = _LABWARE_CACHE.get((cls_name, slot))
+                    if inst is not None:
+                        dev_name = getattr(inst, "name", None) or sanitize_name(f"{cls_name}_on_{slot}")
+                        orig_well = it.get("well")
+                        if orig_well:
+                            it["well"] = f"/PRCXI9300/deck/{dev_name}/{inst._ordering.get(orig_well)}"
+            step[term] = items
+
+    return labware_info
+        
+
+def _clean_micro_symbol(obj):
+    if isinstance(obj, str):
+        return obj.replace("\u00b5", "u").replace("µ", "u").replace("μ", "u")
+    elif isinstance(obj, dict):
+        return {k: _clean_micro_symbol(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [_clean_micro_symbol(v) for v in obj]
+    else:
+        return obj
+
+def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]) -> nx.DiGraph:
+    """
+    构建包含物料创建和步骤节点的 protocol graph。
+    每个节点代表一个操作或物料；每条边表示数据/物料流动。
+    """
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
 
@@ -730,7 +839,8 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
         if step["template"].startswith("transfer"):
             for port_type, port_name in [("sources", "sources"), ("targets", "targets"), ("tip_racks", "tip_racks")]:
                 items = step.get(port_type, [])
-                item = items[0]
+               
+                item = items[0] 
                 slot = item.get("slot")
                 if slot is not None:
                     prev_node = slot_last_writer.get(slot)
@@ -935,79 +1045,6 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
     
     return protocol_steps
 
-from collections import defaultdict
-from collections import defaultdict
-import re
-
-def _safe_name(s: str) -> str:
-    return re.sub(r"[^0-9a-zA-Z_]", "_", s or "labware")
-
-def refine_well_info(data: dict):
-    """
-    data: nx.node_link_data(G) 的结果（一个 dict）
-    作用：
-      - 遍历所有非 create_resource 节点
-      - 找到所有来自 create_resource 的入边（不只取第一个，取全部）
-      - 对每条入边的 target_port（如 'sources' / 'targets' / 'tip_racks'）：
-          将该节点 n[target_port] 中的每个原值，替换为：
-          'PRCXI9300/deck/{L}/{L}_{target_port}{原值}'
-          其中 L 为上游 labware 的安全名字（由其 id 清洗得来）
-      - 同时打印每条替换后的字符串
-    """
-    nodes = data.get("nodes", [])
-    links = data.get("links", [])
-
-    # 索引
-    nodes_by_id = {n.get("id"): n for n in nodes if "id" in n}
-    incoming = defaultdict(list)
-    for lk in links:
-        src = lk.get("source"); tgt = lk.get("target")
-        if src is None or tgt is None:
-            continue
-        incoming[tgt].append(lk)
-
-    # 遍历所有“非 create_resource”节点
-    for n in nodes:
-        if n.get("template") == "create_resource":
-            continue
-
-        nid = n.get("id")
-
-        # 找到所有来源为 create_resource 的入边
-        for lk in incoming.get(nid, []):
-            src_node = nodes_by_id.get(lk.get("source"))
-            if not (src_node and src_node.get("template") == "create_resource"):
-                continue
-
-            target_port = lk.get("target_port")  # e.g., "sources", "targets", "tip_racks"
-            if not target_port:
-                continue
-
-            # labware 安全名字（实例化时也应使用同一套规则）
-            lab_id = src_node.get("id", "")
-            lab_safe = _safe_name(lab_id)
-
-            # 读取节点上该端口当前的值（通常是列表：井位等）
-            orig_vals = n.get(target_port, [])
-            if orig_vals is None:
-                orig_vals = []
-            if not isinstance(orig_vals, list):
-                orig_vals = [orig_vals]
-
-            # 生成带前缀的新值
-            prefixed = [
-                f"PRCXI9300/deck/{lab_safe}/{lab_safe}_{str(v)}"
-                for v in orig_vals
-            ]
-
-            # 覆盖写回
-            n[target_port] = prefixed
-
-            # 打印
-            for pv in prefixed:
-                print(pv)
-
-    return data
 
 
 def parse_protocol(name: str):
@@ -1039,6 +1076,7 @@ def parse_protocol(name: str):
     #     json.dump(enriched_steps, f, indent=4)
     with open(infofile, "r") as f:
         labware_data = json.load(f)
+        #print(json.dumps(labware_data, indent=4))
     labware_info, replace_map = extract_labware_info_from_json(labware_data)
     
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
@@ -1048,12 +1086,18 @@ def parse_protocol(name: str):
     enriched_steps = fix_positions(enriched_steps, replace_map)
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
     #     json.dump(enriched_steps, f, indent=4)
-    print(json.dumps(enriched_steps, indent=4))
-    protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
+    #print(json.dumps(enriched_steps, indent=4))
+    labware_info = refine_wells(labware_info, liquid_info, enriched_steps)
+    protocol_graph = build_protocol_graph(labware_info, enriched_steps)
     data = nx.node_link_data(protocol_graph)
-    data = refine_well_info(data)
-    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
-        json.dump(data, f, indent=4)
+    # Dumb but effective: clean micro symbols at the serialized string level
+    json_str = json.dumps(data, indent=4, ensure_ascii=False)
+    json_str = (json_str
+                .replace("\\u00b5", "u")
+                .replace("µ", "u")
+                .replace("μ", "u"))
+    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w", encoding="utf-8") as f:
+        f.write(json_str)
 
 if __name__ == "__main__":
     # 测试代码

@@ -5,7 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Perkin Elmer 384 Well Plate 110 \u00b5L on 1",
+            "id": "Perkin_Elmer_384_Well_Plate_110_uL_on_1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "perkinelmer_384_wellplate_110ul",
@@ -21,7 +21,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Corning 96 Well Plate 360 \u00b5L on 2",
+            "id": "Corning_96_Well_Plate_360_uL_on_2",
             "parent": "deck",
             "slot_on_deck": 2,
             "class_name": "corning_96_wellplate_360ul",
@@ -33,7 +33,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "id": "Opentrons_96_Filter_Tip_Rack_200_uL_on_3",
             "parent": "deck",
             "slot_on_deck": 3,
             "class_name": "opentrons_96_filtertiprack_200ul",
@@ -45,7 +45,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
+            "id": "Opentrons_96_Filter_Tip_Rack_200_uL_on_4",
             "parent": "deck",
             "slot_on_deck": 4,
             "class_name": "opentrons_96_filtertiprack_200ul",
@@ -57,7 +57,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 5",
+            "id": "Opentrons_Fixed_Trash_on_5",
             "parent": "deck",
             "slot_on_deck": 5,
             "class_name": "opentrons_1_trash_1100ml_fixed",
@@ -70,17 +70,17 @@
         {
             "template": "transfer",
             "sources": [
-                "PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110__L_on_1/Perkin_Elmer_384_Well_Plate_110__L_on_1_A1",
-                "PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110__L_on_1/Perkin_Elmer_384_Well_Plate_110__L_on_1_A1",
-                "PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110__L_on_1/Perkin_Elmer_384_Well_Plate_110__L_on_1_A1"
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1",
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1",
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1"
             ],
             "targets": [
-                "A1",
-                "A1",
-                "A1"
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1",
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1",
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_200__L_on_3/Opentrons_96_Filter_Tip_Rack_200__L_on_3_A1"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_3/None"
             ],
             "use_channels": null,
             "asp_vols": 40.0,
@@ -155,13 +155,13 @@
         {
             "template": "transfer",
             "sources": [
-                "A1"
+                "/PRCXI9300/deck/Perkin_Elmer_384_Well_Plate_110_ul_on_1/Perkin_Elmer_384_Well_Plate_110_ul_on_1_A1"
             ],
             "targets": [
-                "PRCXI9300/deck/Corning_96_Well_Plate_360__L_on_2/Corning_96_Well_Plate_360__L_on_2_A1"
+                "/PRCXI9300/deck/Corning_96_Well_Plate_360_ul_on_2/Corning_96_Well_Plate_360_ul_on_2_A1"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_200__L_on_3/Opentrons_96_Filter_Tip_Rack_200__L_on_3_A1"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_3/None"
             ],
             "use_channels": null,
             "asp_vols": 60.0,
@@ -198,25 +198,25 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Perkin Elmer 384 Well Plate 110 \u00b5L on 1",
+            "source": "Perkin_Elmer_384_Well_Plate_110_uL_on_1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Corning 96 Well Plate 360 \u00b5L on 2",
+            "source": "Corning_96_Well_Plate_360_uL_on_2",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "source": "Opentrons_96_Filter_Tip_Rack_200_uL_on_3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 3",
+            "source": "Opentrons_96_Filter_Tip_Rack_200_uL_on_3",
             "target": "step_2"
         },
         {

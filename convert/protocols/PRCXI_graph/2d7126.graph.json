@@ -5,7 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "plate 1 on 1",
+            "id": "plate_1_on_1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "corning_96_wellplate_360ul_flat",
@@ -21,7 +21,7 @@
         },
         {
             "template": "create_resource",
-            "id": "plate 2 on 2",
+            "id": "plate_2_on_2",
             "parent": "deck",
             "slot_on_deck": 2,
             "class_name": "corning_96_wellplate_360ul_flat",
@@ -37,7 +37,7 @@
         },
         {
             "template": "create_resource",
-            "id": "custom pin adapter on 3",
+            "id": "custom_pin_adapter_on_3",
             "parent": "deck",
             "slot_on_deck": 3,
             "class_name": "opentrons_96_tiprack_300ul",
@@ -49,7 +49,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 4",
+            "id": "Opentrons_Fixed_Trash_on_4",
             "parent": "deck",
             "slot_on_deck": 4,
             "class_name": "opentrons_1_trash_1100ml_fixed",
@@ -62,13 +62,13 @@
         {
             "template": "transfer",
             "sources": [
-                "PRCXI9300/deck/plate_1_on_1/plate_1_on_1_A1"
+                "A1"
             ],
             "targets": [
                 "A1"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/custom_pin_adapter_on_3/custom_pin_adapter_on_3_A1"
+                "A1"
             ],
             "use_channels": null,
             "asp_vols": 1.0,
@@ -141,13 +141,13 @@
         {
             "template": "transfer",
             "sources": [
-                "PRCXI9300/deck/plate_2_on_2/plate_2_on_2_A1"
+                "A1"
             ],
             "targets": [
                 "A1"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/custom_pin_adapter_on_3/custom_pin_adapter_on_3_A1"
+                "A1"
             ],
             "use_channels": null,
             "asp_vols": 1.0,
@@ -224,25 +224,25 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "plate 1 on 1",
+            "source": "plate_1_on_1",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "plate 2 on 2",
+            "source": "plate_2_on_2",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "custom pin adapter on 3",
+            "source": "custom_pin_adapter_on_3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "custom pin adapter on 3",
+            "source": "custom_pin_adapter_on_3",
             "target": "step_2"
         },
         {

@@ -5,7 +5,7 @@
     "nodes": [
         {
             "template": "create_resource",
-            "id": "Libraries Plate on 1",
+            "id": "Libraries_Plate_on_1",
             "parent": "deck",
             "slot_on_deck": 1,
             "class_name": "vwr_96well_pcr_plate_200ul",
@@ -17,7 +17,7 @@
         },
         {
             "template": "create_resource",
-            "id": "12-well Reservoir on 2",
+            "id": "12-well_Reservoir_on_2",
             "parent": "deck",
             "slot_on_deck": 2,
             "class_name": "nest_12_reservoir_15ml",
@@ -29,7 +29,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Fragment Analyzer Plate on 3",
+            "id": "Fragment_Analyzer_Plate_on_3",
             "parent": "deck",
             "slot_on_deck": 3,
             "class_name": "biorad_96_fragment_analyzer_plate_aluminumblock_200ul",
@@ -41,7 +41,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
+            "id": "Opentrons_96_Filter_Tip_Rack_200_uL_on_4",
             "parent": "deck",
             "slot_on_deck": 4,
             "class_name": "opentrons_96_filtertiprack_200ul",
@@ -53,7 +53,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
+            "id": "Opentrons_96_Filter_Tip_Rack_20_uL_on_5",
             "parent": "deck",
             "slot_on_deck": 5,
             "class_name": "opentrons_96_filtertiprack_20ul",
@@ -71,7 +71,7 @@
         },
         {
             "template": "create_resource",
-            "id": "Opentrons Fixed Trash on 6",
+            "id": "Opentrons_Fixed_Trash_on_6",
             "parent": "deck",
             "slot_on_deck": 6,
             "class_name": "opentrons_1_trash_1100ml_fixed",
@@ -84,13 +84,13 @@
         {
             "template": "transfer_with_magnetic",
             "sources": [
-                "PRCXI9300/deck/12_well_Reservoir_on_2/12_well_Reservoir_on_2_A9"
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None"
             ],
             "targets": [
-                "PRCXI9300/deck/Fragment_Analyzer_Plate_on_3/Fragment_Analyzer_Plate_on_3_A1"
+                "A1"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_200__L_on_4/Opentrons_96_Filter_Tip_Rack_200__L_on_4_A1"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_4/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_4_A1"
             ],
             "use_channels": null,
             "asp_vols": 22.0,
@@ -130,17 +130,17 @@
         {
             "template": "transfer",
             "sources": [
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9",
-                "A9"
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None",
+                "/PRCXI9300/deck/12_well_Reservoir_on_2/None"
             ],
             "targets": [
                 "A2",
@@ -156,7 +156,7 @@
                 "A12"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_200__L_on_4/Opentrons_96_Filter_Tip_Rack_200__L_on_4_B2"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_4/Opentrons_OT_2_96_Filter_Tip_Rack_200_ul_on_4_B2"
             ],
             "use_channels": null,
             "asp_vols": [
@@ -257,18 +257,18 @@
         {
             "template": "transfer",
             "sources": [
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A1",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A2",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A3",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A4",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A5",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A6",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A7",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A8",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A9",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A10",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A11",
-                "PRCXI9300/deck/Libraries_Plate_on_1/Libraries_Plate_on_1_A12"
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "A6",
+                "A7",
+                "A8",
+                "A9",
+                "A10",
+                "A11",
+                "A12"
             ],
             "targets": [
                 "A1",
@@ -285,18 +285,18 @@
                 "A12"
             ],
             "tip_racks": [
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A1",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A2",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A3",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A4",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A5",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A6",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A7",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A8",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A9",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A10",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A11",
-                "PRCXI9300/deck/Opentrons_96_Filter_Tip_Rack_20__L_on_5/Opentrons_96_Filter_Tip_Rack_20__L_on_5_A12"
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A1",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A2",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A3",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A4",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A5",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A6",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A7",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A8",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A9",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A10",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A11",
+                "/PRCXI9300/deck/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5/Opentrons_OT_2_96_Filter_Tip_Rack_20_ul_on_5_A12"
             ],
             "use_channels": null,
             "asp_vols": [
@@ -405,37 +405,37 @@
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "Libraries Plate on 1",
+            "source": "Libraries_Plate_on_1",
             "target": "step_3"
         },
         {
             "source_port": "labware",
             "target_port": "sources",
-            "source": "12-well Reservoir on 2",
+            "source": "12-well_Reservoir_on_2",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "targets",
-            "source": "Fragment Analyzer Plate on 3",
+            "source": "Fragment_Analyzer_Plate_on_3",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
+            "source": "Opentrons_96_Filter_Tip_Rack_200_uL_on_4",
             "target": "step_1"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Filter Tip Rack 200 \u00b5L on 4",
+            "source": "Opentrons_96_Filter_Tip_Rack_200_uL_on_4",
             "target": "step_2"
         },
         {
             "source_port": "labware",
             "target_port": "tip_racks",
-            "source": "Opentrons 96 Filter Tip Rack 20 \u00b5L on 5",
+            "source": "Opentrons_96_Filter_Tip_Rack_20_uL_on_5",
             "target": "step_3"
         },
         {
