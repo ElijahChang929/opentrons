@@ -654,22 +654,22 @@ def expend_labware_info(labware_dic):
         if cls is None:
             cand, reason = match_labware_class(class_name)
             if cand is None:
-                #print(f"[WARN] Labware class '{class_name}' not found, and no simple-match candidate. {reason}")
                 return None
-            #print(f"[INFO] Simple-matched '{class_name}' -> '{cand.__name__}' ({reason})")
             cls = cand
 
-        # 如需实例化（可选）：有些类可能需要特参，失败就只打印不实例化
         try:
             import inspect
             a = None
+            # 清洗 node id 作为 name
+            raw_id = labware_dic["id"] if isinstance(labware_dic, dict) and "id" in labware_dic else "labware"
+            safe_name = re.sub(r"[^0-9a-zA-Z_]", "_", raw_id)
+
             if isinstance(cls, type):
-                # class: most resources accept name as kwarg
-                a = cls(name="labware")
+                a = cls(name=safe_name)
             elif callable(cls):
                 sig = inspect.signature(cls)
                 if "name" in sig.parameters:
-                    a = cls(name="labware")
+                    a = cls(name=safe_name)
                 else:
                     a = cls()
             if a is not None:
@@ -677,9 +677,8 @@ def expend_labware_info(labware_dic):
             print(f"[INFO] candidate is not instantiable: {getattr(cls, '__name__', str(cls))}")
             return None
         except TypeError as e:
-            # one more try: if previous call failed without name, try with name; or vice versa
             try:
-                a = cls(name="labware") if callable(cls) else None
+                a = cls(name=safe_name) if callable(cls) else None
                 if a is not None:
                     return a
             except Exception:
@@ -711,8 +710,7 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
                 labware["liquid_type"].append(clean_key)
                 labware["liquid_input_wells"].append(liquid_val["well"])
         # 当该labware存在液体信息时，尝试展开并打印其孔位信息
-        if labware["liquid_type"]:
-            expend_labware_info(labware)
+
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
 
@@ -752,6 +750,9 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
                 slot_last_writer[slot] = node_id
 
     return G
+
+
+
 
 def build_ordered_action_dict(detail_action):
     ordered_action_dict = {}
@@ -934,18 +935,80 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
     
     return protocol_steps
 
-def refine_well_info(graph):
+from collections import defaultdict
+from collections import defaultdict
+import re
 
-    for node in graph.get("nodes", []):
-        if node.get("template") != "create_resource":
-            node_id = node.get("id")
-            for link in graph.get("links", []):
-                if link.get("target") == node_id:
-                    for node in graph.get("nodes", []):
-                        if node.get("id") == link.get("source") and not node.get("id").startswith("step_"):
-                            print(node.get("class_name"))
+def _safe_name(s: str) -> str:
+    return re.sub(r"[^0-9a-zA-Z_]", "_", s or "labware")
 
-    return graph
+def refine_well_info(data: dict):
+    """
+    data: nx.node_link_data(G) 的结果（一个 dict）
+    作用：
+      - 遍历所有非 create_resource 节点
+      - 找到所有来自 create_resource 的入边（不只取第一个，取全部）
+      - 对每条入边的 target_port（如 'sources' / 'targets' / 'tip_racks'）：
+          将该节点 n[target_port] 中的每个原值，替换为：
+          'PRCXI9300/deck/{L}/{L}_{target_port}{原值}'
+          其中 L 为上游 labware 的安全名字（由其 id 清洗得来）
+      - 同时打印每条替换后的字符串
+    """
+    nodes = data.get("nodes", [])
+    links = data.get("links", [])
+
+    # 索引
+    nodes_by_id = {n.get("id"): n for n in nodes if "id" in n}
+    incoming = defaultdict(list)
+    for lk in links:
+        src = lk.get("source"); tgt = lk.get("target")
+        if src is None or tgt is None:
+            continue
+        incoming[tgt].append(lk)
+
+    # 遍历所有“非 create_resource”节点
+    for n in nodes:
+        if n.get("template") == "create_resource":
+            continue
+
+        nid = n.get("id")
+
+        # 找到所有来源为 create_resource 的入边
+        for lk in incoming.get(nid, []):
+            src_node = nodes_by_id.get(lk.get("source"))
+            if not (src_node and src_node.get("template") == "create_resource"):
+                continue
+
+            target_port = lk.get("target_port")  # e.g., "sources", "targets", "tip_racks"
+            if not target_port:
+                continue
+
+            # labware 安全名字（实例化时也应使用同一套规则）
+            lab_id = src_node.get("id", "")
+            lab_safe = _safe_name(lab_id)
+
+            # 读取节点上该端口当前的值（通常是列表：井位等）
+            orig_vals = n.get(target_port, [])
+            if orig_vals is None:
+                orig_vals = []
+            if not isinstance(orig_vals, list):
+                orig_vals = [orig_vals]
+
+            # 生成带前缀的新值
+            prefixed = [
+                f"PRCXI9300/deck/{lab_safe}/{lab_safe}_{str(v)}"
+                for v in orig_vals
+            ]
+
+            # 覆盖写回
+            n[target_port] = prefixed
+
+            # 打印
+            for pv in prefixed:
+                print(pv)
+
+    return data
+
 
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
@@ -985,11 +1048,12 @@ def parse_protocol(name: str):
     enriched_steps = fix_positions(enriched_steps, replace_map)
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
     #     json.dump(enriched_steps, f, indent=4)
+    print(json.dumps(enriched_steps, indent=4))
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
     data = nx.node_link_data(protocol_graph)
     data = refine_well_info(data)
-    # with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
-    #     json.dump(data, f, indent=4)
+    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
+        json.dump(data, f, indent=4)
 
 if __name__ == "__main__":
     # 测试代码

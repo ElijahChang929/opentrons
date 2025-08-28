@@ -1,0 +1,1615 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 1",
+            "parent": "deck",
+            "slot_on_deck": 1,
+            "class_name": "opentrons_96_aluminumblock_nest_wellplate_100ul",
+            "liquid_type": [
+                "pcr_prep_samples_0_",
+                "purified_samples_0_"
+            ],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": [
+                "A3",
+                "A6"
+            ]
+        },
+        {
+            "template": "create_resource",
+            "id": "NEST 12 Well Reservoir 15 mL on 2",
+            "parent": "deck",
+            "slot_on_deck": 2,
+            "class_name": "nest_12_reservoir_15ml",
+            "liquid_type": [
+                "beads",
+                "ethanol2",
+                "te",
+                "waste2"
+            ],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": [
+                "A1",
+                "A4",
+                "A6",
+                "A12"
+            ]
+        },
+        {
+            "template": "create_resource",
+            "id": "NEST 96-Well Plate on Magnetic Module GEN1 on 3",
+            "parent": "deck",
+            "slot_on_deck": 3,
+            "class_name": "nest_96_wellplate_100ul_pcr_full_skirt",
+            "liquid_type": [],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "parent": "deck",
+            "slot_on_deck": 4,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [
+                "mag_samples_0_"
+            ],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": [
+                "A3"
+            ]
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons 96 Tip Rack 300 \u00b5L on 5",
+            "parent": "deck",
+            "slot_on_deck": 5,
+            "class_name": "opentrons_96_tiprack_300ul",
+            "liquid_type": [],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "create_resource",
+            "id": "Opentrons Fixed Trash on 6",
+            "parent": "deck",
+            "slot_on_deck": 6,
+            "class_name": "opentrons_1_trash_1100ml_fixed",
+            "liquid_type": [],
+            "liquid_volume": [
+                100.0
+            ],
+            "liquid_input_wells": []
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                "PRCXI9300/deck/Opentrons_96_Well_Aluminum_Block_with_NEST_Well_Plate_100__L_on_1/Opentrons_96_Well_Aluminum_Block_with_NEST_Well_Plate_100__L_on_1_{'well': 'A3', 'labware': 'Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L', 'slot': 1}"
+            ],
+            "targets": [
+                "PRCXI9300/deck/NEST_96_Well_Plate_on_Magnetic_Module_GEN1_on_3/NEST_96_Well_Plate_on_Magnetic_Module_GEN1_on_3_{'well': 'A3', 'labware': 'NEST 96-Well Plate on Magnetic Module GEN1', 'slot': 3}"
+            ],
+            "tip_racks": [
+                "PRCXI9300/deck/Opentrons_96_Tip_Rack_300__L_on_4/Opentrons_96_Tip_Rack_300__L_on_4_{'well': 'A1', 'type': 'Opentrons OT-2 96 Tip Rack 300 \u00b5L', 'slot': 4}"
+            ],
+            "use_channels": null,
+            "asp_vols": 60.0,
+            "asp_flow_rates": [
+                10.0
+            ],
+            "disp_vols": 60.0,
+            "dis_flow_rates": [
+                300.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "top": [
+                null,
+                -4
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [
+                        -4
+                    ],
+                    "bottom": [
+                        null
+                    ],
+                    "move": [
+                        null
+                    ],
+                    "center": [
+                        false
+                    ]
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "targets_wells": [
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A1"
+            ],
+            "id": "step_1"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "targets": [
+                "PRCXI9300/deck/NEST_12_Well_Reservoir_15_mL_on_2/NEST_12_Well_Reservoir_15_mL_on_2_{'well': 'A1', 'labware': 'NEST 12 Well Reservoir 15 mL', 'slot': 2}",
+                "PRCXI9300/deck/NEST_12_Well_Reservoir_15_mL_on_2/NEST_12_Well_Reservoir_15_mL_on_2_{'well': 'A1', 'labware': 'NEST 12 Well Reservoir 15 mL', 'slot': 2}",
+                "PRCXI9300/deck/NEST_12_Well_Reservoir_15_mL_on_2/NEST_12_Well_Reservoir_15_mL_on_2_{'well': 'A1', 'labware': 'NEST 12 Well Reservoir 15 mL', 'slot': 2}",
+                "PRCXI9300/deck/NEST_12_Well_Reservoir_15_mL_on_2/NEST_12_Well_Reservoir_15_mL_on_2_{'well': 'A1', 'labware': 'NEST 12 Well Reservoir 15 mL', 'slot': 2}",
+                "PRCXI9300/deck/NEST_12_Well_Reservoir_15_mL_on_2/NEST_12_Well_Reservoir_15_mL_on_2_{'well': 'A1', 'labware': 'NEST 12 Well Reservoir 15 mL', 'slot': 2}"
+            ],
+            "tip_racks": [
+                {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 60.0,
+            "asp_flow_rates": [
+                75.0
+            ],
+            "disp_vols": 60.0,
+            "dis_flow_rates": [
+                300.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "before",
+            "mix_times": [
+                5
+            ],
+            "mix_vol": 60.0,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "top": [
+                -4,
+                -12
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [
+                        -13.5
+                    ],
+                    "bottom": [
+                        null
+                    ],
+                    "move": [
+                        null
+                    ],
+                    "center": [
+                        false
+                    ]
+                }
+            ],
+            "sources_wells": [
+                "A1",
+                "A1",
+                "A1",
+                "A1",
+                "A1"
+            ],
+            "targets_wells": [
+                "A1",
+                "A1",
+                "A1",
+                "A1",
+                "A1"
+            ],
+            "tip_racks_wells": [
+                "A2"
+            ],
+            "id": "step_2"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "tip_racks": [
+                {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 60.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 60.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "after",
+            "mix_times": [
+                10
+            ],
+            "mix_vol": 60.0,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": [
+                0
+            ],
+            "top": [
+                -13.5,
+                null
+            ],
+            "bottom": [
+                2,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A1",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3"
+            ],
+            "targets_wells": [
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A2"
+            ],
+            "id": "step_3"
+        },
+        {
+            "template": "transfer_with_magnetic",
+            "sources": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "tip_racks": [
+                "PRCXI9300/deck/Opentrons_96_Tip_Rack_300__L_on_4/Opentrons_96_Tip_Rack_300__L_on_4_{'well': 'A3', 'type': 'Opentrons OT-2 96 Tip Rack 300 \u00b5L', 'slot': 4}"
+            ],
+            "use_channels": null,
+            "asp_vols": 82.5,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 82.5,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "magnetic_engage": true,
+            "magnetic_delay_minutes": 5,
+            "magnetic_disengage": false,
+            "top": [
+                null,
+                null
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "targets_wells": [
+                "A12"
+            ],
+            "tip_racks_wells": [
+                "A3"
+            ],
+            "id": "step_4"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A4",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "tip_racks": [
+                {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 195.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 200.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": [
+                15
+            ],
+            "top": [
+                -2,
+                null
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A4"
+            ],
+            "targets_wells": [
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A4"
+            ],
+            "id": "step_5"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "tip_racks": [
+                {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 200.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 210.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "top": [
+                null,
+                null
+            ],
+            "bottom": [
+                1.5,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "targets_wells": [
+                "A12"
+            ],
+            "tip_racks_wells": [
+                "A4"
+            ],
+            "id": "step_6"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A4",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "tip_racks": [
+                {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 195.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 200.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": [
+                15
+            ],
+            "top": [
+                null,
+                null
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A4"
+            ],
+            "targets_wells": [
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A5"
+            ],
+            "id": "step_7"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                }
+            ],
+            "tip_racks": [
+                {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 \u00b5L",
+                    "slot": 3
+                }
+            ],
+            "use_channels": null,
+            "asp_vols": 200.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 210.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "top": [
+                -2,
+                null
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "targets_wells": [
+                "A12"
+            ],
+            "tip_racks_wells": [
+                "A5"
+            ],
+            "id": "step_8"
+        },
+        {
+            "template": "transfer_with_magnetic",
+            "sources": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [],
+            "tip_racks": [
+                "PRCXI9300/deck/Opentrons_96_Tip_Rack_300__L_on_4/Opentrons_96_Tip_Rack_300__L_on_4_{'well': 'A6', 'type': 'Opentrons OT-2 96 Tip Rack 300 \u00b5L', 'slot': 4}"
+            ],
+            "use_channels": null,
+            "asp_vols": 35.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": [],
+            "dis_flow_rates": null,
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": [
+                0
+            ],
+            "magnetic_engage": false,
+            "magnetic_delay_minutes": null,
+            "magnetic_disengage": true,
+            "top": [
+                null
+            ],
+            "bottom": [
+                1.5
+            ],
+            "move": [
+                null
+            ],
+            "center": [
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A6"
+            ],
+            "id": "step_9"
+        },
+        {
+            "template": "transfer",
+            "sources": [
+                {
+                    "well": "A6",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "tip_racks": [
+                "PRCXI9300/deck/Opentrons_96_Tip_Rack_300__L_on_4/Opentrons_96_Tip_Rack_300__L_on_4_{'well': 'A7', 'type': 'Opentrons OT-2 96 Tip Rack 300 \u00b5L', 'slot': 4}"
+            ],
+            "use_channels": null,
+            "asp_vols": 20.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 20.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "after",
+            "mix_times": [
+                10
+            ],
+            "mix_vol": 20.0,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": [
+                0
+            ],
+            "top": [
+                null,
+                null
+            ],
+            "bottom": [
+                null,
+                0.5
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "sources_wells": [
+                "A6",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3"
+            ],
+            "targets_wells": [
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3",
+                "A3"
+            ],
+            "tip_racks_wells": [
+                "A7"
+            ],
+            "id": "step_10"
+        },
+        {
+            "template": "transfer_with_magnetic",
+            "sources": [
+                {
+                    "well": "A3",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 3
+                }
+            ],
+            "targets": [
+                "PRCXI9300/deck/Opentrons_96_Well_Aluminum_Block_with_NEST_Well_Plate_100__L_on_1/Opentrons_96_Well_Aluminum_Block_with_NEST_Well_Plate_100__L_on_1_{'well': 'A6', 'labware': 'Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L', 'slot': 1}"
+            ],
+            "tip_racks": [
+                "PRCXI9300/deck/Opentrons_96_Tip_Rack_300__L_on_4/Opentrons_96_Tip_Rack_300__L_on_4_{'well': 'A8', 'type': 'Opentrons OT-2 96 Tip Rack 300 \u00b5L', 'slot': 4}"
+            ],
+            "use_channels": null,
+            "asp_vols": 20.0,
+            "asp_flow_rates": [
+                50.0
+            ],
+            "disp_vols": 22.0,
+            "dis_flow_rates": [
+                50.0
+            ],
+            "offsets": null,
+            "touch_tip": false,
+            "liquid_height": null,
+            "blow_out_air_volume": [
+                0.0
+            ],
+            "is_96_well": false,
+            "mix_stage": "none",
+            "mix_times": 0,
+            "mix_vol": null,
+            "mix_rate": null,
+            "mix_liquid_height": null,
+            "delays": null,
+            "magnetic_engage": true,
+            "magnetic_delay_minutes": 5,
+            "magnetic_disengage": true,
+            "top": [
+                null,
+                -12
+            ],
+            "bottom": [
+                null,
+                null
+            ],
+            "move": [
+                null,
+                null
+            ],
+            "center": [
+                false,
+                false
+            ],
+            "move_to": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                }
+            ],
+            "mix_detail": [
+                {
+                    "top": [],
+                    "bottom": [],
+                    "move": [],
+                    "center": []
+                },
+                {
+                    "top": [
+                        null
+                    ],
+                    "bottom": [
+                        null
+                    ],
+                    "move": [
+                        null
+                    ],
+                    "center": [
+                        false
+                    ]
+                }
+            ],
+            "sources_wells": [
+                "A3"
+            ],
+            "targets_wells": [
+                "A6"
+            ],
+            "tip_racks_wells": [
+                "A8"
+            ],
+            "id": "step_11"
+        }
+    ],
+    "links": [
+        {
+            "source_port": "labware",
+            "target_port": "sources",
+            "source": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 1",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 \u00b5L on 1",
+            "target": "step_11"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "NEST 12 Well Reservoir 15 mL on 2",
+            "target": "step_2"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "targets",
+            "source": "NEST 96-Well Plate on Magnetic Module GEN1 on 3",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "target": "step_1"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "target": "step_4"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "target": "step_9"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "target": "step_10"
+        },
+        {
+            "source_port": "labware",
+            "target_port": "tip_racks",
+            "source": "Opentrons 96 Tip Rack 300 \u00b5L on 4",
+            "target": "step_11"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_1",
+            "target": "step_2"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_1",
+            "target": "step_3"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_2",
+            "target": "step_3"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_2",
+            "target": "step_4"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_3",
+            "target": "step_4"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_3",
+            "target": "step_5"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_4",
+            "target": "step_5"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_4",
+            "target": "step_6"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_5",
+            "target": "step_6"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_5",
+            "target": "step_7"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_6",
+            "target": "step_7"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_6",
+            "target": "step_8"
+        },
+        {
+            "source_port": "tip_racks_out",
+            "target_port": "tip_racks",
+            "source": "step_7",
+            "target": "step_8"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_7",
+            "target": "step_9"
+        },
+        {
+            "source_port": "targets_out",
+            "target_port": "targets",
+            "source": "step_7",
+            "target": "step_10"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_8",
+            "target": "step_10"
+        },
+        {
+            "source_port": "sources_out",
+            "target_port": "sources",
+            "source": "step_10",
+            "target": "step_11"
+        }
+    ]
+}
