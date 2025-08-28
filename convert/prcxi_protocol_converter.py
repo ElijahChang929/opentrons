@@ -8,6 +8,107 @@ import networkx as nx
 import os
 from pathlib import Path
 
+from pylabrobot.resources.opentrons.tube_racks import *
+from pylabrobot.resources.opentrons.tip_racks import *
+# from pylabrobot.resources.opentrons.plates import *
+from pylabrobot.resources.opentrons.reservoirs import *
+import pylabrobot.resources.opentrons.reservoirs as reservoirs
+# from pylabrobot.resources.opentrons.plates import *
+from pylabrobot.resources.opentrons.plates import *
+import pylabrobot.resources.opentrons.plates as plates
+# from pylabrobot.resources.opentrons.plate_adapters import *
+from pylabrobot.resources.opentrons.module import *
+# from pylabrobot.resources.opentrons.deck import *
+
+
+
+_DEF_WELL_COUNTS = (384, 96, 48, 24)
+
+def _parse_well_count(name: str) -> int | None:
+    s = name.lower()
+    for k in _DEF_WELL_COUNTS:
+        # 匹配独立数字（避免把 96 匹配到 196 等）
+        if re.search(rf'(^|[^0-9]){k}([^0-9]|$)', s):
+            return k
+    return None
+
+def _parse_capacity_ul(name: str) -> float | None:
+    s = name.lower()
+    m = re.search(r'(\d+(?:\.\d+)?)(\s*(?:u?l|ml))', s, re.IGNORECASE)
+    if not m:
+        return None
+    val = float(m.group(1))
+    unit = m.group(2).strip().lower()
+    if unit == 'ml':
+        return val * 1000.0
+    # 兼容 'ul' / 'u l' / 'µl'
+    return val
+
+def match_labware_class(class_name: str):
+    """超简匹配：
+    - 先看目标名里是否包含 well/pcr；若都不含，直接放弃匹配；
+    - 提取孔数（仅 24/48/96/384），容量（若有）；
+    - 在已导入的 plates 类（globals 里名称包含 'plate' 或 'wellplate' 或 'pcr'）中找同孔数；
+    - 如有容量要求，挑 capacity >= 需求 且差值最小的；否则返回第一个同孔数候选。
+    返回 (cls 或 None, 说明字符串)
+    """
+    name_l = class_name.lower()
+    # Special case: trash – pick the largest reservoir available
+    if 'trash' in name_l:
+        import inspect
+        trash_candidates = []  # (factory_fn, name, cap)
+        for nm, obj in inspect.getmembers(reservoirs, inspect.isfunction):
+            # 解析容量，选容量最大的
+            cap = _parse_capacity_ul(nm) or 0.0
+            trash_candidates.append((obj, nm, cap))
+        if trash_candidates:
+            trash_candidates.sort(key=lambda x: x[2], reverse=True)
+            cls, nm, cap = trash_candidates[0]
+            return cls, f"trash matched by max capacity: picked {nm} ({cap}uL)"
+        return None, "no reservoir functions found for trash"
+
+    has_plate_keyword = ('well' in name_l) or ('pcr' in name_l)
+    if not has_plate_keyword:
+        return None, "skip: not a plate-like name (no 'well'/'pcr')"
+
+    target_wells = _parse_well_count(class_name)
+    if target_wells is None:
+        return None, "skip: no 24/48/96/384 well count in name"
+
+    target_cap = _parse_capacity_ul(class_name)
+
+    import inspect
+    candidates = []  # (factory_fn, name, wells, cap)
+    for nm, obj in inspect.getmembers(plates, inspect.isfunction):
+        nm_l = nm.lower()
+        if not (('plate' in nm_l) or ('wellplate' in nm_l) or ('pcr' in nm_l) or ('well' in nm_l)):
+            continue
+        wells = _parse_well_count(nm)
+        if wells != target_wells:
+            continue
+        cap = _parse_capacity_ul(nm)
+        candidates.append((obj, nm, wells, cap))
+    
+    if not candidates:
+        return None, f"no class with {target_wells}-well in imported plates"
+
+    # 如果没有容量要求，返回第一个候选
+    if target_cap is None:
+        cls, nm, _, cap = candidates[0]
+        return cls, f"matched by wells={target_wells} (no target cap); chose {nm} (cap={cap})"
+
+    # 有容量要求：选择 cap>=target_cap 且 (cap-target_cap) 最小；若都无 cap 或 cap 小于需求，则退而选任一候选
+    feasible = [(cls, nm, cap) for cls, nm, _, cap in candidates if (cap is not None and cap >= target_cap)]
+    if feasible:
+        feasible.sort(key=lambda x: x[2] - target_cap)
+        cls, nm, cap = feasible[0]
+        return cls, f"matched by wells={target_wells} and min over-cap: target={target_cap}uL, picked {nm} ({cap}uL)"
+
+    # 没有容量信息或都不足，兜底：返回任一候选
+    cls, nm, _, cap = candidates[0]
+    return cls, f"fallback by wells={target_wells}; no feasible cap>=target ({target_cap}uL); chose {nm} (cap={cap})"
+
+
 
 def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
     """
@@ -505,10 +606,9 @@ def extract_labware_info_from_json(json_data: dict) -> list:
         # replace '.' in class_name as 'point'
         class_name = re.sub(r'\.', 'point', class_name)
         #print(class_name)
-        
-    # 判断 class_name 是否包含 container_char 的任一关键词
+        # 判断 class_name 是否包含 container_char 的任一关键词
         if any(c in class_name.lower() for c in container_char):
-
+            liquid_vol = 200.0
             # 用正则匹配体积：例如 12.5ul / 0.5ml
             match = re.search(r'(\d+)\.(\d+)([mu]l)', class_name, re.IGNORECASE)
             if match:
@@ -529,9 +629,6 @@ def extract_labware_info_from_json(json_data: dict) -> list:
                         liquid_vol = value * 1000.0
                     elif unit.lower() == "ul":
                         liquid_vol = value
-                # 如果没有匹配到体积信息，默认为 0
-                if liquid_vol is None:
-                    liquid_vol = 200
             #print(class_name, liquid_vol)
 
         prcxi_id = lw.get("name")
@@ -549,6 +646,55 @@ def extract_labware_info_from_json(json_data: dict) -> list:
 
     return output, replace_map
 
+def expend_labware_info(labware_dic):
+    class_name = labware_dic["class_name"] if isinstance(labware_dic, dict) else str(labware_dic)
+    try:
+        cls = globals().get(class_name)
+        if cls is None:
+            cand, reason = match_labware_class(class_name)
+            if cand is None:
+                print(f"[WARN] Labware class '{class_name}' not found, and no simple-match candidate. {reason}")
+                return None
+            print(f"[INFO] Simple-matched '{class_name}' -> '{cand.__name__}' ({reason})")
+            cls = cand
+
+        # 如需实例化（可选）：有些类可能需要特参，失败就只打印不实例化
+        try:
+            import inspect
+            a = None
+            if isinstance(cls, type):
+                # class: most resources accept name as kwarg
+                a = cls(name="labware")
+            elif callable(cls):
+                sig = inspect.signature(cls)
+                if "name" in sig.parameters:
+                    a = cls(name="labware")
+                else:
+                    a = cls()
+            if a is not None:
+                return a
+            print(f"[INFO] candidate is not instantiable: {getattr(cls, '__name__', str(cls))}")
+            return None
+        except TypeError as e:
+            # one more try: if previous call failed without name, try with name; or vice versa
+            try:
+                a = cls(name="labware") if callable(cls) else None
+                if a is not None:
+                    return a
+            except Exception:
+                pass
+            print(f"[INFO] instantiate candidate failed ({getattr(cls, '__name__', str(cls))}): {e}")
+            return None
+        except Exception as e:
+            print(f"[INFO] instantiate candidate failed ({getattr(cls, '__name__', str(cls))}): {e}")
+            return None
+
+    except Exception as e:
+        print(f"[ERROR] expend_labware_info failed for class '{class_name}': {e}")
+        return None
+
+
+
 def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]]) -> nx.DiGraph:
     """
     构建包含物料创建和步骤节点的 protocol graph。
@@ -563,9 +709,9 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
                 clean_key = re.sub(r'[^0-9a-zA-Z_]', '_', liquid_key)
                 labware["liquid_type"].append(clean_key)
                 labware["liquid_input_wells"].append(liquid_val["well"])
-    if labware["liquid_type"]: # 如果这个有，那应该和wells是对应的
-        print('here!!!'*20)
-        print(labware["liquid_type"], labware["liquid_input_wells"])
+        # 当该labware存在液体信息时，尝试展开并打印其孔位信息
+        if labware["liquid_type"]:
+            expend_labware_info(labware)
     G = nx.DiGraph()
     slot_last_writer = {}  # 记录每个 slot 上次的输出节点（transfer/heater_shaker）
 
@@ -780,9 +926,9 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
                     single_slot["slot"] = replace_map[str(old_slot)]
                     #print(f"[INFO] step {step_idx}, {field}[{item_idx}] slot {old_slot} replaced with {single_slot['slot']}")
                 except KeyError:
-
+                    pass
                     # 通用警告，不输出具体 labware 名称等敏感信息
-                    print(f"[WARN] step {step_idx}, {field}[{item_idx}] 无映射，保留原 slot")
+                    #print(f"[WARN] step {step_idx}, {field}[{item_idx}] 无映射，保留原 slot")
                     # pass
     
     return protocol_steps
