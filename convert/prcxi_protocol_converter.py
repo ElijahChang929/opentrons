@@ -1,4 +1,5 @@
 import json
+from platform import node
 import pandas as pd
 from collections import defaultdict
 import networkx as nx
@@ -653,9 +654,9 @@ def expend_labware_info(labware_dic):
         if cls is None:
             cand, reason = match_labware_class(class_name)
             if cand is None:
-                print(f"[WARN] Labware class '{class_name}' not found, and no simple-match candidate. {reason}")
+                #print(f"[WARN] Labware class '{class_name}' not found, and no simple-match candidate. {reason}")
                 return None
-            print(f"[INFO] Simple-matched '{class_name}' -> '{cand.__name__}' ({reason})")
+            #print(f"[INFO] Simple-matched '{class_name}' -> '{cand.__name__}' ({reason})")
             cls = cand
 
         # 如需实例化（可选）：有些类可能需要特参，失败就只打印不实例化
@@ -932,7 +933,20 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
                     # pass
     
     return protocol_steps
-    return protocol_steps
+
+def refine_well_info(graph):
+
+    for node in graph.get("nodes", []):
+        if node.get("template") != "create_resource":
+            node_id = node.get("id")
+            for link in graph.get("links", []):
+                if link.get("target") == node_id:
+                    for node in graph.get("nodes", []):
+                        if node.get("id") == link.get("source") and not node.get("id").startswith("step_"):
+                            print(node.get("class_name"))
+
+    return graph
+
 def parse_protocol(name: str):
     logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
@@ -964,15 +978,16 @@ def parse_protocol(name: str):
         labware_data = json.load(f)
     labware_info, replace_map = extract_labware_info_from_json(labware_data)
     
-    with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
-        json.dump(labware_info, f, indent=4)
+    # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
+    #     json.dump(labware_info, f, indent=4)
 
     enriched_steps = fix_special_cases(enriched_steps)
     enriched_steps = fix_positions(enriched_steps, replace_map)
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
     #     json.dump(enriched_steps, f, indent=4)
     protocol_graph = build_protocol_graph(labware_info, enriched_steps, liquid_info)
-    # data = nx.node_link_data(protocol_graph)
+    data = nx.node_link_data(protocol_graph)
+    data = refine_well_info(data)
     # with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w") as f:
     #     json.dump(data, f, indent=4)
 
