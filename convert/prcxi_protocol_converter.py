@@ -12,15 +12,12 @@ from pathlib import Path
 _LABWARE_CACHE: Dict[tuple, Any] = {}
 from pylabrobot.resources.opentrons.tube_racks import *
 from pylabrobot.resources.opentrons.tip_racks import *
-# from pylabrobot.resources.opentrons.plates import *
 from pylabrobot.resources.opentrons.reservoirs import *
 import pylabrobot.resources.opentrons.reservoirs as reservoirs
-# from pylabrobot.resources.opentrons.plates import *
 from pylabrobot.resources.opentrons.plates import *
 import pylabrobot.resources.opentrons.plates as plates
-# from pylabrobot.resources.opentrons.plate_adapters import *
 from pylabrobot.resources.opentrons.module import *
-# from pylabrobot.resources.opentrons.deck import *
+
 import pylabrobot.resources.opentrons.tip_racks as tip_racks_mod
 import pylabrobot.resources.opentrons.tube_racks as tube_racks_mod
 
@@ -58,7 +55,7 @@ def match_labware_class(class_name: str):
     """
     name_l = class_name.lower()
     # Special case: trash – pick the largest reservoir available
-    if 'trash' in name_l or 'reservoir' in name_l:
+    if 'trash' in name_l or 'reservoir' in name_l or 'waste' in name_l:
         import inspect
         trash_candidates = []  # (factory_fn, name, cap)
         for nm, obj in inspect.getmembers(reservoirs, inspect.isfunction):
@@ -432,6 +429,21 @@ def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
 
     return merged
 
+def extract_asp_params(line):
+# 例子：Aspirating 30.0 uL from A2 of reagent stock on 3 at 940.0 uL/sec
+    m = re.match(r"Aspirating ([\d.]+) uL from ([A-H]\d+) of (.+) on (\d+) at ([\d.]+) uL/sec", line)
+    if m:
+        # 只返回体积和其它参数
+        return {
+            "vol": float(m.group(1)),
+            "well": m.group(2),
+            "labware": m.group(3).strip(),
+            "slot": int(m.group(4)),
+            "flow": float(m.group(5)),
+        }
+    return None
+
+
 def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> List[Dict]:
     """
     Process the liquid handler log text and return a list of dictionaries
@@ -446,11 +458,6 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     ]
     # Compile once for quick matching of Heater‑Shaker commands
     module_start_regex = re.compile("|".join(MODULE_START_PATTERNS))
-
-    # Input: Multiline protocol text
-    # with open("/mnt/data/opentrons_protocol.txt", "r", encoding="utf-8") as file:
-    #     lines = file.readlines()
-
     text_ = re.sub(r'\n[ \t]+', '\n', text)
     lines = text_.strip().split('\n')
 
@@ -464,19 +471,24 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
         "Seal and shake",
         "Pausing robot operation",
         "TRANSFERRING",
-        "Centrifuge"
+        "Centrifuge",
+        "Removing",
+        "Logs",
+        "ERROR"
     ]
     steps = [line.replace(";", "\n        ").strip() for line in lines if line.strip() and
              not line.startswith("        ") and not line.startswith("~~") and
              not "--" in line and not line.endswith(":") and
              not sum([line.startswith(patt) for patt in excluded_patterns])]
-    # Define prepositions to split on
+
     PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
-    # Structure for collecting parsed results
     parsed_steps = []
 
     # Parse each line
     for line in steps:
+        if not any(prep in line for prep in PREPOSITIONS):
+            print("[NO PREP]", line)   # 这里就是没有包含任何介词的行
+
         tokens = [line]
         for prep in PREPOSITIONS:
             new_tokens = []
@@ -487,16 +499,13 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
             "raw": line,
             "tokens": [t.strip() for t in tokens if t.strip()]
         })
-    # with open("parsed_steps.json", "w") as f:
-    #     json.dump(parsed_steps, f, indent=4)
-    # -------- Build phases: split on Heater‑Shaker OR liquid‑logic breaks --------
+
     grouped_phases = []
     current_phase = []
     aspirating_seen = False
-    last = ""
+    last_sentence = ""
     for step in parsed_steps:
         line_raw = step["raw"]
-
         # ① 如果遇到 Heater‑Shaker 指令，立即结束当前 phase
         if module_start_regex.search(line_raw):
             if current_phase:
@@ -504,24 +513,19 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
                 current_phase = []
                 aspirating_seen = False    # reset for next liquid series
 
-        # if (line_raw.startswith("Aspirating") and not ("Picking up tip" in last) and not ("Moving to" in last) and not ("Transferring" in last)
-        #     and not ("Air gap")) \
-        #     or ("Picking up tip" in line_raw):
-        if (line_raw.startswith("Aspirating") and not "Air gap" in last and not "Moving to" in last and not "Transferring" in last
-            and not "Picking up tip" in last and not "Aspirating" in last) or "Picking up tip" in line_raw:
-            
+        if (line_raw.startswith("Aspirating") and not "Air gap" in last_sentence and not "Moving to" in last_sentence and not "Transferring" in last_sentence and not "Picking up tip" in last_sentence and not "Aspirating" in last_sentence) or "Picking up tip" in line_raw:
+
             if aspirating_seen:
                 grouped_phases.append(current_phase)
                 current_phase = []
             aspirating_seen = True
 
-        last = line_raw
+        last_sentence = line_raw
         current_phase.append(line_raw)
-
 
     if current_phase:
         grouped_phases.append(current_phase)
-    # 合并mix对应的dis和asp    
+   
     belong_to_mixing = []
     for i, phase in enumerate(grouped_phases):
         if "Mixing" in phase[-1]:
@@ -531,38 +535,18 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
                 grouped_phases[i].extend(grouped_phases[i+j])
                 belong_to_mixing.append(i+j)
     grouped_phases = [phase for i, phase in enumerate(grouped_phases) if i not in belong_to_mixing]
-    # with open("grouped_phases_new.json", "w") as f:
-    #     json.dump(grouped_phases, f, indent=4) 
 
 
-    def extract_asp_params(line):
-    # 例子：Aspirating 30.0 uL from A2 of reagent stock on 3 at 940.0 uL/sec
-        m = re.match(r"Aspirating ([\d.]+) uL from ([A-H]\d+) of (.+) on (\d+) at ([\d.]+) uL/sec", line)
-        if m:
-            # 只返回体积和其它参数
-            return {
-                "vol": float(m.group(1)),
-                "well": m.group(2),
-                "labware": m.group(3).strip(),
-                "slot": int(m.group(4)),
-                "flow": float(m.group(5)),
-            }
-        return None
-    
     for i, phase in enumerate(grouped_phases):
         to_remove = set()
         for idx, line in enumerate(phase):
-            # print(idx, line)
+
             if line.startswith("Air gap"):
                 asp_up = None
                 for i in range(idx-1, -1, -1):
-
-                    #print(lines[i])
                     if phase[i].startswith("Aspirating"):
-                        
                         asp_up_idx = i
                         asp_up = extract_asp_params(phase[i])
-                        
                         break
                 # 向下找最近Aspirating
                 asp_down = None
@@ -571,10 +555,7 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
                         asp_down_idx = i
                         asp_down = extract_asp_params(phase[i])
                         break
-                # 两个asp都找到，且体积外其它参数一样
                 if asp_up and asp_down:
-                    # 比较（除了vol之外其它都一样）
-                    #print(asp_up, asp_down)
                     params = ['well','labware','slot']
                     if all(asp_up[k]==asp_down[k] for k in params):
                         # 合并体积
@@ -589,7 +570,6 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
 
     # 处理情况：连续出现asp和dis的情况，合并连续的
     for i, phase in enumerate(grouped_phases):
-        
         to_remove = set()
         idx = 0
         while idx < len(phase) - 1:
@@ -631,8 +611,8 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
             outputs.append(build_transfer_liquid_dict_complete(phase_lines))
     # -----------------------------------------------------------
 
-    with open("outputs.json", "w") as f:
-        json.dump(outputs, f, indent=4)
+    # with open("outputs.json", "w") as f:
+    #     json.dump(outputs, f, indent=4)
     final_outputs = merge_same_slot_phases(outputs)
 
     # ------------- Output the final DataFrame -------------
@@ -700,6 +680,7 @@ def extract_labware_info_from_json(json_data: dict) -> list:
             "liquid_input_wells": []    
         })
 
+
     return output, replace_map
 import re, inspect
 
@@ -765,7 +746,9 @@ def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str,
                 clean_key = re.sub(r'[^0-9a-zA-Z_]', '_', liquid_key)
                 labware["liquid_type"].append(clean_key)
                 labware["liquid_input_wells"].append(liquid_val["well"])
-
+        labware["liquid_volume"] = labware["liquid_volume"] * len(labware["liquid_input_wells"])
+        #
+        # print(labware)
     # 收集 protocol 里将会用到的唯一 (class_name, slot) 组合
     unique_pairs = set()
     for step in protocol_steps:
@@ -1051,48 +1034,38 @@ def parse_protocol(name: str):
 
     # first check if the files exist
     if not os.path.exists(infofile):
-        # 获取协议文件夹路径
         proto_dir = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/"
-        # 列出文件夹下所有json文件，排除metadata.json和README.json
         candidates = [
             os.path.join(proto_dir, f)
             for f in os.listdir(proto_dir)
             if f.endswith(".json") and f not in ("metadata.json", "README.json")
         ]
-        # 如果有多个json文件，取第一个
         if candidates:
             infofile = candidates[0]
         else:
             raise FileNotFoundError(f"No protocol json found in {proto_dir}, except metadata.json/README.json")
 
     protocol_steps = process_liquid_handler_log(logfile)
-    # with open('enriched_steps.json', 'w') as f:
-    #     json.dump(protocol_steps, f, indent=4)
-    enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
-    # with open('enriched_steps.json', 'w') as f:
-    #     json.dump(enriched_steps, f, indent=4)
-    with open(infofile, "r") as f:
-        labware_data = json.load(f)
-        #print(json.dumps(labware_data, indent=4))
-    labware_info, replace_map = extract_labware_info_from_json(labware_data)
-    # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
-    #     json.dump(labware_info, f, indent=4)
-    enriched_steps = fix_special_cases(enriched_steps)
-    enriched_steps = fix_positions(enriched_steps, replace_map)
-    # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
-    #     json.dump(enriched_steps, f, indent=4)
-    #print(json.dumps(enriched_steps, indent=4))
-    labware_info = refine_wells(labware_info, liquid_info, enriched_steps)
-    protocol_graph = build_protocol_graph(labware_info, enriched_steps)
-    data = nx.node_link_data(protocol_graph)
-    # Dumb but effective: clean micro symbols at the serialized string level
-    json_str = json.dumps(data, indent=4, ensure_ascii=False)
-    json_str = (json_str
-                .replace("\\u00b5", "u")
-                .replace("µ", "u")
-                .replace("μ", "u"))
-    with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w", encoding="utf-8") as f:
-        f.write(json_str)
+    # enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
+    # with open(infofile, "r") as f:
+    #     labware_data = json.load(f)
+    # labware_info, replace_map = extract_labware_info_from_json(labware_data)
+    # enriched_steps = fix_special_cases(enriched_steps)
+    # enriched_steps = fix_positions(enriched_steps, replace_map)
+    # # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
+    # #     json.dump(enriched_steps, f, indent=4)
+    # #print(json.dumps(enriched_steps, indent=4))
+    # labware_info = refine_wells(labware_info, liquid_info, enriched_steps)
+    # protocol_graph = build_protocol_graph(labware_info, enriched_steps)
+    # data = nx.node_link_data(protocol_graph)
+    # # Dumb but effective: clean micro symbols at the serialized string level
+    # json_str = json.dumps(data, indent=4, ensure_ascii=False)
+    # json_str = (json_str
+    #             .replace("\\u00b5", "u")
+    #             .replace("µ", "u")
+    #             .replace("μ", "u"))
+    # with open(f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/PRCXI_graph/{name}.graph.json", "w", encoding="utf-8") as f:
+    #     f.write(json_str)
 
 if __name__ == "__main__":
     # 测试代码
