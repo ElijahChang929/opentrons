@@ -444,24 +444,28 @@ def extract_asp_params(line):
     return None
 
 
-def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> List[Dict]:
-    """
-    Process the liquid handler log text and return a list of dictionaries
-    containing the parsed information.
-    """
-    if not text:
-        text = open(filename, "r", encoding="utf-8").read()
+# ---------------------- Log parsing helpers (factored) ----------------------
+_MODULE_START_PATTERNS = [
+    r"Setting Target Temperature of Heater-Shaker",
+    r"Engaging Magnetic Module"
+]
+_PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
 
-    MODULE_START_PATTERNS = [
-        r"Setting Target Temperature of Heater-Shaker",
-        r"Engaging Magnetic Module"
-    ]
-    # Compile once for quick matching of Heater‑Shaker commands
-    module_start_regex = re.compile("|".join(MODULE_START_PATTERNS))
-    text_ = re.sub(r'\n[ \t]+', '\n', text)
-    lines = text_.strip().split('\n')
+def _read_log_text(filename: str, text: str) -> str:
+    """Return log text: prefer `text` arg, else read from `filename`."""
+    if text:
+        return text
+    with open(filename, "r", encoding="utf-8") as f:
+        return f.read()
 
-    excluded_patterns = [
+def _preprocess_text(raw: str) -> list[str]:
+    """Normalize indentation-after-newline and split into non-empty lines."""
+    text_ = re.sub(r'\n[ \t]+', '\n', raw)
+    return [ln for ln in text_.strip().split('\n')]
+
+def _filter_step_lines(lines: list[str]) -> list[str]:
+    """Drop headers/noise and keep candidate step lines."""
+    excluded_prefixes = [
         "/Users",
         "Congratulations!",
         "Caught exception:",
@@ -474,47 +478,65 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
         "Centrifuge",
         "Removing",
         "Logs",
-        "ERROR"
+        "ERROR",
     ]
-    steps = [line.replace(";", "\n        ").strip() for line in lines if line.strip() and
-             not line.startswith("        ") and not line.startswith("~~") and
-             not "--" in line and not line.endswith(":") and
-             not sum([line.startswith(patt) for patt in excluded_patterns])]
+    steps = []
+    for line in lines:
+        if not line.strip():
+            continue
+        if line.startswith("        "):   # deep‑indented subline
+            continue
+        if line.startswith("~~"):         # separators
+            continue
+        if "--" in line:                  # noise blocks
+            continue
+        if line.endswith(":"):            # section headers
+            continue
+        if any(line.startswith(p) for p in excluded_prefixes):
+            continue
+        # cosmetic: show semicolon-separated subphrases on next visual line
+        steps.append(line.replace(";", "\n        ").strip())
+    return steps
 
-    PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
-    parsed_steps = []
-
-    # Parse each line
+def _tokenize_for_debug(steps: list[str]) -> list[dict]:
+    """Split by common prepositions (for debug) and mark lines lacking them."""
+    parsed = []
     for line in steps:
-        if not any(prep in line for prep in PREPOSITIONS):
-            print("[NO PREP]", line)   # 这里就是没有包含任何介词的行
-
+        if not any(prep in line for prep in _PREPOSITIONS):
+            #print("[NO PREP]", line)
+            pass
         tokens = [line]
-        for prep in PREPOSITIONS:
+        for prep in _PREPOSITIONS:
             new_tokens = []
             for token in tokens:
                 new_tokens.extend(token.split(prep))
             tokens = new_tokens
-        parsed_steps.append({
-            "raw": line,
-            "tokens": [t.strip() for t in tokens if t.strip()]
-        })
+        parsed.append({"raw": line, "tokens": [t.strip() for t in tokens if t.strip()]})
+    return parsed
 
-    grouped_phases = []
-    current_phase = []
+def _group_phases(parsed_steps: list[dict], module_start_regex: re.Pattern) -> list[list[str]]:
+    """Group raw lines into phases separated by module ops and 'new aspirate/tip' starts."""
+    grouped_phases: list[list[str]] = []
+    current_phase: list[str] = []
     aspirating_seen = False
     last_sentence = ""
+
     for step in parsed_steps:
         line_raw = step["raw"]
-        # ① 如果遇到 Heater‑Shaker 指令，立即结束当前 phase
+
+        # hard split on module starts (heater‑shaker/magnet)
         if module_start_regex.search(line_raw):
             if current_phase:
                 grouped_phases.append(current_phase)
                 current_phase = []
-                aspirating_seen = False    # reset for next liquid series
+                aspirating_seen = False
 
-        if (line_raw.startswith("Aspirating") and not "Air gap" in last_sentence and not "Moving to" in last_sentence and not "Transferring" in last_sentence and not "Picking up tip" in last_sentence and not "Aspirating" in last_sentence) or "Picking up tip" in line_raw:
+        # new liquid series if a 'standalone' Aspirating or a 'Picking up tip'
+        starts_with_asp = line_raw.startswith("Aspirating")
+        guard_prev = all(x not in last_sentence for x in ("Air gap", "Moving to", "Transferring", "Picking up tip", "Aspirating"))
+        is_tip_pick = "Picking up tip" in line_raw
 
+        if (starts_with_asp and guard_prev) or is_tip_pick:
             if aspirating_seen:
                 grouped_phases.append(current_phase)
                 current_phase = []
@@ -525,84 +547,106 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
 
     if current_phase:
         grouped_phases.append(current_phase)
-   
+    return grouped_phases
+
+def _merge_mixing_phases(grouped_phases: list[list[str]]) -> list[list[str]]:
+    """If a phase ends with 'Mixing N times ...', append the next N phases to it."""
     belong_to_mixing = []
     for i, phase in enumerate(grouped_phases):
-        if "Mixing" in phase[-1]:
-            tmp = phase[-1].split(" ")
-            mix_count = tmp[1]
-            for j in range(1, int(mix_count)+1):
-                grouped_phases[i].extend(grouped_phases[i+j])
-                belong_to_mixing.append(i+j)
-    grouped_phases = [phase for i, phase in enumerate(grouped_phases) if i not in belong_to_mixing]
+        if phase and "Mixing" in phase[-1]:
+            # safer extraction of N
+            m = re.search(r"Mixing\s+(\d+)\s+times", phase[-1])
+            if not m:
+                continue
+            mix_count = int(m.group(1))
+            # clamp to available following phases
+            max_take = min(mix_count, len(grouped_phases) - i - 1)
+            for j in range(1, max_take + 1):
+                grouped_phases[i].extend(grouped_phases[i + j])
+                belong_to_mixing.append(i + j)
+    return [p for k, p in enumerate(grouped_phases) if k not in set(belong_to_mixing)]
 
+def _merge_air_gaps_in_phase(phase: list[str]) -> None:
+    """Within a single phase, merge 'Air gap' surrounded aspirates for same container."""
+    to_remove = set()
+    for idx, line in enumerate(phase):
+        if not line.startswith("Air gap"):
+            continue
+        # search upward
+        asp_up = asp_up_idx = None
+        for i in range(idx - 1, -1, -1):
+            if phase[i].startswith("Aspirating"):
+                asp_up_idx = i
+                asp_up = extract_asp_params(phase[i])
+                break
+        # search downward
+        asp_down = asp_down_idx = None
+        for i in range(idx + 1, len(phase)):
+            if phase[i].startswith("Aspirating"):
+                asp_down_idx = i
+                asp_down = extract_asp_params(phase[i])
+                break
+        if asp_up and asp_down:
+            if all(asp_up[k] == asp_down[k] for k in ("well", "labware", "slot")):
+                new_vol = asp_up["vol"] + asp_down["vol"]
+                phase[asp_up_idx] = re.sub(r"Aspirating ([\d.]+) uL",
+                                           f"Aspirating {new_vol} uL",
+                                           phase[asp_up_idx])
+                to_remove.add(asp_down_idx)
+    for i in sorted(to_remove, reverse=True):
+        del phase[i]
 
-    for i, phase in enumerate(grouped_phases):
-        to_remove = set()
-        for idx, line in enumerate(phase):
+def _merge_consecutive_ops_in_phase(phase: list[str]) -> None:
+    """Merge consecutive Aspirating/Dispensing lines by summing volumes."""
+    to_remove = set()
+    idx = 0
+    while idx < len(phase) - 1:
+        cur, nxt = phase[idx], phase[idx + 1]
+        if cur.startswith("Aspirating") and nxt.startswith("Aspirating"):
+            v = float(re.search(r"Aspirating ([\d.]+)", cur).group(1))
+            v2 = float(re.search(r"Aspirating ([\d.]+)", nxt).group(1))
+            phase[idx] = re.sub(r"Aspirating [\d.]+", f"Aspirating {v + v2}", cur)
+            to_remove.add(idx + 1)
+            idx += 1
+        elif cur.startswith("Dispensing") and nxt.startswith("Dispensing"):
+            v = float(re.search(r"Dispensing ([\d.]+)", cur).group(1))
+            v2 = float(re.search(r"Dispensing ([\d.]+)", nxt).group(1))
+            phase[idx] = re.sub(r"Dispensing [\d.]+", f"Dispensing {v + v2}", cur)
+            to_remove.add(idx + 1)
+            idx += 1
+        else:
+            idx += 1
+    for i in sorted(to_remove, reverse=True):
+        del phase[i]
+# ---------------------------------------------------------------------------
 
-            if line.startswith("Air gap"):
-                asp_up = None
-                for i in range(idx-1, -1, -1):
-                    if phase[i].startswith("Aspirating"):
-                        asp_up_idx = i
-                        asp_up = extract_asp_params(phase[i])
-                        break
-                # 向下找最近Aspirating
-                asp_down = None
-                for i in range(idx+1, len(phase)):
-                    if phase[i].startswith("Aspirating"):
-                        asp_down_idx = i
-                        asp_down = extract_asp_params(phase[i])
-                        break
-                if asp_up and asp_down:
-                    params = ['well','labware','slot']
-                    if all(asp_up[k]==asp_down[k] for k in params):
-                        # 合并体积
-                        new_vol = asp_up['vol'] + asp_down['vol']
-                        new_line = re.sub(r"Aspirating ([\d.]+) uL", f"Aspirating {new_vol} uL", phase[asp_up_idx])
-                        phase[asp_up_idx] = new_line
-                        # 标记要删除下面那行
-                        to_remove.add(asp_down_idx)
+def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> List[Dict]:
+    """
+    Parse an Opentrons liquid‑handler log into structured phases and summarize them.
+    Steps:
+      1) read + preprocess
+      2) filter candidate lines
+      3) tokenize (debug) and group into phases
+      4) merge mixing/air‑gap/consecutive ops
+      5) build structured dicts and merge adjacent compatible blocks
+    """
+    raw = _read_log_text(filename, text)
+    lines = _preprocess_text(raw)
+    steps = _filter_step_lines(lines)
 
-        for i in sorted(to_remove, reverse=True):
-            del phase[i]
+    # debug tokenization (kept for visibility)
+    parsed_steps = _tokenize_for_debug(steps)
 
-    # 处理情况：连续出现asp和dis的情况，合并连续的
-    for i, phase in enumerate(grouped_phases):
-        to_remove = set()
-        idx = 0
-        while idx < len(phase) - 1:
-            line = phase[idx]
-            next_line = phase[idx + 1]
-            if line.startswith("Aspirating") and next_line.startswith("Aspirating"):
-                def get_vol(l): return float(re.search(r"Aspirating ([\d.]+)", l).group(1))
-                vol_sum = get_vol(line) + get_vol(next_line)
-                new_line = re.sub(r"Aspirating [\d.]+", f"Aspirating {vol_sum}", line)
-                phase[idx] = new_line
-                to_remove.add(idx + 1)
-                idx += 1
-                # 不递增idx，因为新下一个还需要检查
-            elif line.startswith("Dispensing") and next_line.startswith("Dispensing"):
-                # 合并体积
-                def get_vol(l): return float(re.search(r"Dispensing ([\d.]+)", l).group(1))
-                vol_sum = get_vol(line) + get_vol(next_line)
-                new_line = re.sub(r"Dispensing [\d.]+", f"Dispensing {vol_sum}", line)
-                phase[idx] = new_line
-                to_remove.add(idx + 1)
-                idx += 1
-            else:
-                idx += 1
+    module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
+    grouped_phases = _group_phases(parsed_steps, module_start_regex)
+    grouped_phases = _merge_mixing_phases(grouped_phases)
 
-        for i in sorted(to_remove, reverse=True):
-            del phase[i]
-        
-    
+    # per‑phase cleanups
+    for phase in grouped_phases:
+        _merge_air_gaps_in_phase(phase)
+        _merge_consecutive_ops_in_phase(phase)
 
-    # with open("grouped_phases_new.json", "w") as f:
-    #     json.dump(grouped_phases, f, indent=4) 
-
-     # -------- Build dicts for each phase (liquid vs HS) --------
+    # -------- Build dicts for each phase (liquid vs HS) --------
     outputs = []
     for phase_lines in grouped_phases:
         if any("Heater-Shaker" in l for l in phase_lines):
@@ -611,15 +655,7 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
             outputs.append(build_transfer_liquid_dict_complete(phase_lines))
     # -----------------------------------------------------------
 
-    # with open("outputs.json", "w") as f:
-    #     json.dump(outputs, f, indent=4)
     final_outputs = merge_same_slot_phases(outputs)
-
-    # ------------- Output the final DataFrame -------------
-    # with open("final_outputs.json", "w") as f:
-    #     json.dump(final_outputs, f, indent=4)
-
-
     return final_outputs
 
 def extract_labware_info_from_json(json_data: dict) -> list:
