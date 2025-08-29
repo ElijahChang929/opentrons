@@ -758,7 +758,6 @@ def sanitize_name(name: str) -> str:
 
 
 def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]):
-
     # 给labware_info添加液体信息
     for labware in labware_info:
         for liquid_key, liquid_val in liquid_info.items():
@@ -1041,10 +1040,8 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
                     pass
                     # 通用警告，不输出具体 labware 名称等敏感信息
                     #print(f"[WARN] step {step_idx}, {field}[{item_idx}] 无映射，保留原 slot")
-                    # pass
-    
+                    # pass      
     return protocol_steps
-
 
 
 def parse_protocol(name: str):
@@ -1078,10 +1075,8 @@ def parse_protocol(name: str):
         labware_data = json.load(f)
         #print(json.dumps(labware_data, indent=4))
     labware_info, replace_map = extract_labware_info_from_json(labware_data)
-    
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/prcxi_test/{name}_labware.json', 'w') as f:
     #     json.dump(labware_info, f, indent=4)
-
     enriched_steps = fix_special_cases(enriched_steps)
     enriched_steps = fix_positions(enriched_steps, replace_map)
     # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
