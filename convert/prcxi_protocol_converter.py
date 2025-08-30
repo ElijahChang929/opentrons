@@ -1,5 +1,6 @@
 from pprint import pprint
 import json
+import time
 from platform import node
 import pandas as pd
 from collections import defaultdict
@@ -220,6 +221,7 @@ def is_full_row(wells: List[str]) -> bool:
     return indices == list(range(1, 13))
 
 def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
+
     asp_vols = []
     dis_vols = []
     sources = []
@@ -394,7 +396,7 @@ def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
     merged = []
     last_key = None
     last_block = None
-    print(json.dumps(param_dicts, indent=4))
+
     for d in param_dicts:
         if not d.get("sources") or not d.get("targets"):
             merged.append(d)
@@ -459,11 +461,14 @@ def _read_log_text(filename: str, text: str) -> str:
 def _preprocess_text(raw: str) -> list[str]:
     """Normalize indentation-after-newline and split into non-empty lines."""
     text_ = re.sub(r'\n[ \t]+', '\n', raw)
+    text_ = re.sub(r'\u00b5', 'u', text_)
     return [ln for ln in text_.strip().split('\n')]
 
 def _filter_step_lines(lines: list[str]) -> list[str]:
     """Drop headers/noise and keep candidate step lines."""
     excluded_prefixes = [
+        "Distributing",
+        "Transferring",
         "/Users",
         "Congratulations!",
         "Caught exception:",
@@ -634,11 +639,12 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
 
     # debug tokenization (kept for visibility)
     parsed_steps = _tokenize_for_debug(steps)
-
     module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
     grouped_phases = _group_phases(parsed_steps, module_start_regex)
     grouped_phases = _merge_mixing_phases(grouped_phases)
-
+    with open(f"test_tmp/grouped_phases_{time.time()}.txt", "w") as f:
+        for phase in grouped_phases:
+            f.write("\n".join(phase) + "\n")
     # per‑phase cleanups
     for phase in grouped_phases:
         _merge_air_gaps_in_phase(phase)
@@ -654,6 +660,9 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
     # -----------------------------------------------------------
 
     final_outputs = merge_same_slot_phases(outputs)
+    with open(f"test_tmp/final_outputs_{time.time()}.json", "w") as f:
+        json.dump(final_outputs, f, indent=4)
+
     return final_outputs
 
 def extract_labware_info_from_json(json_data: dict) -> list:
@@ -1062,7 +1071,7 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log_test/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
@@ -1106,7 +1115,7 @@ if __name__ == "__main__":
     file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names[:3]:
+    for name in protocol_names:
         #print(f"Processing protocol: {name}")
         try:
             parse_protocol(name)
