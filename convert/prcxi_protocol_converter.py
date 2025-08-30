@@ -9,6 +9,7 @@ from typing import List, Dict, Optional, Union, Sequence, Literal, Any
 import networkx as nx
 import os
 from pathlib import Path
+import inspect
 _LABWARE_CACHE: Dict[tuple, Any] = {}
 from pylabrobot.resources.opentrons.tube_racks import *
 from pylabrobot.resources.opentrons.tip_racks import *
@@ -17,11 +18,8 @@ import pylabrobot.resources.opentrons.reservoirs as reservoirs
 from pylabrobot.resources.opentrons.plates import *
 import pylabrobot.resources.opentrons.plates as plates
 from pylabrobot.resources.opentrons.module import *
-
 import pylabrobot.resources.opentrons.tip_racks as tip_racks_mod
 import pylabrobot.resources.opentrons.tube_racks as tube_racks_mod
-
-
 
 _DEF_WELL_COUNTS = (384, 96, 48, 24)
 
@@ -56,7 +54,7 @@ def match_labware_class(class_name: str):
     name_l = class_name.lower()
     # Special case: trash – pick the largest reservoir available
     if 'trash' in name_l or 'reservoir' in name_l or 'waste' in name_l:
-        import inspect
+
         trash_candidates = []  # (factory_fn, name, cap)
         for nm, obj in inspect.getmembers(reservoirs, inspect.isfunction):
             # 解析容量，选容量最大的
@@ -129,7 +127,7 @@ def match_labware_class(class_name: str):
 
     target_cap = _parse_capacity_ul(class_name)
 
-    import inspect
+
     candidates = []  # (factory_fn, name, wells, cap)
     for nm, obj in inspect.getmembers(plates, inspect.isfunction):
         nm_l = nm.lower()
@@ -396,7 +394,7 @@ def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
     merged = []
     last_key = None
     last_block = None
-
+    print(json.dumps(param_dicts, indent=4))
     for d in param_dicts:
         if not d.get("sources") or not d.get("targets"):
             merged.append(d)
@@ -1108,7 +1106,7 @@ if __name__ == "__main__":
     file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names:
+    for name in protocol_names[:3]:
         #print(f"Processing protocol: {name}")
         try:
             parse_protocol(name)
