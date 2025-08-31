@@ -523,14 +523,14 @@ def extract_asp_params(line):
 # ---------------------- Log parsing helpers (factored) ----------------------
 _MODULE_START_PATTERNS = [
     r"Setting Target Temperature of Heater-Shaker",
-    r"Engaging Magnetic Module"
+    r"Engaging Magnetic Module",
+    r"Deactivating Temperature Module",
+    r"Disengaging Magnetic Module"
 ]
 _PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
 
-def _read_log_text(filename: str, text: str) -> str:
+def _read_log_text(filename: str) -> str:
     """Return log text: prefer `text` arg, else read from `filename`."""
-    if text:
-        return text
     with open(filename, "r", encoding="utf-8") as f:
         return f.read()
 
@@ -558,6 +558,8 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         "Removing",
         "Logs",
         "ERROR",
+        "Moving to",
+        "Returning tip"
     ]
     steps = []
     for line in lines:
@@ -596,7 +598,11 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
 
         # new liquid series if a 'standalone' Aspirating or a 'Picking up tip'
         starts_with_asp = step.startswith("Aspirating")
-        guard_prev = all(x not in last_sentence for x in ("Air gap", "Moving to", "Transferring", "Picking up tip", "Aspirating"))
+        #guard_prev = all(x not in last_sentence for x in ("Air gap","Transferring", "Picking up tip", "Aspirating"))
+        guard_prev = all(x not in last_sentence for x in (
+    "Air gap", "Moving to", "Transferring", "Picking up tip",
+    "Aspirating", "Dispensing"
+))
         is_tip_pick = "Picking up tip" in step
 
         if is_tip_pick:
@@ -617,22 +623,24 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
         grouped_phases.append(current_phase)
     return grouped_phases
 
-def _merge_mixing_phases(grouped_phases: list[list[str]]) -> list[list[str]]:
-    """If a phase ends with 'Mixing N times ...', append the next N phases to it."""
-
-    belong_to_mixing = []
-    for i, phase in enumerate(grouped_phases):
-        if phase and "Mixing" in phase[-1]:
-            # safer extraction of N
-            m = re.search(r"Mixing\s+(\d+)\s+times", phase[-1])
-            if not m:
-                continue
-            mix_count = int(m.group(1))
-            max_take = min(mix_count, len(grouped_phases) - i - 1)
-            for j in range(1, max_take + 1):
-                grouped_phases[i].extend(grouped_phases[i + j])
-                belong_to_mixing.append(i + j)
-    return [p for k, p in enumerate(grouped_phases) if k not in set(belong_to_mixing)]
+# def _merge_mixing_phases(grouped_phases: list[list[str]]) -> list[list[str]]:
+#     belong_to_mixing = []
+#     for i, phase in enumerate(grouped_phases):
+#         if phase and "Mixing" in phase[-1]:
+#             m = re.search(r"Mixing\s+(\d+)\s+times", phase[-1])
+#             if not m:
+#                 continue
+#             mix_count = int(m.group(1))
+#             max_take = min(mix_count, len(grouped_phases) - i - 1)
+#             for j in range(1, max_take + 1):
+#                 nxt = grouped_phases[i + j]
+#                 head = nxt[0] if nxt else ""
+#                 # --- 关键防护：遇到换枪就别合并 ---
+#                 if head.startswith("Picking up tip") or any("Dropping tip" in ln for ln in nxt):
+#                     break
+#                 grouped_phases[i].extend(nxt)
+#                 belong_to_mixing.append(i + j)
+#     return [p for k, p in enumerate(grouped_phases) if k not in set(belong_to_mixing)]
 
 def _merge_air_gaps_in_phase(phase: list[str]) -> None:
     """Within a single phase, merge 'Air gap' surrounded aspirates for same container."""
@@ -688,7 +696,7 @@ def _merge_consecutive_ops_in_phase(phase: list[str]) -> None:
         del phase[i]
 # ---------------------------------------------------------------------------
 
-def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> List[Dict]:
+def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> List[Dict]:
     """
     Parse an Opentrons liquid‑handler log into structured phases and summarize them.
     Steps:
@@ -698,19 +706,26 @@ def process_liquid_handler_log(filename: str = "test.log", text: str = "") -> Li
       4) merge mixing/air‑gap/consecutive ops
       5) build structured dicts and merge adjacent compatible blocks
     """
-    raw = _read_log_text(filename, text)
+   
+    raw = _read_log_text(filename)
     lines = _preprocess_text(raw)
     steps = _filter_step_lines(lines)
-
+    
     # debug tokenization (kept for visibility)
     module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
     grouped_phases = _group_phases(steps, module_start_regex)
     grouped_phases = _merge_mixing_phases(grouped_phases)
-
+    with open(f"test_tmp/cleaned_phases_{name}.txt", "w") as f:
+        for phase in grouped_phases:
+            for line in phase:
+                f.write(line + "\n")
+            f.write("\n" + "="*40 + "\n")  # 每个 phase 之间加分隔线
     # per‑phase cleanups
     for phase in grouped_phases:
         _merge_air_gaps_in_phase(phase)
         _merge_consecutive_ops_in_phase(phase)
+    #pp.pprint(grouped_phases)    
+
 
     outputs = []
 
@@ -1134,7 +1149,7 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log_test/{name}.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
@@ -1151,7 +1166,7 @@ def parse_protocol(name: str):
         else:
             raise FileNotFoundError(f"No protocol json found in {proto_dir}, except metadata.json/README.json")
 
-    protocol_steps = process_liquid_handler_log(logfile)
+    protocol_steps = process_liquid_handler_log(logfile, name)
     # enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
     # with open(infofile, "r") as f:
     #     labware_data = json.load(f)
@@ -1179,8 +1194,7 @@ if __name__ == "__main__":
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
     for name in protocol_names:
-        
-        print(f"Processing protocol: {name}")
+
         try:
             parse_protocol(name)
         except Exception as e:
