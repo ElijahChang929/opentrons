@@ -525,7 +525,8 @@ _MODULE_START_PATTERNS = [
     r"Setting Target Temperature of Heater-Shaker",
     r"Engaging Magnetic Module",
     r"Deactivating Temperature Module",
-    r"Disengaging Magnetic Module"
+    r"Disengaging Magnetic Module",
+    r"Setting Temperature Module"
 ]
 _PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
 
@@ -559,7 +560,9 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         "Logs",
         "ERROR",
         "Moving to",
-        "Returning tip"
+        "Returning tip",
+        "Mixing",
+        "Touching tip" # 暂时不支持
     ]
     steps = []
     for line in lines:
@@ -714,7 +717,7 @@ def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> Li
     # debug tokenization (kept for visibility)
     module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
     grouped_phases = _group_phases(steps, module_start_regex)
-    grouped_phases = _merge_mixing_phases(grouped_phases)
+    #grouped_phases = _merge_mixing_phases(grouped_phases)
     with open(f"test_tmp/cleaned_phases_{name}.txt", "w") as f:
         for phase in grouped_phases:
             for line in phase:
