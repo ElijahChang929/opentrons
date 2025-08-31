@@ -298,7 +298,6 @@ def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
         if s.startswith("Setting Target Temperature of Heater-Shaker") \
            or s.startswith("Waiting for Heater-Shaker") \
            or s.startswith("Setting Heater-Shaker to Shake at") \
-           or s.startswith("Delaying") \
            or s.startswith("Deactivating Heater") \
            or s.startswith("Deactivating Shaker"):
 

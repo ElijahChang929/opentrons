@@ -1291,7 +1291,21 @@
                 "target_temperature": 37.0,
                 "wait_for_temp": true,
                 "shake_speed": 200.0,
-                "duration_minutes": 60,
+                "duration_minutes": null,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "delay",
+                "minutes": 60,
+                "seconds": 0.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": null,
                 "deactivate_heater": true,
                 "deactivate_shaker": true
             }
@@ -1464,7 +1478,21 @@
                 "target_temperature": 55.0,
                 "wait_for_temp": true,
                 "shake_speed": null,
-                "duration_minutes": 30,
+                "duration_minutes": null,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "delay",
+                "minutes": 30,
+                "seconds": 0.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": null,
                 "deactivate_heater": true,
                 "deactivate_shaker": true
             }
