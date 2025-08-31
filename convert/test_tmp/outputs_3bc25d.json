@@ -1,0 +1,765 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "raw",
+                "text": "Opening Thermocycler lid"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "temperature",
+                "target": 4.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 5,
+            "target_slot": 7
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                "slot": 7,
+                "times": 2,
+                "volume": 4.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 7
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "B1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.5,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 0.5 mL Screwcap on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                "slot": 7,
+                "times": 2,
+                "volume": 5.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "Closing Thermocycler lid"
+            },
+            {
+                "action": "raw",
+                "text": "Setting Thermocycler lid temperature to 90.0 \u00b0C"
+            },
+            {
+                "action": "raw",
+                "text": "Thermocycler starting 1 repetitions of cycle composed of the following steps: [{'temperature': 30, 'hold_time_seconds': 60}, {'temperature': 80, 'hold_time_seconds': 60}, {'temperature': 15, 'hold_time_seconds': 10}]"
+            },
+            {
+                "action": "raw",
+                "text": "Opening Thermocycler lid"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "C1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Opentrons 24 Well Aluminum Block with NEST 0.5 mL Screwcap on Temperature Module GEN2",
+                "slot": 1,
+                "times": 10,
+                "volume": 8.0,
+                "speed": [
+                    92.86,
+                    92.86
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 0.5 mL Screwcap on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 2,
+                "volume": 10.0,
+                "speed": [
+                    92.86,
+                    92.86
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "B1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "C1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "D1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "E1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "F1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "D1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 3,
+                "volume": 8.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "E1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "F1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 0.5 mL Screwcap on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 2,
+                "volume": 5.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    }
+]

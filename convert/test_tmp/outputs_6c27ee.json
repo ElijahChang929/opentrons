@@ -1,0 +1,67 @@
+[
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 10
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 11
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Corning 96 Well Plate 360 uL Flat",
+                "slot": 11,
+                "times": 10,
+                "volume": 30.0,
+                "speed": [
+                    150.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

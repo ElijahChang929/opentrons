@@ -1,0 +1,284 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "temperature",
+                "target": 4.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 6,
+                "volume": 45.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 6,
+                "volume": 45.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 6,
+                "volume": 45.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A4",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 6,
+                "volume": 45.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "Homing pipette plunger on mount right"
+            }
+        ]
+    }
+]

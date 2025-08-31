@@ -1,0 +1,1087 @@
+[
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 6.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Nunc V96 Microwell Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 6.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 3,
+                "volume": 50.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 175.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 175.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 175.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 175.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 3,
+                "volume": 300.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            12
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 12
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            12
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 12
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            12
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 12
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 19.5,
+                "source": {
+                    "well": "A2",
+                    "labware": "Nunc V96 Microwell Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 19.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 19.5,
+                "source": {
+                    "well": "A2",
+                    "labware": "Nunc V96 Microwell Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 19.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Stellar Scientific 96 Cluster Tubes 1200uL on Magnetic Module GEN2",
+                "slot": 4,
+                "times": 25,
+                "volume": 20.0,
+                "speed": [
+                    7.6,
+                    7.6
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            12
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 12
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 39.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 39.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 39.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Stellar Scientific 96 Cluster Tubes 1200uL",
+                    "slot": 2
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 39.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.7,
+                "source": {
+                    "well": "A3",
+                    "labware": "Nunc V96 Microwell Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.7,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.8,
+                "source": {
+                    "well": "A4",
+                    "labware": "Nunc V96 Microwell Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.8,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,2081 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "REAGENT PLATE",
+                "slot": 4,
+                "times": 5,
+                "volume": 100.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "REAGENT PLATE",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                "slot": 10,
+                "times": 15,
+                "volume": 160.0,
+                "speed": [
+                    94.0,
+                    94.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 41.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "REAGENT PLATE",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 41.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 10,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SAMPLE PLATE on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

@@ -12,7 +12,7 @@ import os
 from pathlib import Path
 import inspect
 _LABWARE_CACHE: Dict[tuple, Any] = {}
-from typing import List, Dict, Optional, Tuple
+from typing import List, Dict, Any
 import pprint as pp
 from pylabrobot.resources.opentrons.tube_racks import *
 from pylabrobot.resources.opentrons.tip_racks import *
@@ -194,23 +194,8 @@ def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
             data["deactivate_shaker"] = True
     return data
 
-def extract_float_after_keyword(text: str, keyword: str) -> Optional[float]:
-    match = re.search(fr'{keyword} ([\d.]+)', text)
-    return float(match.group(1)) if match else None
 
-def extract_container_from_line(line: str, keyword: str) -> Optional[Dict[str, Union[str, int, float]]]:
-    # 匹配 from 模式
-    match = re.search(fr'{keyword} [\d.]+ uL .*?from ([A-Z]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
-    if not match:
-        # 匹配 into 模式
-        match = re.search(fr'{keyword} [\d.]+ uL .*?into ([A-Z]\d+) of (.*?) on (\d+).*?at ([\d.]+) uL/sec', line)
-    if match:
-        return {
-            "well": match.group(1),
-            "labware": match.group(2).strip(),
-            "slot": int(match.group(3))
-        }
-    return None
+
 
 def is_full_row(wells: List[str]) -> bool:
     """Returns True if all wells in a row (e.g., A1 to A12) are included"""
@@ -222,288 +207,420 @@ def is_full_row(wells: List[str]) -> bool:
 
 
 
-def _scan_phase_markers(step_lines: List[str]) -> Tuple[Optional[int], Optional[int], List[int], Optional[Dict]]:
-    """
-    返回：
-      aspirate_index, dispense_index, mixing_indices, tip_rack_info
-    """
-    aspirate_index = None
-    dispense_index = None
-    mixing_indices: List[int] = []
-    tip_rack_info: Optional[Dict] = None
+# def _scan_phase_markers(step_lines: List[str]) -> Tuple[Optional[int], Optional[int], List[int], Optional[Dict]]:
+#     """
+#     返回：
+#       aspirate_index, dispense_index, mixing_indices, tip_rack_info
+#     """
+#     aspirate_index = None
+#     dispense_index = None
+#     mixing_indices: List[int] = []
+#     tip_rack_info: Optional[Dict] = None
 
-    for i, line in enumerate(step_lines):
-        if line.startswith(" "):   # 忽略缩进行
-            continue
-        s = line.strip()
-        if s.startswith("Aspirating") and "from" in s and aspirate_index is None:
-            aspirate_index = i
-        elif s.startswith("Dispensing") and "into" in s and dispense_index is None:
-            dispense_index = i
-        elif s.startswith("Mixing"):
-            mixing_indices.append(i)
-        elif s.startswith("Picking up tip"):
-            m = re.search(r'from ([A-H]\d+) of (.*?) on (\d+)', s)
-            if m:
-                tip_rack_info = {
-                    "well": m.group(1),
-                    "type": m.group(2).strip(),
-                    "slot": int(m.group(3))
-                }
-    return aspirate_index, dispense_index, mixing_indices, tip_rack_info
+#     for i, line in enumerate(step_lines):
+#         if line.startswith(" "):   # 忽略缩进行
+#             continue
+#         s = line.strip()
+#         if s.startswith("Aspirating") and "from" in s and aspirate_index is None:
+#             aspirate_index = i
+#         elif s.startswith("Dispensing") and "into" in s and dispense_index is None:
+#             dispense_index = i
+#         elif s.startswith("Mixing"):
+#             mixing_indices.append(i)
+#         elif s.startswith("Picking up tip"):
+#             m = re.search(r'from ([A-H]\d+) of (.*?) on (\d+)', s)
+#             if m:
+#                 tip_rack_info = {
+#                     "well": m.group(1),
+#                     "type": m.group(2).strip(),
+#                     "slot": int(m.group(3))
+#                 }
+#     return aspirate_index, dispense_index, mixing_indices, tip_rack_info
 
 # ---------- 2) 根据位置判断 mixing 阶段 ----------
-def _infer_mix_stage(asp_idx: Optional[int], disp_idx: Optional[int], mixing_indices: List[int]) -> str:
-    """
-    返回 'none' / 'before' / 'after' / 'both'
-    """
-    stage = "none"
-    for idx in mixing_indices:
-        if asp_idx is not None and idx < asp_idx:
-            stage = "before" if stage == "none" else "both"
-        elif disp_idx is not None and idx > disp_idx:
-            stage = "after" if stage == "none" else "both"
-    return stage
+# def _infer_mix_stage(asp_idx: Optional[int], disp_idx: Optional[int], mixing_indices: List[int]) -> str:
+#     """
+#     返回 'none' / 'before' / 'after' / 'both'
+#     """
+#     stage = "none"
+#     for idx in mixing_indices:
+#         if asp_idx is not None and idx < asp_idx:
+#             stage = "before" if stage == "none" else "both"
+#         elif disp_idx is not None and idx > disp_idx:
+#             stage = "after" if stage == "none" else "both"
+#     return stage
 
 # ---------- 3) 第二遍：解析液体学操作 ----------
-def _parse_liquid_ops(step_lines: List[str]):
+def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
     """
-    返回：
-      asp_vols, dis_vols, sources(list), targets(list),
-      asp_flow_rate, dis_flow_rate, blow_out_air_volume(0.0或数值),
-      mix_times(list或0), mix_vol(或None), mix_rate(或None),
-      touch_tip(bool), delays(list或None)
+    返回按原始顺序的动作列表；将连续的 Heater-Shaker 行聚合为一条:
+      {"action":"heater_shaker",
+       "target_temperature":float|None,
+       "wait_for_temp":bool,
+       "shake_speed":float|None,
+       "duration_minutes":int|None,
+       "deactivate_heater":bool,
+       "deactivate_shaker":bool}
+    其它动作同之前：aspirate/dispense/pick_tip/drop_tip/air_gap/blow_out/touch_tip/delay/magnet/temperature/raw
     """
-    asp_vols = []
-    dis_vols = []
-    sources, targets = [], []
-    asp_flow_rate = None
-    dis_flow_rate = None
-    blow_out_air_volume = 0.0
-    mix_times = 0
-    mix_vol = None
-    mix_rate = None
-    touch_tip = False
-    delays = None
+    import re
+    from typing import Optional, Dict, Union, List
 
-    for line in step_lines:
-        if line.startswith(" "):
+    def f_after(s: str, kw: str) -> Optional[float]:
+        m = re.search(rf'{re.escape(kw)}\s+([\d.]+)', s)
+        return float(m.group(1)) if m else None
+
+    def parse_container(line: str, mode_kw: str) -> Optional[Dict[str, Union[str, int]]]:
+        m = re.search(
+            rf'{re.escape(mode_kw)}\s+[\d.]*\s*u?L?.*?(?:from|into|at)\s+([A-H]\d+)\s+of\s+(.*?)\s+on\s+(\d+)',
+            line
+        )
+        if not m:
+            return None
+        return {"well": m.group(1), "labware": m.group(2).strip(), "slot": int(m.group(3))}
+
+    actions: List[Dict] = []
+    # —— Heater-Shaker 聚合状态（遇到非 HS 行时 flush）——
+    hs = None  # dict | None
+
+    def flush_hs():
+        nonlocal hs, actions
+        if hs is not None:
+            actions.append(hs)
+            hs = None
+
+    for raw in step_lines:
+        s = raw.strip()
+        if not s:
             continue
-        s = line.strip()
+
+        # ===== Heater-Shaker 聚合 =====
+        if s.startswith("Setting Target Temperature of Heater-Shaker") \
+           or s.startswith("Waiting for Heater-Shaker") \
+           or s.startswith("Setting Heater-Shaker to Shake at") \
+           or s.startswith("Delaying") \
+           or s.startswith("Deactivating Heater") \
+           or s.startswith("Deactivating Shaker"):
+
+            if hs is None:
+                hs = {
+                    "action": "heater_shaker",
+                    "target_temperature": None,
+                    "wait_for_temp": False,
+                    "shake_speed": None,
+                    "duration_minutes": None,
+                    "deactivate_heater": False,
+                    "deactivate_shaker": False
+                }
+
+            if s.startswith("Setting Target Temperature of Heater-Shaker"):
+                # “… to XX”
+                hs["target_temperature"] = f_after(s, "to")
+
+            elif s.startswith("Waiting for Heater-Shaker"):
+                hs["wait_for_temp"] = True
+
+            elif s.startswith("Setting Heater-Shaker to Shake at"):
+                m = re.search(r'Shake at\s+([\d.]+)\s*RPM', s)
+                if m:
+                    hs["shake_speed"] = float(m.group(1))
+
+            elif s.startswith("Delaying"):
+                m = re.search(r'Delaying for\s+(\d+)\s+minutes', s)
+                if m:
+                    hs["duration_minutes"] = int(m.group(1))
+
+            elif s.startswith("Deactivating Heater"):
+                hs["deactivate_heater"] = True
+
+            elif s.startswith("Deactivating Shaker"):
+                hs["deactivate_shaker"] = True
+
+            # 注意：是“聚合”而不是立即落表，所以 continue
+            continue
+
+        # 走到这里说明当前行**不是** Heater-Shaker，先把上一个 hs flush 掉
+        flush_hs()
+
+        # ===== 常规液体学 / 其它模块 =====
+        matched = False
 
         if s.startswith("Aspirating") and "from" in s:
-            from_val = extract_float_after_keyword(s, "Aspirating")
-            if from_val is not None:
-                asp_vols = from_val
-            src = extract_container_from_line(s, "Aspirating")
-            if src:
-                sources.append(src)
-            asp_flow_rate = extract_float_after_keyword(s, "at")
+            vol = f_after(s, "Aspirating")
+            src = parse_container(s, "Aspirating")
+            rate = f_after(s, "at")
+            actions.append({"action": "aspirate",
+                            "vol": vol if vol is not None else 0.0,
+                            "source": src, "flow_rate": rate})
+            matched = True
 
         elif s.startswith("Dispensing") and "into" in s:
-            to_val = extract_float_after_keyword(s, "Dispensing")
-            if to_val is not None:
-                dis_vols = to_val
-            tgt = extract_container_from_line(s, "Dispensing")
-            if tgt:
-                targets.append(tgt)
-            dis_flow_rate = extract_float_after_keyword(s, "at")
+            vol = f_after(s, "Dispensing")
+            tgt = parse_container(s, "Dispensing")
+            rate = f_after(s, "at")
+            actions.append({"action": "dispense",
+                            "vol": vol if vol is not None else 0.0,
+                            "target": tgt, "flow_rate": rate})
+            matched = True
+
+        elif s.startswith("Picking up tip"):
+            m = re.search(r'from ([A-H]\d+) of (.*?) on (\d+)', s)
+            tip = {"well": m.group(1), "type": m.group(2).strip(), "slot": int(m.group(3))} if m else None
+            actions.append({"action": "pick_tip", "tip_rack": tip})
+            matched = True
+
+        elif s.startswith("Dropping tip"):
+            m = re.search(r'into ([A-H]\d+) of (.*?) on (\d+)', s)
+            loc = {"well": m.group(1), "labware": m.group(2).strip(), "slot": int(m.group(3))} if m else None
+            actions.append({"action": "drop_tip", "location": loc})
+            matched = True
 
         elif s.startswith("Air gap"):
-            v = extract_float_after_keyword(s, "Aspirating")
-            if v is not None:
-                blow_out_air_volume = v
+            m = re.search(r'Air gap(?:\s+with)?\s+([\d.]+)\s*u?L', s, re.IGNORECASE)
+            vol = float(m.group(1)) if m else f_after(s, "Aspirating")
+            actions.append({"action": "air_gap", "vol": vol})
+            matched = True
 
-        elif s.startswith("Mixing"):
-            m = re.search(r'Mixing (\d+) times.*?(\d+\.?\d*)', s)
-            if m:
-                mix_times = [int(m.group(1))]
-                mix_vol = float(m.group(2))
-                mix_rate = extract_float_after_keyword(s, "at")
+        elif s.startswith("Blowing out"):
+            m = re.search(r'Blowing out at\s+([A-H]\d+)\s+of\s+(.*?)\s+on\s+(\d+)', s)
+            at = {"well": m.group(1), "labware": m.group(2).strip(), "slot": int(m.group(3))} if m else None
+            actions.append({"action": "blow_out", "at": at})
+            matched = True
 
         elif "Touching tip" in s:
-            touch_tip = True
+            actions.append({"action": "touch_tip"})
+            matched = True
 
         elif s.startswith("Delaying"):
-            m = re.search(r'Delaying for \d+ minutes and ([\d.]+)', s)
-            if m:
-                delays = [int(float(m.group(1)))]
-    # # save them
-    # with open(f"test_tmp/outputs.json", "w") as f:
-    #     json.dump({
-    #         "step_lines": step_lines,
-    #         "asp_vols": asp_vols,
-    #         "dis_vols": dis_vols,
-    #         "sources": sources,
-    #     "targets": targets,
-    #     "asp_flow_rate": asp_flow_rate,
-    #     "dis_flow_rate": dis_flow_rate,
-    #     "blow_out_air_volume": blow_out_air_volume,
-    #     "mix_times": mix_times,
-    #     "mix_vol": mix_vol,
-    #     "mix_rate": mix_rate,
-    #     "touch_tip": touch_tip,
-    #     "delays": delays
-    # })
-    return (asp_vols, dis_vols, sources, targets, asp_flow_rate, dis_flow_rate,
-            blow_out_air_volume, mix_times, mix_vol, mix_rate, touch_tip, delays)
+            # 注意：此 delay 是**非** Heater-Shaker 的普通延时（因为前面已经 flush 了 hs）
+            m = re.search(r'Delaying for\s+(\d+)\s+minutes(?:\s+and\s+([\d.]+)\s*seconds)?', s)
+            minutes = int(m.group(1)) if m else None
+            seconds = float(m.group(2)) if (m and m.group(2)) else None
+            actions.append({"action": "delay", "minutes": minutes, "seconds": seconds})
+            matched = True
 
-# ---------- 4) 解析模块相关标志 ----------
-def _parse_module_flags(step_lines: List[str]):
-    """
-    返回：
-      temperature_target, temperature_deactivate,
-      magnetic_engage, magnetic_delay_minutes, magnetic_disengage
-    """
-    temperature_target = None
-    temperature_deactivate = False
-    magnetic_engage = False
-    magnetic_delay_minutes = None
-    magnetic_disengage = False
-
-    for line in step_lines:
-        if line.startswith(" "):
-            continue
-        s = line.strip()
-
-        if s.startswith("Setting Temperature Module temperature"):
-            temperature_target = extract_float_after_keyword(s, "to")
-        elif s.startswith("Deactivating Temperature Module"):
-            temperature_deactivate = True
         elif s.startswith("Engaging Magnetic Module"):
-            magnetic_engage = True
+            actions.append({"action": "magnet", "state": "engage"})
+            matched = True
         elif s.startswith("Disengaging Magnetic Module"):
-            magnetic_disengage = True
-        elif s.startswith("Delaying") and magnetic_engage and not magnetic_disengage:
-            m = re.search(r'Delaying for (\d+) minutes', s)
-            if m:
-                magnetic_delay_minutes = int(m.group(1))
+            actions.append({"action": "magnet", "state": "disengage"})
+            matched = True
 
-    return (temperature_target, temperature_deactivate,
-            magnetic_engage, magnetic_delay_minutes, magnetic_disengage)
+        elif s.startswith("Setting Temperature Module temperature"):
+            temp = f_after(s, "to")
+            actions.append({"action": "temperature", "target": temp})
+            matched = True
+        elif s.startswith("Deactivating Temperature Module"):
+            actions.append({"action": "temperature", "state": "off"})
+            matched = True
 
-# ---------- 5) 是否 96 孔整行（多道） ----------
-def _compute_is_96_well(sources: List[Dict], targets: List[Dict]) -> bool:
-    source_wells = [s['well'] for s in sources]
-    target_wells = [t['well'] for t in targets]
-    return is_full_row(source_wells) and is_full_row(target_wells)
+        if not matched:
+            actions.append({"action": "raw", "text": s})
 
-# ---------- 6) 组装基础字段 ----------
-def _build_basic_info(sources, targets, tip_rack_info,
-                      asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
-                      blow_out_air_volume, is_96_well, mix_stage,
-                      mix_times, mix_vol, mix_rate, delays) -> Dict:
-    return {
-        "sources": sources,
-        "targets": targets,
-        "tip_racks": [tip_rack_info] if tip_rack_info else [],
-        "use_channels": None,
-        "asp_vols": asp_vols,
-        "asp_flow_rates": [asp_flow_rate] if asp_flow_rate else None,
-        "disp_vols": dis_vols,
-        "dis_flow_rates": [dis_flow_rate] if dis_flow_rate else None,
-        "offsets": None,
-        "touch_tip": any(["Touching tip" in str(x) for x in []]),  # 由上层填充；这里保持接口
-        "liquid_height": None,
-        "blow_out_air_volume": [blow_out_air_volume] if blow_out_air_volume else [0.0],
-        "is_96_well": is_96_well,
-        "mix_stage": mix_stage,
-        "mix_times": mix_times,
-        "mix_vol": mix_vol,
-        "mix_rate": mix_rate,
-        "mix_liquid_height": None,
-        "delays": delays
-    }
+    # 文件结尾如果还有挂着的 HS，别忘了收尾
+    flush_hs()
+    return actions
+# # ---------- 4) 解析模块相关标志 ----------
+# def _parse_module_flags(step_lines: List[str]):
+#     """
+#     返回：
+#       temperature_target, temperature_deactivate,
+#       magnetic_engage, magnetic_delay_minutes, magnetic_disengage
+#     """
+#     temperature_target = None
+#     temperature_deactivate = False
+#     magnetic_engage = False
+#     magnetic_delay_minutes = None
+#     magnetic_disengage = False
+
+#     for line in step_lines:
+#         if line.startswith(" "):
+#             continue
+#         s = line.strip()
+
+#         if s.startswith("Setting Temperature Module temperature"):
+#             temperature_target = extract_float_after_keyword(s, "to")
+#         elif s.startswith("Deactivating Temperature Module"):
+#             temperature_deactivate = True
+#         elif s.startswith("Engaging Magnetic Module"):
+#             magnetic_engage = True
+#         elif s.startswith("Disengaging Magnetic Module"):
+#             magnetic_disengage = True
+#         elif s.startswith("Delaying") and magnetic_engage and not magnetic_disengage:
+#             m = re.search(r'Delaying for (\d+) minutes', s)
+#             if m:
+#                 magnetic_delay_minutes = int(m.group(1))
+
+#     return (temperature_target, temperature_deactivate,
+#             magnetic_engage, magnetic_delay_minutes, magnetic_disengage)
+
+# # ---------- 5) 是否 96 孔整行（多道） ----------
+# def _compute_is_96_well(sources: List[Dict], targets: List[Dict]) -> bool:
+#     source_wells = [s['well'] for s in sources]
+#     target_wells = [t['well'] for t in targets]
+#     return is_full_row(source_wells) and is_full_row(target_wells)
+
+# # ---------- 6) 组装基础字段 ----------
+# def _build_basic_info(sources, targets, tip_rack_info,
+#                       asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
+#                       blow_out_air_volume, is_96_well, mix_stage,
+#                       mix_times, mix_vol, mix_rate, delays) -> Dict:
+#     return {
+#         "sources": sources,
+#         "targets": targets,
+#         "tip_racks": [tip_rack_info] if tip_rack_info else [],
+#         "use_channels": None,
+#         "asp_vols": asp_vols,
+#         "asp_flow_rates": [asp_flow_rate] if asp_flow_rate else None,
+#         "disp_vols": dis_vols,
+#         "dis_flow_rates": [dis_flow_rate] if dis_flow_rate else None,
+#         "offsets": None,
+#         "touch_tip": any(["Touching tip" in str(x) for x in []]),  # 由上层填充；这里保持接口
+#         "liquid_height": None,
+#         "blow_out_air_volume": [blow_out_air_volume] if blow_out_air_volume else [0.0],
+#         "is_96_well": is_96_well,
+#         "mix_stage": mix_stage,
+#         "mix_times": mix_times,
+#         "mix_vol": mix_vol,
+#         "mix_rate": mix_rate,
+#         "mix_liquid_height": None,
+#         "delays": delays
+#     }
 
 # ---------- 7) 主函数：只做编排 ----------
-def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
-    # 第一遍：标记关键位置 & tip rack
-    asp_idx, disp_idx, mixing_indices, tip_rack_info = _scan_phase_markers(step_lines)
+# def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
+#     # 第一遍：标记关键位置 & tip rack
+#     # asp_idx, disp_idx, mixing_indices, tip_rack_info = _scan_phase_markers(step_lines)
 
-    # pp.pprint({
-    #     "asp_idx": asp_idx,
-    #     "disp_idx": disp_idx,
-    #     "mixing_indices": mixing_indices,
-    #     "tip_rack_info": tip_rack_info
-    # })
+#     # # pp.pprint({
+#     # #     "asp_idx": asp_idx,
+#     # #     "disp_idx": disp_idx,
+#     # #     "mixing_indices": mixing_indices,
+#     # #     "tip_rack_info": tip_rack_info
+#     # # })
 
-    mix_stage = _infer_mix_stage(asp_idx, disp_idx, mixing_indices)
+#     # mix_stage = _infer_mix_stage(asp_idx, disp_idx, mixing_indices)
     
-    # 第二遍：解析液体操作
-    (asp_vols, dis_vols, sources, targets, asp_flow_rate, dis_flow_rate,
-     blow_out_air_volume, mix_times, mix_vol, mix_rate, touch_tip, delays) = _parse_liquid_ops(step_lines)
+#     # 第二遍：解析液体操作
+#     (asp_vols, dis_vols, sources, targets, asp_flow_rate, dis_flow_rate,
+#      blow_out_air_volume, mix_times, mix_vol, mix_rate, touch_tip, delays) = _parse_liquid_ops(step_lines)
 
-    # 模块标志
-    (temperature_target, temperature_deactivate,
-     magnetic_engage, magnetic_delay_minutes, magnetic_disengage) = _parse_module_flags(step_lines)
+#     # 模块标志
+#     (temperature_target, temperature_deactivate,
+#      magnetic_engage, magnetic_delay_minutes, magnetic_disengage) = _parse_module_flags(step_lines)
 
-    # 96 孔整行判定
-    is_96_well = _compute_is_96_well(sources, targets)
+#     # 96 孔整行判定
+#     is_96_well = _compute_is_96_well(sources, targets)
 
-    # 组装基础信息
-    basic_info = {
-        **_build_basic_info(sources, targets, tip_rack_info,
-                            asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
-                            blow_out_air_volume, is_96_well, mix_stage,
-                            mix_times, mix_vol, mix_rate, delays),
-        "touch_tip": touch_tip,  # 回填
-    }
+#     # 组装基础信息
+#     basic_info = {
+#         **_build_basic_info(sources, targets, tip_rack_info,
+#                             asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
+#                             blow_out_air_volume, is_96_well, mix_stage,
+#                             mix_times, mix_vol, mix_rate, delays),
+#         "touch_tip": touch_tip,  # 回填
+#     }
 
-    # 模板分支
-    if magnetic_engage or magnetic_disengage:
-        return {
-            "template": "transfer_with_magnetic",
-            **basic_info,
-            "magnetic_engage": magnetic_engage,
-            "magnetic_delay_minutes": magnetic_delay_minutes,
-            "magnetic_disengage": magnetic_disengage
+#     # 模板分支
+#     if magnetic_engage or magnetic_disengage:
+#         return {
+#             "template": "transfer_with_magnetic",
+#             **basic_info,
+#             "magnetic_engage": magnetic_engage,
+#             "magnetic_delay_minutes": magnetic_delay_minutes,
+#             "magnetic_disengage": magnetic_disengage
+#         }
+#     elif temperature_target is not None:
+#         return {
+#             "template": "transfer_with_temperature",
+#             **basic_info,
+#             "temperature_target": temperature_target,
+#             "temperature_deactivate": temperature_deactivate
+#         }
+#     else:
+#         return {"template": "transfer", **basic_info}
+
+
+
+def collapse_mixes(actions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    把单个 phase 里连续的同孔 Aspirate→Dispense 对折叠为一条 mix：
+      输出的 mix 结构：
+        {
+          "action": "mix",
+          "well": str, "labware": str, "slot": int,
+          "times": int,              # 成功折叠的 AD 对数
+          "volume": float,           # 采用第一对的体积
+          "speed": (asp_rate, dis_rate)  # 采用第一对的吸/放速率
         }
-    elif temperature_target is not None:
-        return {
-            "template": "transfer_with_temperature",
-            **basic_info,
-            "temperature_target": temperature_target,
-            "temperature_deactivate": temperature_deactivate
-        }
-    else:
-        return {"template": "transfer", **basic_info}
+    其余动作保持原顺序。
+    """
+    out = []
+    i, n = 0, len(actions)
 
-def merge_same_slot_phases(param_dicts: List[Dict]) -> List[Dict]:
-    merged = []
-    last_key = None
-    last_block = None
+    # 碰到这些动作就认为中断混匀序列
+    breakers = {"pick_tip", "drop_tip", "touch_tip", "blow_out", "delay",
+                "magnet", "temperature", "heater_shaker", "raw"}
 
-    for d in param_dicts:
-        if not d.get("sources") or not d.get("targets"):
-            merged.append(d)
-            last_key = None
-            last_block = None
-            continue
+    def same_container(a, b) -> bool:
+        return bool(a and b and
+                    a.get("well") == b.get("well") and
+                    a.get("slot") == b.get("slot"))
 
-        key = (
-            d["template"],
-            d["sources"][0]["slot"],
-            d["targets"][0]["slot"],
-            d.get("mix_stage"),
-            d.get("is_96_well"),
-            d.get("touch_tip"),
-            d.get("blow_out_air_volume", [0])[0]
-        )
+    while i < n:
+        # 尝试从 i 开始识别一段 aspirate->dispense（在位）
+        if i + 1 < n:
+            a0, d0 = actions[i], actions[i + 1]
+            if (a0.get("action") == "aspirate"
+                and d0.get("action") == "dispense"
+                and same_container(a0.get("source"), d0.get("target"))):
 
-        if last_key == key and last_block:
-            for field in ['asp_vols', 'disp_vols', 'sources', 'targets',
-                          'tip_racks', 'asp_flow_rates', 'dis_flow_rates',
-                          'blow_out_air_volume', 'delays']:
-                if field in d:
-                    if not isinstance(last_block[field], list):
-                        last_block[field] = [last_block[field]]
-                    last_block[field].extend(d[field] if isinstance(d[field], list) else [d[field]])
-        else:
-            merged.append(d)
-            last_key = key
-            last_block = d
+                base_src   = a0.get("source")
+                base_vol   = a0.get("vol")
+                asp_rate0  = a0.get("flow_rate")
+                dis_rate0  = d0.get("flow_rate")
+                times = 1
+                j = i + 2
 
-    return merged
+                # 吃后续最大连续块：严格 AD 成对、同孔、体积一致、不中断
+                while j + 1 < n:
+                    x, y = actions[j], actions[j + 1]
+                    if x.get("action") in breakers or y.get("action") in breakers:
+                        break
+                    if not (x.get("action") == "aspirate" and y.get("action") == "dispense"):
+                        break
+                    if not same_container(x.get("source"), y.get("target")):
+                        break
+                    # 体积不一致就停（如需速率也一致，可再加判断）
+                    if x.get("vol") != base_vol:
+                        break
+                    times += 1
+                    j += 2
+
+                # times>=2 才折叠为 mix；只有一对就原样保留更直观
+                if times >= 2:
+                    out.append({
+                        "action": "mix",
+                        "well":   base_src.get("well"),
+                        "labware":base_src.get("labware"),
+                        "slot":   base_src.get("slot"),
+                        "times":  times,
+                        "volume": base_vol,
+                        "speed":  (asp_rate0, dis_rate0)
+                    })
+                    i = j
+                    continue
+                else:
+                    out.append(a0); out.append(d0)
+                    i += 2
+                    continue
+
+        # 不是 mix 起点，原样输出一条
+        out.append(actions[i])
+
+        i += 1
+
+    return out
 
 def extract_asp_params(line):
 # 例子：Aspirating 30.0 uL from A2 of reagent stock on 3 at 940.0 uL/sec
@@ -526,7 +643,8 @@ _MODULE_START_PATTERNS = [
     r"Engaging Magnetic Module",
     r"Deactivating Temperature Module",
     r"Disengaging Magnetic Module",
-    r"Setting Temperature Module"
+    r"Setting Temperature Module",
+    r"Incubating"
 ]
 _PREPOSITIONS = [' from ', ' to ', ' on ', ' of ', ' into ']
 
@@ -562,17 +680,21 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         "Moving to",
         "Returning tip",
         "Mixing",
-        "Touching tip" # 暂时不支持
-    ]
+        "Touching tip",
+        "Transfer",
+        "Protocol",
+        "Air gap",
+        "========",
+        "~~","--",
+        "THIS",
+        "protocol",
+        "There"
+              ]
     steps = []
     for line in lines:
         if not line.strip():
             continue
         if line.startswith("        "):   # deep‑indented subline
-            continue
-        if line.startswith("~~"):         # separators
-            continue
-        if "--" in line:                  # noise blocks
             continue
         if line.endswith(":"):            # section headers
             continue
@@ -603,7 +725,7 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
         starts_with_asp = step.startswith("Aspirating")
         #guard_prev = all(x not in last_sentence for x in ("Air gap","Transferring", "Picking up tip", "Aspirating"))
         guard_prev = all(x not in last_sentence for x in (
-    "Air gap", "Moving to", "Transferring", "Picking up tip",
+    "Moving to",  "Picking up tip",
     "Aspirating", "Dispensing"
 ))
         is_tip_pick = "Picking up tip" in step
@@ -699,6 +821,121 @@ def _merge_consecutive_ops_in_phase(phase: list[str]) -> None:
         del phase[i]
 # ---------------------------------------------------------------------------
 
+
+
+def coalesce_transfer_phases(phases):
+    """把相邻路由一致的液体移动 phase 合并；纯 mix 的 phase 若与上下相邻路由槽位重合，也并入对应块。"""
+
+    def _phase_route(phase_actions):
+        """返回 (src_slot, dst_slot) 或 None。要求 aspirate/dispense 各自的槽位唯一。"""
+        src_slots = {
+            a["source"]["slot"]
+            for a in phase_actions
+            if a.get("action") == "aspirate" and a.get("source") and "slot" in a["source"]
+        }
+        dst_slots = {
+            a["target"]["slot"]
+            for a in phase_actions
+            if a.get("action") == "dispense" and a.get("target") and "slot" in a["target"]
+        }
+        if src_slots and dst_slots and len(src_slots) == 1 and len(dst_slots) == 1:
+            return (next(iter(src_slots)), next(iter(dst_slots)))
+        return None
+
+    def _mix_slots(phase_actions):
+        """收集本 phase 中 mix 涉及的槽位集合（若有）。"""
+        return {
+            a.get("slot")
+            for a in phase_actions
+            if a.get("action") == "mix" and isinstance(a.get("slot"), int)
+        }
+
+    high_level = []
+    cur = None  # 正在合并的 transfer_liquid 块：{"template":"transfer_liquid","route_key":(s,d),"route":{...},"actions":[...]}
+    pending_mix = []  # 暂存需要并入“下一段路由”的 mix-only actions
+
+    i = 0
+    while i < len(phases):
+        actions = phases[i]
+        route = _phase_route(actions)
+
+        # 在处理当前段前，若有挂起的 pending_mix 且“当前段是路由段”，且槽位重合，则把 pending_mix 先并入
+        if pending_mix and route is not None:
+            s, d = route
+            mix_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
+            if (s in mix_slots) or (d in mix_slots):
+                # 若当前已有合并块且路由匹配，就把 pending_mix 追加到当前块；
+                # 否则开新块并把 pending_mix 放前面
+                if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
+                    cur["actions"].extend(pending_mix)
+                else:
+                    if cur is not None:
+                        high_level.append(cur)
+                    cur = {
+                        "template": "transfer_liquid",
+                        "route_key": route,
+                        "route": {"source_slot": s, "target_slot": d},
+                        "actions": list(pending_mix),  # 先塞 pending_mix
+                    }
+                pending_mix = []  # 清空
+
+        if route is None:
+            # 非路由段：优先尝试作为 mix-only 并入上下
+            mix_slots = _mix_slots(actions)
+
+            if mix_slots:
+                # 1) 先尝试并到“当前已开的路由块”
+                if cur is not None and cur.get("template") == "transfer_liquid":
+                    s, d = cur["route_key"]
+                    if (s in mix_slots) or (d in mix_slots):
+                        cur["actions"].extend(actions)
+                        i += 1
+                        continue
+
+                # 2) 向前看下一段
+                next_route = _phase_route(phases[i + 1]) if (i + 1 < len(phases)) else None
+                if next_route is not None:
+                    s2, d2 = next_route
+                    if (s2 in mix_slots) or (d2 in mix_slots):
+                        # 先挂起，等下一段路由时并入
+                        pending_mix.extend(actions)
+                        i += 1
+                        continue
+
+            # 3) 上下都并不进去，则当作 other_devices 落地
+            if cur is not None:
+                high_level.append(cur)
+                cur = None
+            high_level.append({"template": "other_devices", "actions": actions})
+            i += 1
+            continue
+
+        # 路由段：常规合并
+        if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
+            cur["actions"].extend(actions)
+        else:
+            if cur is not None:
+                high_level.append(cur)
+            s, d = route
+            cur = {
+                "template": "transfer_liquid",
+                "route": {"source_slot": s, "target_slot": d},
+                "actions": list(actions),
+            }
+        i += 1
+
+    # 循环结束：如果还挂着 pending_mix，尽量塞到当前块；否则单独落地
+    if pending_mix:
+        if cur is not None and cur.get("template") == "transfer_liquid":
+            cur["actions"].extend(pending_mix)
+        else:
+            high_level.append({"template": "other_devices", "actions": pending_mix})
+
+    if cur is not None:
+        high_level.append(cur)
+
+    return high_level
+
 def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> List[Dict]:
     """
     Parse an Opentrons liquid‑handler log into structured phases and summarize them.
@@ -718,33 +955,28 @@ def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> Li
     module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
     grouped_phases = _group_phases(steps, module_start_regex)
     #grouped_phases = _merge_mixing_phases(grouped_phases)
-    with open(f"test_tmp/cleaned_phases_{name}.txt", "w") as f:
-        for phase in grouped_phases:
-            for line in phase:
-                f.write(line + "\n")
-            f.write("\n" + "="*40 + "\n")  # 每个 phase 之间加分隔线
-    # per‑phase cleanups
-    for phase in grouped_phases:
-        _merge_air_gaps_in_phase(phase)
-        _merge_consecutive_ops_in_phase(phase)
-    #pp.pprint(grouped_phases)    
+    # with open(f"test_tmp/cleaned_phases_{name}.txt", "w") as f:
+    #     for phase in grouped_phases:
+    #         for line in phase:
+    #             f.write(line + "\n")
+    #         f.write("\n" + "="*40 + "\n")  # 每个 phase 之间加分隔线
 
 
-    outputs = []
-
+    phases = []
     for phase_lines in grouped_phases:
-        if any("Heater-Shaker" in l for l in phase_lines):
-            outputs.append(build_heater_shaker_dict(phase_lines))
-        else:
-            outputs.append(build_transfer_liquid_dict_complete(phase_lines))
-    # -----------------------------------------------------------
-    # with open(f"test_tmp/outputs_{time.time()}.json", "w") as f:
-    #     json.dump(outputs, f, indent=4)
+        phases.append(collapse_mixes(_parse_liquid_ops(phase_lines)))
 
-    final_outputs = merge_same_slot_phases(outputs)
+    # 相邻同路由的“移动液体”phase 合并；其余落 other_devices
+    high_level_steps = coalesce_transfer_phases(phases)
+
+    # 如果还想保留原始 phases，可同时写两个文件；否则直接覆盖原输出
+    with open(f"test_tmp/outputs_{name}.json", "w") as f:
+        json.dump(high_level_steps, f, indent=4)
+
+    # final_outputs = collapse_mixes(outputs)
 
 
-    return final_outputs
+    return #final_outputs
 
 def extract_labware_info_from_json(json_data: dict) -> list:
     """

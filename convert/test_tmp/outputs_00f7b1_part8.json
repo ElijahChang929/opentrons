@@ -1,0 +1,717 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Deep Well Plate 2mL",
+                "slot": 4,
+                "times": 10,
+                "volume": 180.0,
+                "speed": [
+                    188.0,
+                    188.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 87.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 87.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 6,
+                "volume": 135.0,
+                "speed": [
+                    188.0,
+                    188.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            9
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 9
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 165.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 9.4
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            9,
+            9
+        ],
+        "route": {
+            "source_slot": 9,
+            "target_slot": 9
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            9
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 9
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 9.4
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            9
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 9
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 9.4
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 0.76
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 12.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 3,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 17.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 20,
+                "volume": 15.0,
+                "speed": [
+                    7.6,
+                    15.2
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 5,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 0.76
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "Homing pipette plunger on mount right"
+            }
+        ]
+    }
+]

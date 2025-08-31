@@ -1,0 +1,308 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 5,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "H1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 197.65,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluent",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 197.65,
+                "target": {
+                    "well": "A1",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 186.73,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluent",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 186.73,
+                "target": {
+                    "well": "A2",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 185.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluent",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 185.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Sample Rack in Slot 1",
+                "slot": 1,
+                "times": 6,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.35,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Rack in Slot 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 2.35,
+                "target": {
+                    "well": "A1",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Sample Rack in Slot 1",
+                "slot": 1,
+                "times": 3,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 4,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "B1",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Sample Rack in Slot 4",
+                "slot": 4,
+                "times": 6,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 13.27,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Rack in Slot 4",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 13.27,
+                "target": {
+                    "well": "A2",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Sample Rack in Slot 4",
+                "slot": 4,
+                "times": 3,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "C1",
+                    "type": "Opentrons OT-2 96 Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Sample Rack in Slot 7",
+                "slot": 7,
+                "times": 6,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Rack in Slot 7",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Destination Plate",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Sample Rack in Slot 7",
+                "slot": 7,
+                "times": 3,
+                "volume": 20.0,
+                "speed": [
+                    7.56,
+                    7.56
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

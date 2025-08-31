@@ -1,0 +1,1968 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A12",
+                "labware": "NEST 12 Well Reservoir 15 mL",
+                "slot": 3,
+                "times": 20,
+                "volume": 180.0,
+                "speed": [
+                    480.0,
+                    480.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 72.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 82.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 5,
+                "volume": 112.0,
+                "speed": [
+                    48.0,
+                    48.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 72.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 82.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 5,
+                "volume": 112.0,
+                "speed": [
+                    48.0,
+                    48.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 72.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 82.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 5,
+                "volume": 112.0,
+                "speed": [
+                    48.0,
+                    48.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 7,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 112.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 112.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 112.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 112.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "B3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 112.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 112.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "C3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "D3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 11
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "EMPTY TIP RACK",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 120.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 188.0
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 15,
+                "volume": 36.0,
+                "speed": [
+                    96.0,
+                    188.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 188.0
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 15,
+                "volume": 36.0,
+                "speed": [
+                    96.0,
+                    188.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "E3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 192.0
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                "slot": 1,
+                "times": 15,
+                "volume": 36.0,
+                "speed": [
+                    96.0,
+                    192.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 7,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "engage"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 10,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "USING SINGLE CHANNEL FOR UNFILLED COLUMN"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 1,
+            "target_slot": 10
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "F3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 19.200000000000003
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                },
+                "flow_rate": 96.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "magnet",
+                "state": "disengage"
+            }
+        ]
+    }
+]

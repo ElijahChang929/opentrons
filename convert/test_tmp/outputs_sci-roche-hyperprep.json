@@ -1,0 +1,2043 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "raw",
+                "text": "THIS IS A DRY RUN"
+            },
+            {
+                "action": "raw",
+                "text": "TIP REUSING"
+            },
+            {
+                "action": "raw",
+                "text": "THIS IS A NO MODULE RUN"
+            },
+            {
+                "action": "raw",
+                "text": "THIS PROTOCOL WILL REUSE TIPS FOR WASHES"
+            },
+            {
+                "action": "raw",
+                "text": "<protocol>"
+            },
+            {
+                "action": "raw",
+                "text": "There are 8 Samples"
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 2.5
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 2.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                "slot": 3,
+                "times": 3,
+                "volume": 45.0,
+                "speed": [
+                    75.0,
+                    150.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Deep Well Plate 2mL",
+                "slot": 2,
+                "times": 10,
+                "volume": 98.0,
+                "speed": [
+                    150.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 88.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 44.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 44.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 63.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 63.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                "slot": 1,
+                "times": 70,
+                "volume": 25.0,
+                "speed": [
+                    75.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 1.25
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                "slot": 1,
+                "times": 3,
+                "volume": 10.0,
+                "speed": [
+                    5.0,
+                    10.0
+                ]
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A4",
+                "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                "slot": 3,
+                "times": 2,
+                "volume": 25.0,
+                "speed": [
+                    75.0,
+                    150.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            },
+            {
+                "action": "raw",
+                "text": "=============================================="
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "NEST 96 Deep Well Plate 2mL",
+                "slot": 2,
+                "times": 10,
+                "volume": 50.0,
+                "speed": [
+                    150.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                "slot": 1,
+                "times": 5,
+                "volume": 80.0,
+                "speed": [
+                    150.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 70.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A7",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A10",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A10",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A12",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 225.0
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                "slot": 1,
+                "times": 5,
+                "volume": 32.0,
+                "speed": [
+                    75.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                "slot": 1,
+                "times": 65,
+                "volume": 25.0,
+                "speed": [
+                    150.0,
+                    300.0
+                ]
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A12",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A12",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 37.5
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A12",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    }
+]

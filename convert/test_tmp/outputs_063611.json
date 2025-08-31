@@ -1,0 +1,1208 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 3,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 250.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Rack",
+                    "slot": 2
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,292 @@
+[
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 10 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 4
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            12
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 12
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            1
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "D7",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 5
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "D12",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Opentrons Fixed Trash",
+                "slot": 12,
+                "times": 2,
+                "volume": 40.0,
+                "speed": [
+                    25.0,
+                    50.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            2
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 2
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "B1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 6
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "G8",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 6
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "G8",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Opentrons Fixed Trash",
+                "slot": 12,
+                "times": 3,
+                "volume": 10.0,
+                "speed": [
+                    25.0,
+                    50.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            }
+        ]
+    }
+]

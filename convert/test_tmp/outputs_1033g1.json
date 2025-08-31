@@ -1,0 +1,4293 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "raw",
+                "text": "Latching labware on Heater-Shaker"
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "E1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "F1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "G1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "H1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "E2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "F2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "G2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "H2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "B3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "C3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "D3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "E3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "F3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "G3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "H3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "B4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "C4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "D4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "E4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "F4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "B5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 13.4,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 13.4,
+                "target": {
+                    "well": "C5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "Latching labware on Heater-Shaker"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": 500.0,
+                "duration_minutes": 35,
+                "deactivate_heater": false,
+                "deactivate_shaker": true
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Tip Rack 300 uL",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "E2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "F2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "G2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "H2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "E3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "F3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "G3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "G3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "H3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "H3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "D4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "E4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "F4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
+                    "slot": 11
+                },
+                "flow_rate": 92.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 70.0
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "C5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat on Heater-Shaker Module GEN1",
+                    "slot": 1
+                }
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                }
+            },
+            {
+                "action": "raw",
+                "text": "Latching labware on Heater-Shaker"
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": 500.0,
+                "duration_minutes": 2,
+                "deactivate_heater": false,
+                "deactivate_shaker": true
+            }
+        ]
+    }
+]

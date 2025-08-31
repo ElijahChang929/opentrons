@@ -1,0 +1,3570 @@
+[
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A4",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A5",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A6",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A7",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A8",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A8",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A9",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A9",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A10",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A10",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A11",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A12",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A12",
+                "labware": "Reaction Plate",
+                "slot": 4,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A12",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 8
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A4",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A5",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A6",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A7",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A8",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A8",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A9",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A9",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A10",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A10",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A11",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A12",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A12",
+                "labware": "Reaction Plate",
+                "slot": 5,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A12",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 9
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A1",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A2",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A3",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A4",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A5",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A6",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A6",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A6",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A7",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A7",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A7",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A8",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A8",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A8",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A9",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A9",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A9",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A10",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A10",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A10",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A11",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A11",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A11",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A12",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "heater_shaker",
+                "target_temperature": null,
+                "wait_for_temp": false,
+                "shake_speed": null,
+                "duration_minutes": 0,
+                "deactivate_heater": false,
+                "deactivate_shaker": false
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route": {
+            "source_slot": 7,
+            "target_slot": 6
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 2.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "MMX Plate",
+                    "slot": 7
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                },
+                "flow_rate": 1.5
+            },
+            {
+                "action": "mix",
+                "well": "A12",
+                "labware": "Reaction Plate",
+                "slot": 6,
+                "times": 2,
+                "volume": 8.0,
+                "speed": [
+                    3.0,
+                    3.0
+                ]
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "Reaction Plate",
+                    "slot": 6
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A12",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 10
+                }
+            },
+            {
+                "action": "raw",
+                "text": "deck and prepare Barcode Reaction Mix for Part 3."
+            }
+        ]
+    }
+]
