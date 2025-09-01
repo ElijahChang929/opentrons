@@ -39,6 +39,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -69,6 +79,16 @@
                     "well": "D1",
                     "labware": "Opentrons 24 TubeRack",
                     "slot": 8
+                },
+                "flow_rate": 3.78
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 3.78
             },
@@ -127,6 +147,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "C1",
@@ -171,6 +201,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "D1",
@@ -201,6 +241,16 @@
                     "well": "D1",
                     "labware": "Opentrons 24 TubeRack",
                     "slot": 8
+                },
+                "flow_rate": 3.78
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 3.78
             },
@@ -259,6 +309,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "F1",
@@ -303,6 +363,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "G1",
@@ -347,6 +417,16 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "H1",
@@ -361,7 +441,20 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -391,6 +484,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -421,6 +529,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -451,6 +574,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -480,6 +618,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -511,44 +664,14 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                    "slot": 4
-                },
-                "flow_rate": 50.0
-            },
-            {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 2,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
-            },
-            {
                 "action": "dispense",
-                "vol": 20.0,
+                "vol": 200.0,
                 "target": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
                     "slot": 4
                 },
                 "flow_rate": 150.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A1",
-                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                    "slot": 4
-                }
             }
         ]
     },
@@ -574,16 +697,44 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 2,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -595,6 +746,79 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -612,7 +836,20 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -632,16 +869,284 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 14,
-                "volume": 130.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -664,16 +1169,284 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 14,
-                "volume": 130.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 130.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -720,18 +1493,22 @@
                 "text": "Incubating on magdeck for 5 minutes"
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 5,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 5,
+                "seconds": 0.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -762,6 +1539,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -791,6 +1583,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -822,6 +1629,16 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -832,7 +1649,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -863,6 +1688,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -893,6 +1733,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -922,6 +1777,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -953,6 +1823,16 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 190.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -972,7 +1852,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1003,6 +1891,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1032,6 +1935,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1063,6 +1981,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 185.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1073,16 +2014,384 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 19,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1129,18 +2438,22 @@
                 "text": "Incubating on MagDeck for 3 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1171,6 +2484,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1200,6 +2528,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1231,6 +2574,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1260,7 +2618,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1291,6 +2657,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1320,6 +2701,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1351,6 +2747,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 185.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1361,16 +2780,184 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 9,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1417,18 +3004,22 @@
                 "text": "Incubating on MagDeck for 3 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1459,6 +3050,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1488,6 +3094,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1519,6 +3140,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1548,7 +3184,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1579,6 +3223,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1608,6 +3267,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1639,6 +3313,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 185.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1649,16 +3346,184 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 9,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1705,18 +3570,22 @@
                 "text": "Incubating on MagDeck for 3 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1747,6 +3616,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1776,6 +3660,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1807,6 +3706,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1836,7 +3750,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1867,6 +3789,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1896,6 +3833,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 165.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1927,6 +3879,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 185.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
@@ -1937,16 +3912,184 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 9,
-                "volume": 160.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 160.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 160.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1993,18 +4136,22 @@
                 "text": "Incubating on MagDeck for 3 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            11
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2035,6 +4182,21 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2064,6 +4226,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2094,6 +4271,21 @@
                 },
                 "flow_rate": 150.0
             },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2126,13 +4318,9 @@
                 "text": "Allowing beads to air dry for 2 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 2,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 2,
+                "seconds": 0.0
             }
         ]
     },
@@ -2176,6 +4364,16 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 11
+                },
+                "flow_rate": 150.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -2188,13 +4386,9 @@
                 "text": "Allowing beads to air dry for 10 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 10,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 10,
+                "seconds": 0.0
             }
         ]
     },
@@ -2257,16 +4451,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 15,
-                "volume": 50.0,
-                "speed": [
-                    50.0,
-                    150.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "blow_out",
@@ -2294,13 +4786,9 @@
                 "text": "Incubating at room temp for 10 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 10,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 10,
+                "seconds": 0.0
             }
         ]
     },
@@ -2321,13 +4809,9 @@
                 "text": "Incubating on MagDeck for 2 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 2,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 2,
+                "seconds": 0.0
             }
         ]
     },
@@ -2359,6 +4843,16 @@
                     "slot": 4
                 },
                 "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",

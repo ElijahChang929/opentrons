@@ -9,7 +9,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            2
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -26,6 +34,16 @@
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -60,12 +78,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -100,12 +138,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A4",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A5",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -140,12 +198,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A6",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A7",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -180,12 +258,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A8",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A9",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -220,12 +318,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A10",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A11",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -260,6 +378,29 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A12",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 8.5,
                 "source": {
@@ -280,22 +421,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -325,22 +467,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A2",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -370,22 +513,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A3",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -415,22 +559,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A4",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A4",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -460,22 +605,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A5",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A5",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -505,22 +651,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A6",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A6",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -550,22 +697,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A7",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A7",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -595,22 +743,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A8",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A8",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -640,22 +789,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A9",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A9",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -685,22 +835,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A10",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A10",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -730,22 +881,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A11",
+                    "labware": "cDNA plate",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A11",
                     "labware": "200ul filtertiprack",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -761,6 +913,16 @@
                     "well": "A12",
                     "labware": "sample plate",
                     "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.5,
+                "target": {
+                    "well": "A12",
+                    "labware": "cDNA plate",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },

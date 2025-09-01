@@ -48,6 +48,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -69,11 +79,11 @@
         "template": "transfer_liquid",
         "route_key": [
             2,
-            4
+            2
         ],
         "route": {
             "source_slot": 2,
-            "target_slot": 4
+            "target_slot": 2
         },
         "actions": [
             {
@@ -85,17 +95,218 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 2,
-                "times": 10,
-                "volume": 200.0,
-                "speed": [
-                    75.0,
-                    300.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
             },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -103,6 +314,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
                 },
                 "flow_rate": 10.0
             },
@@ -125,16 +346,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
-                "slot": 4,
-                "times": 10,
-                "volume": 80.0,
-                "speed": [
-                    50.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 80.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -162,13 +571,9 @@
                 "text": "Incubating for 5 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 5,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 5,
+                "seconds": 0.0
             }
         ]
     },
@@ -189,13 +594,9 @@
                 "state": "engage"
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 6,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 6,
+                "seconds": 0.0
             }
         ]
     },
@@ -227,6 +628,16 @@
                     "slot": 4
                 },
                 "flow_rate": 20.0
+            },
+            {
+                "action": "dispense",
+                "vol": 108.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -308,13 +719,19 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 210.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 15.0
             }
         ]
     },
@@ -358,6 +775,16 @@
                     "slot": 4
                 },
                 "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 210.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -439,13 +866,19 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 210.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 15.0
             }
         ]
     },
@@ -489,6 +922,16 @@
                     "slot": 4
                 },
                 "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 210.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -554,13 +997,9 @@
                 "text": "Letting beads dry for 3 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
@@ -613,6 +1052,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -621,16 +1070,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
-                "slot": 4,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    100.0,
-                    200.0
-                ]
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96-Well Plate on Magnetic Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 200.0
             },
             {
                 "action": "blow_out",
@@ -658,13 +1295,9 @@
                 "text": "Incubating for 2 minutes."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 2,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 2,
+                "seconds": 0.0
             }
         ]
     },
@@ -685,13 +1318,9 @@
                 "state": "engage"
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 6,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 6,
+                "seconds": 0.0
             }
         ]
     },
@@ -723,6 +1352,16 @@
                     "slot": 4
                 },
                 "flow_rate": 75.0
+            },
+            {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -801,6 +1440,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -825,6 +1474,16 @@
                     "slot": 3
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -873,6 +1532,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -897,6 +1566,16 @@
                     "slot": 3
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -945,6 +1624,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -969,6 +1658,16 @@
                     "slot": 3
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -1017,6 +1716,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -1053,6 +1762,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -1069,16 +1788,124 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
-                "slot": 3,
-                "times": 6,
-                "volume": 50.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24-Well Aluminum Block on Temperature Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1109,6 +1936,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
@@ -1117,16 +1954,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1173,6 +2198,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "B4",
@@ -1181,16 +2216,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1237,6 +2460,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "C4",
@@ -1245,16 +2478,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1301,6 +2722,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "D4",
@@ -1309,16 +2740,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1365,6 +2984,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "E4",
@@ -1373,16 +3002,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "E4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1429,6 +3246,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "F4",
@@ -1437,16 +3264,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "F4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1493,6 +3508,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "G4",
@@ -1501,16 +3526,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "G4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -1557,6 +3770,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "H4",
@@ -1565,16 +3788,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "H4",
-                "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
-                "slot": 1,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "H4",
+                    "labware": "Opentrons 96 Well Aluminum Block with NEST Well Plate 100 uL",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",

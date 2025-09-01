@@ -17,7 +17,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            9,
+            6
+        ],
+        "route": {
+            "source_slot": 9,
+            "target_slot": 6
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -58,12 +66,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 46.0,
                 "source": {
                     "well": "A3",
                     "labware": "tuberack for detection mix (A3)",
                     "slot": 9
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
                 },
                 "flow_rate": 92.86
             },
@@ -98,12 +126,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "C7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 46.0,
                 "source": {
                     "well": "A3",
                     "labware": "tuberack for detection mix (A3)",
                     "slot": 9
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "D7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
                 },
                 "flow_rate": 92.86
             },
@@ -138,12 +186,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "E7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 46.0,
                 "source": {
                     "well": "A3",
                     "labware": "tuberack for detection mix (A3)",
                     "slot": 9
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "F7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
                 },
                 "flow_rate": 92.86
             },
@@ -178,12 +246,37 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "G7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 46.0,
                 "source": {
                     "well": "A3",
                     "labware": "tuberack for detection mix (A3)",
                     "slot": 9
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 46.0,
+                "target": {
+                    "well": "H7",
+                    "labware": "strip for distribution (column 7)",
+                    "slot": 6
                 },
                 "flow_rate": 92.86
             },
@@ -219,6 +312,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            3
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 3
@@ -263,12 +360,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 7.2,
                 "source": {
                     "well": "A7",
                     "labware": "strip for distribution (column 7)",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -303,6 +420,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 7.2,
                 "source": {
@@ -323,12 +450,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 7.2,
                 "source": {
                     "well": "A7",
                     "labware": "strip for distribution (column 7)",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -363,6 +510,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 7.2,
+                "target": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -374,6 +531,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            3
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 3
@@ -408,22 +569,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -453,22 +615,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -498,22 +661,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -543,22 +707,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -588,22 +753,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -619,6 +785,16 @@
                     "well": "A6",
                     "labware": "incubation plate",
                     "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 2.8,
+                "target": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -648,6 +824,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -682,22 +862,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -727,22 +908,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -772,22 +954,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -817,22 +1000,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -862,22 +1046,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -907,6 +1092,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -918,6 +1113,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            2
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 2
@@ -952,22 +1151,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -997,22 +1197,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1042,22 +1243,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1087,22 +1289,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1132,22 +1335,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1163,6 +1367,16 @@
                     "well": "A6",
                     "labware": "sample plate",
                     "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Fluidigm 96.96 Dynamic Array",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },

@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -35,6 +39,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Axygen 96 Well Plate",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -55,6 +69,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Axygen 96 Well Plate",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 3.0,
                 "source": {
@@ -63,6 +87,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Axygen 96 Well Plate",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",

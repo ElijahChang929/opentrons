@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -21,15 +29,6 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
                 "action": "dispense",
                 "vol": 24.0,
                 "target": {
@@ -50,13 +49,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -69,13 +64,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -84,12 +90,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -99,15 +100,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -130,13 +122,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -149,13 +137,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -164,12 +163,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -179,15 +173,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -210,13 +195,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -229,13 +210,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -244,12 +236,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -259,15 +246,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -290,13 +268,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -309,13 +283,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -324,12 +309,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -339,15 +319,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -370,13 +341,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -389,13 +356,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -404,12 +382,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -419,15 +392,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -450,13 +414,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -469,13 +429,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -484,12 +455,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -499,15 +465,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -530,13 +487,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -549,13 +502,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -564,12 +528,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -579,15 +538,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -610,13 +560,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -629,13 +575,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -652,12 +609,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -677,15 +629,6 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
                 "action": "dispense",
                 "vol": 24.0,
                 "target": {
@@ -706,13 +649,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -725,13 +664,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -740,12 +690,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -755,15 +700,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -786,13 +722,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -805,13 +737,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "B10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -820,12 +763,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -835,15 +773,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -866,13 +795,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -885,13 +810,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "C10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -900,12 +836,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -915,15 +846,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -946,13 +868,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -965,13 +883,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "D10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -980,12 +909,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -995,15 +919,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -1026,13 +941,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -1045,13 +956,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "E10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1060,12 +982,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -1075,15 +992,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -1106,13 +1014,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -1125,13 +1029,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "F10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1140,12 +1055,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -1155,15 +1065,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -1186,13 +1087,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -1205,13 +1102,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "G10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1220,12 +1128,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 48.0,
@@ -1235,15 +1138,6 @@
                     "slot": 1
                 },
                 "flow_rate": 69.645
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
             },
             {
                 "action": "dispense",
@@ -1266,13 +1160,9 @@
                 "flow_rate": 69.645
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "dispense",
@@ -1285,13 +1175,24 @@
                 "flow_rate": 55.716
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 48.0,
+                "target": {
+                    "well": "H10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 55.716
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1315,11 +1216,11 @@
         "template": "transfer_liquid",
         "route_key": [
             7,
-            4
+            7
         ],
         "route": {
             "source_slot": 7,
-            "target_slot": 4
+            "target_slot": 7
         },
         "actions": [
             {
@@ -1331,17 +1232,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "USA Strips 96 Aluminum Block 200 uL",
-                "slot": 7,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    4.56,
-                    4.56
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
             },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Strips 96 Aluminum Block 200 uL",
+                    "slot": 7
+                },
+                "flow_rate": 4.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            7,
+            4
+        ],
+        "route": {
+            "source_slot": 7,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.0,
@@ -1359,6 +1321,16 @@
                     "well": "A1",
                     "labware": "USA Strips 96 Aluminum Block 200 uL",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1408,11 +1380,11 @@
         "template": "transfer_liquid",
         "route_key": [
             9,
-            4
+            9
         ],
         "route": {
             "source_slot": 9,
-            "target_slot": 4
+            "target_slot": 9
         },
         "actions": [
             {
@@ -1424,17 +1396,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "USA Strips 96 Support Base 200 uL",
-                "slot": 9,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    4.56,
-                    4.56
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
             },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "USA Strips 96 Support Base 200 uL",
+                    "slot": 9
+                },
+                "flow_rate": 4.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            9,
+            4
+        ],
+        "route": {
+            "source_slot": 9,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.0,
@@ -1452,6 +1485,16 @@
                     "well": "A12",
                     "labware": "USA Strips 96 Support Base 200 uL",
                     "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1504,25 +1547,409 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "MicroAmp Strips 96 Support Base 100 uL",
-                "slot": 4,
-                "times": 20,
-                "volume": 18.0,
-                "speed": [
-                    7.6,
-                    11.399999999999999
-                ]
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1531,20 +1958,7 @@
                     "labware": "MicroAmp Strips 96 Support Base 100 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route_key": [
-            4,
-            4
-        ],
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -1566,13 +1980,19 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1603,13 +2023,19 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1640,25 +2066,409 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "MicroAmp Strips 96 Support Base 100 uL",
-                "slot": 4,
-                "times": 20,
-                "volume": 18.0,
-                "speed": [
-                    7.6,
-                    11.399999999999999
-                ]
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "aspirate",
+                "vol": 18.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 11.399999999999999
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1689,13 +2499,19 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",
@@ -1726,13 +2542,19 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "MicroAmp Strips 96 Support Base 100 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 4.0
             },
             {
                 "action": "blow_out",

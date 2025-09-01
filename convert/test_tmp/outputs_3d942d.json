@@ -3,18 +3,42 @@
         "template": "other_devices",
         "actions": [
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 5
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -25,16 +49,24 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
-                "slot": 5,
-                "times": 2,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -43,6 +75,41 @@
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
                     "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
                 },
                 "flow_rate": 7.56
             },
@@ -110,11 +177,11 @@
         "template": "transfer_liquid",
         "route_key": [
             1,
-            2
+            1
         ],
         "route": {
             "source_slot": 1,
-            "target_slot": 2
+            "target_slot": 1
         },
         "actions": [
             {
@@ -126,17 +193,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 1,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 2.5,
@@ -158,16 +286,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -186,16 +372,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 1,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -218,16 +452,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -246,16 +538,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 1,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -278,16 +618,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -306,16 +704,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 1,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -338,16 +784,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -358,18 +862,67 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 5
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -380,16 +933,24 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D6",
-                "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
-                "slot": 5,
-                "times": 2,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -398,6 +959,49 @@
                     "well": "D6",
                     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
                     "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            3
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 3
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 3.75,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },
@@ -442,16 +1046,24 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D6",
-                "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
-                "slot": 5,
-                "times": 2,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -460,6 +1072,41 @@
                     "well": "D6",
                     "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
                     "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 3.75,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },
@@ -527,11 +1174,11 @@
         "template": "transfer_liquid",
         "route_key": [
             2,
-            3
+            2
         ],
         "route": {
             "source_slot": 2,
-            "target_slot": 3
+            "target_slot": 2
         },
         "actions": [
             {
@@ -543,17 +1190,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 1.25,
@@ -575,16 +1283,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -603,16 +1369,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -635,16 +1449,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -663,16 +1535,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -695,16 +1615,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -723,16 +1701,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -755,16 +1781,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -783,16 +1867,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -815,16 +1947,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -843,16 +2033,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -875,16 +2113,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -903,16 +2199,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -935,16 +2279,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -963,16 +2365,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 2,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -995,16 +2445,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D2",
-                "labware": "Corning 384 Well Plate 112 uL Flat",
-                "slot": 3,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 1.25,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 3
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",

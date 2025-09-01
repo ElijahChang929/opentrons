@@ -27,9 +27,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
-            "target_slot": 4
+            "target_slot": 3
         },
         "actions": [
             {
@@ -55,16 +59,7 @@
             {
                 "action": "raw",
                 "text": "DONE PRE-WET"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -72,6 +67,16 @@
                     "well": "A1",
                     "labware": "Sample Tuberack",
                     "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Optiplate",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },
@@ -114,9 +119,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
-            "target_slot": 4
+            "target_slot": 3
         },
         "actions": [
             {
@@ -142,16 +151,7 @@
             {
                 "action": "raw",
                 "text": "DONE PRE-WET"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -159,6 +159,16 @@
                     "well": "B1",
                     "labware": "Sample Tuberack",
                     "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Optiplate",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },

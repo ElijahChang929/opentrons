@@ -39,6 +39,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -49,15 +59,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            12,
-            12
-        ],
-        "route": {
-            "source_slot": 12,
-            "target_slot": 12
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -137,6 +139,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "D12",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -147,19 +159,55 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            12
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 12
+        },
         "actions": [
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons Fixed Trash",
-                "slot": 12,
-                "times": 2,
-                "volume": 40.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",
@@ -219,6 +267,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "G8",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -247,6 +305,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "G8",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 2
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -257,19 +325,75 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            12
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 12
+        },
         "actions": [
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons Fixed Trash",
-                "slot": 12,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "blow_out",

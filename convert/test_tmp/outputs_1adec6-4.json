@@ -3,11 +3,11 @@
         "template": "transfer_liquid",
         "route_key": [
             1,
-            2
+            1
         ],
         "route": {
             "source_slot": 1,
-            "target_slot": 2
+            "target_slot": 1
         },
         "actions": [
             {
@@ -19,17 +19,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Thermo-Fast 96, Skirted PCR Plate",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo-Fast 96, Skirted PCR Plate",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 2
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 4.0,
@@ -37,6 +98,16 @@
                     "well": "A1",
                     "labware": "Thermo-Fast 96, Skirted PCR Plate",
                     "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
                 },
                 "flow_rate": 7.56
             },
@@ -67,16 +138,84 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 2,
-                "times": 4,
-                "volume": 200.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",

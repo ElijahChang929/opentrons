@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -51,6 +59,16 @@
                 "flow_rate": 2.0
             },
             {
+                "action": "dispense",
+                "vol": 12.4,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 2.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
@@ -70,12 +88,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -113,6 +126,16 @@
                     "slot": 3
                 },
                 "flow_rate": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 12.4,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 2.0
             },
             {
                 "action": "dispense",

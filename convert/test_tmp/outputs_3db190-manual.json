@@ -12,11 +12,11 @@
         "template": "transfer_liquid",
         "route_key": [
             2,
-            3
+            2
         ],
         "route": {
             "source_slot": 2,
-            "target_slot": 3
+            "target_slot": 2
         },
         "actions": [
             {
@@ -28,16 +28,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Eppendorf 96 Deep Well Block 1000ul",
-                "slot": 2,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    274.7,
-                    274.7
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Block 1000ul",
+                    "slot": 2
+                },
+                "flow_rate": 274.7
             },
             {
                 "action": "drop_tip",
@@ -46,7 +134,20 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -62,6 +163,16 @@
                     "well": "A1",
                     "labware": "Eppendorf 96 Deep Well Block 1000ul",
                     "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "EnduraPlate 96 Well Plate 200uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },

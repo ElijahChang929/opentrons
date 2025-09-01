@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 4
@@ -35,6 +39,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -46,6 +60,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            5
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 5
@@ -80,6 +98,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 5
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -91,6 +119,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            5
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 5
@@ -113,6 +145,16 @@
                     "slot": 3
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "H12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 5
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",

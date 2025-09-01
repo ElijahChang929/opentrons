@@ -9,7 +9,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            7
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -26,6 +34,16 @@
                     "well": "A9",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -66,12 +84,7 @@
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "other_devices",
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -87,6 +100,16 @@
                     "well": "A9",
                     "labware": "reagent plate on Temperature Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -131,7 +154,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            7
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -162,6 +193,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 70.0,
                 "source": {
@@ -180,7 +221,12 @@
                     "slot": 7
                 },
                 "flow_rate": 376.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -202,7 +248,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            7
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -233,6 +287,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 70.0,
                 "source": {
@@ -251,7 +315,12 @@
                     "slot": 7
                 },
                 "flow_rate": 376.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -283,6 +352,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            8
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 8
@@ -317,22 +390,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "reagent reservoir",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
                     "slot": 9
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -348,6 +422,16 @@
                     "well": "A2",
                     "labware": "TAG1 plate on Magnetic Module GEN2",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "reagent reservoir",
+                    "slot": 8
                 },
                 "flow_rate": 94.0
             },
@@ -381,7 +465,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            7
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -412,6 +504,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 70.0,
                 "source": {
@@ -430,7 +532,12 @@
                     "slot": 7
                 },
                 "flow_rate": 376.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -452,7 +559,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            7
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -483,6 +598,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "TAG1 plate on Magnetic Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 70.0,
                 "source": {
@@ -501,7 +626,12 @@
                     "slot": 7
                 },
                 "flow_rate": 376.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,

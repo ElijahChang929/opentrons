@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -21,6 +25,16 @@
                     "well": "B1",
                     "labware": "Source Labware",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Destination Labware",
+                    "slot": 3
                 },
                 "flow_rate": 92.86
             },

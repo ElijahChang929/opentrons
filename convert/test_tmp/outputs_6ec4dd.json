@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            3
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -17,6 +25,16 @@
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -51,12 +69,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 15.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -91,12 +129,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 15.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -131,12 +189,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 15.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -171,12 +249,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 15.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -211,12 +309,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 15.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent plate",
                     "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "PCR plate",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -251,6 +369,29 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -270,6 +411,21 @@
                 },
                 "flow_rate": 7.6
             },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 2.0,
@@ -291,7 +447,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -322,6 +486,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -342,7 +521,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -373,6 +560,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -393,7 +595,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -424,6 +634,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -444,7 +669,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -475,6 +708,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -495,7 +743,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -526,6 +782,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -546,7 +817,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -577,6 +856,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -597,7 +891,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -628,6 +930,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -648,7 +965,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -679,6 +1004,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -699,7 +1039,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -730,6 +1078,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -750,7 +1113,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -781,6 +1152,21 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 2.0,
                 "source": {
@@ -801,7 +1187,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -831,6 +1225,21 @@
                 },
                 "flow_rate": 7.6
             },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "PCR plate",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 2.0,

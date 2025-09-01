@@ -14,6 +14,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            5
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 5
@@ -48,6 +52,16 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 101.0,
                 "source": {
@@ -68,12 +82,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 101.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 102.0,
                 "source": {
                     "well": "A6",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 102.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
                 },
                 "flow_rate": 92.86
             },
@@ -108,6 +142,16 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 103.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -119,9 +163,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
-            "target_slot": 5
+            "target_slot": 4
         },
         "actions": [
             {
@@ -133,17 +181,58 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 4,
-                "times": 2,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            5
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 5
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -165,16 +254,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 3,
-                "volume": 5.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 5.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -183,16 +330,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -202,16 +340,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 4,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -234,16 +400,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -252,16 +476,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -271,16 +486,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 4,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -303,16 +546,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -321,16 +622,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -340,16 +632,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 4,
-                "times": 2,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -372,16 +692,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 3,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -399,6 +777,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -433,22 +815,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -478,22 +861,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -523,22 +907,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -568,22 +953,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -613,22 +999,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -658,22 +1045,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 15.179999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -703,22 +1091,23 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 5.5200000000000005,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -748,16 +1137,514 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
-                "slot": 6,
-                "times": 25,
-                "volume": 300.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "dispense",
+                "vol": 151.79999999999998,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 6
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -771,6 +1658,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            1
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 1
@@ -805,12 +1696,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -845,12 +1756,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -885,12 +1816,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -925,12 +1876,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -965,12 +1936,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -1005,12 +1996,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 18.0,
                 "source": {
                     "well": "A1",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 18.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.56
             },
@@ -1036,9 +2047,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
-            "target_slot": 1
+            "target_slot": 5
         },
         "actions": [
             {
@@ -1050,17 +2065,58 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            1
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 4.0,
@@ -1082,16 +2138,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1100,16 +2214,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1119,16 +2224,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1151,16 +2284,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1169,16 +2360,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1188,16 +2370,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1220,16 +2430,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1238,16 +2506,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1257,16 +2516,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1289,16 +2576,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1307,16 +2652,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1326,16 +2662,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1358,16 +2722,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "E1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1376,16 +2798,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1395,16 +2808,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1427,16 +2868,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "F1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1445,16 +2944,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1464,16 +2954,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1496,16 +3014,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "G1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1514,16 +3090,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1533,16 +3100,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1565,16 +3160,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "H1",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1583,16 +3236,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1602,16 +3246,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1634,16 +3306,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1652,16 +3382,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1671,16 +3392,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1703,16 +3452,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1721,16 +3528,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1740,16 +3538,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1772,16 +3598,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1790,16 +3674,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1809,16 +3684,44 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 5,
-                "times": 2,
-                "volume": 10.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 5
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -1841,16 +3744,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "D2",
-                "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 15.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -1864,6 +3825,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            1
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 1
@@ -1898,12 +3863,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "E2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 22.0,
                 "source": {
                     "well": "D2",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "F2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1938,12 +3923,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "G2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 22.0,
                 "source": {
                     "well": "D2",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 6
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 22.0,
+                "target": {
+                    "well": "H2",
+                    "labware": "ThermoFisher MicroAmp 96 Aluminum Block 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },

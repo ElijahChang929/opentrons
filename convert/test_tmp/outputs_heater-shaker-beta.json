@@ -94,12 +94,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Heater Shaker Plate on Heater-Shaker Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
                     "well": "A1",
                     "labware": "source",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Heater Shaker Plate on Heater-Shaker Module GEN1",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -147,9 +167,14 @@
                 "target_temperature": null,
                 "wait_for_temp": false,
                 "shake_speed": 1500.0,
-                "duration_minutes": 0,
+                "duration_minutes": null,
                 "deactivate_heater": false,
                 "deactivate_shaker": false
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "raw",
@@ -160,11 +185,11 @@
     {
         "template": "transfer_liquid",
         "route_key": [
-            1,
+            6,
             6
         ],
         "route": {
-            "source_slot": 1,
+            "source_slot": 6,
             "target_slot": 6
         },
         "actions": [
@@ -177,16 +202,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "destination",
-                "slot": 6,
-                "times": 10,
-                "volume": 10.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -208,7 +421,20 @@
             {
                 "action": "raw",
                 "text": "current speed 0"
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            6
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -238,12 +464,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "destination",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 80.0,
                 "source": {
                     "well": "A7",
                     "labware": "Heater Shaker Plate on Heater-Shaker Module GEN1",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "destination",
+                    "slot": 6
                 },
                 "flow_rate": 94.0
             },

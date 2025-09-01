@@ -9,7 +9,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -20,17 +28,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -38,6 +99,16 @@
                     "well": "A1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -82,7 +153,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -93,17 +172,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -111,6 +243,16 @@
                     "well": "B1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -155,7 +297,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -166,17 +316,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -184,6 +387,16 @@
                     "well": "C1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -228,7 +441,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -239,17 +460,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -257,6 +531,16 @@
                     "well": "D1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -301,7 +585,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -312,17 +604,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -330,6 +675,16 @@
                     "well": "A2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -374,7 +729,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -385,17 +748,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -403,6 +819,16 @@
                     "well": "B2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -447,7 +873,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -458,17 +892,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -476,6 +963,16 @@
                     "well": "C2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -520,7 +1017,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -531,17 +1036,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -549,6 +1107,16 @@
                     "well": "D2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -597,7 +1165,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -608,17 +1184,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -626,6 +1255,16 @@
                     "well": "A3",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -670,7 +1309,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -681,17 +1328,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B3",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -699,6 +1399,16 @@
                     "well": "B3",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -743,7 +1453,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -754,17 +1472,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C3",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -772,6 +1543,16 @@
                     "well": "C3",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -816,7 +1597,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -827,17 +1616,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D3",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -845,6 +1687,16 @@
                     "well": "D3",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -889,7 +1741,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -900,17 +1760,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -918,6 +1831,16 @@
                     "well": "A4",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "E3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -962,7 +1885,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -973,17 +1904,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B4",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -991,6 +1975,16 @@
                     "well": "B4",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "F3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1035,7 +2029,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1046,17 +2048,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C4",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1064,6 +2119,16 @@
                     "well": "C4",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "G3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1108,7 +2173,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1119,17 +2192,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D4",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1137,6 +2263,16 @@
                     "well": "D4",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "H3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1181,7 +2317,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1192,17 +2336,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1210,6 +2407,16 @@
                     "well": "A5",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1254,7 +2461,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1265,17 +2480,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B5",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1283,6 +2551,16 @@
                     "well": "B5",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1327,7 +2605,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1338,17 +2624,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C5",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1356,6 +2695,16 @@
                     "well": "C5",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1400,7 +2749,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1411,17 +2768,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D5",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D5",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1429,6 +2839,16 @@
                     "well": "D5",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "D5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1473,7 +2893,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1484,17 +2912,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1502,6 +2983,16 @@
                     "well": "A6",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "E5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1546,7 +3037,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1557,17 +3056,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B6",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1575,6 +3127,16 @@
                     "well": "B6",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "F5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1619,7 +3181,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1630,17 +3200,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C6",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1648,6 +3271,16 @@
                     "well": "C6",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "G5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1692,7 +3325,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1703,17 +3344,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D6",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 2,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1721,6 +3415,16 @@
                     "well": "D6",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "H5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1765,7 +3469,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1776,17 +3488,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1794,6 +3559,16 @@
                     "well": "A1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1838,7 +3613,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1849,17 +3632,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1867,6 +3703,16 @@
                     "well": "B1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1911,7 +3757,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1922,17 +3776,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1940,6 +3847,16 @@
                     "well": "C1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -1984,7 +3901,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1995,17 +3920,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2013,6 +3991,16 @@
                     "well": "D1",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "D7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -2057,7 +4045,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2068,17 +4064,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2086,6 +4135,16 @@
                     "well": "A2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "E7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -2130,7 +4189,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2141,17 +4208,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2159,6 +4279,16 @@
                     "well": "B2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "F7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -2203,7 +4333,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2214,17 +4352,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2232,6 +4423,16 @@
                     "well": "C2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "G7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -2276,7 +4477,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2287,17 +4496,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "D2",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 3,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2305,6 +4567,16 @@
                     "well": "D2",
                     "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
                     "slot": 3
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "H7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 92.86
             },
@@ -2354,6 +4626,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            1
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 1
@@ -2391,6 +4667,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A2",
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
@@ -2404,16 +4690,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2421,6 +4698,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2451,16 +4738,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2468,6 +4746,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2498,16 +4786,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2515,6 +4794,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2561,16 +4850,7 @@
             {
                 "action": "raw",
                 "text": "Adding 100uL of TMB Substrate"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2603,6 +4883,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A2",
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
@@ -2616,16 +4906,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2633,6 +4914,16 @@
                     "well": "A4",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2663,16 +4954,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2680,6 +4962,16 @@
                     "well": "A4",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2710,16 +5002,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2727,6 +5010,16 @@
                     "well": "A4",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2773,16 +5066,7 @@
             {
                 "action": "raw",
                 "text": "Adding 100uL of Stop Solution"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2815,6 +5099,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A2",
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
@@ -2828,16 +5122,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2845,6 +5130,16 @@
                     "well": "A7",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2875,16 +5170,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2892,6 +5178,16 @@
                     "well": "A7",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2922,16 +5218,7 @@
                     "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -2939,6 +5226,16 @@
                     "well": "A7",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Nunc MaxiSorp 96 Well Plate 250ul",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },

@@ -43,9 +43,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
-            "target_slot": 1
+            "target_slot": 3
         },
         "actions": [
             {
@@ -57,17 +61,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -89,22 +194,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -114,16 +220,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -146,22 +340,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -171,16 +366,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -203,22 +486,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -228,16 +512,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -260,22 +632,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -285,16 +658,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -317,22 +778,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -342,16 +804,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -374,22 +924,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -399,16 +950,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -431,22 +1070,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -456,16 +1096,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -488,22 +1216,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -513,16 +1242,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -545,22 +1362,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -570,16 +1388,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -602,22 +1508,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -627,16 +1534,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -659,22 +1654,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -684,16 +1680,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "NEST 96 Deep Well Plate 2mL",
-                "slot": 3,
-                "times": 5,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -702,6 +1786,16 @@
                     "well": "A12",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -727,32 +1821,437 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
+                    "slot": 8
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            1
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 1
         },
         "actions": [
             {
-                "action": "pick_tip",
-                "tip_rack": {
-                    "well": "A2",
-                    "type": "Opentrons OT-2 96 Filter Tip Rack 200 uL",
-                    "slot": 8
-                }
-            },
-            {
-                "action": "mix",
-                "well": "A12",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 5,
-                "times": 20,
-                "volume": 200.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 180.0,
                 "source": {
@@ -773,16 +2272,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -805,16 +2362,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -837,16 +2452,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -869,16 +2542,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -901,16 +2632,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -933,16 +2722,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -965,16 +2812,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -997,16 +2902,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -1029,16 +2992,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -1061,16 +3082,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -1093,16 +3172,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -1125,16 +3262,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Cerillo Stratus Armadillo Flat Bottom Plate 96well 200uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",

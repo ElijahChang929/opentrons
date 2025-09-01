@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            11
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 11
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -41,12 +49,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 23.0,
                 "source": {
                     "well": "A1",
                     "labware": "tuberack for incubation mix (A1)",
                     "slot": 8
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
                 },
                 "flow_rate": 92.86
             },
@@ -81,12 +109,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 23.0,
                 "source": {
                     "well": "A1",
                     "labware": "tuberack for incubation mix (A1)",
                     "slot": 8
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
                 },
                 "flow_rate": 92.86
             },
@@ -121,12 +169,32 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "aspirate",
                 "vol": 23.0,
                 "source": {
                     "well": "A1",
                     "labware": "tuberack for incubation mix (A1)",
                     "slot": 8
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
                 },
                 "flow_rate": 92.86
             },
@@ -161,12 +229,37 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 23.0,
                 "source": {
                     "well": "A1",
                     "labware": "tuberack for incubation mix (A1)",
                     "slot": 8
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "sample and dilution strips",
+                    "slot": 11
                 },
                 "flow_rate": 92.86
             },
@@ -202,6 +295,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            11,
+            10
+        ],
         "route": {
             "source_slot": 11,
             "target_slot": 10
@@ -246,12 +343,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 3.0,
                 "source": {
                     "well": "A1",
                     "labware": "sample and dilution strips",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "incubation plate",
+                    "slot": 10
                 },
                 "flow_rate": 7.6
             },
@@ -286,6 +403,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 3.0,
                 "source": {
@@ -306,12 +433,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 3.0,
                 "source": {
                     "well": "A1",
                     "labware": "sample and dilution strips",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "incubation plate",
+                    "slot": 10
                 },
                 "flow_rate": 7.6
             },
@@ -346,22 +493,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -391,6 +539,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -405,16 +563,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -444,6 +593,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
@@ -458,16 +617,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -497,6 +647,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
@@ -511,16 +671,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -550,6 +701,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
@@ -564,16 +725,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -603,6 +755,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "incubation plate",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
@@ -617,16 +779,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -642,6 +795,16 @@
                     "well": "A5",
                     "labware": "sample and dilution strips",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "incubation plate",
+                    "slot": 10
                 },
                 "flow_rate": 7.6
             },

@@ -23,6 +23,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            8,
+            1
+        ],
         "route": {
             "source_slot": 8,
             "target_slot": 1
@@ -68,6 +72,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
+                "action": "dispense",
                 "vol": 90.0,
                 "target": {
                     "well": "B1",
@@ -93,16 +107,7 @@
                     "labware": "Opentrons 10 Tube Rack with NEST 4x50 mL, 6x15 mL Conical",
                     "slot": 8
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 300.0,
@@ -112,6 +117,16 @@
                     "slot": 8
                 },
                 "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 97.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
             },
             {
                 "action": "dispense",
@@ -167,6 +182,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            9,
+            1
+        ],
         "route": {
             "source_slot": 9,
             "target_slot": 1
@@ -201,22 +220,23 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "B1",
                     "labware": "Opentrons OT-2 96 Tip Rack 20 uL",
                     "slot": 10
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 9,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -246,6 +266,16 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "C1",
@@ -257,6 +287,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            1
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 1
@@ -291,22 +325,23 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "D1",
                     "labware": "Opentrons OT-2 96 Tip Rack 20 uL",
                     "slot": 10
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -336,22 +371,23 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "E1",
                     "labware": "Opentrons OT-2 96 Tip Rack 20 uL",
                     "slot": 10
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -381,6 +417,16 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "F1",
@@ -392,6 +438,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            8,
+            1
+        ],
         "route": {
             "source_slot": 8,
             "target_slot": 1
@@ -426,22 +476,23 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Opentrons 10 Tube Rack with NEST 4x50 mL, 6x15 mL Conical",
                     "slot": 8
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -463,22 +514,23 @@
                 "flow_rate": 1000.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Opentrons 10 Tube Rack with NEST 4x50 mL, 6x15 mL Conical",
                     "slot": 8
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -488,6 +540,16 @@
                     "slot": 8
                 },
                 "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NUNC 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 1000.0
             },
             {
                 "action": "dispense",

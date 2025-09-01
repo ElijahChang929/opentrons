@@ -14,6 +14,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -48,16 +52,94 @@
                 "flow_rate": 30.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Deepwell Pro 96 Well Plate 450 uL",
-                "slot": 1,
-                "times": 4,
-                "volume": 40.0,
-                "speed": [
-                    30.0,
-                    30.0
-                ]
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "blow_out",
@@ -79,6 +161,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -113,6 +199,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -121,6 +217,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -153,6 +259,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -161,6 +277,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -193,6 +319,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -201,6 +337,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -233,6 +379,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -241,6 +397,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -273,6 +439,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -281,6 +457,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -313,6 +499,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -321,6 +517,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -353,6 +559,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A13",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -361,6 +577,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A14",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -393,6 +619,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A15",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -401,6 +637,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A16",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -433,6 +679,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A17",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -441,6 +697,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A18",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -473,6 +739,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A19",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -481,6 +757,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A20",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -513,6 +799,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A21",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -521,6 +817,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A22",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -553,6 +859,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A23",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -561,6 +877,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A24",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -588,6 +914,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -622,16 +952,94 @@
                 "flow_rate": 30.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Deepwell Pro 96 Well Plate 450 uL",
-                "slot": 1,
-                "times": 4,
-                "volume": 40.0,
-                "speed": [
-                    30.0,
-                    30.0
-                ]
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Deepwell Pro 96 Well Plate 450 uL",
+                    "slot": 1
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "blow_out",
@@ -653,6 +1061,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -687,6 +1099,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -695,6 +1117,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -727,6 +1159,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -735,6 +1177,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -767,6 +1219,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -775,6 +1237,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -807,6 +1279,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -815,6 +1297,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -847,6 +1339,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -855,6 +1357,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B10",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -887,6 +1399,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B11",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -895,6 +1417,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B12",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -927,6 +1459,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B13",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -935,6 +1477,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B14",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -967,6 +1519,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B15",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -975,6 +1537,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B16",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -1007,6 +1579,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B17",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1015,6 +1597,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B18",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -1047,6 +1639,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B19",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1055,6 +1657,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B20",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -1087,6 +1699,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B21",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1095,6 +1717,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B22",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -1127,6 +1759,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B23",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1135,6 +1777,16 @@
                     "slot": 1
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "B24",
+                    "labware": "Pcr 384 Well Plate 50 uL",
+                    "slot": 2
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",

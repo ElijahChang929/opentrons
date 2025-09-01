@@ -1,9 +1,13 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
-            "target_slot": 3
+            "target_slot": 2
         },
         "actions": [
             {
@@ -15,17 +19,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Agilent 96 Well Plate 500 uL",
-                "slot": 2,
-                "times": 5,
-                "volume": 32.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 32.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 32.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 32.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 32.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 32.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 500 uL",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -33,6 +138,16 @@
                     "well": "A1",
                     "labware": "Agilent 96 Well Plate 500 uL",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 1400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 92.86
             },

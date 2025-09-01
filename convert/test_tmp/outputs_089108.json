@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            11,
+            2
+        ],
         "route": {
             "source_slot": 11,
             "target_slot": 2
@@ -21,6 +25,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -69,16 +83,7 @@
             {
                 "action": "raw",
                 "text": "Select \"Resume\" on the Opentrons app."
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -108,16 +113,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
-                "slot": 2,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -146,16 +209,7 @@
             {
                 "action": "raw",
                 "text": "Select \"Resume\" on the Opentrons app."
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -185,16 +239,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
-                "slot": 2,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 280.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -216,6 +328,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -250,22 +366,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 190.0,
@@ -287,22 +404,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 190.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 190.0,
@@ -310,6 +428,16 @@
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 190.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -379,6 +507,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            11,
+            2
+        ],
         "route": {
             "source_slot": 11,
             "target_slot": 2
@@ -423,22 +555,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 250.0,
@@ -470,41 +603,113 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
-                "slot": 2,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 250.0,
                 "source": {
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -539,12 +744,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 250.0,
                 "source": {
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -579,12 +804,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 250.0,
                 "source": {
                     "well": "A1",
                     "labware": "USA Scientific 96 Deep Well Plate 2.4 mL",
                     "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 250.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -638,6 +883,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            11,
+            3
+        ],
         "route": {
             "source_slot": 11,
             "target_slot": 3
@@ -682,22 +931,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 250.0,
@@ -729,22 +979,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
                     "slot": 3
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 11,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 250.0,
@@ -762,6 +1013,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 275.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_high 96 Well Plate 1200 uL",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -823,6 +1084,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            11,
+            1
+        ],
         "route": {
             "source_slot": 11,
             "target_slot": 1
@@ -843,6 +1108,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Jacky_Shiyi_elution 96 Well Plate 1200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },

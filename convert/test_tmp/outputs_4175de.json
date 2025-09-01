@@ -19,6 +19,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -39,6 +43,16 @@
                     "well": "A6",
                     "labware": "Opentrons 24 Tube Rack with Generic 2 mL Screwcap",
                     "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 11.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Applied Biosystems 96 Well Plate 100 uL on Temperature Module GEN2",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },

@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -35,6 +39,16 @@
                 "flow_rate": 50.0
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 50.0,
                 "source": {
@@ -43,6 +57,16 @@
                     "slot": 2
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 8.6,
+                "target": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -73,16 +97,7 @@
                     "slot": 1
                 },
                 "flow_rate": 50.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -100,6 +115,16 @@
                     "slot": 2
                 },
                 "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 0.3,
+                "target": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "dispense",
@@ -162,6 +187,16 @@
                 "flow_rate": 10.0
             },
             {
+                "action": "dispense",
+                "vol": 4.7,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 45.699999999999996,
                 "source": {
@@ -170,6 +205,16 @@
                     "slot": 2
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 6.9,
+                "target": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -241,6 +286,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -275,16 +324,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -293,16 +400,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -332,16 +430,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 6.4,
+                "target": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -350,16 +506,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -389,16 +536,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 9.2,
+                "target": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -407,16 +612,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -446,16 +642,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 6.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -464,16 +718,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -503,16 +748,74 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "E1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "dispense",
+                "vol": 14.7,
+                "target": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "drop_tip",
@@ -521,16 +824,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -560,16 +854,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "F1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 7.8,
+                "target": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -578,16 +930,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -617,16 +960,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "G1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 5.3,
+                "target": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -635,16 +1036,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -674,16 +1066,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "H1",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 9.6,
+                "target": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "H1",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -692,16 +1142,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -731,16 +1172,74 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "dispense",
+                "vol": 10.3,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "drop_tip",
@@ -749,16 +1248,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -788,16 +1278,74 @@
                 "flow_rate": 50.0
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    25.0,
-                    50.0
-                ]
+                "action": "dispense",
+                "vol": 16.9,
+                "target": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "drop_tip",
@@ -806,16 +1354,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -845,16 +1384,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 8.1,
+                "target": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "C2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -863,16 +1460,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -902,16 +1490,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "D2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "D2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -920,16 +1566,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -959,16 +1596,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "E2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 9.8,
+                "target": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "E2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -977,16 +1672,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1016,16 +1702,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "F2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 6.1,
+                "target": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "F2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",
@@ -1034,16 +1778,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1073,16 +1808,74 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "G2",
-                "labware": "PCR strips",
-                "slot": 1,
-                "times": 3,
-                "volume": 7.5,
-                "speed": [
-                    5.0,
-                    10.0
-                ]
+                "action": "dispense",
+                "vol": 7.7,
+                "target": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.5,
+                "source": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "G2",
+                    "labware": "PCR strips",
+                    "slot": 1
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "drop_tip",

@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            1
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 1
@@ -38,6 +42,16 @@
                 "action": "dispense",
                 "vol": 40.0,
                 "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
                     "well": "A3",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
@@ -91,16 +105,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 80.0,
@@ -122,12 +127,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 72.0,
                 "source": {
                     "well": "A1",
                     "labware": "Agilent 1 Well Reservoir 290 mL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 72.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -152,16 +177,7 @@
             {
                 "action": "raw",
                 "text": "of sample to column 1"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -171,16 +187,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -203,22 +267,23 @@
                 "flow_rate": 37.6
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -228,16 +293,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -260,22 +373,23 @@
                 "flow_rate": 37.6
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -285,16 +399,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -317,22 +479,23 @@
                 "flow_rate": 37.6
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -342,16 +505,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -374,22 +585,23 @@
                 "flow_rate": 37.6
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -399,16 +611,64 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -431,22 +691,23 @@
                 "flow_rate": 37.6
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -456,16 +717,24 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -474,6 +743,69 @@
                     "well": "A6",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 8
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 37.6
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
                 },
                 "flow_rate": 37.6
             },
@@ -498,16 +830,7 @@
             {
                 "action": "raw",
                 "text": "\u02da"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -517,17 +840,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            8,
+            1
+        ],
+        "route": {
+            "source_slot": 8,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 40.0,
@@ -535,6 +959,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -560,27 +994,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -589,6 +1102,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -614,27 +1137,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -643,6 +1245,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -668,27 +1280,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -697,6 +1388,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -722,27 +1423,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -751,6 +1531,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -776,27 +1566,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -805,6 +1674,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -830,27 +1709,106 @@
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 8,
-                "times": 5,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -859,6 +1817,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -896,7 +1864,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -927,12 +1903,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A1",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -957,7 +1966,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -988,12 +2005,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A2",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1018,7 +2068,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1049,12 +2107,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A3",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1079,7 +2170,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1110,12 +2209,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A4",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1140,7 +2272,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1171,12 +2311,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A5",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1201,7 +2374,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1232,12 +2413,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A6",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1262,7 +2476,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1293,12 +2515,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A7",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1323,7 +2578,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 8
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1354,12 +2617,45 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 60.0,
                 "source": {
                     "well": "A8",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -1385,6 +2681,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            8,
+            4
+        ],
         "route": {
             "source_slot": 8,
             "target_slot": 4
@@ -1424,22 +2724,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1474,22 +2780,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1524,22 +2836,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1574,22 +2892,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1624,22 +2948,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1674,22 +3004,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1724,22 +3060,28 @@
                 "flow_rate": 18.8
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1755,6 +3097,21 @@
                     "well": "A2",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 8
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 140.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 18.8
             },

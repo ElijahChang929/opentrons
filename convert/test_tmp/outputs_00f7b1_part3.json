@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -44,22 +48,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -89,16 +94,134 @@
                 "flow_rate": 1.9
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
-                "slot": 1,
-                "times": 6,
-                "volume": 10.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Fisher 96 Well Plate 200 uL on Magnetic Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",

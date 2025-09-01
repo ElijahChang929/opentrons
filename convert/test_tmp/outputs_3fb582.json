@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            9
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 9
@@ -35,22 +39,23 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 9
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 9
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -80,22 +85,23 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 9
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 9
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -125,22 +131,23 @@
                 "flow_rate": 3.78
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 9
+                },
+                "flow_rate": 3.78
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 9
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -156,6 +163,16 @@
                     "well": "A4",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 2
+                },
+                "flow_rate": 3.78
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 9
                 },
                 "flow_rate": 3.78
             },

@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            7
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 7
@@ -44,6 +48,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -55,6 +69,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            7
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 7
@@ -89,16 +107,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Diluted RNA plate on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Diluted RNA plate on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",

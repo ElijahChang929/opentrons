@@ -46,6 +46,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            7
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 7
@@ -80,16 +84,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -98,16 +160,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -137,16 +190,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -155,16 +266,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -194,16 +296,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -212,16 +372,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -251,16 +402,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -269,16 +478,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -308,16 +508,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -326,16 +584,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -365,16 +614,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -383,16 +690,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -422,16 +720,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -440,16 +796,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -479,16 +826,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -497,16 +902,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -536,16 +932,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -554,16 +1008,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -593,16 +1038,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -611,16 +1114,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -650,16 +1144,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -668,16 +1220,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -707,16 +1250,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 4.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.25,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 4.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -772,16 +1373,7 @@
             {
                 "action": "raw",
                 "text": "add adapter to samples"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -811,22 +1403,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -856,22 +1449,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -901,22 +1495,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -946,22 +1541,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -991,22 +1587,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1036,22 +1633,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1081,22 +1679,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1126,22 +1725,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1171,22 +1771,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1216,22 +1817,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1261,22 +1863,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1292,6 +1895,16 @@
                     "well": "A2",
                     "labware": "Master Mix Plate",
                     "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -1340,16 +1953,7 @@
             {
                 "action": "raw",
                 "text": "withdraw tip slowly from liquid"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1387,20 +1991,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A1",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -1411,6 +2006,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -1426,16 +2031,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1445,11 +2041,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1465,16 +2056,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1484,11 +2066,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1512,16 +2089,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1559,20 +2127,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A2",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -1583,6 +2142,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -1598,16 +2167,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1617,11 +2177,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1637,16 +2192,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1656,11 +2202,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1684,16 +2225,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1731,20 +2263,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A3",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -1755,6 +2278,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -1770,16 +2303,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1789,11 +2313,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1809,16 +2328,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1828,11 +2338,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1856,16 +2361,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1903,20 +2399,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A4",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -1927,6 +2414,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -1942,16 +2439,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1961,11 +2449,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -1981,16 +2464,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2000,11 +2474,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2028,16 +2497,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2075,20 +2535,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A5",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2099,6 +2550,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2114,16 +2575,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2133,11 +2585,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2153,16 +2600,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2172,11 +2610,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2200,16 +2633,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2247,20 +2671,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A6",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2271,6 +2686,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2286,16 +2711,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2305,11 +2721,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2325,16 +2736,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2344,11 +2746,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2372,16 +2769,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2419,20 +2807,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A7",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2443,6 +2822,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2458,16 +2847,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2477,11 +2857,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2497,16 +2872,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2516,11 +2882,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2544,16 +2905,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2591,20 +2943,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A8",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2615,6 +2958,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2630,16 +2983,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2649,11 +2993,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2669,16 +3008,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2688,11 +3018,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2716,16 +3041,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2763,20 +3079,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A9",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2787,6 +3094,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2802,16 +3119,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2821,11 +3129,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2841,16 +3144,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2860,11 +3154,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -2888,16 +3177,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2935,20 +3215,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A10",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -2959,6 +3230,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -2974,16 +3255,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2993,11 +3265,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3013,16 +3280,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3032,11 +3290,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3060,16 +3313,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3107,20 +3351,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A11",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -3131,6 +3366,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -3146,16 +3391,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3165,11 +3401,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3185,16 +3416,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3204,11 +3426,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3232,16 +3449,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3279,20 +3487,11 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
-                "action": "aspirate",
-                "vol": 10.0,
-                "source": {
+                "action": "dispense",
+                "vol": 7.75,
+                "target": {
                     "well": "A12",
                     "labware": "Sample Plate on Thermocycler Module GEN1",
                     "slot": 7
@@ -3303,6 +3502,16 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 3.0
             },
             {
                 "action": "dispense",
@@ -3318,16 +3527,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3337,11 +3537,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3357,16 +3552,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3376,11 +3562,6 @@
                     "slot": 7
                 },
                 "flow_rate": 3.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 1.0
             },
             {
                 "action": "dispense",
@@ -3429,16 +3610,7 @@
             {
                 "action": "raw",
                 "text": "15 min 37 C, hold 4 C"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3468,16 +3640,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3486,16 +3716,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3525,16 +3746,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3543,16 +3822,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3582,16 +3852,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3600,16 +3928,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3639,16 +3958,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3657,16 +4034,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3696,16 +4064,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3714,16 +4140,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3753,16 +4170,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3771,16 +4246,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3810,16 +4276,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3828,16 +4352,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3867,16 +4382,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3885,16 +4458,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3924,16 +4488,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3942,16 +4564,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3981,16 +4594,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -3999,16 +4670,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4038,16 +4700,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",
@@ -4056,16 +4776,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4095,16 +4806,74 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Sample Plate on Thermocycler Module GEN1",
-                "slot": 7,
-                "times": 3,
-                "volume": 8.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 0.75,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 8.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "drop_tip",

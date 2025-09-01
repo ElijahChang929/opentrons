@@ -11,11 +11,11 @@
     {
         "template": "transfer_liquid",
         "route_key": [
-            1,
+            5,
             10
         ],
         "route": {
-            "source_slot": 1,
+            "source_slot": 5,
             "target_slot": 10
         },
         "actions": [
@@ -48,12 +48,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
                     "well": "A1",
                     "labware": "reagent reservoir",
                     "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
                 },
                 "flow_rate": 7.6
             },
@@ -88,17 +108,141 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Plate A (Sample Plate)",
-                "slot": 1,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
             },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            10
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 10
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -120,16 +264,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -156,16 +398,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Plate A (Sample Plate)",
-                "slot": 1,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "aspirate",
@@ -188,16 +518,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -224,16 +652,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Plate A (Sample Plate)",
-                "slot": 1,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate A (Sample Plate)",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "aspirate",
@@ -256,16 +772,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -319,6 +933,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            10
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 10
@@ -353,16 +971,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -371,16 +1087,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -410,16 +1117,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -428,16 +1233,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -467,16 +1263,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
-                "slot": 10,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate B (DNAse Dilution Plate) on Temperature Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -489,7 +1383,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            3
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -520,12 +1422,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
                     "well": "A3",
                     "labware": "reagent reservoir",
                     "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -560,12 +1482,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            6
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
                     "well": "A3",
                     "labware": "reagent reservoir",
                     "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -600,12 +1555,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 20.0,
                 "source": {
                     "well": "A3",
                     "labware": "reagent reservoir",
                     "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -631,6 +1606,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            3
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 3
@@ -665,16 +1644,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Plate D (Dilution Buffer Plate 1)",
-                "slot": 3,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -683,16 +1860,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -722,16 +1890,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Plate D (Dilution Buffer Plate 1)",
-                "slot": 3,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -740,16 +2106,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -779,16 +2136,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Plate D (Dilution Buffer Plate 1)",
-                "slot": 3,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate D (Dilution Buffer Plate 1)",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -802,6 +2357,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -836,16 +2395,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Plate E (Template Plate)",
-                "slot": 6,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -854,16 +2611,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -893,16 +2641,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Plate E (Template Plate)",
-                "slot": 6,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -911,16 +2857,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -950,16 +2887,214 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Plate E (Template Plate)",
-                "slot": 6,
-                "times": 10,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate E (Template Plate)",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -973,6 +3108,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            9
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 9
@@ -1007,12 +3146,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 22.5,
                 "source": {
                     "well": "A8",
                     "labware": "reagent reservoir",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
                 },
                 "flow_rate": 94.0
             },
@@ -1047,6 +3206,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -1058,6 +3227,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            6,
+            9
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 9
@@ -1092,16 +3265,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "final Bio-Rad PCR plate",
-                "slot": 9,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -1110,16 +3381,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 9
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1149,16 +3411,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "final Bio-Rad PCR plate",
-                "slot": 9,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -1167,16 +3527,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 9
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1206,16 +3557,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "final Bio-Rad PCR plate",
-                "slot": 9,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "final Bio-Rad PCR plate",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",

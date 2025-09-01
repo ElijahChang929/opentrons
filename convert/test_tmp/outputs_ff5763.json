@@ -24,11 +24,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -65,16 +74,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",
@@ -111,11 +318,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -152,16 +368,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",
@@ -198,11 +612,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -239,16 +662,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",
@@ -285,11 +906,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -326,16 +956,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",
@@ -372,11 +1200,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -413,16 +1250,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",
@@ -459,11 +1494,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -500,16 +1544,214 @@
                 "flow_rate": 23.5
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 45.0,
-                "speed": [
-                    47.0,
-                    47.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 23.5
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 45.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
+            },
+            {
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 47.0
             },
             {
                 "action": "drop_tip",

@@ -33,6 +33,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -72,16 +76,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -90,16 +297,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -134,16 +332,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -152,16 +553,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -196,16 +588,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -214,16 +809,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -258,16 +844,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -276,16 +1065,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -320,16 +1100,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -338,16 +1321,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -382,16 +1356,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -400,16 +1577,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -444,16 +1612,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -462,16 +1833,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -506,16 +1868,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -524,16 +2089,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -568,16 +2124,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -586,16 +2345,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -630,16 +2380,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -648,16 +2601,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -692,16 +2636,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",
@@ -710,16 +2857,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -754,16 +2892,219 @@
                 "flow_rate": 4.0
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
-                "slot": 3,
-                "times": 10,
-                "volume": 64.0,
-                "speed": [
-                    4.0,
-                    4.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 64.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
+            },
+            {
+                "action": "dispense",
+                "vol": 64.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Sample Plate at 4 Degrees on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 4.0
             },
             {
                 "action": "drop_tip",

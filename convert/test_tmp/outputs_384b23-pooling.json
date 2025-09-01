@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 1
@@ -40,22 +44,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -90,22 +100,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -140,22 +156,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -190,22 +212,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -240,16 +268,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Tuberack A",
-                "slot": 1,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -258,16 +589,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -302,22 +624,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -352,22 +680,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -402,22 +736,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -452,22 +792,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -502,16 +848,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "B6",
-                "labware": "Tuberack A",
-                "slot": 1,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -520,16 +1169,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -564,22 +1204,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -614,22 +1260,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -664,22 +1316,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -714,22 +1372,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -764,16 +1428,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "C6",
-                "labware": "Tuberack A",
-                "slot": 1,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -782,16 +1749,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -826,22 +1784,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -876,22 +1840,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -926,22 +1896,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -976,22 +1952,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1026,16 +2008,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "D6",
-                "labware": "Tuberack A",
-                "slot": 1,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -1044,16 +2329,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1088,22 +2364,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1138,22 +2420,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1188,22 +2476,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1238,22 +2532,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1288,16 +2588,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "E6",
-                "labware": "Tuberack A",
-                "slot": 1,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Tuberack A",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -1311,6 +2914,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -1350,22 +2957,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1400,22 +3013,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1450,22 +3069,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1500,22 +3125,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1550,16 +3181,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Tuberack B",
-                "slot": 2,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -1568,16 +3502,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1612,22 +3537,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1662,22 +3593,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1712,22 +3649,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1762,22 +3705,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1812,16 +3761,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "B6",
-                "labware": "Tuberack B",
-                "slot": 2,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -1830,16 +4082,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1874,22 +4117,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1924,22 +4173,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1974,22 +4229,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2024,22 +4285,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2074,16 +4341,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "C6",
-                "labware": "Tuberack B",
-                "slot": 2,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",
@@ -2092,16 +4662,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2136,22 +4697,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2186,22 +4753,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2236,22 +4809,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2286,22 +4865,28 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2336,16 +4921,319 @@
                 "flow_rate": 92.86
             },
             {
-                "action": "mix",
-                "well": "D6",
-                "labware": "Tuberack B",
-                "slot": 2,
-                "times": 15,
-                "volume": 200.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Tuberack B",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
             },
             {
                 "action": "drop_tip",

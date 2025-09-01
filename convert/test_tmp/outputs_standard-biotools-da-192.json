@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            2
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 2
@@ -35,6 +39,16 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -45,11 +59,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "pick_tip",
@@ -76,6 +86,17 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": null,
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 150.0,
                 "source": {
@@ -92,12 +113,41 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": null,
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            7,
+            2
+        ],
+        "route": {
+            "source_slot": 7,
+            "target_slot": 2
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 40.0,
                 "source": {
                     "well": "A2",
                     "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
                     "slot": 7
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "C10",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
                 },
                 "flow_rate": 92.86
             },
@@ -129,6 +179,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            2
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 2
@@ -163,22 +217,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -208,22 +263,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B20",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -253,6 +309,16 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -264,6 +330,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -298,22 +368,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -343,22 +414,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A2",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -388,22 +460,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A3",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -433,22 +506,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A4",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -478,22 +552,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A5",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -523,22 +598,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A6",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -568,22 +644,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A7",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -613,22 +690,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A8",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -658,22 +736,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A9",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -703,22 +782,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A10",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -748,22 +828,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A11",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -793,6 +874,16 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C7",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A12",
@@ -804,6 +895,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            2
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 2
@@ -838,22 +933,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B14",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -883,22 +979,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B15",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A2",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -928,22 +1025,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B16",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A3",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -973,22 +1071,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B17",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A4",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1018,22 +1117,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B18",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A5",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1063,22 +1163,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "B19",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A6",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1108,22 +1209,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C14",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A7",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1153,22 +1255,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C15",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A8",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1198,22 +1301,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C16",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A9",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1243,22 +1347,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C17",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A10",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1288,22 +1393,23 @@
                 "flow_rate": 5.699999999999999
             },
             {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C18",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A11",
                     "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1321,6 +1427,16 @@
                     "slot": 3
                 },
                 "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "C19",
+                    "labware": "Standard Biotools Dynamic Array 192.24",
+                    "slot": 2
+                },
+                "flow_rate": 5.699999999999999
             },
             {
                 "action": "dispense",

@@ -9,7 +9,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            7
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -26,6 +34,16 @@
                     "well": "A1",
                     "labware": "Opentrons 96 Well Aluminum Block with Bio-Rad Well Plate 200 uL on Temperature Module GEN2",
                     "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -71,6 +89,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            7
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 7
@@ -105,6 +127,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -115,7 +147,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            7
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 7
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -134,6 +174,16 @@
                     "slot": 3
                 },
                 "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Thermocycler Module GEN1",
+                    "slot": 7
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "dispense",

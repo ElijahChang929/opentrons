@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            8
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 8
@@ -35,22 +39,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -80,6 +85,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -91,6 +106,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            8
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 8
@@ -125,16 +144,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "normalization plate",
-                "slot": 8,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "drop_tip",
@@ -148,6 +265,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            8,
+            11
+        ],
         "route": {
             "source_slot": 8,
             "target_slot": 11
@@ -182,22 +303,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -227,22 +349,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -272,22 +395,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -317,22 +441,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -362,22 +487,23 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -393,6 +519,16 @@
                     "well": "F1",
                     "labware": "normalization plate",
                     "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pool tube (A1)",
+                    "slot": 11
                 },
                 "flow_rate": 7.6
             },

@@ -39,6 +39,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 11.25,
                 "source": {
@@ -59,12 +69,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 11.25,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 11.25,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 11.25,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 7.56
             },
@@ -99,6 +129,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 11.25,
                 "source": {
@@ -119,12 +159,32 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 11.25,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 11.25,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 5
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 11.25,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
                 },
                 "flow_rate": 7.56
             },
@@ -145,7 +205,20 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -155,17 +228,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 1,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 7.5,
@@ -187,16 +361,114 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 4,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
@@ -219,13 +491,36 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "H12",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            },
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 2
+        },
+        "actions": [
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -235,17 +530,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B8",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 2,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
             },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 7.5,
@@ -267,22 +663,130 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "Corning 96 Well Plate 360 uL Flat",
-                "slot": 4,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "aspirate",
                 "vol": 5.0,
                 "source": {
                     "well": "B1",
+                    "labware": "Corning 96 Well Plate 360 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "H12",
                     "labware": "Corning 96 Well Plate 360 uL Flat",
                     "slot": 4
                 },

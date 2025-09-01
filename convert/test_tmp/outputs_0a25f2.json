@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
         "route": {
             "source_slot": 12,
             "target_slot": 1
@@ -46,6 +50,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "A1",
@@ -71,6 +85,16 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -126,6 +150,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C1",
@@ -166,6 +200,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D1",
@@ -206,6 +250,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E1",
@@ -246,6 +300,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F1",
@@ -286,6 +350,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G1",
@@ -326,7 +400,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H1",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -335,37 +409,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H1",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -394,10 +451,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -415,6 +483,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -470,6 +599,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B2",
@@ -510,6 +649,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C2",
@@ -550,6 +699,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D2",
@@ -590,6 +749,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E2",
@@ -630,6 +799,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F2",
@@ -670,6 +849,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G2",
@@ -710,7 +899,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H2",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -719,37 +908,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H2",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -778,10 +950,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -799,6 +982,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -854,6 +1098,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B3",
@@ -894,6 +1148,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C3",
@@ -934,6 +1198,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D3",
@@ -974,6 +1248,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E3",
@@ -1014,6 +1298,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F3",
@@ -1054,6 +1348,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G3",
@@ -1094,7 +1398,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H3",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -1103,37 +1407,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H3",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1162,10 +1449,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1183,6 +1481,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -1238,6 +1597,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B4",
@@ -1278,6 +1647,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C4",
@@ -1318,6 +1697,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D4",
@@ -1358,6 +1747,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E4",
@@ -1398,6 +1797,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F4",
@@ -1438,6 +1847,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G4",
@@ -1478,7 +1897,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H4",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -1487,37 +1906,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H4",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1546,10 +1948,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1567,6 +1980,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -1622,6 +2096,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B5",
@@ -1662,6 +2146,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C5",
@@ -1702,6 +2196,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D5",
@@ -1742,6 +2246,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E5",
@@ -1782,6 +2296,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F5",
@@ -1822,6 +2346,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G5",
@@ -1862,7 +2396,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H5",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -1871,37 +2405,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H5",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1930,10 +2447,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1951,6 +2479,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -2006,6 +2595,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B6",
@@ -2046,6 +2645,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C6",
@@ -2086,6 +2695,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D6",
@@ -2126,6 +2745,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E6",
@@ -2166,6 +2795,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F6",
@@ -2206,6 +2845,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G6",
@@ -2246,7 +2895,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H6",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -2255,37 +2904,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H6",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2314,10 +2946,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2335,6 +2978,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -2390,6 +3094,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B7",
@@ -2430,6 +3144,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C7",
@@ -2470,6 +3194,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D7",
@@ -2510,6 +3244,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E7",
@@ -2550,6 +3294,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F7",
@@ -2590,6 +3344,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G7",
@@ -2630,7 +3394,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H7",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -2639,37 +3403,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H7",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2698,10 +3445,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2719,6 +3477,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -2774,6 +3593,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B8",
@@ -2814,6 +3643,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C8",
@@ -2854,6 +3693,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D8",
@@ -2894,6 +3743,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E8",
@@ -2934,6 +3793,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F8",
@@ -2974,6 +3843,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G8",
@@ -3014,7 +3893,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H8",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -3023,37 +3902,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H8",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3082,10 +3944,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3103,6 +3976,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -3158,6 +4092,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B9",
@@ -3198,6 +4142,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C9",
@@ -3238,6 +4192,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D9",
@@ -3278,6 +4242,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E9",
@@ -3318,6 +4292,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F9",
@@ -3358,6 +4342,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G9",
@@ -3398,7 +4392,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H9",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -3407,37 +4401,20 @@
                 "flow_rate": 137.35
             },
             {
-                "action": "aspirate",
-                "vol": 100.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "aspirate",
-                "vol": 500.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "Opentrons Fixed Trash",
-                    "slot": 12
-                },
-                "flow_rate": 137.35
-            },
-            {
-                "action": "dispense",
-                "vol": 500.0,
-                "target": null,
-                "flow_rate": 137.35
-            },
-            {
                 "action": "dispense",
                 "vol": 100.0,
-                "target": null,
+                "target": {
+                    "well": "H9",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
                 "flow_rate": 137.35
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3466,10 +4443,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3487,6 +4475,67 @@
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            12,
+            1
+        ],
+        "route": {
+            "source_slot": 12,
+            "target_slot": 1
+        },
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "aspirate",
+                "vol": 500.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons Fixed Trash",
+                    "slot": 12
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
                 },
                 "flow_rate": 137.35
             },
@@ -3542,6 +4591,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "B10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "B10",
@@ -3582,6 +4641,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "C10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "C10",
@@ -3622,6 +4691,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "D10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "D10",
@@ -3662,6 +4741,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "E10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "E10",
@@ -3702,6 +4791,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "F10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "F10",
@@ -3742,6 +4841,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 500.0,
+                "target": {
+                    "well": "G10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
                 "vol": 100.0,
                 "target": {
                     "well": "G10",
@@ -3782,7 +4891,7 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": {
                     "well": "H10",
                     "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
@@ -3791,6 +4900,21 @@
                 "flow_rate": 137.35
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "H10",
+                    "labware": "Custom 300 Capsule Assembly with 3x 100 Capsule Racks",
+                    "slot": 1
+                },
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -3818,10 +4942,21 @@
             },
             {
                 "action": "dispense",
-                "vol": 100.0,
+                "vol": 500.0,
                 "target": null,
                 "flow_rate": 137.35
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": null,
+                "flow_rate": 137.35
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3840,6 +4975,12 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 500.0,
+                "target": null,
                 "flow_rate": 137.35
             },
             {

@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            3
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -40,6 +48,21 @@
                 },
                 "flow_rate": 50.0
             },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 3
+                },
+                "flow_rate": 50.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,

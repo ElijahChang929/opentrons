@@ -38,6 +38,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -82,6 +86,16 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 178.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -92,7 +106,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            3
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "aspirate",
@@ -115,6 +137,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 158.5,
                 "source": {
@@ -133,6 +178,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 178.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -179,6 +234,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -223,6 +282,16 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 178.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -233,7 +302,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            3
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "aspirate",
@@ -256,6 +333,29 @@
                 "flow_rate": 150.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 158.5,
                 "source": {
@@ -274,6 +374,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 178.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -329,6 +439,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -373,16 +487,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -419,6 +831,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -463,16 +879,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -528,6 +1242,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -560,6 +1278,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -606,6 +1334,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -638,6 +1370,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -693,6 +1435,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -737,16 +1483,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -783,6 +1827,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -827,16 +1875,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -892,6 +2238,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -924,6 +2274,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -970,6 +2330,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -1002,6 +2366,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1057,6 +2431,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -1101,16 +2479,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -1147,6 +2823,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -1191,16 +2871,314 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 15,
-                "volume": 150.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -1256,6 +3234,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -1288,6 +3270,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1334,6 +3326,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -1366,6 +3362,16 @@
                     "slot": 3
                 },
                 "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 220.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Liquid Waste",
+                    "slot": 6
+                },
+                "flow_rate": 150.0
             },
             {
                 "action": "dispense",
@@ -1426,6 +3432,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -1460,16 +3470,214 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 10,
-                "volume": 35.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -1506,6 +3714,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -1540,16 +3752,214 @@
                 "flow_rate": 150.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "deepwell plate on Magnetic Module GEN1",
-                "slot": 3,
-                "times": 10,
-                "volume": 35.0,
-                "speed": [
-                    600.0,
-                    600.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 35.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
+            },
+            {
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "deepwell plate on Magnetic Module GEN1",
+                    "slot": 3
+                },
+                "flow_rate": 600.0
             },
             {
                 "action": "blow_out",
@@ -1619,6 +4029,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -1649,6 +4063,16 @@
                     "well": "A1",
                     "labware": "deepwell plate on Magnetic Module GEN1",
                     "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "elution plate on Temperature Module GEN2",
+                    "slot": 1
                 },
                 "flow_rate": 150.0
             },
@@ -1697,6 +4121,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -1727,6 +4155,16 @@
                     "well": "A2",
                     "labware": "deepwell plate on Magnetic Module GEN1",
                     "slot": 3
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "elution plate on Temperature Module GEN2",
+                    "slot": 1
                 },
                 "flow_rate": 150.0
             },

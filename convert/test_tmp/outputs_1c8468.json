@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -41,6 +49,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermo Scientific 96 Well Plate 200 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "aspirate",
                 "vol": 5.0,
                 "source": {
@@ -61,6 +79,21 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 7.5,
+                "target": {
+                    "well": "A7",
+                    "labware": "Thermo Scientific 96 Well Plate 200 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 5.0,
                 "source": {
@@ -69,6 +102,14 @@
                     "slot": 4
                 },
                 "flow_rate": 7.56
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "B1",
+                    "labware": "Life 96 Aluminum Block 240 uL",
+                    "slot": 1
+                }
             },
             {
                 "action": "blow_out",

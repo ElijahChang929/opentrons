@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -44,6 +48,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pooling tube",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -58,16 +72,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -97,6 +102,16 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pooling tube",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -111,16 +126,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -150,6 +156,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pooling tube",
+                    "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -164,16 +180,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -189,6 +196,16 @@
                     "well": "D1",
                     "labware": "source plate on Temperature Module GEN2",
                     "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "pooling tube",
+                    "slot": 2
                 },
                 "flow_rate": 7.56
             },

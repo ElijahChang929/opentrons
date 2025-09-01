@@ -40,26 +40,19 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             }
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            5,
-            5
-        ],
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -83,65 +76,6 @@
             },
             {
                 "action": "dispense",
-                "vol": 144.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "dispense",
-                "vol": 20.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 144.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "dispense",
                 "vol": 20.0,
                 "target": {
                     "well": "A1",
@@ -169,7 +103,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -191,14 +130,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -208,6 +153,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -238,7 +193,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -260,14 +220,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -277,6 +243,106 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 144.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 144.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -350,26 +416,19 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             }
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            5,
-            5
-        ],
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -393,65 +452,6 @@
             },
             {
                 "action": "dispense",
-                "vol": 144.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "dispense",
-                "vol": 20.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "B2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 144.0,
-                "source": {
-                    "well": "B2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "B2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "dispense",
                 "vol": 20.0,
                 "target": {
                     "well": "A1",
@@ -479,7 +479,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -501,14 +506,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -518,6 +529,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -548,7 +569,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -570,14 +596,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -587,6 +619,106 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 144.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 144.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -660,26 +792,19 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             }
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            5,
-            5
-        ],
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -703,65 +828,6 @@
             },
             {
                 "action": "dispense",
-                "vol": 144.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "dispense",
-                "vol": 20.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "C2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 144.0,
-                "source": {
-                    "well": "C2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "C2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "dispense",
                 "vol": 20.0,
                 "target": {
                     "well": "A1",
@@ -789,7 +855,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -811,14 +882,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -828,6 +905,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -858,7 +945,12 @@
                     "slot": 5
                 },
                 "flow_rate": 30.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -880,14 +972,20 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -897,6 +995,106 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 144.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 144.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -970,13 +1168,104 @@
                 "flow_rate": 15.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 115.19999999999999,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "D2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 115.19999999999999,
+                "source": {
+                    "well": "D2",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 3.0
             }
         ]
     },
@@ -1013,65 +1302,6 @@
             },
             {
                 "action": "dispense",
-                "vol": 115.19999999999999,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "dispense",
-                "vol": 20.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 30.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "D2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "aspirate",
-                "vol": 115.19999999999999,
-                "source": {
-                    "well": "D2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
-            },
-            {
-                "action": "aspirate",
-                "vol": 20.0,
-                "source": {
-                    "well": "D2",
-                    "labware": "2ml screw tube aluminum block for mastermix + controls",
-                    "slot": 5
-                },
-                "flow_rate": 15.0
-            },
-            {
-                "action": "dispense",
                 "vol": 20.0,
                 "target": {
                     "well": "A1",
@@ -1101,17 +1331,158 @@
                 "flow_rate": 30.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "2ml screw tube aluminum block for mastermix + controls",
-                "slot": 5,
-                "times": 7,
-                "volume": 200.0,
-                "speed": [
-                    15.0,
-                    30.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
             },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "2ml screw tube aluminum block for mastermix + controls",
+                    "slot": 5
+                },
+                "flow_rate": 30.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            7
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 7
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 200.0,
@@ -1133,6 +1504,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1141,6 +1522,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "A1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1173,6 +1564,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1181,6 +1582,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "B1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1213,6 +1624,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1221,6 +1642,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "C1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1253,6 +1684,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1261,6 +1702,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "D1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1293,6 +1744,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1301,6 +1762,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "E1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1333,6 +1804,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1341,6 +1822,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "F1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1373,6 +1864,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1381,6 +1882,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "G1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1413,6 +1924,16 @@
                 "flow_rate": 30.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 24.400000000000006,
                 "source": {
@@ -1421,6 +1942,16 @@
                     "slot": 5
                 },
                 "flow_rate": 15.0
+            },
+            {
+                "action": "dispense",
+                "vol": 24.400000000000006,
+                "target": {
+                    "well": "H1",
+                    "labware": "mastermix strips",
+                    "slot": 7
+                },
+                "flow_rate": 30.0
             },
             {
                 "action": "dispense",
@@ -1482,12 +2013,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
                     "well": "A1",
                     "labware": "mastermix strips",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1522,12 +2073,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
                     "well": "A1",
                     "labware": "mastermix strips",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1562,12 +2133,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
                     "well": "A1",
                     "labware": "mastermix strips",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1602,12 +2193,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
                     "well": "A1",
                     "labware": "mastermix strips",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1642,6 +2253,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
@@ -1662,12 +2283,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 17.0,
                 "source": {
                     "well": "A1",
                     "labware": "mastermix strips",
                     "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1702,6 +2343,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -1712,7 +2363,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1729,6 +2388,16 @@
                     "well": "A1",
                     "labware": "chilled elution plate on block from Station B",
                     "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1796,7 +2465,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1827,6 +2504,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1880,7 +2567,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1911,6 +2606,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1964,7 +2669,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1995,6 +2708,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2048,7 +2771,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2079,6 +2810,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2132,7 +2873,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2163,6 +2912,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2216,7 +2975,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2247,6 +3014,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2300,7 +3077,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2331,6 +3116,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2384,7 +3179,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2415,6 +3218,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2468,7 +3281,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2499,6 +3320,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2552,7 +3383,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2583,6 +3422,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2636,7 +3485,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2653,6 +3510,16 @@
                     "well": "A12",
                     "labware": "chilled elution plate on block from Station B",
                     "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 8.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "PCR plate on Temperature Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },

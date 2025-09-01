@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 8
@@ -35,6 +39,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -46,6 +60,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            8
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 8
@@ -80,6 +98,16 @@
                 "flow_rate": 7.56
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
+                },
+                "flow_rate": 7.56
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -91,6 +119,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            8
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 8
@@ -125,6 +157,16 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -139,16 +181,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -164,6 +197,16 @@
                     "well": "A4",
                     "labware": "Opentrons 10 Tube Rack with Falcon 4x50 mL, 6x15 mL Conical",
                     "slot": 7
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
                 },
                 "flow_rate": 92.86
             },

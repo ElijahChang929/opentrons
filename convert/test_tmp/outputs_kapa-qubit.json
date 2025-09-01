@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            2
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 2
@@ -35,12 +39,32 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 190.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 190.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 190.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -75,6 +99,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 198.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -86,6 +120,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -120,16 +158,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Agilent 96 Well Plate 270 uL",
-                "slot": 2,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -146,16 +282,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -185,16 +312,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Agilent 96 Well Plate 270 uL",
-                "slot": 2,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -211,16 +436,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -250,16 +466,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Agilent 96 Well Plate 270 uL",
-                "slot": 2,
-                "times": 5,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Agilent 96 Well Plate 270 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",

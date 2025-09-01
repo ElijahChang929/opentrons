@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            3
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 3
@@ -44,16 +48,134 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
-                "slot": 3,
-                "times": 6,
-                "volume": 75.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Temperature Module GEN2",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -130,6 +252,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            2
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 2
@@ -152,6 +278,21 @@
                     "slot": 10
                 },
                 "flow_rate": 9.4
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "delay",
@@ -212,6 +353,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            10
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 10
@@ -246,16 +391,134 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
-                "slot": 10,
-                "times": 6,
-                "volume": 75.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -283,6 +546,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            2
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 2
@@ -322,6 +589,21 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A12",
@@ -365,6 +647,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            10
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 10
@@ -399,16 +685,134 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
-                "slot": 10,
-                "times": 6,
-                "volume": 75.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -445,16 +849,7 @@
             {
                 "action": "raw",
                 "text": "Place plate back on magnetic module for BBB addition."
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -484,16 +879,134 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
-                "slot": 10,
-                "times": 6,
-                "volume": 75.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -533,6 +1046,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            2
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 2
@@ -572,6 +1089,21 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A12",
@@ -615,6 +1147,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            10
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 10
@@ -649,16 +1185,134 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
-                "slot": 10,
-                "times": 6,
-                "volume": 75.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 75.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -686,6 +1340,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            2
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 2
@@ -708,6 +1366,21 @@
                     "slot": 10
                 },
                 "flow_rate": 9.4
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "delay",
@@ -768,6 +1441,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            10
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 10
@@ -802,16 +1479,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
-                "slot": 10,
-                "times": 3,
-                "volume": 20.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Froggabio 96 Well Plate 300 uL on Magnetic Module GEN2",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",

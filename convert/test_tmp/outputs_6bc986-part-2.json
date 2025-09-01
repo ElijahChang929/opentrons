@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            8
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 8
@@ -33,6 +37,16 @@
                     "slot": 2
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",
@@ -151,16 +165,7 @@
                     "labware": "Aspir-8 Reservoir",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -180,6 +185,16 @@
                     "slot": 2
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 4.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 8
+                },
+                "flow_rate": 50.0
             },
             {
                 "action": "dispense",

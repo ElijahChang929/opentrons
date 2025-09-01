@@ -1,9 +1,13 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            1
+        ],
         "route": {
             "source_slot": 1,
-            "target_slot": 7
+            "target_slot": 1
         },
         "actions": [
             {
@@ -15,17 +19,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Perkin Elmer 384 Well Plate 110 uL",
-                "slot": 1,
-                "times": 3,
-                "volume": 40.0,
-                "speed": [
-                    92.86,
-                    92.86
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
             },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Perkin Elmer 384 Well Plate 110 uL",
+                    "slot": 1
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            7
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 7
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -43,6 +108,16 @@
                     "well": "A1",
                     "labware": "Perkin Elmer 384 Well Plate 110 uL",
                     "slot": 1
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Corning 96 Well Plate 360 uL",
+                    "slot": 7
                 },
                 "flow_rate": 92.86
             },

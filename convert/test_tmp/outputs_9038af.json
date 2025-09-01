@@ -24,11 +24,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 4
@@ -41,6 +50,21 @@
                     "well": "A1",
                     "labware": "genomic dna",
                     "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 9.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
                 },
                 "flow_rate": 7.56
             },
@@ -99,11 +123,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 4
@@ -116,6 +149,21 @@
                     "well": "B1",
                     "labware": "genomic dna",
                     "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 9.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
                 },
                 "flow_rate": 7.56
             },
@@ -174,11 +222,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 4
@@ -215,6 +272,21 @@
                 "seconds": 2.0
             },
             {
+                "action": "dispense",
+                "vol": 9.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -226,6 +298,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 4
@@ -265,16 +341,119 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "normalization plate",
-                "slot": 4,
-                "times": 5,
-                "volume": 7.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "delay",
@@ -296,16 +475,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -340,16 +510,119 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "normalization plate",
-                "slot": 4,
-                "times": 5,
-                "volume": 7.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "delay",
@@ -371,16 +644,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -415,16 +679,119 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "normalization plate",
-                "slot": 4,
-                "times": 5,
-                "volume": 7.0,
-                "speed": [
-                    7.56,
-                    7.56
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 7.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "normalization plate",
+                    "slot": 4
+                },
+                "flow_rate": 7.56
             },
             {
                 "action": "delay",
@@ -474,11 +841,20 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            8
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 8
@@ -513,16 +889,22 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 8
-        },
-        "actions": [
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -554,22 +936,28 @@
                 "seconds": 2.0
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -579,16 +967,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
-                "slot": 8,
-                "times": 10,
-                "volume": 27.0,
-                "speed": [
-                    274.7,
-                    274.7
-                ]
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "aspirate",
+                "vol": 27.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 27.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
             },
             {
                 "action": "aspirate",
@@ -619,16 +1195,22 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 2.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 1.5 mL Safe-Lock Snapcap",
+                    "slot": 8
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -653,16 +1235,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -687,16 +1260,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -721,16 +1285,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -755,16 +1310,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -789,16 +1335,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -823,16 +1360,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -857,16 +1385,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -891,16 +1410,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,
@@ -925,16 +1435,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 30.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 45.0,

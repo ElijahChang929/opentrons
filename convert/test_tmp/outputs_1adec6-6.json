@@ -12,11 +12,11 @@
         "template": "transfer_liquid",
         "route_key": [
             3,
-            4
+            3
         ],
         "route": {
             "source_slot": 3,
-            "target_slot": 4
+            "target_slot": 3
         },
         "actions": [
             {
@@ -28,17 +28,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -50,14 +103,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -79,13 +146,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -96,17 +169,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -118,14 +244,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -147,13 +287,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -164,17 +310,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -186,14 +385,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -215,13 +428,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -232,17 +451,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -254,14 +526,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -283,13 +569,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -300,17 +592,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -322,14 +667,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -351,13 +710,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -368,17 +733,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -390,14 +808,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -419,13 +851,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -436,17 +874,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -458,14 +949,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -487,13 +992,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -504,17 +1015,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -526,14 +1090,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -555,13 +1133,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -572,17 +1156,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -594,14 +1231,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -623,13 +1274,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -640,17 +1297,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -662,14 +1372,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -691,13 +1415,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -708,17 +1438,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -730,14 +1513,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -759,13 +1556,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -776,17 +1579,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 3,
-                "times": 3,
-                "volume": 100.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -798,14 +1654,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            4
+        ],
+        "route": {
+            "source_slot": 3,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -827,13 +1697,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "blow_out",
@@ -852,13 +1728,34 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "raw",
@@ -902,13 +1799,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -944,6 +1842,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -952,13 +1860,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -986,13 +1890,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1028,6 +1933,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
@@ -1036,13 +1951,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1070,13 +1981,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1112,6 +2024,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
@@ -1120,13 +2042,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1154,13 +2072,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1196,6 +2115,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
@@ -1204,13 +2133,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1238,13 +2163,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1280,6 +2206,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
@@ -1288,13 +2224,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1322,13 +2254,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1364,6 +2297,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
@@ -1372,13 +2315,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1406,13 +2345,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1448,6 +2388,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
@@ -1456,13 +2406,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1490,13 +2436,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1532,6 +2479,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
@@ -1540,13 +2497,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1574,13 +2527,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1616,6 +2570,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
@@ -1624,13 +2588,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1658,13 +2618,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1700,6 +2661,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
@@ -1708,13 +2679,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1742,13 +2709,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1784,6 +2752,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
@@ -1792,13 +2770,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1826,13 +2800,14 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             }
         ]
     },
@@ -1868,6 +2843,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A12",
@@ -1876,13 +2861,9 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -1893,13 +2874,34 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "raw",
@@ -1910,13 +2912,34 @@
                 "text": "When complete, please return plate to deck and click RESUME."
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "raw",
@@ -1932,11 +2955,11 @@
         "template": "transfer_liquid",
         "route_key": [
             5,
-            4
+            5
         ],
         "route": {
             "source_slot": 5,
-            "target_slot": 4
+            "target_slot": 5
         },
         "actions": [
             {
@@ -1948,17 +2971,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -1970,14 +3046,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -1999,13 +3089,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2024,17 +3120,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2046,14 +3195,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2075,13 +3238,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2100,17 +3269,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2122,14 +3344,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2151,13 +3387,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2176,17 +3418,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2198,14 +3493,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2227,13 +3536,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2252,17 +3567,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2274,14 +3642,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2303,13 +3685,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2328,17 +3716,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2350,14 +3791,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2379,13 +3834,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2404,17 +3865,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2426,14 +3940,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2455,13 +3983,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2480,17 +4014,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2502,14 +4089,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2531,13 +4132,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2556,17 +4163,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2578,14 +4238,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2607,13 +4281,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2632,17 +4312,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 5,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2654,14 +4387,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2683,13 +4430,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2705,11 +4458,11 @@
         "template": "transfer_liquid",
         "route_key": [
             6,
-            4
+            6
         ],
         "route": {
             "source_slot": 6,
-            "target_slot": 4
+            "target_slot": 6
         },
         "actions": [
             {
@@ -2721,17 +4474,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 6,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2743,14 +4549,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            4
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2772,13 +4592,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2797,17 +4623,70 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
-                "slot": 6,
-                "times": 3,
-                "volume": 50.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 50.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2819,14 +4698,28 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            4
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -2848,13 +4741,19 @@
                 "flow_rate": 65.8
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 70.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "SPL Cell Culture Plate 96 Well Flat Bottom",
+                    "slot": 4
+                },
+                "flow_rate": 65.8
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "drop_tip",
@@ -2865,13 +4764,34 @@
                 }
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
             },
             {
                 "action": "raw",

@@ -23,11 +23,19 @@
             {
                 "action": "raw",
                 "text": "Air Gap"
+            },
+            {
+                "action": "raw",
+                "text": "Air Gap"
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -54,18 +62,19 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "raw",
                 "text": "Air Gap"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -87,18 +96,19 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "raw",
                 "text": "Air Gap"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -120,23 +130,34 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "raw",
                 "text": "Air Gap"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A4",
                     "labware": "Plate 2",
                     "slot": 2
                 },
@@ -159,7 +180,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 3
+        },
         "actions": [
             {
                 "action": "aspirate",
@@ -186,6 +215,25 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "raw",
+                "text": "Blowout at A1 of Trash Plate on 3"
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Trash Plate",
+                    "slot": 3
+                },
+                "flow_rate": 92.86
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 130.0,
                 "source": {
@@ -198,11 +246,19 @@
             {
                 "action": "raw",
                 "text": "Air Gap"
+            },
+            {
+                "action": "raw",
+                "text": "Air Gap"
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            2
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 2
@@ -229,23 +285,34 @@
                 "flow_rate": 92.86
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
                 "action": "raw",
                 "text": "Air Gap"
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A5",
+                    "labware": "Plate 2",
+                    "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A6",
                     "labware": "Plate 2",
                     "slot": 2
                 },
@@ -269,6 +336,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -281,6 +352,20 @@
                     "well": "A6",
                     "labware": "Plate 2",
                     "slot": 2
+                },
+                "flow_rate": 92.86
+            },
+            {
+                "action": "raw",
+                "text": "Blowout at A1 of Trash Plate on 3"
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Trash Plate",
+                    "slot": 3
                 },
                 "flow_rate": 92.86
             },

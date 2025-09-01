@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -31,12 +39,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "B11",
+                    "labware": "Corning 384 Well Plate 112 uL Flat",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            2,
+            5
+        ],
+        "route": {
+            "source_slot": 2,
+            "target_slot": 5
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 3.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -62,6 +103,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            5
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 5
@@ -82,6 +127,16 @@
                     "well": "A1",
                     "labware": "NEST 1 Well Reservoir 195 mL",
                     "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 7.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "NEST 96 Deep Well Plate 2mL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },

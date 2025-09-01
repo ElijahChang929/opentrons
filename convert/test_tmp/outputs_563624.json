@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -25,9 +29,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -48,45 +72,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -103,9 +92,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -134,147 +217,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A1",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -291,11 +237,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -309,16 +250,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -330,11 +262,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -353,6 +280,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -369,9 +300,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -400,53 +359,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A1",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A1",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A1",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -461,11 +377,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -489,16 +400,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -508,11 +410,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -536,16 +433,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -555,11 +443,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -583,16 +466,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -602,11 +476,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -643,6 +512,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -667,9 +540,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -690,45 +583,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A2",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -745,9 +603,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -776,147 +728,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A2",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -933,11 +748,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -951,16 +761,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -972,11 +773,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -995,6 +791,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -1011,9 +811,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A2",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -1042,53 +870,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A2",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A2",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A2",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -1103,11 +888,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1131,16 +911,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1150,11 +921,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1178,16 +944,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1197,11 +954,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1225,16 +977,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1244,11 +987,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1285,6 +1023,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -1309,9 +1051,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -1332,45 +1094,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A3",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A3",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -1387,9 +1114,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -1418,147 +1239,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A3",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -1575,11 +1259,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -1593,16 +1272,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -1614,11 +1284,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -1637,6 +1302,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -1653,9 +1322,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -1684,53 +1381,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A3",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A3",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A3",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -1745,11 +1399,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1773,16 +1422,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1792,11 +1432,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1820,16 +1455,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1839,11 +1465,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1867,16 +1488,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -1886,11 +1498,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -1927,6 +1534,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -1951,9 +1562,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -1974,45 +1605,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A4",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A4",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -2029,9 +1625,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -2060,147 +1750,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A4",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -2217,11 +1770,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -2235,16 +1783,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -2256,11 +1795,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -2279,6 +1813,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -2295,9 +1833,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A4",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -2326,53 +1892,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A4",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A4",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A4",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -2387,11 +1910,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -2415,16 +1933,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -2434,11 +1943,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -2462,16 +1966,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -2481,11 +1976,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -2509,16 +1999,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -2528,11 +2009,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -2569,6 +2045,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -2593,9 +2073,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -2616,45 +2116,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A5",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A5",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -2671,9 +2136,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -2702,147 +2261,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A5",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -2859,11 +2281,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -2877,16 +2294,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -2898,11 +2306,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -2921,6 +2324,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -2937,9 +2344,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -2968,53 +2403,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A5",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A5",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A5",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -3029,11 +2421,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3057,16 +2444,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3076,11 +2454,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3104,16 +2477,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3123,11 +2487,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3151,16 +2510,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3170,11 +2520,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3211,6 +2556,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -3235,9 +2584,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -3258,45 +2627,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A6",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A6",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -3313,9 +2647,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -3344,147 +2772,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A6",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -3501,11 +2792,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -3519,16 +2805,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -3540,11 +2817,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -3563,6 +2835,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -3579,9 +2855,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A6",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -3610,53 +2914,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A6",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A6",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A6",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -3671,11 +2932,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3699,16 +2955,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3718,11 +2965,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3746,16 +2988,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3765,11 +2998,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3793,16 +3021,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -3812,11 +3031,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -3853,6 +3067,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -3877,9 +3095,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -3900,45 +3138,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A7",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A7",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -3955,9 +3158,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -3986,147 +3283,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A7",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -4143,11 +3303,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -4161,16 +3316,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -4182,11 +3328,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -4205,6 +3346,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -4221,9 +3366,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -4252,53 +3425,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A7",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A7",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A7",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -4313,11 +3443,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -4341,16 +3466,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -4360,11 +3476,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -4388,16 +3499,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -4407,11 +3509,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -4435,16 +3532,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -4454,11 +3542,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -4495,6 +3578,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -4519,9 +3606,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -4542,45 +3649,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A8",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A8",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -4597,9 +3669,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -4628,147 +3794,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A8",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -4785,11 +3814,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -4803,16 +3827,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -4824,11 +3839,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -4847,6 +3857,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -4863,9 +3877,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A8",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -4894,53 +3936,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A8",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A8",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A8",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -4955,11 +3954,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -4983,16 +3977,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5002,11 +3987,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5030,16 +4010,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5049,11 +4020,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5077,16 +4043,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5096,11 +4053,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5137,6 +4089,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -5161,9 +4117,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -5184,45 +4160,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A9",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A9",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -5239,9 +4180,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -5270,147 +4305,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A9",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -5427,11 +4325,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -5445,16 +4338,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -5466,11 +4350,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -5489,6 +4368,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -5505,9 +4388,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -5536,53 +4447,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A9",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A9",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A9",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -5597,11 +4465,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5625,16 +4488,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5644,11 +4498,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5672,16 +4521,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5691,11 +4531,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5719,16 +4554,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -5738,11 +4564,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -5779,6 +4600,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -5803,9 +4628,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -5826,45 +4671,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A10",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A10",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -5881,9 +4691,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -5912,147 +4816,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A10",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -6069,11 +4836,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -6087,16 +4849,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -6108,11 +4861,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -6131,6 +4879,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -6147,9 +4899,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A10",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -6178,53 +4958,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A10",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A10",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A10",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -6239,11 +4976,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6267,16 +4999,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -6286,11 +5009,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6314,16 +5032,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -6333,11 +5042,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6361,16 +5065,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -6380,11 +5075,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6421,6 +5111,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -6445,9 +5139,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -6468,45 +5182,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A11",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A11",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -6523,9 +5202,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -6554,147 +5327,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A11",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -6711,11 +5347,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -6729,16 +5360,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -6750,11 +5372,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -6773,6 +5390,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -6789,9 +5410,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A11",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -6820,53 +5469,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A11",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A11",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A11",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -6881,11 +5487,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6909,16 +5510,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -6928,11 +5520,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -6956,16 +5543,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -6975,11 +5553,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -7003,16 +5576,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -7022,11 +5586,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -7063,6 +5622,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            2
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 2
@@ -7087,9 +5650,29 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 90.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "equilibration buffer plate",
+                    "slot": 2
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -7110,45 +5693,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 90.0,
-                "source": {
-                    "well": "A12",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 90.0,
-                "target": {
-                    "well": "A12",
-                    "labware": "equilibration buffer plate",
-                    "slot": 2
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            3,
+            3
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 3
@@ -7165,9 +5713,103 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "sample plate",
+                    "slot": 3
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -7196,147 +5838,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A12",
-                    "labware": "sample plate",
-                    "slot": 3
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 4
@@ -7353,11 +5858,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -7371,16 +5871,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 180.0,
@@ -7392,11 +5883,6 @@
                 "flow_rate": 5.0
             },
             {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
                 "action": "dispense",
                 "vol": 180.0,
                 "target": {
@@ -7415,6 +5901,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 5
@@ -7431,9 +5921,37 @@
                 "flow_rate": 5.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
+            },
+            {
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 20.0
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A12",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 180.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "wash buffer 2 plate",
+                    "slot": 5
+                },
+                "flow_rate": 5.0
             },
             {
                 "action": "dispense",
@@ -7462,53 +5980,10 @@
     },
     {
         "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 5
-        },
-        "actions": [
-            {
-                "action": "aspirate",
-                "vol": 180.0,
-                "source": {
-                    "well": "A12",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "dispense",
-                "vol": 180.0,
-                "target": {
-                    "well": "A12",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                },
-                "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
-            },
-            {
-                "action": "blow_out",
-                "at": {
-                    "well": "A12",
-                    "labware": "wash buffer 2 plate",
-                    "slot": 5
-                }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
         "route": {
             "source_slot": 6,
             "target_slot": 6
@@ -7523,11 +5998,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -7551,16 +6021,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -7570,11 +6031,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -7598,16 +6054,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -7617,11 +6064,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",
@@ -7645,16 +6087,7 @@
                     "labware": "elution buffer plate",
                     "slot": 6
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 70.0,
@@ -7664,11 +6097,6 @@
                     "slot": 6
                 },
                 "flow_rate": 5.0
-            },
-            {
-                "action": "delay",
-                "minutes": 0,
-                "seconds": 20.0
             },
             {
                 "action": "dispense",

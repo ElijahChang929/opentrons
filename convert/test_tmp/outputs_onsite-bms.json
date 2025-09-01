@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -30,6 +34,16 @@
                     "well": "A1",
                     "labware": "Opentrons 6 Tube Rack with Falcon 50 mL Conical",
                     "slot": 4
+                },
+                "flow_rate": 274.7
+            },
+            {
+                "action": "dispense",
+                "vol": 1000.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
                 },
                 "flow_rate": 274.7
             },
@@ -83,6 +97,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -117,16 +135,54 @@
                 "flow_rate": 7.56
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
-                "slot": 1,
-                "times": 2,
-                "volume": 20.0,
-                "speed": [
-                    15.12,
-                    15.12
-                ]
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 15.12
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 15.12
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 15.12
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Thermofisher 40 Tube Rack with Thermofisher  2 mL on Temperature Module GEN2",
+                    "slot": 1
+                },
+                "flow_rate": 15.12
             },
             {
                 "action": "blow_out",

@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            3
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 3
@@ -35,6 +39,16 @@
                 "flow_rate": 137.35
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "12-channel reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 137.35
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -46,6 +60,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -80,22 +98,23 @@
                 "flow_rate": 137.35
             },
             {
+                "action": "dispense",
+                "vol": 90.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "12-channel reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 137.35
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -125,6 +144,16 @@
                 "flow_rate": 137.35
             },
             {
+                "action": "dispense",
+                "vol": 248.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "12-channel reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 137.35
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -136,6 +165,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            3
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 3
@@ -170,22 +203,23 @@
                 "flow_rate": 137.35
             },
             {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "12-channel reservoir",
+                    "slot": 3
+                },
+                "flow_rate": 137.35
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -201,6 +235,16 @@
                     "well": "A5",
                     "labware": "tuberack 1",
                     "slot": 1
+                },
+                "flow_rate": 137.35
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "12-channel reservoir",
+                    "slot": 3
                 },
                 "flow_rate": 137.35
             },

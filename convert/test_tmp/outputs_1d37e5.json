@@ -1,6 +1,14 @@
 [
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            1
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -31,12 +39,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -71,12 +99,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -111,6 +159,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -131,12 +189,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            2
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 2
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -171,12 +262,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -211,12 +322,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -251,12 +382,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            3
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 3
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -291,12 +455,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -331,12 +515,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -371,12 +575,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            4
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -411,12 +648,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -451,12 +708,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -491,12 +768,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            5
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 5
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -531,12 +841,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -571,12 +901,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -611,12 +961,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            6
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -651,12 +1034,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -691,12 +1094,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -731,12 +1154,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            7
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 7
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -771,12 +1227,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -811,12 +1287,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -851,12 +1347,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            8
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 8
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -891,12 +1420,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -931,12 +1480,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -971,12 +1540,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            9
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 9
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -1011,12 +1613,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -1051,6 +1673,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1071,12 +1703,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A1",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -1101,7 +1753,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            1
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -1132,12 +1792,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -1172,12 +1852,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -1212,6 +1912,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -1232,12 +1942,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            2
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 2
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -1272,12 +2015,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -1312,12 +2075,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -1352,12 +2135,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            3
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 3
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -1392,12 +2208,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -1432,12 +2268,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -1472,12 +2328,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            4
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1512,12 +2401,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1552,12 +2461,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -1592,12 +2521,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            5
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 5
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -1632,12 +2594,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -1672,12 +2654,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -1712,12 +2714,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            6
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -1752,12 +2787,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -1792,12 +2847,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -1832,12 +2907,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            7
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 7
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -1872,12 +2980,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -1912,12 +3040,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -1952,12 +3100,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            8
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 8
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -1992,12 +3173,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -2032,12 +3233,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -2072,12 +3293,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            9
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 9
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -2112,12 +3366,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -2152,6 +3426,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2172,12 +3456,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A2",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -2202,7 +3506,15 @@
         ]
     },
     {
-        "template": "other_devices",
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            1
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 1
+        },
         "actions": [
             {
                 "action": "pick_tip",
@@ -2233,12 +3545,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -2273,12 +3605,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -2313,12 +3665,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -2353,12 +3725,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -2393,6 +3785,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -2413,12 +3815,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },
@@ -2453,12 +3875,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            2
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 2
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2493,12 +3948,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2533,12 +4008,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2573,12 +4068,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2613,12 +4128,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2653,12 +4188,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
                 },
                 "flow_rate": 7.6
             },
@@ -2693,12 +4248,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 2
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            3
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 3
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2733,12 +4321,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2773,12 +4381,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2813,12 +4441,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2853,12 +4501,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2893,12 +4561,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
                 },
                 "flow_rate": 7.6
             },
@@ -2933,12 +4621,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 3
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            4
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 4
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -2973,12 +4694,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -3013,12 +4754,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -3053,12 +4814,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -3093,12 +4874,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -3133,12 +4934,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
                 },
                 "flow_rate": 7.6
             },
@@ -3173,12 +4994,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 4
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            5
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 5
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3213,12 +5067,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3253,12 +5127,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3293,12 +5187,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3333,12 +5247,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3373,12 +5307,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
                 },
                 "flow_rate": 7.6
             },
@@ -3413,12 +5367,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            6
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 6
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3453,12 +5440,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3493,12 +5500,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3533,12 +5560,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3573,12 +5620,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3613,12 +5680,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
                 },
                 "flow_rate": 7.6
             },
@@ -3653,12 +5740,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            7
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 7
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3693,12 +5813,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3733,12 +5873,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3773,12 +5933,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3813,12 +5993,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3853,12 +6053,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
                 },
                 "flow_rate": 7.6
             },
@@ -3893,12 +6113,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 7
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            8
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 8
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -3933,12 +6186,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -3973,12 +6246,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -4013,12 +6306,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -4053,12 +6366,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -4093,12 +6426,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
                 },
                 "flow_rate": 7.6
             },
@@ -4133,12 +6486,45 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 8
+                },
+                "flow_rate": 7.6
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            11,
+            9
+        ],
+        "route": {
+            "source_slot": 11,
+            "target_slot": 9
+        },
+        "actions": [
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -4173,12 +6559,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -4213,12 +6619,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -4253,12 +6679,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -4293,12 +6739,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },
@@ -4333,6 +6799,16 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
@@ -4353,12 +6829,32 @@
                 "flow_rate": 7.6
             },
             {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
+                },
+                "flow_rate": 7.6
+            },
+            {
                 "action": "aspirate",
                 "vol": 10.0,
                 "source": {
                     "well": "A3",
                     "labware": "NEST 96 Deep Well Plate 2mL",
                     "slot": 11
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "HiMic 96 Well Plate 400 uL",
+                    "slot": 9
                 },
                 "flow_rate": 7.6
             },

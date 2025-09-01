@@ -7,13 +7,9 @@
                 "state": "engage"
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 3,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 3,
+                "seconds": 0.0
             }
         ]
     },
@@ -57,6 +53,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -81,6 +87,16 @@
                     "slot": 4
                 },
                 "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -129,6 +145,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -153,6 +179,16 @@
                     "slot": 4
                 },
                 "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -201,6 +237,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -225,6 +271,16 @@
                     "slot": 4
                 },
                 "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -259,11 +315,11 @@
         "template": "transfer_liquid",
         "route_key": [
             1,
-            4
+            1
         ],
         "route": {
             "source_slot": 1,
-            "target_slot": 4
+            "target_slot": 1
         },
         "actions": [
             {
@@ -275,17 +331,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            4
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 40.0,
@@ -318,6 +475,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A1",
@@ -327,16 +494,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -355,16 +710,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
             {
                 "action": "aspirate",
@@ -398,6 +841,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A2",
@@ -407,16 +860,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -435,16 +1076,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
             {
                 "action": "aspirate",
@@ -478,6 +1207,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A3",
@@ -487,16 +1226,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -515,16 +1442,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
             {
                 "action": "aspirate",
@@ -558,6 +1573,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A4",
@@ -567,16 +1592,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -595,16 +1808,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
             {
                 "action": "aspirate",
@@ -638,6 +1939,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A5",
@@ -647,16 +1958,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -675,16 +2174,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
-                "slot": 1,
-                "times": 5,
-                "volume": 30.0,
-                "speed": [
-                    18.8,
-                    18.8
-                ]
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "aspirate",
+                "vol": 30.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 30.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL on Temperature Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 18.8
             },
             {
                 "action": "aspirate",
@@ -718,6 +2305,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 40.0,
                 "target": {
                     "well": "A6",
@@ -727,16 +2324,204 @@
                 "flow_rate": 18.8
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
-                "slot": 4,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "drop_tip",
@@ -799,6 +2584,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 60.0,
                 "target": {
                     "well": "A7",
@@ -855,6 +2650,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 60.0,
                 "target": {
                     "well": "A8",
@@ -911,6 +2716,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 60.0,
                 "target": {
                     "well": "A9",
@@ -967,6 +2782,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 60.0,
                 "target": {
                     "well": "A10",
@@ -1023,6 +2848,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
                 "vol": 60.0,
                 "target": {
                     "well": "A11",
@@ -1064,6 +2899,16 @@
                     "well": "A6",
                     "labware": "NEST 96 Deep Well Plate 2mL on Magnetic Module GEN2",
                     "slot": 4
+                },
+                "flow_rate": 18.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 18.8
             },
@@ -1148,6 +2993,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
                 "vol": 10.0,
                 "target": {
                     "well": "A7",
@@ -1204,6 +3059,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
                 "vol": 10.0,
                 "target": {
                     "well": "A8",
@@ -1260,6 +3125,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
                 "vol": 10.0,
                 "target": {
                     "well": "A9",
@@ -1316,6 +3191,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
                 "vol": 10.0,
                 "target": {
                     "well": "A10",
@@ -1372,6 +3257,16 @@
             },
             {
                 "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
                 "vol": 10.0,
                 "target": {
                     "well": "A11",
@@ -1413,6 +3308,16 @@
                     "well": "A6",
                     "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
                     "slot": 3
+                },
+                "flow_rate": 1.9
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 1.9
             },
@@ -1453,16 +3358,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",
@@ -1481,16 +3574,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",
@@ -1509,16 +3790,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",
@@ -1537,16 +4006,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",
@@ -1565,16 +4222,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",
@@ -1593,16 +4438,204 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Custom AB NEST 96 Well Plate 200 uL",
-                "slot": 2,
-                "times": 10,
-                "volume": 40.0,
-                "speed": [
-                    31.333333333333332,
-                    31.333333333333332
-                ]
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "aspirate",
+                "vol": 40.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Custom AB NEST 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 31.333333333333332
             },
             {
                 "action": "drop_tip",

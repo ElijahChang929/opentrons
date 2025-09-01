@@ -34,6 +34,16 @@
                 "action": "dispense",
                 "vol": 50.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
                     "well": "A2",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
@@ -79,7 +89,12 @@
                     "slot": 3
                 },
                 "flow_rate": 94.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 300.0,
@@ -87,6 +102,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -149,7 +174,12 @@
                     "slot": 3
                 },
                 "flow_rate": 94.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 300.0,
@@ -157,6 +187,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -219,7 +259,12 @@
                     "slot": 3
                 },
                 "flow_rate": 94.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 300.0,
@@ -227,6 +272,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -289,7 +344,12 @@
                     "slot": 3
                 },
                 "flow_rate": 94.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 300.0,
@@ -297,6 +357,16 @@
                     "well": "A1",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -362,6 +432,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -382,6 +456,16 @@
                     "well": "A1",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -420,16 +504,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -445,6 +520,16 @@
                     "well": "A2",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -483,16 +568,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -508,6 +584,16 @@
                     "well": "A3",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -546,16 +632,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -571,6 +648,16 @@
                     "well": "A4",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -609,16 +696,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -634,6 +712,16 @@
                     "well": "A5",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -672,16 +760,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -697,6 +776,16 @@
                     "well": "A6",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -740,6 +829,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            1
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 1
@@ -760,6 +853,16 @@
                     "well": "A1",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -798,16 +901,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -823,6 +917,16 @@
                     "well": "A2",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -861,16 +965,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -886,6 +981,16 @@
                     "well": "A3",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -924,16 +1029,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -949,6 +1045,16 @@
                     "well": "A4",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -987,16 +1093,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1012,6 +1109,16 @@
                     "well": "A5",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -1050,16 +1157,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1075,6 +1173,16 @@
                     "well": "A6",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -1118,6 +1226,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            2
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 2
@@ -1138,6 +1250,16 @@
                     "well": "A1",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1176,16 +1298,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1201,6 +1314,16 @@
                     "well": "A2",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1239,16 +1362,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1264,6 +1378,16 @@
                     "well": "A3",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1302,16 +1426,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1327,6 +1442,16 @@
                     "well": "A4",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1365,16 +1490,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1390,6 +1506,16 @@
                     "well": "A5",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1428,16 +1554,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1453,6 +1570,16 @@
                     "well": "A6",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 7
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1496,6 +1623,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            8,
+            2
+        ],
         "route": {
             "source_slot": 8,
             "target_slot": 2
@@ -1516,6 +1647,16 @@
                     "well": "A1",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1554,16 +1695,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1579,6 +1711,16 @@
                     "well": "A2",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1617,16 +1759,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1642,6 +1775,16 @@
                     "well": "A3",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1680,16 +1823,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1705,6 +1839,16 @@
                     "well": "A4",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1743,16 +1887,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1768,6 +1903,16 @@
                     "well": "A5",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1806,16 +1951,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 8,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1831,6 +1967,16 @@
                     "well": "A6",
                     "labware": "Custom 24 Well Plate 2000 uL",
                     "slot": 8
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "B11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -1874,6 +2020,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -1908,22 +2058,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1945,22 +2096,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -1982,22 +2134,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2019,22 +2172,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2056,22 +2210,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2093,22 +2248,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2130,22 +2286,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2167,22 +2324,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2204,22 +2362,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2241,22 +2400,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2278,22 +2438,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2301,6 +2462,16 @@
                     "well": "A2",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -2326,6 +2497,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            2
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 2
@@ -2352,22 +2527,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2389,22 +2565,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2426,22 +2603,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2463,22 +2641,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2500,22 +2679,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2537,22 +2717,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2574,22 +2755,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2611,22 +2793,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2648,22 +2831,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2685,22 +2869,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2722,22 +2907,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 60.0,
@@ -2745,6 +2931,16 @@
                     "well": "A2",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 60.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },
@@ -2778,6 +2974,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            1
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 1
@@ -2812,22 +3012,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -2849,22 +3050,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -2886,22 +3088,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -2923,22 +3126,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -2960,22 +3164,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -2997,22 +3202,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3034,22 +3240,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3071,22 +3278,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3108,22 +3316,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3145,22 +3354,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3182,22 +3392,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3205,6 +3416,16 @@
                     "well": "A3",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 1
                 },
                 "flow_rate": 94.0
             },
@@ -3230,6 +3451,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            2
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 2
@@ -3256,22 +3481,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3293,22 +3519,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3330,22 +3557,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3367,22 +3595,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3404,22 +3633,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3441,22 +3671,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3478,22 +3709,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3515,22 +3747,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3552,22 +3785,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3589,22 +3823,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3626,22 +3861,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "Greiner 96 Well Plate 200 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 2
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 75.0,
@@ -3649,6 +3885,16 @@
                     "well": "A3",
                     "labware": "NEST 12 Well Reservoir 15 mL",
                     "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 75.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Greiner 96 Well Plate 200 uL",
+                    "slot": 2
                 },
                 "flow_rate": 94.0
             },

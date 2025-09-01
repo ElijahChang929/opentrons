@@ -1,9 +1,13 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
-            "target_slot": 4
+            "target_slot": 5
         },
         "actions": [
             {
@@ -15,17 +19,58 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -57,33 +102,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -116,33 +190,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -175,33 +278,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -234,33 +366,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -293,33 +454,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -352,33 +542,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -411,33 +630,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -470,33 +718,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -529,33 +806,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -588,33 +894,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -647,33 +982,62 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 2,
-                "volume": 150.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -692,6 +1056,16 @@
                     "well": "A1",
                     "labware": "Reagent Reservoir",
                     "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
                 },
                 "flow_rate": 94.0
             },
@@ -748,6 +1122,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -782,6 +1160,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -796,16 +1184,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -835,6 +1214,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -849,16 +1238,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -888,6 +1268,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -902,16 +1292,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -941,6 +1322,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -955,16 +1346,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -994,6 +1376,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1008,16 +1400,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1047,6 +1430,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1061,16 +1454,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1100,6 +1484,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1114,16 +1508,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1153,6 +1538,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1167,16 +1562,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1206,6 +1592,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1220,16 +1616,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1259,6 +1646,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1273,16 +1670,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1312,6 +1700,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -1326,16 +1724,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1353,6 +1742,16 @@
                     "slot": 4
                 },
                 "flow_rate": 20.0
+            },
+            {
+                "action": "dispense",
+                "vol": 40.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -1388,6 +1787,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 4
@@ -1432,22 +1835,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1479,22 +1883,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1526,22 +1931,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1573,22 +1979,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1620,22 +2027,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1667,22 +2075,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1714,22 +2123,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1761,22 +2171,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1808,22 +2219,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1855,22 +2267,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1902,22 +2315,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -1937,6 +2351,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -1973,6 +2397,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -2007,6 +2435,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2021,16 +2459,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2060,6 +2489,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2074,16 +2513,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2113,6 +2543,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2127,16 +2567,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2166,6 +2597,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2180,16 +2621,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2219,6 +2651,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2233,16 +2675,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2272,6 +2705,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2286,16 +2729,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2325,6 +2759,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2339,16 +2783,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2378,6 +2813,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2392,16 +2837,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2431,6 +2867,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2445,16 +2891,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2484,6 +2921,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2498,16 +2945,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2537,6 +2975,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2551,16 +2999,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2578,6 +3017,16 @@
                     "slot": 4
                 },
                 "flow_rate": 20.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -2613,6 +3062,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
         "route": {
             "source_slot": 5,
             "target_slot": 4
@@ -2657,22 +3110,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2704,22 +3158,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2751,22 +3206,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2798,22 +3254,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2845,22 +3302,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2892,22 +3350,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2939,22 +3398,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -2986,22 +3446,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3033,22 +3494,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3080,22 +3542,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3127,22 +3590,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
                     "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -3162,6 +3626,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 120.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -3198,6 +3672,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 1
@@ -3232,6 +3710,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3246,16 +3734,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3285,6 +3764,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3299,16 +3788,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3338,6 +3818,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3352,16 +3842,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3391,6 +3872,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3405,16 +3896,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3444,6 +3926,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3458,16 +3950,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3497,6 +3980,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3511,16 +4004,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3550,6 +4034,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3564,16 +4058,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3603,6 +4088,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3617,16 +4112,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3656,6 +4142,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3670,16 +4166,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3709,6 +4196,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3723,16 +4220,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3762,6 +4250,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -3776,16 +4274,7 @@
                     "labware": "Opentrons OT-2 96 Tip Rack 300 uL",
                     "slot": 2
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3803,6 +4292,16 @@
                     "slot": 4
                 },
                 "flow_rate": 20.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Waste Reservoir",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -3848,9 +4347,13 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            5,
+            5
+        ],
         "route": {
             "source_slot": 5,
-            "target_slot": 4
+            "target_slot": 5
         },
         "actions": [
             {
@@ -3862,17 +4365,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
             },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            5,
+            4
+        ],
+        "route": {
+            "source_slot": 5,
+            "target_slot": 4
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 20.0,
@@ -3882,6 +4486,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -3908,16 +4522,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3927,16 +4532,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -3947,6 +4640,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -3973,16 +4676,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3992,16 +4686,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4012,6 +4794,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4038,16 +4830,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4057,16 +4840,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4077,6 +4948,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4103,16 +4984,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4122,16 +4994,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4142,6 +5102,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4168,16 +5138,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4187,16 +5148,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4207,6 +5256,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4233,16 +5292,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4252,16 +5302,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4272,6 +5410,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4298,16 +5446,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4317,16 +5456,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4337,6 +5564,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4363,16 +5600,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4382,16 +5610,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4402,6 +5718,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4428,16 +5754,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4447,16 +5764,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4467,6 +5872,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4493,16 +5908,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4512,16 +5918,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4532,6 +6026,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4558,16 +6062,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 5,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4577,16 +6072,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Reagent Reservoir",
-                "slot": 5,
-                "times": 5,
-                "volume": 10.0,
-                "speed": [
-                    50.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reagent Reservoir",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "aspirate",
@@ -4597,6 +6180,16 @@
                     "slot": 5
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "4ti-0960/C 96 Well Full Skirted Plate on Magnetic Module GEN2",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",
@@ -4655,6 +6248,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 3
@@ -4689,6 +6286,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -4703,16 +6310,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4742,6 +6340,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
@@ -4756,16 +6364,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4795,6 +6394,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A3",
@@ -4809,16 +6418,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4848,6 +6448,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A4",
@@ -4862,16 +6472,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4901,6 +6502,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A5",
@@ -4915,16 +6526,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4954,6 +6556,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A6",
@@ -4968,16 +6580,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5007,6 +6610,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A7",
@@ -5021,16 +6634,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5060,6 +6664,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A8",
@@ -5074,16 +6688,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5113,6 +6718,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A9",
@@ -5127,16 +6742,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5166,6 +6772,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A10",
@@ -5180,16 +6796,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5219,6 +6826,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A11",
@@ -5233,16 +6850,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 3
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -5260,6 +6868,16 @@
                     "slot": 4
                 },
                 "flow_rate": 50.0
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Elution Plate",
+                    "slot": 3
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "dispense",

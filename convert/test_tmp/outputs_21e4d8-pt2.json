@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            10
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 10
@@ -44,16 +48,74 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 20.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 20.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 20.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -79,6 +141,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            7,
+            10
+        ],
         "route": {
             "source_slot": 7,
             "target_slot": 10
@@ -113,16 +179,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -139,16 +263,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -178,16 +293,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -204,16 +377,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -243,16 +407,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -269,16 +491,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -308,16 +521,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -334,16 +605,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -373,16 +635,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "E1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -399,16 +719,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -438,16 +749,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "F1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -464,16 +833,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -503,16 +863,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "G1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -529,16 +947,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 7,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -568,16 +977,74 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "H1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 45.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -603,6 +1070,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            10
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 10
@@ -637,16 +1108,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -663,16 +1332,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -702,16 +1362,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -728,16 +1586,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -767,16 +1616,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -793,16 +1840,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -832,16 +1870,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "D1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -858,16 +2094,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -897,16 +2124,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "E1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -923,16 +2348,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -962,16 +2378,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "F1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -988,16 +2602,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1027,16 +2632,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "G1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -1053,16 +2856,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1092,16 +2886,214 @@
                 "flow_rate": 94.0
             },
             {
-                "action": "mix",
-                "well": "H1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 10,
-                "volume": 170.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "dispense",
+                "vol": 80.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 170.0,
+                "source": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 94.0
             },
             {
                 "action": "blow_out",
@@ -1160,6 +3152,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            11
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 11
@@ -1194,22 +3190,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1239,22 +3236,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1284,22 +3282,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1329,22 +3328,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1374,22 +3374,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1419,22 +3420,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1464,22 +3466,23 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1509,6 +3512,16 @@
                 "flow_rate": 94.0
             },
             {
+                "action": "dispense",
+                "vol": 180.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 94.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -1524,6 +3537,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            10
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 10
@@ -1558,22 +3575,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1603,22 +3621,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1648,22 +3667,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1693,22 +3713,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1738,22 +3759,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1783,22 +3805,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1828,22 +3851,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1861,6 +3885,16 @@
                     "slot": 4
                 },
                 "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
             },
             {
                 "action": "dispense",
@@ -1898,6 +3932,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            11
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 11
@@ -1932,22 +3970,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1977,22 +4016,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2022,22 +4062,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2067,22 +4108,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2112,22 +4154,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2157,22 +4200,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2202,22 +4246,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2247,6 +4292,16 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
@@ -2262,6 +4317,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            10
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 10
@@ -2296,22 +4355,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2341,22 +4401,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2386,22 +4447,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2431,22 +4493,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "D1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2476,22 +4539,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "E1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2521,22 +4585,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "F1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2566,22 +4631,23 @@
                 "flow_rate": 25.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "G1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 10
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2599,6 +4665,16 @@
                     "slot": 4
                 },
                 "flow_rate": 100.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "H1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 25.0
             },
             {
                 "action": "dispense",
@@ -2636,6 +4712,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            11
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 11
@@ -2670,22 +4750,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2715,22 +4796,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2760,22 +4842,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2805,22 +4888,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2850,22 +4934,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2895,22 +4980,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2940,22 +5026,23 @@
                 "flow_rate": 100.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 10,
-            "target_slot": 11
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2973,6 +5060,16 @@
                     "slot": 10
                 },
                 "flow_rate": 25.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 11
+                },
+                "flow_rate": 100.0
             },
             {
                 "action": "dispense",
@@ -3018,6 +5115,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            10
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 10
@@ -3052,16 +5153,114 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
-                "slot": 10,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    7.6,
-                    7.6
-                ]
+                "action": "dispense",
+                "vol": 17.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
+                    "slot": 10
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "blow_out",
@@ -3120,6 +5319,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            10,
+            1
+        ],
         "route": {
             "source_slot": 10,
             "target_slot": 1
@@ -3140,6 +5343,16 @@
                     "well": "A1",
                     "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt on Magnetic Module GEN1",
                     "slot": 10
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 1
                 },
                 "flow_rate": 7.6
             },

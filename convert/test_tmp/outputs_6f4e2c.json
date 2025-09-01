@@ -1,6 +1,10 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -35,22 +39,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 130.0,
@@ -72,22 +77,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
                     "slot": 1
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 130.0,
@@ -97,6 +103,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 130.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -123,16 +139,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -142,16 +149,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 2,
-                "times": 5,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "aspirate",
@@ -162,6 +257,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -194,16 +299,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "blow_out",
@@ -220,16 +383,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -239,16 +393,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 2,
-                "times": 5,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "aspirate",
@@ -259,6 +501,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -291,16 +543,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "blow_out",
@@ -317,16 +627,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -336,16 +637,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 12 Well Reservoir 15 mL",
-                "slot": 2,
-                "times": 5,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 12 Well Reservoir 15 mL",
+                    "slot": 2
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "aspirate",
@@ -356,6 +745,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -388,16 +787,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 110.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "blow_out",
@@ -442,6 +899,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 8
@@ -476,6 +937,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -496,6 +967,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -504,6 +985,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -522,16 +1013,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -561,6 +1043,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -581,6 +1073,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -589,6 +1091,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -607,16 +1119,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -646,6 +1149,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -666,6 +1179,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 170.0,
                 "source": {
@@ -674,6 +1197,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 170.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -706,6 +1239,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -740,6 +1277,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -748,6 +1295,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -780,16 +1337,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -798,16 +1413,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -837,6 +1443,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -845,6 +1461,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -877,16 +1503,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -895,16 +1579,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -934,6 +1609,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -942,6 +1627,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -974,16 +1669,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1011,6 +1764,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 8
@@ -1045,6 +1802,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1065,22 +1832,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1110,6 +1878,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1130,22 +1908,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1175,6 +1954,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1183,6 +1972,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1215,6 +2014,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -1249,6 +2052,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1257,6 +2070,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1289,16 +2112,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1307,16 +2188,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1346,6 +2218,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1354,6 +2236,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1386,16 +2278,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1404,16 +2354,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1443,6 +2384,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1451,6 +2402,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1483,16 +2444,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1520,6 +2539,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 8
@@ -1554,6 +2577,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1574,22 +2607,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1619,6 +2653,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1639,22 +2683,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1684,6 +2729,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -1692,6 +2747,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1724,6 +2789,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            1
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 1
@@ -1758,6 +2827,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1766,6 +2845,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1798,16 +2887,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1816,16 +2963,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1855,6 +2993,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1863,6 +3011,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1895,16 +3053,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -1913,16 +3129,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1952,6 +3159,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 200.0,
                 "source": {
@@ -1960,6 +3177,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -1992,16 +3219,74 @@
                 "flow_rate": 300.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
-                "slot": 1,
-                "times": 3,
-                "volume": 200.0,
-                "speed": [
-                    150.0,
-                    300.0
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 200.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Magnetic Module GEN1",
+                    "slot": 1
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "drop_tip",
@@ -2029,6 +3314,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            8
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 8
@@ -2063,6 +3352,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -2083,22 +3382,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2128,6 +3428,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -2148,22 +3458,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "drop_tip",
                 "location": {
                     "well": "A1",
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 8
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2193,6 +3504,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "aspirate",
                 "vol": 300.0,
                 "source": {
@@ -2201,6 +3522,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 1 Well Reservoir 195 mL",
+                    "slot": 8
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -2256,6 +3587,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            4
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 4
@@ -2290,22 +3625,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Temperature Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
                     "labware": "Eppendorf 96 Deep Well Plate 1000uL on Temperature Module GEN1",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2327,22 +3663,23 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Temperature Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
                     "labware": "Eppendorf 96 Deep Well Plate 1000uL on Temperature Module GEN1",
                     "slot": 4
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 4
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 50.0,
@@ -2352,6 +3689,16 @@
                     "slot": 2
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Eppendorf 96 Deep Well Plate 1000uL on Temperature Module GEN1",
+                    "slot": 4
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",
@@ -2411,6 +3758,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            5
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 5
@@ -2445,6 +3796,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 5
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A1",
@@ -2459,16 +3820,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2498,6 +3850,16 @@
                 "flow_rate": 300.0
             },
             {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 5
+                },
+                "flow_rate": 300.0
+            },
+            {
                 "action": "blow_out",
                 "at": {
                     "well": "A2",
@@ -2512,16 +3874,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2539,6 +3892,16 @@
                     "slot": 1
                 },
                 "flow_rate": 150.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
+                    "slot": 5
+                },
+                "flow_rate": 300.0
             },
             {
                 "action": "dispense",

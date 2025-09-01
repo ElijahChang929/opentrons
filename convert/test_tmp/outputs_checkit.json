@@ -1,10 +1,6 @@
 [
     {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 2,
-            "target_slot": 2
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "pick_tip",
@@ -23,6 +19,16 @@
                     "slot": 2
                 },
                 "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 5.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Checkit 8 Well Plate 5 uL",
+                    "slot": 2
+                },
+                "flow_rate": 15.0
             },
             {
                 "action": "dispense",

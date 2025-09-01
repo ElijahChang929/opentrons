@@ -271,8 +271,9 @@ def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
         return float(m.group(1)) if m else None
 
     def parse_container(line: str, mode_kw: str) -> Optional[Dict[str, Union[str, int]]]:
+        # 只匹配 from / into，不要把 "at ..." 误当分隔词
         m = re.search(
-            rf'{re.escape(mode_kw)}\s+[\d.]*\s*u?L?.*?(?:from|into|at)\s+([A-H]\d+)\s+of\s+(.*?)\s+on\s+(\d+)',
+            rf'{re.escape(mode_kw)}\s+[\d.]+\s*u?L.*?(?:from|into)\s+([A-H]\d+)\s+of\s+(.*?)\s+on\s+(\d+)',
             line
         )
         if not m:
@@ -419,205 +420,86 @@ def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
     # 文件结尾如果还有挂着的 HS，别忘了收尾
     flush_hs()
     return actions
-# # ---------- 4) 解析模块相关标志 ----------
-# def _parse_module_flags(step_lines: List[str]):
-#     """
-#     返回：
-#       temperature_target, temperature_deactivate,
-#       magnetic_engage, magnetic_delay_minutes, magnetic_disengage
-#     """
-#     temperature_target = None
-#     temperature_deactivate = False
-#     magnetic_engage = False
-#     magnetic_delay_minutes = None
-#     magnetic_disengage = False
-
-#     for line in step_lines:
-#         if line.startswith(" "):
-#             continue
-#         s = line.strip()
-
-#         if s.startswith("Setting Temperature Module temperature"):
-#             temperature_target = extract_float_after_keyword(s, "to")
-#         elif s.startswith("Deactivating Temperature Module"):
-#             temperature_deactivate = True
-#         elif s.startswith("Engaging Magnetic Module"):
-#             magnetic_engage = True
-#         elif s.startswith("Disengaging Magnetic Module"):
-#             magnetic_disengage = True
-#         elif s.startswith("Delaying") and magnetic_engage and not magnetic_disengage:
-#             m = re.search(r'Delaying for (\d+) minutes', s)
-#             if m:
-#                 magnetic_delay_minutes = int(m.group(1))
-
-#     return (temperature_target, temperature_deactivate,
-#             magnetic_engage, magnetic_delay_minutes, magnetic_disengage)
-
-# # ---------- 5) 是否 96 孔整行（多道） ----------
-# def _compute_is_96_well(sources: List[Dict], targets: List[Dict]) -> bool:
-#     source_wells = [s['well'] for s in sources]
-#     target_wells = [t['well'] for t in targets]
-#     return is_full_row(source_wells) and is_full_row(target_wells)
-
-# # ---------- 6) 组装基础字段 ----------
-# def _build_basic_info(sources, targets, tip_rack_info,
-#                       asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
-#                       blow_out_air_volume, is_96_well, mix_stage,
-#                       mix_times, mix_vol, mix_rate, delays) -> Dict:
-#     return {
-#         "sources": sources,
-#         "targets": targets,
-#         "tip_racks": [tip_rack_info] if tip_rack_info else [],
-#         "use_channels": None,
-#         "asp_vols": asp_vols,
-#         "asp_flow_rates": [asp_flow_rate] if asp_flow_rate else None,
-#         "disp_vols": dis_vols,
-#         "dis_flow_rates": [dis_flow_rate] if dis_flow_rate else None,
-#         "offsets": None,
-#         "touch_tip": any(["Touching tip" in str(x) for x in []]),  # 由上层填充；这里保持接口
-#         "liquid_height": None,
-#         "blow_out_air_volume": [blow_out_air_volume] if blow_out_air_volume else [0.0],
-#         "is_96_well": is_96_well,
-#         "mix_stage": mix_stage,
-#         "mix_times": mix_times,
-#         "mix_vol": mix_vol,
-#         "mix_rate": mix_rate,
-#         "mix_liquid_height": None,
-#         "delays": delays
-#     }
-
-# ---------- 7) 主函数：只做编排 ----------
-# def build_transfer_liquid_dict_complete(step_lines: List[str]) -> Dict:
-#     # 第一遍：标记关键位置 & tip rack
-#     # asp_idx, disp_idx, mixing_indices, tip_rack_info = _scan_phase_markers(step_lines)
-
-#     # # pp.pprint({
-#     # #     "asp_idx": asp_idx,
-#     # #     "disp_idx": disp_idx,
-#     # #     "mixing_indices": mixing_indices,
-#     # #     "tip_rack_info": tip_rack_info
-#     # # })
-
-#     # mix_stage = _infer_mix_stage(asp_idx, disp_idx, mixing_indices)
-    
-#     # 第二遍：解析液体操作
-#     (asp_vols, dis_vols, sources, targets, asp_flow_rate, dis_flow_rate,
-#      blow_out_air_volume, mix_times, mix_vol, mix_rate, touch_tip, delays) = _parse_liquid_ops(step_lines)
-
-#     # 模块标志
-#     (temperature_target, temperature_deactivate,
-#      magnetic_engage, magnetic_delay_minutes, magnetic_disengage) = _parse_module_flags(step_lines)
-
-#     # 96 孔整行判定
-#     is_96_well = _compute_is_96_well(sources, targets)
-
-#     # 组装基础信息
-#     basic_info = {
-#         **_build_basic_info(sources, targets, tip_rack_info,
-#                             asp_vols, asp_flow_rate, dis_vols, dis_flow_rate,
-#                             blow_out_air_volume, is_96_well, mix_stage,
-#                             mix_times, mix_vol, mix_rate, delays),
-#         "touch_tip": touch_tip,  # 回填
-#     }
-
-#     # 模板分支
-#     if magnetic_engage or magnetic_disengage:
-#         return {
-#             "template": "transfer_with_magnetic",
-#             **basic_info,
-#             "magnetic_engage": magnetic_engage,
-#             "magnetic_delay_minutes": magnetic_delay_minutes,
-#             "magnetic_disengage": magnetic_disengage
-#         }
-#     elif temperature_target is not None:
-#         return {
-#             "template": "transfer_with_temperature",
-#             **basic_info,
-#             "temperature_target": temperature_target,
-#             "temperature_deactivate": temperature_deactivate
-#         }
-#     else:
-#         return {"template": "transfer", **basic_info}
 
 
 
-def collapse_mixes(actions: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    把单个 phase 里连续的同孔 Aspirate→Dispense 对折叠为一条 mix：
-      输出的 mix 结构：
-        {
-          "action": "mix",
-          "well": str, "labware": str, "slot": int,
-          "times": int,              # 成功折叠的 AD 对数
-          "volume": float,           # 采用第一对的体积
-          "speed": (asp_rate, dis_rate)  # 采用第一对的吸/放速率
-        }
-    其余动作保持原顺序。
-    """
-    out = []
-    i, n = 0, len(actions)
-
-    # 碰到这些动作就认为中断混匀序列
-    breakers = {"pick_tip", "drop_tip", "touch_tip", "blow_out", "delay",
-                "magnet", "temperature", "heater_shaker", "raw"}
+def collapse_mixes(actions: List[Dict[str, Any]], tol: float = 1e-6) -> List[Dict[str, Any]]:
+    """把同一孔的连续 A→D 对折叠为 mix；允许中间穿插软动作。"""
+    soft = {"delay", "touch_tip", "blow_out", "raw"}  # 可放宽/增减
+    out, i, n = [], 0, len(actions)
 
     def same_container(a, b) -> bool:
-        return bool(a and b and
-                    a.get("well") == b.get("well") and
-                    a.get("slot") == b.get("slot"))
+        return bool(a and b
+                    and a.get("well")==b.get("well")
+                    and a.get("slot")==b.get("slot"))
 
     while i < n:
-        # 尝试从 i 开始识别一段 aspirate->dispense（在位）
-        if i + 1 < n:
-            a0, d0 = actions[i], actions[i + 1]
-            if (a0.get("action") == "aspirate"
-                and d0.get("action") == "dispense"
-                and same_container(a0.get("source"), d0.get("target"))):
+        # 找一个 A→D 起点
+        if actions[i].get("action") != "aspirate":
+            out.append(actions[i])
+            i += 1
+            continue
 
-                base_src   = a0.get("source")
-                base_vol   = a0.get("vol")
-                asp_rate0  = a0.get("flow_rate")
-                dis_rate0  = d0.get("flow_rate")
-                times = 1
-                j = i + 2
+        # 收集可能的 A→D 对（中间允许 soft）
+        j = i
+        pairs = []  # [(asp, disp)]
+        while True:
+            # 跳过 soft
+            while j < n and actions[j].get("action") in soft:
+                out.append(actions[j])  # 软动作保留在 mix 前
+                j += 1
+            if j >= n or actions[j].get("action") != "aspirate":
+                break
+            asp = actions[j]; j += 1
 
-                # 吃后续最大连续块：严格 AD 成对、同孔、体积一致、不中断
-                while j + 1 < n:
-                    x, y = actions[j], actions[j + 1]
-                    if x.get("action") in breakers or y.get("action") in breakers:
-                        break
-                    if not (x.get("action") == "aspirate" and y.get("action") == "dispense"):
-                        break
-                    if not same_container(x.get("source"), y.get("target")):
-                        break
-                    # 体积不一致就停（如需速率也一致，可再加判断）
-                    if x.get("vol") != base_vol:
-                        break
-                    times += 1
-                    j += 2
+            # 吞掉中间 soft
+            mid_soft = []
+            while j < n and actions[j].get("action") in soft:
+                mid_soft.append(actions[j]); j += 1
 
-                # times>=2 才折叠为 mix；只有一对就原样保留更直观
-                if times >= 2:
-                    out.append({
-                        "action": "mix",
-                        "well":   base_src.get("well"),
-                        "labware":base_src.get("labware"),
-                        "slot":   base_src.get("slot"),
-                        "times":  times,
-                        "volume": base_vol,
-                        "speed":  (asp_rate0, dis_rate0)
-                    })
-                    i = j
-                    continue
-                else:
-                    out.append(a0); out.append(d0)
-                    i += 2
-                    continue
+            if j >= n or actions[j].get("action") != "dispense":
+                # 不是 A→D，回退：把 asp 和中间 soft 发回 out
+                out.extend([asp] + mid_soft)
+                break
 
-        # 不是 mix 起点，原样输出一条
-        out.append(actions[i])
+            disp = actions[j]; j += 1
+            if not same_container(asp.get("source"), disp.get("target")):
+                # 容器不同，回退输出
+                out.extend([asp] + mid_soft + [disp])
+                break
 
-        i += 1
+            pairs.append((asp, disp))
+            # 如果下一条不是 aspirate，就停止吃对
+            k = j
+            while k < n and actions[k].get("action") in soft:
+                k += 1
+            if k >= n or actions[k].get("action") != "aspirate":
+                # 结束
+                break
+
+        if pairs:
+            # 判定是否折叠成 mix：至少 2 对，且体积近似一致
+            vols = [p[0].get("vol", 0.0) for p in pairs]
+            if len(pairs) >= 2 and max(vols) - min(vols) <= tol:
+                base_asp, base_dis = pairs[0]
+                src = base_asp.get("source")
+                out.append({
+                    "action": "mix",
+                    "well": src.get("well"),
+                    "labware": src.get("labware"),
+                    "slot": src.get("slot"),
+                    "times": len(pairs),
+                    "volume": vols[0],
+                    "speed": (base_asp.get("flow_rate"), base_dis.get("flow_rate"))
+                })
+            else:
+                # 不折叠，原样吐回
+                for a, d in pairs:
+                    out.append(a); out.append(d)
+            i = j
+        else:
+            # 没形成 A→D 对，刚才已把非 aspirate 的都吐回了；这里只推进一步
+            i += 1
 
     return out
 
@@ -724,8 +606,7 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
         starts_with_asp = step.startswith("Aspirating")
         #guard_prev = all(x not in last_sentence for x in ("Air gap","Transferring", "Picking up tip", "Aspirating"))
         guard_prev = all(x not in last_sentence for x in (
-    "Moving to",  "Picking up tip",
-    "Aspirating", "Dispensing"
+    "Picking up tip", "Aspirating"# "Dispensing"
 ))
         is_tip_pick = "Picking up tip" in step
 
@@ -823,8 +704,19 @@ def _merge_consecutive_ops_in_phase(phase: list[str]) -> None:
 
 
 def coalesce_transfer_phases(phases):
-    """把相邻路由一致的液体移动 phase 合并；纯 mix 的 phase 若与上下相邻路由槽位重合，也并入对应块。"""
+    """把相邻路由一致的液体移动 phase 合并；
+    规则：
+      1) 计算每个 phase 的 (src_slot, dst_slot) 路由；若无法唯一确定则视为无路由。
+      2) s==d 的“就地”段（纯 in-place 混匀或所有 A/D 仅在同一 slot）优先并入
+         相邻与该 slot 重合的 transfer 段（若当前有，则追加；否则挂起等待下一段）。
+      3) 相邻且路由完全一致的 transfer 段直接合并为同一块。
+      4) 其余落地为 other_devices。
+    返回高层 step 列表，每块结构：
+      {"template":"transfer_liquid","route":{"source_slot":s,"target_slot":d},"actions":[...]}
+      或 {"template":"other_devices","actions":[...]}
+    """
 
+    # ---------- helpers ----------
     def _phase_route(phase_actions):
         """返回 (src_slot, dst_slot) 或 None。要求 aspirate/dispense 各自的槽位唯一。"""
         src_slots = {
@@ -841,6 +733,16 @@ def coalesce_transfer_phases(phases):
             return (next(iter(src_slots)), next(iter(dst_slots)))
         return None
 
+    def _ad_slots(phase_actions):
+        """收集本段所有 Aspirate/Dispense 涉及的槽位 set。"""
+        slots = set()
+        for a in phase_actions:
+            if a.get("action") == "aspirate" and a.get("source") and "slot" in a["source"]:
+                slots.add(a["source"]["slot"])
+            elif a.get("action") == "dispense" and a.get("target") and "slot" in a["target"]:
+                slots.add(a["target"]["slot"])
+        return slots
+
     def _mix_slots(phase_actions):
         """收集本 phase 中 mix 涉及的槽位集合（若有）。"""
         return {
@@ -849,22 +751,38 @@ def coalesce_transfer_phases(phases):
             if a.get("action") == "mix" and isinstance(a.get("slot"), int)
         }
 
+    def _is_pure_in_place(phase_actions):
+        """是否“纯就地”：
+           - 路由存在且 s==d；
+           - 且所有 A/D 的槽位都是这个 s（或根本没有 A/D，仅有 mix 也算就地）。"""
+        route = _phase_route(phase_actions)
+        if route is None:
+            return False
+        s, d = route
+        if s != d:
+            return False
+        ad = _ad_slots(phase_actions)
+        return (not ad) or (ad == {s})
+
+    # ---------- main ----------
     high_level = []
-    cur = None  # 正在合并的 transfer_liquid 块：{"template":"transfer_liquid","route_key":(s,d),"route":{...},"actions":[...]}
-    pending_mix = []  # 暂存需要并入“下一段路由”的 mix-only actions
+    cur = None             # 正在合并的 transfer_liquid 块
+    pending_mix = []       # 等待并入下一段路由（槽位重合）的 mix-only / in-place 段
 
     i = 0
     while i < len(phases):
         actions = phases[i]
         route = _phase_route(actions)
+        mix_slots = _mix_slots(actions)
+        in_place = _is_pure_in_place(actions)
 
-        # 在处理当前段前，若有挂起的 pending_mix 且“当前段是路由段”，且槽位重合，则把 pending_mix 先并入
+        # 先处理挂起的 pending_mix：若当前是路由段且槽位重合，优先并入
         if pending_mix and route is not None:
             s, d = route
-            mix_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
-            if (s in mix_slots) or (d in mix_slots):
-                # 若当前已有合并块且路由匹配，就把 pending_mix 追加到当前块；
-                # 否则开新块并把 pending_mix 放前面
+            pend_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
+            # 如果 pending_mix 里没有 mix（理论上不会），保底也并入当前块
+            overlap = (not pend_slots) or (s in pend_slots) or (d in pend_slots)
+            if overlap:
                 if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
                     cur["actions"].extend(pending_mix)
                 else:
@@ -874,34 +792,35 @@ def coalesce_transfer_phases(phases):
                         "template": "transfer_liquid",
                         "route_key": route,
                         "route": {"source_slot": s, "target_slot": d},
-                        "actions": list(pending_mix),  # 先塞 pending_mix
+                        "actions": list(pending_mix),
                     }
-                pending_mix = []  # 清空
+                pending_mix = []
 
-        if route is None:
-            # 非路由段：优先尝试作为 mix-only 并入上下
-            mix_slots = _mix_slots(actions)
+        # ------ 非路由段 或 纯就地段：尝试作为“mix-only”并入上下 ------
+        if route is None or in_place:
+            # 优先并到当前已开的路由块（若槽位重合）
+            if (route is None and mix_slots) or in_place:
+                target_slots = mix_slots
+                if in_place and route is not None:
+                    target_slots = {route[0]}  # s==d
 
-            if mix_slots:
-                # 1) 先尝试并到“当前已开的路由块”
                 if cur is not None and cur.get("template") == "transfer_liquid":
-                    s, d = cur["route_key"]
-                    if (s in mix_slots) or (d in mix_slots):
+                    cs, cd = cur["route_key"]
+                    if (cs in target_slots) or (cd in target_slots):
                         cur["actions"].extend(actions)
                         i += 1
                         continue
 
-                # 2) 向前看下一段
+                # 看下一段：如果下一段是路由且槽位重合，则挂起
                 next_route = _phase_route(phases[i + 1]) if (i + 1 < len(phases)) else None
                 if next_route is not None:
-                    s2, d2 = next_route
-                    if (s2 in mix_slots) or (d2 in mix_slots):
-                        # 先挂起，等下一段路由时并入
+                    ns, nd = next_route
+                    if (ns in target_slots) or (nd in target_slots):
                         pending_mix.extend(actions)
                         i += 1
                         continue
 
-            # 3) 上下都并不进去，则当作 other_devices 落地
+            # 实在并不进去：落地 other_devices
             if cur is not None:
                 high_level.append(cur)
                 cur = None
@@ -909,7 +828,7 @@ def coalesce_transfer_phases(phases):
             i += 1
             continue
 
-        # 路由段：常规合并
+        # ------ 路由段：常规合并 ------
         if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
             cur["actions"].extend(actions)
         else:
@@ -918,12 +837,13 @@ def coalesce_transfer_phases(phases):
             s, d = route
             cur = {
                 "template": "transfer_liquid",
+                "route_key": route,
                 "route": {"source_slot": s, "target_slot": d},
                 "actions": list(actions),
             }
         i += 1
 
-    # 循环结束：如果还挂着 pending_mix，尽量塞到当前块；否则单独落地
+    # 循环结束：把还没并入的 pending_mix 尽量放进当前块，否则落地
     if pending_mix:
         if cur is not None and cur.get("template") == "transfer_liquid":
             cur["actions"].extend(pending_mix)
@@ -965,7 +885,6 @@ def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> Li
     for phase_lines in grouped_phases:
         phases.append(collapse_mixes(_parse_liquid_ops(phase_lines)))
 
-    # 相邻同路由的“移动液体”phase 合并；其余落 other_devices
     high_level_steps = coalesce_transfer_phases(phases)
 
     # 如果还想保留原始 phases，可同时写两个文件；否则直接覆盖原输出

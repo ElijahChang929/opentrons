@@ -1,9 +1,13 @@
 [
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            4
+        ],
         "route": {
             "source_slot": 4,
-            "target_slot": 1
+            "target_slot": 4
         },
         "actions": [
             {
@@ -15,17 +19,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -70,6 +135,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A2",
+                    "labware": "rep 1",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A3",
                     "labware": "rep 1",
                     "slot": 1
@@ -93,29 +168,81 @@
                     "labware": "rep 1",
                     "slot": 1
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            2
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 2
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -159,6 +286,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A2",
+                    "labware": "rep 2",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A3",
                     "labware": "rep 2",
                     "slot": 2
@@ -182,29 +319,81 @@
                     "labware": "rep 2",
                     "slot": 2
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 3
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -231,6 +420,16 @@
                     "well": "A1",
                     "labware": "DRUG + YOYO-MEDIA",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "rep 3",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -279,16 +478,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -298,17 +488,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -353,6 +604,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A5",
+                    "labware": "rep 1",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A6",
                     "labware": "rep 1",
                     "slot": 1
@@ -376,29 +637,81 @@
                     "labware": "rep 1",
                     "slot": 1
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            2
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 2
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -442,6 +755,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A5",
+                    "labware": "rep 2",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A6",
                     "labware": "rep 2",
                     "slot": 2
@@ -465,29 +788,81 @@
                     "labware": "rep 2",
                     "slot": 2
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 3
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -514,6 +889,16 @@
                     "well": "A3",
                     "labware": "DRUG + YOYO-MEDIA",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "rep 3",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },
@@ -562,16 +947,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 4,
-            "target_slot": 1
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -581,17 +957,78 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            4,
+            1
+        ],
+        "route": {
+            "source_slot": 4,
+            "target_slot": 1
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 100.0,
@@ -636,6 +1073,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A8",
+                    "labware": "rep 1",
+                    "slot": 1
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A9",
                     "labware": "rep 1",
                     "slot": 1
@@ -659,29 +1106,81 @@
                     "labware": "rep 1",
                     "slot": 1
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            2
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 2
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -725,6 +1224,16 @@
                 "action": "dispense",
                 "vol": 100.0,
                 "target": {
+                    "well": "A8",
+                    "labware": "rep 2",
+                    "slot": 2
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
                     "well": "A9",
                     "labware": "rep 2",
                     "slot": 2
@@ -748,29 +1257,81 @@
                     "labware": "rep 2",
                     "slot": 2
                 }
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 300.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 300.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "DRUG + YOYO-MEDIA",
+                    "slot": 4
+                },
+                "flow_rate": 94.0
             }
         ]
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            4,
+            3
+        ],
         "route": {
             "source_slot": 4,
             "target_slot": 3
         },
         "actions": [
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "DRUG + YOYO-MEDIA",
-                "slot": 4,
-                "times": 3,
-                "volume": 300.0,
-                "speed": [
-                    94.0,
-                    94.0
-                ]
-            },
-            {
                 "action": "aspirate",
                 "vol": 100.0,
                 "source": {
@@ -797,6 +1358,16 @@
                     "well": "A5",
                     "labware": "DRUG + YOYO-MEDIA",
                     "slot": 4
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "rep 3",
+                    "slot": 3
                 },
                 "flow_rate": 94.0
             },

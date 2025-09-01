@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            5
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 5
@@ -57,6 +61,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A2",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 5
@@ -157,16 +176,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 92.0,
@@ -201,6 +211,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A10",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 5
@@ -254,6 +279,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            5
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 5
@@ -293,16 +322,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -316,16 +408,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -360,16 +443,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -383,16 +529,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -427,16 +564,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -450,16 +650,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -494,16 +685,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -517,16 +771,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -561,16 +806,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -584,16 +892,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -628,16 +927,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -651,16 +1013,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -695,16 +1048,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -718,16 +1134,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -762,16 +1169,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -785,16 +1255,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -829,16 +1290,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -852,16 +1376,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -896,16 +1411,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -919,16 +1497,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -963,16 +1532,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -986,16 +1618,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1030,16 +1653,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1058,6 +1744,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            5
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 5
@@ -1105,6 +1795,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A2",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 5
@@ -1205,16 +1910,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 92.0,
@@ -1249,6 +1945,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A10",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 5
@@ -1302,6 +2013,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            5
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 5
@@ -1341,16 +2056,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1364,16 +2142,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1408,16 +2177,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1431,16 +2263,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1475,16 +2298,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1498,16 +2384,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1542,16 +2419,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1565,16 +2505,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1609,16 +2540,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1632,16 +2626,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1676,16 +2661,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1699,16 +2747,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1743,16 +2782,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1766,16 +2868,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1810,16 +2903,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1833,16 +2989,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1877,16 +3024,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1900,16 +3110,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -1944,16 +3145,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -1967,16 +3231,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2011,16 +3266,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2034,16 +3352,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 5
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2078,16 +3387,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 5,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2106,6 +3478,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            6
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 6
@@ -2153,6 +3529,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A2",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 6
@@ -2253,16 +3644,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 92.0,
@@ -2297,6 +3679,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A10",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 6
@@ -2350,6 +3747,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -2389,16 +3790,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2412,16 +3876,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2456,16 +3911,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2479,16 +3997,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2523,16 +4032,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2546,16 +4118,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2590,16 +4153,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2613,16 +4239,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2657,16 +4274,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2680,16 +4360,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2724,16 +4395,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2747,16 +4481,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2791,16 +4516,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2814,16 +4602,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2858,16 +4637,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2881,16 +4723,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2925,16 +4758,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -2948,16 +4844,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -2992,16 +4879,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3015,16 +4965,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3059,16 +5000,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3082,16 +5086,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3126,16 +5121,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3154,6 +5212,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            1,
+            6
+        ],
         "route": {
             "source_slot": 1,
             "target_slot": 6
@@ -3201,6 +5263,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A2",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 6
@@ -3301,16 +5378,7 @@
                 "action": "delay",
                 "minutes": 0,
                 "seconds": 1.0
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 1,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "aspirate",
                 "vol": 92.0,
@@ -3345,6 +5413,21 @@
                 "action": "dispense",
                 "vol": 23.0,
                 "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 94.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 23.0,
+                "target": {
                     "well": "A10",
                     "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
                     "slot": 6
@@ -3398,6 +5481,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            3,
+            6
+        ],
         "route": {
             "source_slot": 3,
             "target_slot": 6
@@ -3437,16 +5524,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3460,16 +5610,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3504,16 +5645,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3527,16 +5731,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3571,16 +5766,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3594,16 +5852,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3638,16 +5887,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3661,16 +5973,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3705,16 +6008,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3728,16 +6094,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3772,16 +6129,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3795,16 +6215,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3839,16 +6250,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3862,16 +6336,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3906,16 +6371,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3929,16 +6457,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -3973,16 +6492,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -3996,16 +6578,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4040,16 +6613,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -4063,16 +6699,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4107,16 +6734,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",
@@ -4130,16 +6820,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route": {
-            "source_slot": 3,
-            "target_slot": 6
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -4174,16 +6855,79 @@
                 "flow_rate": 7.6
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
-                "slot": 6,
-                "times": 3,
-                "volume": 10.0,
-                "speed": [
-                    3.8,
-                    7.6
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 1.0
+            },
+            {
+                "action": "dispense",
+                "vol": 2.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 10.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 3.8
+            },
+            {
+                "action": "dispense",
+                "vol": 10.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 uL",
+                    "slot": 6
+                },
+                "flow_rate": 7.6
             },
             {
                 "action": "delay",

@@ -10,6 +10,10 @@
     },
     {
         "template": "transfer_liquid",
+        "route_key": [
+            2,
+            3
+        ],
         "route": {
             "source_slot": 2,
             "target_slot": 3
@@ -30,6 +34,16 @@
                     "well": "A1",
                     "labware": "Bio-Rad 96 Well Plate 200 uL PCR",
                     "slot": 2
+                },
+                "flow_rate": 7.56
+            },
+            {
+                "action": "dispense",
+                "vol": 4.7,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 24 Tube Rack with Eppendorf 2 mL Safe-Lock Snapcap",
+                    "slot": 3
                 },
                 "flow_rate": 7.56
             },

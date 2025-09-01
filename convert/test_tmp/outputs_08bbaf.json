@@ -12,11 +12,11 @@
         "template": "transfer_liquid",
         "route_key": [
             1,
-            7
+            1
         ],
         "route": {
             "source_slot": 1,
-            "target_slot": 7
+            "target_slot": 1
         },
         "actions": [
             {
@@ -28,17 +28,118 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            7
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 7
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 4.0,
@@ -60,13 +161,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -79,25 +176,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 200.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -120,13 +316,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -139,25 +331,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -180,13 +471,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -199,25 +486,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -240,13 +626,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -259,25 +641,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 104.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -300,13 +781,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -319,25 +796,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 104.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -360,13 +936,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -379,25 +951,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 104.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -420,13 +1091,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -439,25 +1106,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 104.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -480,13 +1246,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -499,25 +1261,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -540,13 +1401,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -559,25 +1416,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -600,13 +1556,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -619,25 +1571,124 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
-                "slot": 1,
-                "times": 5,
-                "volume": 150.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 150.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 150.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 24 Well Aluminum Block with NEST 1.5 mL Snapcap",
+                    "slot": 1
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -660,13 +1711,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -679,13 +1726,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 54.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -694,20 +1752,7 @@
                     "labware": "Opentrons Fixed Trash",
                     "slot": 12
                 }
-            }
-        ]
-    },
-    {
-        "template": "transfer_liquid",
-        "route_key": [
-            7,
-            7
-        ],
-        "route": {
-            "source_slot": 7,
-            "target_slot": 7
-        },
-        "actions": [
+            },
             {
                 "action": "pick_tip",
                 "tip_rack": {
@@ -717,16 +1762,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 15.0,
-                "speed": [
-                    1.89,
-                    1.89
-                ]
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "aspirate",
+                "vol": 15.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
             },
             {
                 "action": "aspirate",
@@ -749,13 +1882,9 @@
                 "flow_rate": 1.89
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -768,13 +1897,24 @@
                 "flow_rate": 1.89
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 14.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 1.89
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -793,16 +1933,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -825,13 +2053,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -844,13 +2068,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -869,16 +2104,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -901,13 +2224,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -920,13 +2239,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -945,16 +2275,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -977,13 +2395,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -996,13 +2410,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1021,16 +2446,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A5",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1053,13 +2566,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1072,13 +2581,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1097,16 +2617,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A6",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A6",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1129,13 +2737,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1148,13 +2752,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1173,16 +2788,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A7",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1205,13 +2908,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1224,13 +2923,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1249,16 +2959,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A8",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A8",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1281,13 +3079,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1300,13 +3094,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1325,16 +3130,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A9",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1357,13 +3250,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1376,13 +3265,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1401,16 +3301,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A10",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A10",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1433,13 +3421,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1452,13 +3436,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1477,16 +3472,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A11",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A11",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "aspirate",
@@ -1509,13 +3592,9 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "dispense",
@@ -1528,13 +3607,24 @@
                 "flow_rate": 23.215
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "dispense",
+                "vol": 50.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1553,16 +3643,104 @@
                 }
             },
             {
-                "action": "mix",
-                "well": "A12",
-                "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
-                "slot": 7,
-                "times": 5,
-                "volume": 100.0,
-                "speed": [
-                    23.215,
-                    23.215
-                ]
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "aspirate",
+                "vol": 100.0,
+                "source": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
+            },
+            {
+                "action": "dispense",
+                "vol": 100.0,
+                "target": {
+                    "well": "A12",
+                    "labware": "Opentrons 96 Flat Bottom Heater-Shaker Adapter with NEST 96 Well Plate 200 uL Flat on Temperature Module GEN2",
+                    "slot": 7
+                },
+                "flow_rate": 23.215
             },
             {
                 "action": "drop_tip",

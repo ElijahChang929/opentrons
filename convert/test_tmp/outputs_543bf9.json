@@ -25,15 +25,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -79,13 +71,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -121,13 +114,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 30.85,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -153,13 +152,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -195,13 +195,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 30.85,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -231,15 +237,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -260,7 +258,12 @@
                     "slot": 3
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 8.3,
@@ -272,13 +275,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -314,25 +318,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 18.3,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "A1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -378,15 +436,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -432,13 +482,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -474,13 +525,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -510,15 +567,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -539,7 +588,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -551,14 +605,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -580,25 +648,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "A2",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -644,15 +766,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -698,13 +812,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -740,13 +855,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -772,13 +893,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -814,13 +936,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -850,15 +978,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -879,7 +999,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -891,14 +1016,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -920,25 +1059,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "A3",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -984,15 +1177,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1038,13 +1223,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -1080,13 +1266,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1116,15 +1308,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1145,7 +1329,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 25.0,
@@ -1157,14 +1346,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1186,25 +1389,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "A4",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "A4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -1250,15 +1507,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1304,13 +1553,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -1346,13 +1596,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -1378,13 +1634,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -1420,13 +1677,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1456,15 +1719,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1485,7 +1740,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -1497,14 +1757,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1526,25 +1800,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -1590,15 +1918,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1644,13 +1964,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -1686,13 +2007,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1722,15 +2049,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1751,7 +2070,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -1763,14 +2087,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -1792,25 +2130,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B2",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -1856,15 +2248,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -1910,13 +2294,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -1952,13 +2337,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -1988,15 +2379,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2017,7 +2400,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -2029,14 +2417,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2058,25 +2460,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B3",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -2122,15 +2578,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2176,13 +2624,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -2218,13 +2667,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -2254,15 +2709,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2283,7 +2730,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -2295,14 +2747,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2324,25 +2790,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B4",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -2388,15 +2908,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2442,13 +2954,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -2484,13 +2997,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -2520,15 +3039,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2549,7 +3060,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -2561,14 +3077,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2590,25 +3120,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B5",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B5",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -2654,15 +3238,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2708,13 +3284,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -2750,13 +3327,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -2786,15 +3369,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2815,7 +3390,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -2827,14 +3407,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -2856,25 +3450,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B6",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B6",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -2920,15 +3568,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -2974,13 +3614,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3016,13 +3657,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -3052,15 +3699,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3081,7 +3720,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -3093,14 +3737,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3122,25 +3780,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B7",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B7",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -3186,15 +3898,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3240,13 +3944,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3282,13 +3987,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 47.5,
+                "target": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -3318,15 +4029,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3347,7 +4050,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 12.5,
@@ -3359,14 +4067,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3388,25 +4110,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 22.5,
+                "target": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "B8",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "B8",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -3452,15 +4228,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3506,13 +4274,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3548,13 +4317,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -3580,13 +4355,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3622,13 +4398,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 35.0,
+                "target": {
+                    "well": "B9",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -3666,15 +4448,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3720,13 +4494,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3762,13 +4537,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 39.9,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -3794,13 +4575,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -3836,13 +4618,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 39.9,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -3872,15 +4660,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -3901,7 +4681,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.2,
@@ -3913,14 +4698,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -3942,25 +4741,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.2,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C1",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 32.5,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 32.5,
+                "source": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C1",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -4006,15 +4859,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4060,13 +4905,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4102,13 +4948,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -4134,13 +4986,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4176,13 +5029,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -4212,15 +5071,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4241,7 +5092,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -4253,14 +5109,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -4282,25 +5152,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C2",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C2",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -4346,15 +5270,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4400,13 +5316,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4442,13 +5359,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -4474,13 +5397,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4516,13 +5440,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -4552,15 +5482,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4581,7 +5503,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -4593,14 +5520,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -4622,25 +5563,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C3",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C3",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
@@ -4686,15 +5681,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            3,
-            3
-        ],
-        "route": {
-            "source_slot": 3,
-            "target_slot": 3
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4740,13 +5727,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4782,13 +5770,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "raw",
@@ -4814,13 +5808,14 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             }
         ]
     },
@@ -4856,13 +5851,19 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 32.5,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
             {
                 "action": "drop_tip",
@@ -4892,15 +5893,7 @@
         ]
     },
     {
-        "template": "transfer_liquid",
-        "route_key": [
-            6,
-            6
-        ],
-        "route": {
-            "source_slot": 6,
-            "target_slot": 6
-        },
+        "template": "other_devices",
         "actions": [
             {
                 "action": "aspirate",
@@ -4921,7 +5914,12 @@
                     "slot": 6
                 },
                 "flow_rate": 10.0
-            },
+            }
+        ]
+    },
+    {
+        "template": "other_devices",
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 5.0,
@@ -4933,14 +5931,28 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
             },
+            {
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            }
+        ]
+    },
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            6,
+            6
+        ],
+        "route": {
+            "source_slot": 6,
+            "target_slot": 6
+        },
+        "actions": [
             {
                 "action": "aspirate",
                 "vol": 10.0,
@@ -4962,25 +5974,79 @@
                 "flow_rate": 10.0
             },
             {
-                "action": "heater_shaker",
-                "target_temperature": null,
-                "wait_for_temp": false,
-                "shake_speed": null,
-                "duration_minutes": 0,
-                "deactivate_heater": false,
-                "deactivate_shaker": false
+                "action": "dispense",
+                "vol": 15.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
-                "action": "mix",
-                "well": "C4",
-                "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
-                "slot": 6,
-                "times": 3,
-                "volume": 25.0,
-                "speed": [
-                    10.0,
-                    10.0
-                ]
+                "action": "delay",
+                "minutes": 0,
+                "seconds": 2.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "aspirate",
+                "vol": 25.0,
+                "source": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
+            },
+            {
+                "action": "dispense",
+                "vol": 25.0,
+                "target": {
+                    "well": "C4",
+                    "labware": "NEST 96 Well Plate 100 uL PCR Full Skirt",
+                    "slot": 6
+                },
+                "flow_rate": 10.0
             },
             {
                 "action": "blow_out",
