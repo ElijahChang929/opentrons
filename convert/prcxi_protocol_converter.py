@@ -593,7 +593,8 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         "THIS",
         "protocol",
         "There",
-        "This protocol"
+        "This protocol",
+        "Homing"
               ]
     steps = []
     for line in lines:
@@ -651,163 +652,157 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
     return grouped_phases
 
 def coalesce_transfer_phases(phases):
-    """把相邻路由一致的液体移动 phase 合并；
-    规则：
-      1) 计算每个 phase 的 (src_slot, dst_slot) 路由；若无法唯一确定则视为无路由。
-      2) s==d 的“就地”段（纯 in-place 混匀或所有 A/D 仅在同一 slot）优先并入
-         相邻与该 slot 重合的 transfer 段（若当前有，则追加；否则挂起等待下一段）。
-      3) 相邻且路由完全一致的 transfer 段直接合并为同一块。
-      4) 其余落地为 other_devices。
-    返回高层 step 列表，每块结构：
-      {"template":"transfer_liquid","route":{"source_slot":s,"target_slot":d},"actions":[...]}
-      或 {"template":"other_devices","actions":[...]}
-    """
-    def _phase_route(phase_actions):
-        """返回 (src_slot, dst_slot) 或 None。要求 aspirate/dispense 各自的槽位唯一。"""
+    """把相邻、方向兼容的 phase 连续合并为更大的块。返回合并后的 phases 列表（每元素仍是动作列表）。"""
 
+    def _phase_route(actions):
+        """返回 (src_slot, dst_slot) 或 None。
+           - 若存在 aspirate/dispense，并且各自 slot 唯一 -> (s,d)
+           - 若只有 mix，并且 mix 的 slot 唯一 -> (m,m)（就地段）
+           - 否则 None
+        """
         src_slots = {
             a["source"]["slot"]
-            for a in phase_actions
+            for a in actions
             if a.get("action") == "aspirate" and a.get("source") and "slot" in a["source"]
         }
         dst_slots = {
             a["target"]["slot"]
-            for a in phase_actions
+            for a in actions
             if a.get("action") == "dispense" and a.get("target") and "slot" in a["target"]
         }
-
-        mix_slots = {a["position"]["slot"] 
-                    for a in phase_actions 
-                    if a.get("action") == "mix"}
-        
-        if src_slots and dst_slots and len(src_slots) == 1 and len(dst_slots) == 1:
-            return (next(iter(src_slots)), next(iter(dst_slots)))
-        if mix_slots and not src_slots and not dst_slots and len(mix_slots) == 1:
-            return (next(iter(mix_slots)), next(iter(mix_slots)))
-        return None
-
-    def _ad_slots(phase_actions):
-        """收集本段所有 Aspirate/Dispense 涉及的槽位 set。"""
-        slots = set()
-        for a in phase_actions:
-            if a.get("action") == "aspirate" and a.get("source") and "slot" in a["source"]:
-                slots.add(a["source"]["slot"])
-            elif a.get("action") == "dispense" and a.get("target") and "slot" in a["target"]:
-                slots.add(a["target"]["slot"])
-        return slots
-
-    def _mix_slots(phase_actions):
-        """收集本 phase 中 mix 涉及的槽位集合（若有）。"""
-        return {
-            a.get("slot")
-            for a in phase_actions
-            if a.get("action") == "mix" and isinstance(a.get("slot"), int)
+        mix_slots = {
+            a["position"]["slot"]
+            for a in actions
+            if a.get("action") == "mix" and a.get("position") and "slot" in a["position"]
         }
 
-    def _is_pure_in_place(phase_actions):
-        """是否“纯就地”：
-           - 路由存在且 s==d；
-           - 且所有 A/D 的槽位都是这个 s（或根本没有 A/D，仅有 mix 也算就地）。"""
-        route = _phase_route(phase_actions)
-        if route is None:
-            return False
-        s, d = route
-        if s != d:
-            return False
-        ad = _ad_slots(phase_actions)
-        return (not ad) or (ad == {s})
+        if src_slots and dst_slots and len(src_slots) == 1 and len(dst_slots) == 1:
+            return (next(iter(src_slots)), next(iter(dst_slots)))
+        if not src_slots and not dst_slots and len(mix_slots) == 1:
+            m = next(iter(mix_slots))
+            return (m, m)  # 就地段
+        return None
 
-    # ---------- main ----------
-    high_level = []
-    cur = None             # 正在合并的 transfer_liquid 块
-    pending_mix = []       # 等待并入下一段路由（槽位重合）的 mix-only / in-place 段
+    def is_inplace(r):  # r 是 (s,d) 或 None
+        return r is not None and r[0] == r[1]
 
+    def can_chain(block_route, nxt_route):
+        """判断 block_route 与 nxt_route 是否可合并。"""
+        if block_route is None or nxt_route is None:
+            return False
+        # 路由完全一致
+        if nxt_route == block_route:
+            return True
+        # 下一个是就地段，且它的 slot 与当前块的 s 或 d 重合
+        if is_inplace(nxt_route) and (nxt_route[0] in block_route):
+            return True
+        # 当前块是就地段，而下一个是有向段：把块“定向”为下一个，并允许合并
+        if is_inplace(block_route) and not is_inplace(nxt_route) and (block_route[0] in nxt_route):
+            return True
+        return False
+
+    result = []
     i = 0
-    while i < 10:#len(phases):
-        
-        actions = phases[i]
-        route = _phase_route(actions)
+    while i < len(phases):
+        # 以第 i 段为起点，形成一个“合并块”
+        block = list(phases[i])  # 拷贝内容
+        block_route = _phase_route(block)
 
-        pp.pprint(actions)
+        j = i + 1
+        while j < len(phases):
+            rj = _phase_route(phases[j])
 
-        # pp.pprint(in_place)
+            # 如果当前块是就地段，下一段是有向段且可合并，顺带把块路由“定向”为下一段的路由
+            if block_route is not None and is_inplace(block_route) and rj is not None and not is_inplace(rj) and (block_route[0] in rj):
+                block_route = rj  # 定向
 
-        # 先处理挂起的 pending_mix：若当前是路由段且槽位重合，优先并入
-        if pending_mix and route is not None:
-            s, d = route
-            pend_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
-            # 如果 pending_mix 里没有 mix（理论上不会），保底也并入当前块
-            overlap = (not pend_slots) or (s in pend_slots) or (d in pend_slots)
-            if overlap:
-                if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
-                    cur["actions"].extend(pending_mix)
-                else:
-                    if cur is not None:
-                        high_level.append(cur)
-                    cur = {
-                        "template": "transfer_liquid",
-                        "route_key": route,
-                        "route": {"source_slot": s, "target_slot": d},
-                        "actions": list(pending_mix),
-                    }
-                pending_mix = []
+            if can_chain(block_route, rj):
+                block.extend(phases[j])
+                j += 1
+                continue
+            break
 
-        # ------ 非路由段 或 纯就地段：尝试作为“mix-only”并入上下 ------
-        if route is None or in_place:
-            # 优先并到当前已开的路由块（若槽位重合）
-            if (route is None and mix_slots) or in_place:
-                target_slots = mix_slots
-                if in_place and route is not None:
-                    target_slots = {route[0]}  # s==d
+        result.append(block)
+        i = j  # 跳到下一未处理段
 
-                if cur is not None and cur.get("template") == "transfer_liquid":
-                    cs, cd = cur["route_key"]
-                    if (cs in target_slots) or (cd in target_slots):
-                        cur["actions"].extend(actions)
-                        i += 1
-                        continue
+    return result
 
-                # 看下一段：如果下一段是路由且槽位重合，则挂起
-                next_route = _phase_route(phases[i + 1]) if (i + 1 < len(phases)) else None
-                if next_route is not None:
-                    ns, nd = next_route
-                    if (ns in target_slots) or (nd in target_slots):
-                        pending_mix.extend(actions)
-                        i += 1
-                        continue
+    #     # 先处理挂起的 pending_mix：若当前是路由段且槽位重合，优先并入
+    #     if pending_mix and route is not None:
+    #         s, d = route
+    #         pend_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
+    #         # 如果 pending_mix 里没有 mix（理论上不会），保底也并入当前块
+    #         overlap = (not pend_slots) or (s in pend_slots) or (d in pend_slots)
+    #         if overlap:
+    #             if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
+    #                 cur["actions"].extend(pending_mix)
+    #             else:
+    #                 if cur is not None:
+    #                     high_level.append(cur)
+    #                 cur = {
+    #                     "template": "transfer_liquid",
+    #                     "route_key": route,
+    #                     "route": {"source_slot": s, "target_slot": d},
+    #                     "actions": list(pending_mix),
+    #                 }
+    #             pending_mix = []
 
-            # 实在并不进去：落地 other_devices
-            if cur is not None:
-                high_level.append(cur)
-                cur = None
-            high_level.append({"template": "other_devices", "actions": actions})
-            i += 1
-            continue
+    #     # ------ 非路由段 或 纯就地段：尝试作为“mix-only”并入上下 ------
+    #     if route is None or in_place:
+    #         # 优先并到当前已开的路由块（若槽位重合）
+    #         if (route is None and mix_slots) or in_place:
+    #             target_slots = mix_slots
+    #             if in_place and route is not None:
+    #                 target_slots = {route[0]}  # s==d
 
-        # ------ 路由段：常规合并 ------
-        if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
-            cur["actions"].extend(actions)
-        else:
-            if cur is not None:
-                high_level.append(cur)
-            s, d = route
-            cur = {
-                "template": "transfer_liquid",
-                "route_key": route,
-                "route": {"source_slot": s, "target_slot": d},
-                "actions": list(actions),
-            }
-        i += 1
+    #             if cur is not None and cur.get("template") == "transfer_liquid":
+    #                 cs, cd = cur["route_key"]
+    #                 if (cs in target_slots) or (cd in target_slots):
+    #                     cur["actions"].extend(actions)
+    #                     i += 1
+    #                     continue
 
-    # 循环结束：把还没并入的 pending_mix 尽量放进当前块，否则落地
-    if pending_mix:
-        if cur is not None and cur.get("template") == "transfer_liquid":
-            cur["actions"].extend(pending_mix)
-        else:
-            high_level.append({"template": "other_devices", "actions": pending_mix})
+    #             # 看下一段：如果下一段是路由且槽位重合，则挂起
+    #             next_route = _phase_route(phases[i + 1]) if (i + 1 < len(phases)) else None
+    #             if next_route is not None:
+    #                 ns, nd = next_route
+    #                 if (ns in target_slots) or (nd in target_slots):
+    #                     pending_mix.extend(actions)
+    #                     i += 1
+    #                     continue
 
-    if cur is not None:
-        high_level.append(cur)
+    #         # 实在并不进去：落地 other_devices
+    #         if cur is not None:
+    #             high_level.append(cur)
+    #             cur = None
+    #         high_level.append({"template": "other_devices", "actions": actions})
+    #         i += 1
+    #         continue
+
+    #     # ------ 路由段：常规合并 ------
+    #     if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
+    #         cur["actions"].extend(actions)
+    #     else:
+    #         if cur is not None:
+    #             high_level.append(cur)
+    #         s, d = route
+    #         cur = {
+    #             "template": "transfer_liquid",
+    #             "route_key": route,
+    #             "route": {"source_slot": s, "target_slot": d},
+    #             "actions": list(actions),
+    #         }
+    #     i += 1
+
+    # # 循环结束：把还没并入的 pending_mix 尽量放进当前块，否则落地
+    # if pending_mix:
+    #     if cur is not None and cur.get("template") == "transfer_liquid":
+    #         cur["actions"].extend(pending_mix)
+    #     else:
+    #         high_level.append({"template": "other_devices", "actions": pending_mix})
+
+    # if cur is not None:
+    #     high_level.append(cur)
 
     return high_level
 
@@ -1247,7 +1242,7 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log_test/{name}.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
