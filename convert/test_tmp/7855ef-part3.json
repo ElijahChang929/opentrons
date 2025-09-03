@@ -1,0 +1,420 @@
+[
+    {
+        "template": "transfer_liquid",
+        "route_key": [
+            1,
+            5
+        ],
+        "route": {
+            "source_slot": 1,
+            "target_slot": 5
+        },
+        "actions": [
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A1",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 3.0,
+                "source": {
+                    "well": "A1",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "mix",
+                "vol": [
+                    8.0,
+                    8.0
+                ],
+                "position": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": [
+                    7.6,
+                    7.6
+                ],
+                "mix_time": 2
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A1",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A1",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A2",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 3.0,
+                "source": {
+                    "well": "A2",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "mix",
+                "vol": [
+                    8.0,
+                    8.0
+                ],
+                "position": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": [
+                    7.6,
+                    7.6
+                ],
+                "mix_time": 2
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A3",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A2",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A3",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 3.0,
+                "source": {
+                    "well": "A3",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "mix",
+                "vol": [
+                    8.0,
+                    8.0
+                ],
+                "position": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": [
+                    7.6,
+                    7.6
+                ],
+                "mix_time": 2
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A5",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A3",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A4",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 3.0,
+                "source": {
+                    "well": "A4",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "mix",
+                "vol": [
+                    8.0,
+                    8.0
+                ],
+                "position": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": [
+                    7.6,
+                    7.6
+                ],
+                "mix_time": 2
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A7",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A4",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "pick_tip",
+                "tip_rack": {
+                    "well": "A5",
+                    "type": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            },
+            {
+                "action": "aspirate",
+                "vol": 1.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "aspirate",
+                "vol": 3.0,
+                "source": {
+                    "well": "A5",
+                    "labware": "Ion Barcode Plate 1",
+                    "slot": 1
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 3.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "dispense",
+                "vol": 1.0,
+                "target": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": 7.6
+            },
+            {
+                "action": "mix",
+                "vol": [
+                    8.0,
+                    8.0
+                ],
+                "position": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                },
+                "flow_rate": [
+                    7.6,
+                    7.6
+                ],
+                "mix_time": 2
+            },
+            {
+                "action": "blow_out",
+                "at": {
+                    "well": "A9",
+                    "labware": "Reaction Plate",
+                    "slot": 5
+                }
+            },
+            {
+                "action": "drop_tip",
+                "location": {
+                    "well": "A5",
+                    "labware": "Opentrons OT-2 96 Filter Tip Rack 20 uL",
+                    "slot": 7
+                }
+            }
+        ]
+    }
+]

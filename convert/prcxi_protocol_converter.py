@@ -1,4 +1,4 @@
-from pprint import pprint
+
 import json
 import time
 from platform import node
@@ -161,42 +161,6 @@ def match_labware_class(class_name: str):
     cls, nm, _, cap = candidates[0]
     return cls, f"fallback by wells={target_wells}; no feasible cap>=target ({target_cap}uL); chose {nm} (cap={cap})"
 
-def build_heater_shaker_dict(step_lines: List[str]) -> Dict:
-    """
-    Extracts key parameters for a Heater‑Shaker phase:
-    target_temperature, shake_speed, duration, wait flag, deactivate flags
-    """
-    data = {
-        "template": "heater_shaker",
-        "target_temperature": None,
-        "wait_for_temp": False,
-        "shake_speed": None,
-        "duration_minutes": None,
-        "deactivate_heater": False,
-        "deactivate_shaker": False
-    }
-    for line in step_lines:
-        if line.startswith("Setting Target Temperature of Heater-Shaker"):
-            data["target_temperature"] = extract_float_after_keyword(line, "to")
-        elif line.startswith("Waiting for Heater-Shaker"):
-            data["wait_for_temp"] = True
-        elif line.startswith("Setting Heater-Shaker to Shake at"):
-            m = re.search(r'Shake at ([\d.]+) RPM', line)
-            if m:
-                data["shake_speed"] = float(m.group(1))
-        elif line.startswith("Delaying"):
-            dm = re.search(r'Delaying for (\d+) minutes', line)
-            if dm:
-                data["duration_minutes"] = int(dm.group(1))
-        elif line.startswith("Deactivating Heater"):
-            data["deactivate_heater"] = True
-        elif line.startswith("Deactivating Shaker"):
-            data["deactivate_shaker"] = True
-    return data
-
-
-
-
 def is_full_row(wells: List[str]) -> bool:
     """Returns True if all wells in a row (e.g., A1 to A12) are included"""
     if len(wells) < 12:
@@ -206,51 +170,6 @@ def is_full_row(wells: List[str]) -> bool:
     return indices == list(range(1, 13))
 
 
-
-# def _scan_phase_markers(step_lines: List[str]) -> Tuple[Optional[int], Optional[int], List[int], Optional[Dict]]:
-#     """
-#     返回：
-#       aspirate_index, dispense_index, mixing_indices, tip_rack_info
-#     """
-#     aspirate_index = None
-#     dispense_index = None
-#     mixing_indices: List[int] = []
-#     tip_rack_info: Optional[Dict] = None
-
-#     for i, line in enumerate(step_lines):
-#         if line.startswith(" "):   # 忽略缩进行
-#             continue
-#         s = line.strip()
-#         if s.startswith("Aspirating") and "from" in s and aspirate_index is None:
-#             aspirate_index = i
-#         elif s.startswith("Dispensing") and "into" in s and dispense_index is None:
-#             dispense_index = i
-#         elif s.startswith("Mixing"):
-#             mixing_indices.append(i)
-#         elif s.startswith("Picking up tip"):
-#             m = re.search(r'from ([A-H]\d+) of (.*?) on (\d+)', s)
-#             if m:
-#                 tip_rack_info = {
-#                     "well": m.group(1),
-#                     "type": m.group(2).strip(),
-#                     "slot": int(m.group(3))
-#                 }
-#     return aspirate_index, dispense_index, mixing_indices, tip_rack_info
-
-# ---------- 2) 根据位置判断 mixing 阶段 ----------
-# def _infer_mix_stage(asp_idx: Optional[int], disp_idx: Optional[int], mixing_indices: List[int]) -> str:
-#     """
-#     返回 'none' / 'before' / 'after' / 'both'
-#     """
-#     stage = "none"
-#     for idx in mixing_indices:
-#         if asp_idx is not None and idx < asp_idx:
-#             stage = "before" if stage == "none" else "both"
-#         elif disp_idx is not None and idx > disp_idx:
-#             stage = "after" if stage == "none" else "both"
-#     return stage
-
-# ---------- 3) 第二遍：解析液体学操作 ----------
 def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
     """
     返回按原始顺序的动作列表；将连续的 Heater-Shaker 行聚合为一条:
@@ -346,25 +265,48 @@ def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
         matched = False
 
         if s.startswith("Aspirating") and "from" in s:
-            vol = f_after(s, "Aspirating")
-            src = parse_container(s, "Aspirating")
-            rate = f_after(s, "at")
-            actions.append({"action": "aspirate",
-                            "vol": vol if vol is not None else 0.0,
-                            "source": src, "flow_rate": rate})
-            matched = True
+
+            m = re.search(
+                r'Aspirating\s+([\d.]+)\s*u?L\s+from\s+([A-Z]\d+)\s+of\s+(.*?)\s+on\s+(?:slot\s*)?(\d+)\s+at\s+([\d.]+)\s*[µu]L/sec',
+                s,
+                re.IGNORECASE
+            )         
+
+            if m:
+                vol = float(m.group(1))
+                src = {"well": m.group(2), "labware": m.group(3).strip(), "slot": int(m.group(4))}
+                flow_rate = float(m.group(5))
+                actions.append({"action": "aspirate",
+                            "vol": vol,
+                            "source": src,
+                            "flow_rate": flow_rate  
+                        })
+                matched = True
+
+            # pp.pprint(actions)
+            # print(s)
 
         elif s.startswith("Dispensing") and "into" in s:
-            vol = f_after(s, "Dispensing")
-            tgt = parse_container(s, "Dispensing")
-            rate = f_after(s, "at")
-            actions.append({"action": "dispense",
-                            "vol": vol if vol is not None else 0.0,
-                            "target": tgt, "flow_rate": rate})
-            matched = True
+            m = re.search(
+                r'Dispensing\s+([\d.]+)\s*u?L\s+into\s+([A-Z]\d+)\s+of\s+(.*?)\s+on\s+(?:slot\s*)?(\d+)\s+at\s+([\d.]+)\s*[µu]L/sec',
+                s,
+                re.IGNORECASE
+            )         
+
+            if m:
+                vol = float(m.group(1))
+                tgt = {"well": m.group(2), "labware": m.group(3).strip(), "slot": int(m.group(4))}
+                flow_rate = float(m.group(5))
+                actions.append({"action": "dispense",
+                            "vol": vol,
+                            "target": tgt,
+                            "flow_rate": flow_rate
+                        })
+                matched = True
 
         elif s.startswith("Picking up tip"):
-            m = re.search(r'from ([A-H]\d+) of (.*?) on (\d+)', s)
+            
+            m = re.search(r'from ([A-H]\d+) of (.*?) on (?:slot\s*)?(\d+)', s, re.IGNORECASE)
             tip = {"well": m.group(1), "type": m.group(2).strip(), "slot": int(m.group(3))} if m else None
             actions.append({"action": "pick_tip", "tip_rack": tip})
             matched = True
@@ -423,85 +365,166 @@ def _parse_liquid_ops(step_lines: List[str]) -> List[Dict]:
 
 
 
-def collapse_mixes(actions: List[Dict[str, Any]], tol: float = 1e-6) -> List[Dict[str, Any]]:
-    """把同一孔的连续 A→D 对折叠为 mix；允许中间穿插软动作。"""
-    soft = {"delay", "touch_tip", "blow_out", "raw"}  # 可放宽/增减
-    out, i, n = [], 0, len(actions)
+def collapse_mixes(phases: list[list[dict]]) -> list[list[dict]]:
 
-    def same_container(a, b) -> bool:
-        return bool(a and b
-                    and a.get("well")==b.get("well")
-                    and a.get("slot")==b.get("slot"))
+    """
+    如果某一相位只包含 aspirate（且没有 dispense），
+    则把该相位的所有动作并到下一相位的前面，并删除该相位。
+    """
 
-    while i < n:
-        # 找一个 A→D 起点
-        if actions[i].get("action") != "aspirate":
-            out.append(actions[i])
-            i += 1
-            continue
+    def extract_src_dst(phase: List[Dict[str, Any]]):
+        """
+        提取一个 phase 中 aspirate/dispense 涉及的源/目标槽位和孔位。
+        返回：
+        {
+            "src": {"slots": {...}, "wells": {...}},
+            "dst": {"slots": {...}, "wells": {...}}
+        }
+        """
+        src_slots = {a['source']['slot'] for a in phase
+                    if a.get('action') == 'aspirate' and a.get('source') and 'slot' in a['source']}
+        src_wells = {a['source']['well'] for a in phase
+                    if a.get('action') == 'aspirate' and a.get('source') and 'well' in a['source']}
 
-        # 收集可能的 A→D 对（中间允许 soft）
-        j = i
-        pairs = []  # [(asp, disp)]
-        while True:
-            # 跳过 soft
-            while j < n and actions[j].get("action") in soft:
-                out.append(actions[j])  # 软动作保留在 mix 前
-                j += 1
-            if j >= n or actions[j].get("action") != "aspirate":
-                break
-            asp = actions[j]; j += 1
+        dst_slots = {a['target']['slot'] for a in phase
+                    if a.get('action') == 'dispense' and a.get('target') and 'slot' in a['target']}
+        dst_wells = {a['target']['well'] for a in phase
+                    if a.get('action') == 'dispense' and a.get('target') and 'well' in a['target']}
 
-            # 吞掉中间 soft
-            mid_soft = []
-            while j < n and actions[j].get("action") in soft:
-                mid_soft.append(actions[j]); j += 1
+        return {
+            "src": {"slots": src_slots, "wells": src_wells},
+            "dst": {"slots": dst_slots, "wells": dst_wells}
+        }
+    
+    def squeeze_asperate(phases: list[list[dict]]) -> list[list[dict]]:
+        i = 0
+        while i < len(phases) - 1:  # 至少要有“下一相位”才能合并
+            cur = phases[i]
+            kinds = {a.get("action") for a in cur}
 
-            if j >= n or actions[j].get("action") != "dispense":
-                # 不是 A→D，回退：把 asp 和中间 soft 发回 out
-                out.extend([asp] + mid_soft)
-                break
-
-            disp = actions[j]; j += 1
-            if not same_container(asp.get("source"), disp.get("target")):
-                # 容器不同，回退输出
-                out.extend([asp] + mid_soft + [disp])
-                break
-
-            pairs.append((asp, disp))
-            # 如果下一条不是 aspirate，就停止吃对
-            k = j
-            while k < n and actions[k].get("action") in soft:
-                k += 1
-            if k >= n or actions[k].get("action") != "aspirate":
-                # 结束
-                break
-
-        if pairs:
-            # 判定是否折叠成 mix：至少 2 对，且体积近似一致
-            vols = [p[0].get("vol", 0.0) for p in pairs]
-            if len(pairs) >= 2 and max(vols) - min(vols) <= tol:
-                base_asp, base_dis = pairs[0]
-                src = base_asp.get("source")
-                out.append({
-                    "action": "mix",
-                    "well": src.get("well"),
-                    "labware": src.get("labware"),
-                    "slot": src.get("slot"),
-                    "times": len(pairs),
-                    "volume": vols[0],
-                    "speed": (base_asp.get("flow_rate"), base_dis.get("flow_rate"))
-                })
+            # 只有 aspirate（可允许有别的辅助动作），但绝对没有 dispense
+            if "aspirate" in kinds and "dispense" not in kinds:
+                # 并到下一相位的前面：保持时间顺序
+                phases[i + 1] = cur + phases[i + 1]
+                # 删除当前相位，不递增 i，这样新的 i 位置就是原来的 “下一相位”
+                del phases[i]
             else:
-                # 不折叠，原样吐回
-                for a, d in pairs:
-                    out.append(a); out.append(d)
-            i = j
-        else:
-            # 没形成 A→D 对，刚才已把非 aspirate 的都吐回了；这里只推进一步
-            i += 1
+                i += 1
+        return phases
 
-    return out
+    def detect_mixes(phases: list[list[dict]]) -> list[list[dict]]:
+        """把路由完全一致（src/dst 的 slot 与 well 各自都是唯一且相同）的相邻若干 phase 连续合并，
+        并且在每个合并后的 phase 内，把成对的 Aspirate→Dispense（同一容器）替换为一条 `mix` 动作：
+          {
+            "action": "mix",
+            "vol": (asp_vol, dis_vol),
+            "position": {"well": str, "labware": str, "slot": int},
+            "flow_rate": (asp_rate, dis_rate),
+            "mix_time": int
+          }
+        其它动作按原顺序保留。
+        """
+        def _is_single(info: dict) -> bool:
+            # 每个 phase 必须各自只有唯一 src_slot, dst_slot, src_well, dst_well
+            return (
+                len(info["src"]["slots"]) == 1 and
+                len(info["dst"]["slots"]) == 1 and
+                len(info["src"]["wells"]) == 1 and
+                len(info["dst"]["wells"]) == 1
+            )
+
+        def _same_route(a: dict, b: dict) -> bool:
+            # 路由比较：四个集合都完全相等
+            return (
+                a["src"]["slots"] == b["src"]["slots"] and
+                a["src"]["wells"] == b["src"]["wells"] and
+                a["dst"]["slots"] == b["dst"]["slots"] and
+                a["dst"]["wells"] == b["dst"]["wells"]
+            )
+
+        # 先：连续合并相邻、路由完全一致的 phase
+        i = 0
+        while i < len(phases) - 1:
+            base_info = extract_src_dst(phases[i])
+            if not _is_single(base_info):
+                i += 1
+                continue
+
+            j = i + 1
+            merged_any = False
+            while j < len(phases):
+                next_info = extract_src_dst(phases[j])
+                if not _is_single(next_info):
+                    break
+                if not _same_route(base_info, next_info):
+                    break
+                phases[i].extend(phases[j])
+                del phases[j]
+                merged_any = True
+            if not merged_any:
+                i += 1
+
+        # 再：把每个 phase 内部的 AD 对替换成 mix
+        def _same_container(src: dict | None, tgt: dict | None) -> bool:
+            return bool(
+                src and tgt and
+                src.get("well") == tgt.get("well") and
+                src.get("labware") == tgt.get("labware") and
+                src.get("slot") == tgt.get("slot")
+            )
+
+        def _fold_pairs_into_mix(actions: list[dict]) -> list[dict]:
+            out: list[dict] = []
+            k = 0
+            n = len(actions)
+            while k < n:
+                a = actions[k]
+                # 尝试以 a 开头聚合一段连续 AD（同容器、同体积）的混匀
+                if k + 1 < n and a.get("action") == "aspirate":
+                    b = actions[k + 1]
+                    if b.get("action") == "dispense" and _same_container(a.get("source"), b.get("target")):
+                        base_src = a.get("source") or {}
+                        base_vol_asp = a.get("vol")
+                        base_vol_dis = b.get("vol")
+                        base_rates = (a.get("flow_rate"), b.get("flow_rate"))
+                        times = 1
+                        j = k + 2
+                        # 继续吞并后续完全相同的 AD 对（同容器、同体积）。速率可能不同，times 只计数，速率保留第一对。
+                        while j + 1 < n:
+                            x, y = actions[j], actions[j + 1]
+                            if not (x.get("action") == "aspirate" and y.get("action") == "dispense"):
+                                break
+                            if not _same_container(x.get("source"), y.get("target")):
+                                break
+                            if x.get("vol") != base_vol_asp or y.get("vol") != base_vol_dis:
+                                break
+                            times += 1
+                            j += 2
+                        out.append({
+                            "action": "mix",
+                            "vol": (base_vol_asp, base_vol_dis),
+                            "position": {
+                                "well": base_src.get("well"),
+                                "labware": base_src.get("labware"),
+                                "slot": base_src.get("slot"),
+                            },
+                            "flow_rate": base_rates,
+                            "mix_time": times
+                        })
+                        k = j
+                        continue
+                # 不是可折叠的一对，原样放入
+                out.append(a)
+                k += 1
+            return out
+
+        for idx in range(len(phases)):
+            phases[idx] = _fold_pairs_into_mix(phases[idx])
+
+        return phases
+    phases = squeeze_asperate(phases)
+    phases = detect_mixes(phases)
+    return phases
 
 def extract_asp_params(line):
 # 例子：Aspirating 30.0 uL from A2 of reagent stock on 3 at 940.0 uL/sec
@@ -569,7 +592,8 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         "~~","--",
         "THIS",
         "protocol",
-        "There"
+        "There",
+        "This protocol"
               ]
     steps = []
     for line in lines:
@@ -584,8 +608,6 @@ def _filter_step_lines(lines: list[str]) -> list[str]:
         # cosmetic: show semicolon-separated subphrases on next visual line
         steps.append(line.replace(";", "\n        ").strip())
     return steps
-
-
 
 def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[list[str]]:
     """Group raw lines into phases separated by module ops and 'new aspirate/tip' starts."""
@@ -628,81 +650,6 @@ def _group_phases(steps: list[dict], module_start_regex: re.Pattern) -> list[lis
         grouped_phases.append(current_phase)
     return grouped_phases
 
-# def _merge_mixing_phases(grouped_phases: list[list[str]]) -> list[list[str]]:
-#     belong_to_mixing = []
-#     for i, phase in enumerate(grouped_phases):
-#         if phase and "Mixing" in phase[-1]:
-#             m = re.search(r"Mixing\s+(\d+)\s+times", phase[-1])
-#             if not m:
-#                 continue
-#             mix_count = int(m.group(1))
-#             max_take = min(mix_count, len(grouped_phases) - i - 1)
-#             for j in range(1, max_take + 1):
-#                 nxt = grouped_phases[i + j]
-#                 head = nxt[0] if nxt else ""
-#                 # --- 关键防护：遇到换枪就别合并 ---
-#                 if head.startswith("Picking up tip") or any("Dropping tip" in ln for ln in nxt):
-#                     break
-#                 grouped_phases[i].extend(nxt)
-#                 belong_to_mixing.append(i + j)
-#     return [p for k, p in enumerate(grouped_phases) if k not in set(belong_to_mixing)]
-
-def _merge_air_gaps_in_phase(phase: list[str]) -> None:
-    """Within a single phase, merge 'Air gap' surrounded aspirates for same container."""
-    to_remove = set()
-    for idx, line in enumerate(phase):
-        if not line.startswith("Air gap"):
-            continue
-        # search upward
-        asp_up = asp_up_idx = None
-        for i in range(idx - 1, -1, -1):
-            if phase[i].startswith("Aspirating"):
-                asp_up_idx = i
-                asp_up = extract_asp_params(phase[i])
-                break
-        # search downward
-        asp_down = asp_down_idx = None
-        for i in range(idx + 1, len(phase)):
-            if phase[i].startswith("Aspirating"):
-                asp_down_idx = i
-                asp_down = extract_asp_params(phase[i])
-                break
-        if asp_up and asp_down:
-            if all(asp_up[k] == asp_down[k] for k in ("well", "labware", "slot")):
-                new_vol = asp_up["vol"] + asp_down["vol"]
-                phase[asp_up_idx] = re.sub(r"Aspirating ([\d.]+) uL",
-                                           f"Aspirating {new_vol} uL",
-                                           phase[asp_up_idx])
-                to_remove.add(asp_down_idx)
-    for i in sorted(to_remove, reverse=True):
-        del phase[i]
-
-def _merge_consecutive_ops_in_phase(phase: list[str]) -> None:
-    """Merge consecutive Aspirating/Dispensing lines by summing volumes."""
-    to_remove = set()
-    idx = 0
-    while idx < len(phase) - 1:
-        cur, nxt = phase[idx], phase[idx + 1]
-        if cur.startswith("Aspirating") and nxt.startswith("Aspirating"):
-            v = float(re.search(r"Aspirating ([\d.]+)", cur).group(1))
-            v2 = float(re.search(r"Aspirating ([\d.]+)", nxt).group(1))
-            phase[idx] = re.sub(r"Aspirating [\d.]+", f"Aspirating {v + v2}", cur)
-            to_remove.add(idx + 1)
-            idx += 1
-        elif cur.startswith("Dispensing") and nxt.startswith("Dispensing"):
-            v = float(re.search(r"Dispensing ([\d.]+)", cur).group(1))
-            v2 = float(re.search(r"Dispensing ([\d.]+)", nxt).group(1))
-            phase[idx] = re.sub(r"Dispensing [\d.]+", f"Dispensing {v + v2}", cur)
-            to_remove.add(idx + 1)
-            idx += 1
-        else:
-            idx += 1
-    for i in sorted(to_remove, reverse=True):
-        del phase[i]
-# ---------------------------------------------------------------------------
-
-
-
 def coalesce_transfer_phases(phases):
     """把相邻路由一致的液体移动 phase 合并；
     规则：
@@ -715,10 +662,9 @@ def coalesce_transfer_phases(phases):
       {"template":"transfer_liquid","route":{"source_slot":s,"target_slot":d},"actions":[...]}
       或 {"template":"other_devices","actions":[...]}
     """
-
-    # ---------- helpers ----------
     def _phase_route(phase_actions):
         """返回 (src_slot, dst_slot) 或 None。要求 aspirate/dispense 各自的槽位唯一。"""
+
         src_slots = {
             a["source"]["slot"]
             for a in phase_actions
@@ -729,8 +675,15 @@ def coalesce_transfer_phases(phases):
             for a in phase_actions
             if a.get("action") == "dispense" and a.get("target") and "slot" in a["target"]
         }
+
+        mix_slots = {a["position"]["slot"] 
+                    for a in phase_actions 
+                    if a.get("action") == "mix"}
+        
         if src_slots and dst_slots and len(src_slots) == 1 and len(dst_slots) == 1:
             return (next(iter(src_slots)), next(iter(dst_slots)))
+        if mix_slots and not src_slots and not dst_slots and len(mix_slots) == 1:
+            return (next(iter(mix_slots)), next(iter(mix_slots)))
         return None
 
     def _ad_slots(phase_actions):
@@ -770,11 +723,14 @@ def coalesce_transfer_phases(phases):
     pending_mix = []       # 等待并入下一段路由（槽位重合）的 mix-only / in-place 段
 
     i = 0
-    while i < len(phases):
+    while i < 10:#len(phases):
+        
         actions = phases[i]
         route = _phase_route(actions)
-        mix_slots = _mix_slots(actions)
-        in_place = _is_pure_in_place(actions)
+
+        pp.pprint(actions)
+
+        # pp.pprint(in_place)
 
         # 先处理挂起的 pending_mix：若当前是路由段且槽位重合，优先并入
         if pending_mix and route is not None:
@@ -865,31 +821,24 @@ def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> Li
       4) merge mixing/air‑gap/consecutive ops
       5) build structured dicts and merge adjacent compatible blocks
     """
-   
+    
     raw = _read_log_text(filename)
     lines = _preprocess_text(raw)
     steps = _filter_step_lines(lines)
-    
-    # debug tokenization (kept for visibility)
     module_start_regex = re.compile("|".join(_MODULE_START_PATTERNS))
     grouped_phases = _group_phases(steps, module_start_regex)
-    #grouped_phases = _merge_mixing_phases(grouped_phases)
-    # with open(f"test_tmp/cleaned_phases_{name}.txt", "w") as f:
-    #     for phase in grouped_phases:
-    #         for line in phase:
-    #             f.write(line + "\n")
-    #         f.write("\n" + "="*40 + "\n")  # 每个 phase 之间加分隔线
-
-
     phases = []
-    for phase_lines in grouped_phases:
-        phases.append(collapse_mixes(_parse_liquid_ops(phase_lines)))
-
+    for i, phase_lines in enumerate(grouped_phases):
+        phases.append(_parse_liquid_ops(phase_lines))
+    phases = collapse_mixes(phases)
     high_level_steps = coalesce_transfer_phases(phases)
-
-    # 如果还想保留原始 phases，可同时写两个文件；否则直接覆盖原输出
-    with open(f"test_tmp/outputs_{name}.json", "w") as f:
+    with open(f"test_tmp/{name}.json", "w") as f:
         json.dump(high_level_steps, f, indent=4)
+    # print(name)
+
+    # # 如果还想保留原始 phases，可同时写两个文件；否则直接覆盖原输出
+    # with open(f"test_tmp/outputs_{name}.json", "w") as f:
+    #     json.dump(high_level_steps, f, indent=4)
 
     # final_outputs = collapse_mixes(outputs)
 
@@ -956,7 +905,6 @@ def extract_labware_info_from_json(json_data: dict) -> list:
 
 
     return output, replace_map
-import re, inspect
 
 def expend_labware_info(class_name: str, name: str = "labware", slot: int = 1):
     """
@@ -1116,9 +1064,6 @@ def build_protocol_graph(labware_info: List[Dict[str, Any]], protocol_steps: Lis
                 slot_last_writer[slot] = node_id
 
     return G
-
-
-
 
 def build_ordered_action_dict(detail_action):
     ordered_action_dict = {}
@@ -1302,7 +1247,7 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log_test/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
     detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
 
@@ -1347,7 +1292,6 @@ if __name__ == "__main__":
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
     for name in protocol_names:
-
         try:
             parse_protocol(name)
         except Exception as e:
