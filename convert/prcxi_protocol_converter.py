@@ -540,8 +540,6 @@ def extract_asp_params(line):
         }
     return None
 
-
-# ---------------------- Log parsing helpers (factored) ----------------------
 _MODULE_START_PATTERNS = [
     r"Setting Target Temperature of Heater-Shaker",
     r"Engaging Magnetic Module",
@@ -685,7 +683,7 @@ def coalesce_transfer_phases(phases):
 
     def is_inplace(r):  # r 是 (s,d) 或 None
         return r is not None and r[0] == r[1]
-
+    
     def can_chain(block_route, nxt_route):
         """判断 block_route 与 nxt_route 是否可合并。"""
         if block_route is None or nxt_route is None:
@@ -700,6 +698,19 @@ def coalesce_transfer_phases(phases):
         if is_inplace(block_route) and not is_inplace(nxt_route) and (block_route[0] in nxt_route):
             return True
         return False
+
+    def fix_blowout(actions):
+
+        """把blow_out动作的模版改成dispense，体积为-1，flowrate为100"""
+
+        for a in actions:
+            if a.get("action") == "blow_out":
+                a["action"] = "dispense"
+                a["vol"] = -1
+                a["flow_rate"] = 100
+                if a.get("at"):
+                    a["target"] = a["at"]
+                del a["at"]
 
     result = []
     i = 0
@@ -723,88 +734,12 @@ def coalesce_transfer_phases(phases):
             break
 
         result.append(block)
-        i = j  # 跳到下一未处理段
+        i = j  
+    for block in result:
+        fix_blowout(block)
 
     return result
 
-    #     # 先处理挂起的 pending_mix：若当前是路由段且槽位重合，优先并入
-    #     if pending_mix and route is not None:
-    #         s, d = route
-    #         pend_slots = {a.get("slot") for a in pending_mix if a.get("action") == "mix"}
-    #         # 如果 pending_mix 里没有 mix（理论上不会），保底也并入当前块
-    #         overlap = (not pend_slots) or (s in pend_slots) or (d in pend_slots)
-    #         if overlap:
-    #             if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
-    #                 cur["actions"].extend(pending_mix)
-    #             else:
-    #                 if cur is not None:
-    #                     high_level.append(cur)
-    #                 cur = {
-    #                     "template": "transfer_liquid",
-    #                     "route_key": route,
-    #                     "route": {"source_slot": s, "target_slot": d},
-    #                     "actions": list(pending_mix),
-    #                 }
-    #             pending_mix = []
-
-    #     # ------ 非路由段 或 纯就地段：尝试作为“mix-only”并入上下 ------
-    #     if route is None or in_place:
-    #         # 优先并到当前已开的路由块（若槽位重合）
-    #         if (route is None and mix_slots) or in_place:
-    #             target_slots = mix_slots
-    #             if in_place and route is not None:
-    #                 target_slots = {route[0]}  # s==d
-
-    #             if cur is not None and cur.get("template") == "transfer_liquid":
-    #                 cs, cd = cur["route_key"]
-    #                 if (cs in target_slots) or (cd in target_slots):
-    #                     cur["actions"].extend(actions)
-    #                     i += 1
-    #                     continue
-
-    #             # 看下一段：如果下一段是路由且槽位重合，则挂起
-    #             next_route = _phase_route(phases[i + 1]) if (i + 1 < len(phases)) else None
-    #             if next_route is not None:
-    #                 ns, nd = next_route
-    #                 if (ns in target_slots) or (nd in target_slots):
-    #                     pending_mix.extend(actions)
-    #                     i += 1
-    #                     continue
-
-    #         # 实在并不进去：落地 other_devices
-    #         if cur is not None:
-    #             high_level.append(cur)
-    #             cur = None
-    #         high_level.append({"template": "other_devices", "actions": actions})
-    #         i += 1
-    #         continue
-
-    #     # ------ 路由段：常规合并 ------
-    #     if cur is not None and cur.get("template") == "transfer_liquid" and cur.get("route_key") == route:
-    #         cur["actions"].extend(actions)
-    #     else:
-    #         if cur is not None:
-    #             high_level.append(cur)
-    #         s, d = route
-    #         cur = {
-    #             "template": "transfer_liquid",
-    #             "route_key": route,
-    #             "route": {"source_slot": s, "target_slot": d},
-    #             "actions": list(actions),
-    #         }
-    #     i += 1
-
-    # # 循环结束：把还没并入的 pending_mix 尽量放进当前块，否则落地
-    # if pending_mix:
-    #     if cur is not None and cur.get("template") == "transfer_liquid":
-    #         cur["actions"].extend(pending_mix)
-    #     else:
-    #         high_level.append({"template": "other_devices", "actions": pending_mix})
-
-    # if cur is not None:
-    #     high_level.append(cur)
-
-    return high_level
 
 def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> List[Dict]:
     """
@@ -827,77 +762,114 @@ def process_liquid_handler_log(filename: str = "test.log", name: str = "") -> Li
         phases.append(_parse_liquid_ops(phase_lines))
     phases = collapse_mixes(phases)
     high_level_steps = coalesce_transfer_phases(phases)
-    with open(f"test_tmp/{name}.json", "w") as f:
-        json.dump(high_level_steps, f, indent=4)
-    # print(name)
-
-    # # 如果还想保留原始 phases，可同时写两个文件；否则直接覆盖原输出
-    # with open(f"test_tmp/outputs_{name}.json", "w") as f:
+    # with open(f"test_tmp/{name}.json", "w") as f:
     #     json.dump(high_level_steps, f, indent=4)
 
-    # final_outputs = collapse_mixes(outputs)
+    return high_level_steps
 
-
-    return #final_outputs
-
-def extract_labware_info_from_json(json_data: dict) -> list:
+def extract_labware_info_from_json(json_data: dict, total_slots: int) -> tuple[list, dict]:
     """
-    从 Opentrons JSON 配置中提取板位信息，转换为结构化格式。
+    从 Opentrons JSON 配置中提取板位信息，并根据 `total_slots` 进行槽位映射：
+      - 若 total_slots >= 12：不映射，保留原始 slot。
+      - 若 total_slots < 12：将出现过的原始 slot（去重、按出现顺序）紧凑映射到 1..total_slots。
+        若去重后的原始 slot 数量 > total_slots，则报错。
+    返回:
+      output: 规范化后的 labware 列表
+      replace_map: {原始slot: 新slot}
     """
     labware_list = json_data.get("labware", [])
-    if len(labware_list) > 6:
-        raise ValueError("Labware list exceeds 6 items, which is not supported by the PRCXI.")
-    import re
+    if not isinstance(labware_list, list):
+        raise ValueError("json_data['labware'] must be a list.")
 
+    if len(labware_list) > 12:
+        # 你原来文本里已经放宽到 12，这里沿用
+        raise ValueError("Labware list exceeds 12 items, which is not supported by the PRCXI 9320.")
+
+    # 1) 收集“原始 slot”出现顺序（去重）
+    orig_slots_in_order = []
+    for lw in labware_list:
+        s = lw.get("slot")
+        if s is None:
+            raise ValueError(f"Labware item missing 'slot': {lw}")
+        if s not in orig_slots_in_order:
+            orig_slots_in_order.append(s)
+
+    # 2) 计算映射表 replace_map
+    replace_map: dict[int, int] = {}
+
+    if total_slots >= 12:
+        # 不映射：保留原始 slot
+        replace_map = {s: s for s in orig_slots_in_order}
+    else:
+        # 紧凑映射到 1..total_slots
+        if len(orig_slots_in_order) > total_slots:
+            raise ValueError(
+                f"Cannot compact-map {len(orig_slots_in_order)} distinct slots into total_slots={total_slots}."
+            )
+        # 依出现顺序映射：第1个 → 1，第2个 → 2，…
+        replace_map = {s: i + 1 for i, s in enumerate(orig_slots_in_order)}
+
+    # 3) 组装输出
     output = []
-    replace_map = {}
-    # 直接把标号强行转换为1-6
     container_char = ['wellplate', 'well', 'pcr']
-    for i, lw in enumerate(labware_list):
 
-        class_name = lw.get("type")
-        # replace '.' in class_name as 'point'
+    for lw in labware_list:
+        class_name = (lw.get("type") or "").strip()
+        if not class_name:
+            raise ValueError(f"Labware item missing 'type': {lw}")
+        # 清洗 class_name 中的点
         class_name = re.sub(r'\.', 'point', class_name)
-        #print(class_name)
-        # 判断 class_name 是否包含 container_char 的任一关键词
+
+        # 默认体积
+        liquid_vol = 200.0
+        # 若名字看起来像盛液板，尝试解析体积
         if any(c in class_name.lower() for c in container_char):
-            liquid_vol = 200.0
-            # 用正则匹配体积：例如 12.5ul / 0.5ml
-            match = re.search(r'(\d+)\.(\d+)([mu]l)', class_name, re.IGNORECASE)
-            if match:
-                num1, num2, unit = match.groups()
+            # 先小数：12.5ul / 0.5ml
+            m = re.search(r'(\d+)\.(\d+)([mu]l)', class_name, re.IGNORECASE)
+            if m:
+                num1, num2, unit = m.groups()
                 value = float(f"{num1}.{num2}")
-                # 单位换算：统一转成 µL
                 if unit.lower() == "ml":
                     liquid_vol = value * 1000.0
-                elif unit.lower() == "ul":
+                else:  # 'ul'
                     liquid_vol = value
             else:
-                # 没匹配到小数，尝试匹配整数
-                match_int = re.search(r'(\d+)([mu]l)', class_name, re.IGNORECASE)
-                if match_int:
-                    num, unit = match_int.groups()
+                # 再整数：200ul / 1ml
+                m2 = re.search(r'(\d+)([mu]l)', class_name, re.IGNORECASE)
+                if m2:
+                    num, unit = m2.groups()
                     value = float(num)
                     if unit.lower() == "ml":
                         liquid_vol = value * 1000.0
-                    elif unit.lower() == "ul":
+                    else:  # 'ul'
                         liquid_vol = value
-            #print(class_name, liquid_vol)
 
-        prcxi_id = lw.get("name")
-        new_id = re.sub(r'on \d+', f'on {i+1}', prcxi_id)
-        new_id = re.sub(r' ', '_', new_id)
-        replace_map[lw.get("slot")] = i+1
+        # 计算新 slot
+        orig_slot = lw.get("slot")
+        new_slot = replace_map.get(orig_slot)
+        if new_slot is None:
+            raise RuntimeError(f"Internal mapping error: slot {orig_slot} not in replace_map.")
+
+        # 生成新 id：把 "on X" 改成 "on {new_slot}"，再把空格换成下划线
+        prcxi_id = (lw.get("name") or "").strip()
+        if not prcxi_id:
+            # 没有名字就用类型占位，防止空
+            prcxi_id = f"{class_name} on {orig_slot}"
+        new_id = re.sub(r'on \d+', f'on {new_slot}', prcxi_id)
+        new_id = re.sub(r'\s+', '_', new_id)
+
         output.append({
             "id": new_id,
             "parent": "deck",
-            "slot_on_deck": i+1,
+            "slot_on_deck": new_slot,
             "class_name": class_name,
             "liquid_type": [],
             "liquid_volume": [liquid_vol],
-            "liquid_input_wells": []    
+            "liquid_input_wells": []
         })
-
+    # print('=== Lawbare Info ===')
+    pp.pprint(output)
+    pp.pprint(replace_map)
 
     return output, replace_map
 
@@ -964,8 +936,7 @@ def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str,
                 labware["liquid_type"].append(clean_key)
                 labware["liquid_input_wells"].append(liquid_val["well"])
         labware["liquid_volume"] = labware["liquid_volume"] * len(labware["liquid_input_wells"])
-        #
-        # print(labware)
+
     # 收集 protocol 里将会用到的唯一 (class_name, slot) 组合
     unique_pairs = set()
     for step in protocol_steps:
@@ -998,7 +969,7 @@ def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str,
                         dev_name = getattr(inst, "name", None) or sanitize_name(f"{cls_name}_on_{slot}")
                         orig_well = it.get("well")
                         if orig_well:
-                            it["well"] = f"/PRCXI9300/deck/{dev_name}/{inst._ordering.get(orig_well)}"
+                            it["well"] = f"/PRCXI9320/deck/{dev_name}/{inst._ordering.get(orig_well)}"
             step[term] = items
 
     return labware_info
@@ -1220,7 +1191,6 @@ def fix_special_cases(protocol_steps: List[Dict]) -> List[Dict]:
                     step["tip_racks"] = prev_step.get("tip_racks", [])
     return protocol_steps
 
-
 def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> List[Dict]:
     """
     根据 replace_map 修复 protocol_steps 中各 labware 的 slot。
@@ -1239,6 +1209,18 @@ def fix_positions(protocol_steps: List[Dict], replace_map: Dict[int, int]) -> Li
                     #print(f"[WARN] step {step_idx}, {field}[{item_idx}] 无映射，保留原 slot")
                     # pass      
     return protocol_steps
+
+def get_labware_settings(detail_steps: str) -> dict:
+
+    detail_data = json.load(open(detail_steps, "r"))
+    liquid_settings = detail_data.get("liquid_locations", {})
+    labware_settings = {}
+    for k, v in liquid_settings.items():
+        labware_settings[k] = {
+            "slot": v.get("slot"),
+            "well": v.get("well")
+        }
+    return labware_settings
 
 
 def parse_protocol(name: str):
@@ -1260,16 +1242,19 @@ def parse_protocol(name: str):
             raise FileNotFoundError(f"No protocol json found in {proto_dir}, except metadata.json/README.json")
 
     protocol_steps = process_liquid_handler_log(logfile, name)
+
     # enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
-    # with open(infofile, "r") as f:
-    #     labware_data = json.load(f)
-    # labware_info, replace_map = extract_labware_info_from_json(labware_data)
+    with open(infofile, "r") as f:
+        labware_data = json.load(f)
+    liquid_info = get_labware_settings(detail_steps)
+    labware_info, replace_map = extract_labware_info_from_json(labware_data, 12)
+
     # enriched_steps = fix_special_cases(enriched_steps)
     # enriched_steps = fix_positions(enriched_steps, replace_map)
     # # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
     # #     json.dump(enriched_steps, f, indent=4)
     # #print(json.dumps(enriched_steps, indent=4))
-    # labware_info = refine_wells(labware_info, liquid_info, enriched_steps)
+    labware_info = refine_wells(labware_info, liquid_info, protocol_steps)
     # protocol_graph = build_protocol_graph(labware_info, enriched_steps)
     # data = nx.node_link_data(protocol_graph)
     # # Dumb but effective: clean micro symbols at the serialized string level
@@ -1286,7 +1271,7 @@ if __name__ == "__main__":
     file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names:
+    for name in protocol_names[:2]:
         try:
             parse_protocol(name)
         except Exception as e:
