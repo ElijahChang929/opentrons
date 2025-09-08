@@ -868,8 +868,8 @@ def extract_labware_info_from_json(json_data: dict, total_slots: int) -> tuple[l
             "liquid_input_wells": []
         })
     # print('=== Lawbare Info ===')
-    pp.pprint(output)
-    pp.pprint(replace_map)
+    # pp.pprint(output)
+    # pp.pprint(replace_map)
 
     return output, replace_map
 
@@ -928,7 +928,9 @@ def sanitize_name(name: str) -> str:
 
 
 def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]):
-    # 给labware_info添加液体信息
+    
+    pp.pprint(liquid_info)
+
     for labware in labware_info:
         for liquid_key, liquid_val in liquid_info.items():
             if labware["slot_on_deck"] == int(liquid_val["slot"]):
@@ -1248,7 +1250,7 @@ def parse_protocol(name: str):
         labware_data = json.load(f)
     liquid_info = get_labware_settings(detail_steps)
     labware_info, replace_map = extract_labware_info_from_json(labware_data, 12)
-
+    print(name)
     # enriched_steps = fix_special_cases(enriched_steps)
     # enriched_steps = fix_positions(enriched_steps, replace_map)
     # # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
@@ -1271,7 +1273,7 @@ if __name__ == "__main__":
     file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names[:2]:
+    for name in protocol_names[:1]:
         try:
             parse_protocol(name)
         except Exception as e:
