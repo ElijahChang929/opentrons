@@ -928,6 +928,8 @@ def sanitize_name(name: str) -> str:
 
 
 def refine_wells(labware_info: List[Dict[str, Any]], liquid_info: List[Dict[str, Any]], protocol_steps: List[Dict[str, Any]]):
+    
+    pp.pprint(liquid_info)
 
     for labware in labware_info:
         for liquid_key, liquid_val in liquid_info.items():
@@ -1224,9 +1226,9 @@ def get_labware_settings(detail_steps: str) -> dict:
 
 
 def parse_protocol(name: str):
-    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/log/{name}.log"
+    logfile = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/new_test/protocols/log/{name}.log"
     infofile = f"/Users/guangxinzhang/Documents/Deep_Potential/Protocols/protoBuilds/{name}/{name}.ot2.apiv2.py.json"
-    detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/detailed_action_json/{name}.json"
+    detail_steps = f"/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/new_test/protocols/detailed_action_json/{name}.json"
 
     # first check if the files exist
     if not os.path.exists(infofile):
@@ -1242,21 +1244,19 @@ def parse_protocol(name: str):
             raise FileNotFoundError(f"No protocol json found in {proto_dir}, except metadata.json/README.json")
 
     protocol_steps = process_liquid_handler_log(logfile, name)
-
+    pp.pprint(protocol_steps)
     # enriched_steps, liquid_info = add_detail_info(protocol_steps, detail_steps)
     with open(infofile, "r") as f:
         labware_data = json.load(f)
     liquid_info = get_labware_settings(detail_steps)
     labware_info, replace_map = extract_labware_info_from_json(labware_data, 12)
-    
+
     # enriched_steps = fix_special_cases(enriched_steps)
     # enriched_steps = fix_positions(enriched_steps, replace_map)
     # # with open(f'/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/prcxi_enriched_steps/{name}.json', 'w') as f:
     # #     json.dump(enriched_steps, f, indent=4)
     # #print(json.dumps(enriched_steps, indent=4))
     labware_info = refine_wells(labware_info, liquid_info, protocol_steps)
-    pp.pprint(labware_info)
-
     # protocol_graph = build_protocol_graph(labware_info, enriched_steps)
     # data = nx.node_link_data(protocol_graph)
     # # Dumb but effective: clean micro symbols at the serialized string level
@@ -1270,10 +1270,10 @@ def parse_protocol(name: str):
 
 if __name__ == "__main__":
     # 测试代码
-    file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
+    file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/new_test/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names[:1]:
+    for name in protocol_names:
         try:
             parse_protocol(name)
         except Exception as e:
