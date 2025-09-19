@@ -1,0 +1,69 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_1"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_4"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_5",
+        "targets": "Liquid_4"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_3": {
+      "slot": 1,
+      "well": [
+        "A1"
+      ],
+      "labware": "Opentrons 96 Well Aluminum Block with Generic PCR Strip 200 µL on Temperature Module GEN1"
+    },
+    "Liquid_4": {
+      "slot": 2,
+      "well": [
+        "A12"
+      ],
+      "labware": "Custom AB NEST 96 Well Plate 200 µL"
+    },
+    "Liquid_5": {
+      "slot": 3,
+      "well": [
+        "A1"
+      ],
+      "labware": "NEST 96 Well Plate 100 µL PCR Full Skirt"
+    },
+    "Liquid_1": {
+      "slot": 4,
+      "well": [
+        "A4"
+      ],
+      "labware": "NEST 96 Deepwell Plate 2mL on Magnetic Module GEN2"
+    },
+    "Liquid_2": {
+      "slot": 6,
+      "well": [
+        "A1"
+      ],
+      "labware": "NEST 1 Well Reservoir 195 mL"
+    }
+  }
+}

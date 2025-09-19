@@ -1,0 +1,46 @@
+{
+  "protocol_name": "0b97ae-protocol-2A",
+  "reagent": {
+    "Liquid_1": {
+      "slot": 2,
+      "well": [
+        "A1"
+      ],
+      "labware": "Water_reservoir"
+    },
+    "Liquid_2": {
+      "slot": 7,
+      "well": [
+        "A1"
+      ],
+      "labware": "Diluted_RNA_plate_on_Temperature_Module_GEN2"
+    },
+    "Liquid_3": {
+      "slot": 10,
+      "well": [
+        "A1"
+      ],
+      "labware": "MasterMix_plate_on_Temperature_Module_GEN2"
+    }
+  },
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "summary": {
+    "total_actions": 2,
+    "liquids_used": 3
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_2",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_2": {
+      "slot": 1,
+      "well": [
+        "A1"
+      ],
+      "labware": "Thermofisher 40 Tube Rack with Thermofisher 2 mL on Temperature Module GEN2"
+    },
+    "Liquid_1": {
+      "slot": 4,
+      "well": [
+        "A1"
+      ],
+      "labware": "Opentrons 6 Tube Rack with Falcon 4 mL Conical"
+    }
+  }
+}

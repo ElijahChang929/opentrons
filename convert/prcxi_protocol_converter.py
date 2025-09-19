@@ -1273,7 +1273,7 @@ if __name__ == "__main__":
     file_dir = "/Users/guangxinzhang/Documents/Deep_Potential/opentrons/convert/protocols/original"
     error_log = Path("protocols/log/error_converting.txt")
     protocol_names = [d for d in os.listdir(file_dir) if os.path.isdir(os.path.join(file_dir, d))]
-    for name in protocol_names[:1]:
+    for name in protocol_names:
         try:
             parse_protocol(name)
         except Exception as e:

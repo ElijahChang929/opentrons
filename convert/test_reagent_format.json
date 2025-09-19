@@ -1,0 +1,32 @@
+{
+  "protocol_name": "00c517-pt2",
+  "reagent": {
+    "Liquid_1": {
+      "slot": 2,
+      "well": [
+        "A1"
+      ],
+      "labware": "Agilent_96_Well_Plate_500_µL"
+    },
+    "Liquid_2": {
+      "slot": 3,
+      "well": [
+        "A1"
+      ],
+      "labware": "Agilent_96_Well_Plate_1400_µL"
+    }
+  },
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "summary": {
+    "total_actions": 1,
+    "liquids_used": 2
+  }
+}

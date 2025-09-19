@@ -1,0 +1,55 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_4"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_5",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_1": {
+      "slot": 1,
+      "well": [
+        "A1"
+      ],
+      "labware": "Thermofisher 96 Well Plate 1400 µL"
+    },
+    "Liquid_3": {
+      "slot": 2,
+      "well": [
+        "A2"
+      ],
+      "labware": "Thermofisher 96 Well Plate 1400 µL"
+    },
+    "Liquid_5": {
+      "slot": 7,
+      "well": [
+        "A4"
+      ],
+      "labware": "Opentrons 10 Tube Rack with Falcon 7x50 mL, 6x15 mL Conical"
+    },
+    "Liquid_2": {
+      "slot": 8,
+      "well": [
+        "A1"
+      ],
+      "labware": "NEST 96 Deepwell Plate 2mL"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_4",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_4": {
+      "slot": 1,
+      "well": [
+        "A1"
+      ],
+      "labware": "Opentrons 24 Well Aluminum Block with Generic 2 mL Screwcap on Temperature Module GEN1"
+    },
+    "Liquid_3": {
+      "slot": 2,
+      "well": [
+        "A2"
+      ],
+      "labware": "Azenta Life Sciences 96 Well Plate 200 µL"
+    },
+    "Liquid_2": {
+      "slot": 3,
+      "well": [
+        "A1"
+      ],
+      "labware": "Azenta Life Sciences 96 Aluminum Block 200 µL on Temperature Module GEN1"
+    },
+    "Liquid_1": {
+      "slot": 4,
+      "well": [
+        "A1"
+      ],
+      "labware": "Azenta Life Sciences 12 Reservoir 21000 µL"
+    }
+  }
+}

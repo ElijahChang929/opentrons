@@ -1,0 +1,70 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_1"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_2",
+        "targets": "Liquid_1"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_4"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_3"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_4"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_2": {
+      "slot": 1,
+      "well": [
+        "B1"
+      ],
+      "labware": "NEST 96 Well Plate 100 µL PCR Full Skirt"
+    },
+    "Liquid_1": {
+      "slot": 2,
+      "well": [
+        "D1"
+      ],
+      "labware": "NEST 96 Well Plate 100 µL PCR Full Skirt"
+    },
+    "Liquid_4": {
+      "slot": 3,
+      "well": [
+        "B1"
+      ],
+      "labware": "Corning 384 Well Plate 112 µL Flat"
+    },
+    "Liquid_3": {
+      "slot": 5,
+      "well": [
+        "A1",
+        "D6"
+      ],
+      "labware": "Opentrons 24 Tube Rack with NEST 1.5 mL Snapcap"
+    }
+  }
+}

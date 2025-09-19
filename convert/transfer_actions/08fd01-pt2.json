@@ -1,0 +1,55 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_4"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_2",
+        "targets": "Liquid_4"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_1": {
+      "slot": 5,
+      "well": [
+        "A1"
+      ],
+      "labware": "NEST 12 Well Reservoir 15 mL"
+    },
+    "Liquid_3": {
+      "slot": 7,
+      "well": [
+        "A12"
+      ],
+      "labware": "NEST 96 Well Plate 100 µL PCR Full Skirt"
+    },
+    "Liquid_4": {
+      "slot": 8,
+      "well": [
+        "B21"
+      ],
+      "labware": "Custom 384 Well Plate 50 µL"
+    },
+    "Liquid_2": {
+      "slot": 9,
+      "well": [
+        "B22"
+      ],
+      "labware": "Custom 384 Well Plate 50 µL"
+    }
+  }
+}

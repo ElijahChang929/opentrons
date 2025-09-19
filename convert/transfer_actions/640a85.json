@@ -1,0 +1,41 @@
+{
+  "workflow": [
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_1",
+        "targets": "Liquid_2"
+      }
+    },
+    {
+      "action": "transfer_liquid",
+      "action_args": {
+        "sources": "Liquid_3",
+        "targets": "Liquid_2"
+      }
+    }
+  ],
+  "reagent": {
+    "Liquid_3": {
+      "slot": 4,
+      "well": [
+        "B4"
+      ],
+      "labware": "input DNA sample plate"
+    },
+    "Liquid_1": {
+      "slot": 6,
+      "well": [
+        "A1"
+      ],
+      "labware": "reservoir for mastermix"
+    },
+    "Liquid_2": {
+      "slot": 7,
+      "well": [
+        "A12"
+      ],
+      "labware": "Thermo Scientific 96 Well Plate 300 µL on Thermocycler Module"
+    }
+  }
+}
